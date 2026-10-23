@@ -1,3 +1,4 @@
+import { OptionalImage } from "./OptionalImage";
 import { CheckoutPayment, paymentMethods, VoucherUpload } from "./Payments";
 import { DateField } from "./DateField";
 import { TrackingJourney } from "./Experiences";
@@ -199,7 +200,8 @@ export function Field({ label, type, ...props }) {
   );
 }
 export function Profile({ user, setUsers, onLogout }) {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(""),
+    [avatar, setAvatar] = useState(user.avatar || "");
   async function save(e) {
     e.preventDefault();
     const f = Object.fromEntries(new FormData(e.currentTarget));
@@ -212,13 +214,19 @@ export function Profile({ user, setUsers, onLogout }) {
       return;
     }
     setUsers((a) =>
-      a.map((u) => (u.id === user.id ? { ...u, ...f, email } : u)),
+      a.map((u) => (u.id === user.id ? { ...u, ...f, email, avatar } : u)),
     );
     setMessage("Tus datos se actualizaron.");
   }
   return (
     <section className="profile">
       <h2>Tu información.</h2>
+      <OptionalImage
+        label="Foto de perfil"
+        avatar
+        value={avatar}
+        onChange={setAvatar}
+      />
       <form className="form-grid" onSubmit={save}>
         <Field
           label="Nombres"
@@ -421,18 +429,18 @@ export function DeliveryForm({
             </Select>
           </label>
           <label className="field wide agency-search">
-              {region ? `Buscar agencia en ${region}` : "Buscar agencia Shalom"}
-              <input
-                type="search"
-                value={agencyQuery}
-                onChange={(e) => setAgencyQuery(e.target.value)}
-                placeholder="Distrito, agencia o dirección"
-              />
-              <span className="form-hint">
-                {options.length} ubicaciones coincidentes ·{" "}
-                {options.filter((a) => a.active && a.receives !== false).length}{" "}
-                para recojo
-              </span>
+            {region ? `Buscar agencia en ${region}` : "Buscar agencia Shalom"}
+            <input
+              type="search"
+              value={agencyQuery}
+              onChange={(e) => setAgencyQuery(e.target.value)}
+              placeholder="Distrito, agencia o dirección"
+            />
+            <span className="form-hint">
+              {options.length} ubicaciones coincidentes ·{" "}
+              {options.filter((a) => a.active && a.receives !== false).length}{" "}
+              para recojo
+            </span>
           </label>
           <label className="field wide">
             Agencia Shalom de recojo
@@ -460,7 +468,9 @@ export function DeliveryForm({
                   {a.pointPro ? " · Punto PRO" : ""}
                   {a.receives === false
                     ? " · No recibe envíos"
-                    : !a.active ? " · Pausada" : ""}
+                    : !a.active
+                      ? " · Pausada"
+                      : ""}
                 </option>
               ))}
             </Select>

@@ -1,3 +1,5 @@
+import { OptionalImage } from "./OptionalImage";
+import { AssetImage } from "./AssetImage";
 import { AdminNotice } from "./AdminFeedback";
 import { useState, useRef, useEffect } from "react";
 import {
@@ -234,7 +236,23 @@ export function CheckoutPayment({
         <div className="payment-instructions">
           <strong>{selected.name}</strong>
           <p>Titular: {selected.owner}</p>
-          <p>Cuenta / número: {selected.account}</p>
+          <p>
+            Cuenta / número: <strong>{selected.account}</strong>
+          </p>
+          {selected.qr && (
+            <div className="checkout-payment-qr">
+              <AssetImage src={selected.qr} alt={"QR de " + selected.name} />
+              <span>QR de {selected.name}</span>
+            </div>
+          )}
+          {selected.demo && (
+            <p className="payment-demo-note">
+              Datos de prueba · No realizar pagos.
+              {selected.qr
+                ? " El QR de muestra no procesa transferencias."
+                : ""}
+            </p>
+          )}
         </div>
       ) : (
         <p className="form-hint">
@@ -320,6 +338,25 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
               </label>
             ))}
           </div>
+          <OptionalImage
+            label={"QR de " + (m.name || "pago")}
+            value={m.qr || ""}
+            onChange={(value) => change(m.id, "qr", value)}
+          />
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={!!m.demo}
+              onChange={(e) => change(m.id, "demo", e.target.checked)}
+            />
+            Identificar como datos de prueba
+          </label>
+          {m.demo && (
+            <p className="payment-demo-note">
+              Medio de prueba. Los datos y el QR no deben utilizarse para pagos
+              reales.
+            </p>
+          )}
           <label className="checkbox">
             <input
               type="checkbox"

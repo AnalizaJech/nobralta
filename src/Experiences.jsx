@@ -232,6 +232,13 @@ export function AccountDashboard({
       <div className="account-heading">
         <div>
           <p>Tu espacio NOBRALTA</p>
+          {user.avatar && (
+            <img
+              className="account-avatar"
+              src={user.avatar}
+              alt={"Foto de perfil de " + user.name}
+            />
+          )}
           <h1>Hola, {user.name}.</h1>
         </div>
         <button className="button button-outline" onClick={onBrowse}>

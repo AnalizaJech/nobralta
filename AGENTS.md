@@ -101,3 +101,6 @@ Prioridad sobre primarios negros del admin: primarios borgoña622938/hover451b28
 
 ## Gestión de pedidos r25 — 23/10/2026
 Tablas admin con encabezado negro y texto blanco; hover de filas rosado muy suave y acción de gestión con hover borgoña. Detalle de pedido con datos etiquetados, agencia, resumen de importes e historial estructurado. Voucher de imagen visible, ampliable y descargable; PDF en visor integrado más descarga. Botones de acción compactos, separación20–28px respecto a campos/contenedores y un único icono por botón. No mezclar el borrador de comunicación con avisos de verificación.
+
+## Perfil y pagos de prueba r26 — 23/10/2026
+Mis datos permite foto opcional JPG/PNG/WebP hasta500KB, vista previa, reemplazo/eliminación y persistencia al guardar cambios. Avatar también visible en saludo de cuenta. Seed de medios demoYape/BCP/Plin por solicitud del propietario, conservando configuraciones previas; identificar datos como prueba, sin pagos reales. QR de muestra codifica texto de prueba, no transferencia. Admin permite subir/cambiar/quitar QR y marcar/desmarcar medio de prueba; comprador ve titular, número/cuenta y QR según plataforma seleccionada.

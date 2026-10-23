@@ -41,6 +41,7 @@ import {
   initialPromos,
   initialAffiliates,
   defaultSettings,
+  demoPaymentMethods,
   isActive,
   now,
   currency,
@@ -567,6 +568,33 @@ export function App() {
       setProducts((items) => items.map(nameProduct));
       setBag((items) => items.map(nameProduct));
       localStorage.setItem("nobralta.catalog-names-r15", "1");
+    }
+    if (!localStorage.getItem("nobralta.demo-payments-r26")) {
+      setSettings((s) => {
+        const existing =
+          s.paymentMethods ||
+          (s.paymentActive && s.paymentAccount
+            ? [
+                {
+                  id: "legacy",
+                  name: s.paymentName,
+                  owner: s.paymentOwner,
+                  account: s.paymentAccount,
+                  active: true,
+                },
+              ]
+            : []);
+        return {
+          ...s,
+          paymentMethods: [
+            ...existing,
+            ...demoPaymentMethods.filter(
+              (d) => !existing.some((m) => m.id === d.id),
+            ),
+          ],
+        };
+      });
+      localStorage.setItem("nobralta.demo-payments-r26", "1");
     }
     if (!localStorage.getItem("nobralta.shalom-full-r21")) {
       setAgencies((items) => [

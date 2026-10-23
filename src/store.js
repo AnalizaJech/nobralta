@@ -79,6 +79,33 @@ export const initialAffiliates = [
     active: true,
   },
 ];
+export const demoPaymentMethods = [
+  {
+    id: "demo-yape",
+    name: "Yape · Prueba",
+    owner: "NOBRALTA · Cuenta de prueba",
+    account: "900 000 000",
+    qr: "/assets/yape-demo-qr.png",
+    demo: true,
+    active: true,
+  },
+  {
+    id: "demo-bcp",
+    name: "BCP · Transferencia",
+    owner: "NOBRALTA · Cuenta de prueba",
+    account: "191-0000000-0-00",
+    demo: true,
+    active: true,
+  },
+  {
+    id: "demo-plin",
+    name: "Plin · Prueba",
+    owner: "NOBRALTA · Cuenta de prueba",
+    account: "900 000 000",
+    demo: true,
+    active: true,
+  },
+];
 export const defaultSettings = {
   brand: "NOBRALTA",
   email: "",
@@ -89,6 +116,7 @@ export const defaultSettings = {
   paymentOwner: "",
   paymentAccount: "",
   paymentActive: false,
+  paymentMethods: demoPaymentMethods,
 };
 export async function digest(password, salt) {
   const hash = await crypto.subtle.digest(

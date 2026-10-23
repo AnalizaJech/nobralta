@@ -40,3 +40,6 @@ Primario: borgoña #622938 y hover #451b28. Secundario: fondo #f6edf1, texto #62
 
 ## Pedido y tablas r25
 Encabezados de tabla #19191b/#fff, filas hover #f8f1f4; acción de fila rosada que pasa a borgoña. Detalle con bloques de destinatario, agencia, importes, historial y pago; etiquetas discretas, cifras destacadas e iconos de contexto. Imágenes del voucher conservan proporción y pueden ampliarse en visor con cierre accesible; PDF embebido y descarga disponible. Acciones con ancho según contenido y20px bajo textarea; cada botón lleva un solo icono.
+
+## Foto opcional y QR r26
+Selector de imagen compartido OptionalImage: vista circular de perfil y cuadrada para QR, validación500KB, cambiar/eliminar y texto de ayuda. Foto guardada con datos de perfil. En checkout, instrucciones del medio incluyen cuenta destacada, QR de210px con fondo blanco y aviso de datos de prueba únicamente en medios demo.

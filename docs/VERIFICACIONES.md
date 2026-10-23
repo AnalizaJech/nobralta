@@ -23,3 +23,6 @@ Con un pedido En revisión de prueba, gap entre Ver pagos y primera tarjeta medi
 
 ## Gestión de pedidos r25 — 23/10/2026
 Fixture de pedido En revisión con voucher PNG: vista previa decodificada, ampliación/cierre nativo comprobados; PDF válido cargado en iframe. No errores de ejecución. Detalle revisado a1440/1024/768/390px sin desbordamiento, separación de Copiar mensaje20px respecto al textarea y ningún botón con dos iconos. Revisión en los11 módulos también sin botones con dos iconos. Importe incorrecto mantiene En revisión y el correcto cambia a Pago verificado; observación puede abrirse y cancelarse. Encabezado de tabla negro/blanco y hover comprobados. Fixtures restaurados.
+
+## Perfil/pagos r26 — 23/10/2026
+Foto PNG cargada, decodificada, guardada y conservada tras reload; eliminación guardada comprobada. Yape demo muestra número y QR válido como imagen; BCP muestra cuenta y retira el QR. Admin cambia y elimina QR guardando configuración. Pruebas con fixtures restaurados. Checkout y admin sin overflow a390px; evidencia r26 en output/playwright. QR local generado con qrcode, contenido textual NOBRALTA - YAPE DE PRUEBA - NO REALIZAR PAGOS, sin payload de transferencia.

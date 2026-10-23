@@ -1546,3 +1546,102 @@
 .admin-app .admin-nav-group > button {
   border-radius: 999px;
 }
+
+/* Admin action and state palette: one meaning per color. */
+.admin-app {
+  --action-primary: #622938;
+  --action-primary-hover: #451b28;
+  --action-secondary: #f6edf1;
+  --action-secondary-hover: #eddae2;
+  --action-secondary-line: #d7b8c4;
+  --state-success-ink: #155e52;
+  --state-success-fill: #eaf5f1;
+  --state-warning-ink: #805019;
+  --state-warning-fill: #fff3df;
+  --state-info-ink: #284e83;
+  --state-info-fill: #edf3fc;
+  --state-danger-ink: #962c43;
+  --state-danger-fill: #fbeef1;
+}
+.admin-app .button.button-dark,
+.admin-app .button.button-wine,
+.admin-app .button.admin-payments-link {
+  background: var(--action-primary);
+  border-color: var(--action-primary);
+  color: #fff;
+}
+.admin-app .button.button-dark:hover,
+.admin-app .button.button-wine:hover,
+.admin-app .button.admin-payments-link:hover {
+  background: var(--action-primary-hover);
+  border-color: var(--action-primary-hover);
+  color: #fff;
+}
+.admin-app .button.button-outline {
+  background: var(--action-secondary);
+  border-color: var(--action-secondary-line);
+  color: var(--action-primary);
+}
+.admin-app .button.button-outline:hover {
+  background: var(--action-secondary-hover);
+  border-color: #b78c9e;
+  color: var(--action-primary-hover);
+}
+.admin-app .button.button-warning {
+  color: var(--state-warning-ink);
+  background: var(--state-warning-fill);
+  border: 1px solid #e3c18f;
+}
+.admin-app .button.button-warning:hover {
+  color: #693c0e;
+  background: #f6e1be;
+  border-color: #bc8b47;
+}
+.admin-app .button.button-danger {
+  color: var(--state-danger-ink);
+  background: var(--state-danger-fill);
+  border-color: #e7bac5;
+}
+.admin-app .button.button-danger:hover {
+  color: #fff;
+  background: var(--state-danger-ink);
+  border-color: var(--state-danger-ink);
+}
+.admin-app .admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  line-height: 1.5;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.admin-badge > svg {
+  flex-shrink: 0;
+}
+.admin-app .admin-badge[data-tone="success"] {
+  color: var(--state-success-ink);
+  background: var(--state-success-fill);
+  border-color: #bad9cf;
+}
+.admin-app .admin-badge[data-tone="warning"] {
+  color: var(--state-warning-ink);
+  background: var(--state-warning-fill);
+  border-color: #e3c18f;
+}
+.admin-app .admin-badge[data-tone="info"] {
+  color: var(--state-info-ink);
+  background: var(--state-info-fill);
+  border-color: #bdcee8;
+}
+.admin-app .admin-badge[data-tone="danger"] {
+  color: var(--state-danger-ink);
+  background: var(--state-danger-fill);
+  border-color: #e7bac5;
+}
+.admin-app .admin-badge[data-tone="neutral"] {
+  color: #52525b;
+  background: #f4f4f6;
+  border-color: #dedee2;
+}

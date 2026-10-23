@@ -1,4 +1,4 @@
-import { AdminEmpty, AdminNotice } from "./AdminFeedback";
+import { AdminEmpty, AdminNotice, AdminBadge } from "./AdminFeedback";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -183,10 +183,7 @@ export function JobsManager({
         <section className="admin-section">
           <div className="section-title">
             <h2>Oportunidades de trabajo</h2>
-            <button
-              className="button button-outline"
-              onClick={() => setEdit({})}
-            >
+            <button className="button button-dark" onClick={() => setEdit({})}>
               <Plus size={18} />
               Nueva
             </button>
@@ -198,9 +195,7 @@ export function JobsManager({
                 <p>
                   {j.area} · {j.location}
                 </p>
-                <span className="status">
-                  {j.active ? "Publicada" : "Pausada"}
-                </span>
+                <AdminBadge>{j.active ? "Publicada" : "Pausada"}</AdminBadge>
               </div>
               <div>
                 <button
@@ -211,7 +206,9 @@ export function JobsManager({
                   Editar
                 </button>
                 <button
-                  className="text-action"
+                  className={
+                    j.active ? "button button-warning" : "button button-dark"
+                  }
                   onClick={() => {
                     setJobs((a) =>
                       a.map((v) =>

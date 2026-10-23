@@ -95,3 +95,6 @@ El propietario rechaza listas visualmente planas tipo tabla en stock y contenedo
 
 ## Espaciado y botones admin r23 — 23/10/2026
 Encabezados con acciones dentro de contenedores admin conservan 24px de margen antes del contenido; no permitir que reglas antiguas lo anulen. Ver pagos usa borgoña de marca con hover más oscuro. Iconos de cabecera cuadrados con radio50% (46px escritorio/44px móvil); opciones de navegación con extremos completamente redondeados como los controles del cliente.
+
+## Colores semánticos admin r24 — 23/10/2026
+Prioridad sobre primarios negros del admin: primarios borgoña622938/hover451b28; secundarios fondo rosado suavef6edf1 con texto borgoña y hovereddae2. Pausar usa ámbar; publicar/habilitar usa primario. Badges con icono y estado: verde petróleo suave para activo/publicado/verificado, ámbar para pausado/por pagar, azul para revisión/preparación/envío, rojo para observado/cancelado y neutro para informativo. Estas superficies pequeñas de estado no cambian la base blanca del sistema. Usar AdminBadge en los estados administrativos.

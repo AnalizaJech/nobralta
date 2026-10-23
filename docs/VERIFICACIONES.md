@@ -17,3 +17,6 @@ Recorrido de los 11 módulos a 1440, 1024, 768 y 390 px: sin desbordamientos ni 
 
 ## Espaciado y botones r23 — 23/10/2026
 Con un pedido En revisión de prueba, gap entre Ver pagos y primera tarjeta medido: 24px en 1440/1024/768/390px. Borgoña por defecto y hover oscuro comprobados. Iconos46x46px desktop/tablet y44x44px móvil, radio50%; menú999px. Sin overflow ni errores de ejecución, fixture restaurado. Se corrigió la regla heredada admin-section/section-title que anulaba el margen.
+
+## Colores admin r24 — 23/10/2026
+11 módulos revisados a1440/1024/768/390px sin overflow ni errores de ejecución. Trabajos: pausa cambia Publicada→Pausada y publicación restaura el estado; fixtures restaurados. Colores y hover de Nueva/Editar/Pausar comprobados en navegador; badges con icono y colores diferentes. Contraste de texto de primarios, secundarios y cuatro tonos de badges calculado: todos superan4.5:1.

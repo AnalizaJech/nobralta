@@ -1,4 +1,4 @@
-import { AdminEmpty, AdminNotice } from "./AdminFeedback";
+import { AdminEmpty, AdminNotice, AdminBadge } from "./AdminFeedback";
 import { useState, useEffect } from "react";
 import {
   ArrowRight,
@@ -415,7 +415,7 @@ export function AgencyManager({ agencies, setAgencies, log }) {
                   </small>
                 </td>
                 <td>
-                  <span className="status">
+                  <AdminBadge>
                     {a.public === false && !a.receives
                       ? "Registro interno"
                       : a.receives === false
@@ -423,13 +423,17 @@ export function AgencyManager({ agencies, setAgencies, log }) {
                         : a.active
                           ? "Recojo habilitado"
                           : "Pausada"}
-                  </span>
+                  </AdminBadge>
                   {a.pointPro && <small>Punto PRO</small>}
                 </td>
                 <td>
                   {a.receives !== false ? (
                     <button
-                      className="button button-outline"
+                      className={
+                        a.active
+                          ? "button button-warning"
+                          : "button button-dark"
+                      }
                       aria-label={
                         (a.active ? "Pausar agencia " : "Habilitar agencia ") +
                         a.name

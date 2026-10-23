@@ -1,4 +1,4 @@
-import { AdminEmpty } from "./AdminFeedback";
+import { AdminEmpty, AdminBadge } from "./AdminFeedback";
 import "./admin.css";
 import {
   AdminOverview,
@@ -477,7 +477,7 @@ export function Admin({
                           <small>{o.agency.name}</small>
                         </td>
                         <td>
-                          <span className="status">{o.status}</span>
+                          <AdminBadge>{o.status}</AdminBadge>
                         </td>
                         <td className="numeric">{currency(o.total)}</td>
                         <td>
@@ -512,7 +512,7 @@ export function Admin({
               </button>
               <div className="section-title">
                 <h2>{order.id}</h2>
-                <span className="status">{order.status}</span>
+                <AdminBadge>{order.status}</AdminBadge>
               </div>
               <div className="admin-columns">
                 <section className="admin-section">
@@ -1076,6 +1076,9 @@ export function Admin({
                     <div className="management-row" key={p.id}>
                       <div>
                         <h3>{p.title}</h3>
+                        <AdminBadge>
+                          {p.active ? "Activa" : "Pausada"}
+                        </AdminBadge>
                         <p>
                           {p.type === "pack"
                             ? `${p.qty} prendas / ${currency(p.price)}`
@@ -1087,7 +1090,7 @@ export function Admin({
                       </div>
                       <div>
                         <button
-                          className="text-action"
+                          className="button button-outline"
                           onClick={() => {
                             setEditing(p);
                             setPromoType(p.type);
@@ -1098,7 +1101,11 @@ export function Admin({
                           Editar
                         </button>
                         <button
-                          className="text-action"
+                          className={
+                            p.active
+                              ? "button button-warning"
+                              : "button button-dark"
+                          }
                           onClick={() => {
                             setPromos((a) =>
                               a.map((v) =>
@@ -1382,7 +1389,11 @@ export function Admin({
                         </details>
                       </div>
                       <button
-                        className="text-action"
+                        className={
+                          a.active
+                            ? "button button-warning"
+                            : "button button-dark"
+                        }
                         onClick={() => {
                           setAffiliates((b) =>
                             b.map((v) =>

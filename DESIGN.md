@@ -34,3 +34,6 @@ Menú jerárquico de compra/servicio/descubrimiento. Cierre único en navbar, si
 
 ## Pulido admin r22 — 23/10/2026
 Sustituye la navegación lateral: cabecera de marca centrada y menú de pantalla completa, con grupos en cuatro/dos/una columna según ancho. El logo sirve de retorno a tienda. Catálogo como galería de productos y stock bajo como tarjetas visuales con estado y acceso a edición. Métricas separadas, acciones de preparación/despacho con contorno y estados con iconos. Componentes AdminEmpty y AdminNotice unifican mensajes con padding y tipografía del sistema. Primarios negros/hover borgoña, secundarios blancos/hover gris y destructivos con borde borgoña.
+
+## Paleta de acciones y estados admin r24
+Primario: borgoña #622938 y hover #451b28. Secundario: fondo #f6edf1, texto #622938, borde #d7b8c4; hover #eddae2. Advertencia/pausa: ámbar #805019 sobre #fff3df; destrucción: rojo #962c43 sobre #fbeef1. AdminBadge incluye icono y texto: éxito #155e52/#eaf5f1, advertencia #805019/#fff3df, información #284e83/#edf3fc, error #962c43/#fbeef1 y neutro gris. No usar un único gris para estados diferentes; el color siempre acompaña texto e icono.

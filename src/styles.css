@@ -7785,3 +7785,12 @@ textarea::placeholder {
     width: 100%;
   }
 }
+
+/* La selección conserva su aspecto; salir mantiene la anatomía de la navegación. */
+.account-shell>nav>button.current:hover{background:#202023;color:#fff}
+.admin-nav button.current:hover{background:#19191b;color:#fff}
+.select-options>button[aria-selected="true"]:not(:disabled):hover{background:#19191b;color:#fff}
+.account-shell>nav>.account-signout{justify-content:flex-start!important;gap:13px;width:100%;min-height:55px;padding:0 16px;margin-top:0;text-align:left;font-size:13px}
+.account-shell>nav>.account-signout:hover{background:#622938;color:#fff;border-color:#622938}
+.account-shell>nav>.account-signout>svg{display:block;margin:0;flex:0 0 20px}
+.account-shell>nav>.account-signout>svg:last-child{margin-left:0;margin-right:0}

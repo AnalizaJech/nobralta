@@ -62,3 +62,6 @@ Etiqueta Precio total en carrito y recojo. Cerrar sesión con icono SignOut y ho
 
 ## Historial y tablet — 22/10/2026
 Cuenta incluye Historial de compras debajo de Mis pedidos, con prendas, variantes, cantidades, precios, descuentos, total y recojo; Mis pedidos mantiene seguimiento. Tablet hasta1100px: productos → resumen/subtotal → formulario. Historial probado con fixture aislado/restaurado; tablet1024 sin overflow. GitHub Pages preparado con base /nobralta/ y workflow de Actions.
+
+## Estados seleccionados y salir — 22/10/2026
+Las opciones de cuenta/combobox seleccionadas conservan fondo oscuro y texto blanco al hover. Cerrar sesión alinea icono y texto a la izquierda con el resto de navegación, sin margen extra; hover vino #622938.

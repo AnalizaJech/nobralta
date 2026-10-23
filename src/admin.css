@@ -1645,3 +1645,441 @@
   background: #f4f4f6;
   border-color: #dedee2;
 }
+
+/* Readable tables and order review, with deliberate action spacing. */
+.admin-app .admin-table thead th {
+  background: #19191b;
+  color: #fff;
+  border-color: #343438;
+  font-weight: 600;
+  padding: 18px 20px;
+}
+.admin-app .admin-table tbody td {
+  transition: background-color 140ms ease;
+}
+.admin-app .admin-table tbody tr:hover td {
+  background: #f8f1f4;
+}
+.admin-app .admin-table tbody tr:focus-within td {
+  background: #f8f1f4;
+}
+.admin-app .admin-table .button.button-outline {
+  color: var(--action-primary);
+  background: var(--action-secondary);
+  border-color: var(--action-secondary-line);
+}
+.admin-app .admin-table .button.button-outline:hover {
+  color: #fff;
+  background: var(--action-primary);
+  border-color: var(--action-primary);
+}
+.admin-app .admin-order-heading {
+  margin: 28px 0;
+  align-items: center;
+}
+.admin-app .admin-order-heading h2 {
+  font-size: 23px;
+  margin: 0;
+}
+.admin-app .admin-order-workspace {
+  align-items: start;
+  gap: 28px;
+}
+.admin-app .admin-order-workspace > section {
+  padding: 28px;
+}
+.admin-app .admin-order-workspace .button {
+  width: fit-content;
+  max-width: 100%;
+  justify-self: start;
+  align-self: start;
+  margin: 0;
+}
+.admin-app .admin-order-workspace form {
+  margin: 28px 0;
+  gap: 22px;
+}
+.admin-app .admin-order-workspace .form-grid > .button {
+  justify-self: start;
+}
+.admin-app .admin-order-workspace .checkbox {
+  margin: 2px 0 6px;
+  align-items: flex-start;
+  line-height: 1.8;
+}
+.admin-app .admin-order-workspace .checkbox input {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.admin-recipient {
+  margin: 24px 0 28px;
+}
+.order-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.admin-app .order-person h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 4px;
+}
+.order-person > svg {
+  flex-shrink: 0;
+  color: #622938;
+}
+.order-person span,
+.order-destination span {
+  font-size: 12px;
+  color: #52525b;
+  line-height: 1.7;
+}
+.order-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  margin: 22px 0;
+}
+.order-info-grid > div {
+  min-width: 0;
+}
+.order-info-grid .wide {
+  grid-column: 1 / -1;
+}
+.order-info-grid dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #52525b;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 7px;
+}
+.order-info-grid dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.order-destination {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8f4f6;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 24px;
+}
+.order-destination > svg {
+  flex-shrink: 0;
+  color: #622938;
+  margin-top: 3px;
+}
+.order-destination strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 5px 0;
+}
+.order-destination p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #52525b;
+}
+.admin-app .admin-order-workspace .order-lines {
+  margin: 28px 0;
+}
+.admin-app .admin-order-workspace .order-lines > div {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 0;
+  border-color: #dedee2;
+}
+.admin-app .admin-order-workspace .order-lines img {
+  width: 58px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  padding: 6px;
+  background: #f4f4f6;
+}
+.admin-app .admin-order-workspace .order-lines span {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.admin-app .admin-order-workspace .order-lines small {
+  display: block;
+  color: #52525b;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.admin-app .admin-order-workspace .order-lines strong {
+  font-size: 13px;
+  white-space: nowrap;
+}
+.order-totals {
+  padding: 20px;
+  background: #f8f8fa;
+  border-radius: 14px;
+  margin: 24px 0;
+}
+.order-totals > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  padding: 8px 0;
+}
+.order-totals dt {
+  color: #52525b;
+}
+.order-totals dd {
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.order-totals .order-total {
+  border-top: 1px solid #dedee2;
+  margin-top: 12px;
+  padding-top: 18px;
+}
+.order-total dt {
+  color: #19191b;
+  font-weight: 600;
+}
+.order-total dd {
+  color: #622938;
+  font-size: 20px;
+}
+.order-coupon {
+  display: inline-block;
+  color: #622938;
+  background: #f0e0e7;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-left: 6px;
+}
+.admin-app .admin-order-history {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #dedee2;
+}
+.admin-app .admin-order-history h3,
+.admin-app .order-communication h3,
+.admin-app .voucher-title h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin: 0 0 22px;
+  line-height: 1.5;
+}
+.admin-order-history ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.admin-order-history li {
+  padding: 0 0 22px 20px;
+  border-left: 1px solid #dedee2;
+  margin-left: 6px;
+  position: relative;
+}
+.admin-order-history li::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #622938;
+}
+.admin-order-history li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+.admin-order-history time {
+  display: block;
+  color: #52525b;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 9px;
+}
+.admin-order-history p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #52525b;
+  margin: 7px 0 0;
+}
+.admin-app .admin-voucher {
+  border: 1px solid #dedee2;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 28px 0;
+}
+.voucher-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+}
+.admin-app .voucher-title h3 {
+  margin: 0;
+}
+.voucher-title > span {
+  font-size: 11px;
+  color: #52525b;
+}
+.admin-voucher-image {
+  background: #f4f4f6;
+  padding: 20px;
+  text-align: center;
+}
+.admin-voucher-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 460px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+.admin-voucher-pdf {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+  background: #f4f4f6;
+}
+.admin-voucher-footer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-voucher-footer p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #52525b;
+  width: 100%;
+}
+.admin-app .order-communication {
+  border-top: 1px solid #dedee2;
+  padding-top: 28px;
+  margin-top: 32px;
+}
+.admin-app .order-communication textarea {
+  height: 140px;
+  resize: none;
+  line-height: 1.8;
+}
+.admin-app .order-communication > .button {
+  margin-top: 20px;
+}
+.admin-app .order-communication .form-hint {
+  margin-top: 20px;
+}
+.admin-app .admin-order-notice {
+  padding: 18px;
+  border-radius: 12px;
+  background: #edf3fc;
+  color: #284e83;
+  font-size: 13px;
+  line-height: 1.8;
+}
+@media (max-width: 700px) {
+  .admin-app .admin-order-workspace > section {
+    padding: 22px;
+  }
+  .order-info-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .admin-app .admin-order-workspace .order-lines > div {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .admin-app .admin-order-workspace .order-lines strong {
+    grid-column: 2;
+  }
+  .order-totals > div {
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .order-total dd {
+    font-size: 18px;
+  }
+  .admin-app .admin-order-workspace .button {
+    min-height: 44px;
+    padding: 11px 18px;
+  }
+  .order-destination,
+  .order-totals {
+    padding: 18px;
+  }
+  .admin-voucher-image {
+    padding: 14px;
+  }
+  .admin-voucher-pdf {
+    height: 380px;
+  }
+}
+.admin-app .admin-voucher-viewer {
+  width: min(960px, 94vw);
+  max-height: 92dvh;
+  padding: 24px;
+  border: 1px solid #dedee2;
+  border-radius: 18px;
+  background: #fff;
+  color: #19191b;
+}
+.admin-voucher-viewer::backdrop {
+  background: rgb(25 25 27 / 65%);
+}
+.voucher-viewer-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.admin-app .voucher-viewer-heading h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.admin-app .voucher-viewer-heading .icon-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: #f4f4f6;
+}
+.admin-app .voucher-viewer-heading .icon-button:hover {
+  background: #eddae2;
+  color: #622938;
+}
+.admin-voucher-viewer > img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 76dvh;
+  margin: auto;
+  object-fit: contain;
+}

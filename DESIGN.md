@@ -37,3 +37,6 @@ Sustituye la navegación lateral: cabecera de marca centrada y menú de pantalla
 
 ## Paleta de acciones y estados admin r24
 Primario: borgoña #622938 y hover #451b28. Secundario: fondo #f6edf1, texto #622938, borde #d7b8c4; hover #eddae2. Advertencia/pausa: ámbar #805019 sobre #fff3df; destrucción: rojo #962c43 sobre #fbeef1. AdminBadge incluye icono y texto: éxito #155e52/#eaf5f1, advertencia #805019/#fff3df, información #284e83/#edf3fc, error #962c43/#fbeef1 y neutro gris. No usar un único gris para estados diferentes; el color siempre acompaña texto e icono.
+
+## Pedido y tablas r25
+Encabezados de tabla #19191b/#fff, filas hover #f8f1f4; acción de fila rosada que pasa a borgoña. Detalle con bloques de destinatario, agencia, importes, historial y pago; etiquetas discretas, cifras destacadas e iconos de contexto. Imágenes del voucher conservan proporción y pueden ampliarse en visor con cierre accesible; PDF embebido y descarga disponible. Acciones con ancho según contenido y20px bajo textarea; cada botón lleva un solo icono.

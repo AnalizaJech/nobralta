@@ -98,3 +98,6 @@ Encabezados con acciones dentro de contenedores admin conservan 24px de margen a
 
 ## Colores semánticos admin r24 — 23/10/2026
 Prioridad sobre primarios negros del admin: primarios borgoña622938/hover451b28; secundarios fondo rosado suavef6edf1 con texto borgoña y hovereddae2. Pausar usa ámbar; publicar/habilitar usa primario. Badges con icono y estado: verde petróleo suave para activo/publicado/verificado, ámbar para pausado/por pagar, azul para revisión/preparación/envío, rojo para observado/cancelado y neutro para informativo. Estas superficies pequeñas de estado no cambian la base blanca del sistema. Usar AdminBadge en los estados administrativos.
+
+## Gestión de pedidos r25 — 23/10/2026
+Tablas admin con encabezado negro y texto blanco; hover de filas rosado muy suave y acción de gestión con hover borgoña. Detalle de pedido con datos etiquetados, agencia, resumen de importes e historial estructurado. Voucher de imagen visible, ampliable y descargable; PDF en visor integrado más descarga. Botones de acción compactos, separación20–28px respecto a campos/contenedores y un único icono por botón. No mezclar el borrador de comunicación con avisos de verificación.

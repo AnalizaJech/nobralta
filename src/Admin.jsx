@@ -1,3 +1,11 @@
+import {
+  OrderRecipient,
+  OrderTotals,
+  OrderHistory,
+  OrderPayment,
+  AdminVoucher,
+  OrderCommunication,
+} from "./AdminOrderVisuals";
 import { AdminEmpty, AdminBadge } from "./AdminFeedback";
 import "./admin.css";
 import {
@@ -33,7 +41,6 @@ import {
   Pause,
   Play,
   Prohibit,
-  Copy,
   UserMinus,
   UserPlus,
 } from "@phosphor-icons/react";
@@ -482,7 +489,7 @@ export function Admin({
                         <td className="numeric">{currency(o.total)}</td>
                         <td>
                           <button
-                            className="text-action"
+                            className="button button-outline"
                             onClick={() => {
                               setSelected(o.id);
                               setNotice("");
@@ -506,30 +513,21 @@ export function Admin({
           )}
           {tab === "Pedidos" && order && (
             <>
-              <button className="text-action" onClick={() => setSelected(null)}>
+              <button
+                className="button button-outline"
+                onClick={() => setSelected(null)}
+              >
                 <ArrowLeft size={17} />
                 Todos los pedidos
               </button>
-              <div className="section-title">
+              <div className="section-title admin-order-heading">
                 <h2>{order.id}</h2>
                 <AdminBadge>{order.status}</AdminBadge>
               </div>
-              <div className="admin-columns">
+              <div className="admin-columns admin-order-workspace">
                 <section className="admin-section">
                   <h2>Compra y destinatario</h2>
-                  <p className="prose">
-                    {order.customer.name} {order.customer.lastName}
-                    <br />
-                    DNI: {order.customer.dni}
-                    <br />
-                    {order.customer.phone}
-                    <br />
-                    {order.customer.email}
-                    <br />
-                    Shalom: {order.agency.name}
-                    <br />
-                    {order.agency.region} / {order.agency.city}
-                  </p>
+                  <OrderRecipient order={order} />
                   <div className="order-lines">
                     {order.lines.map((l) => (
                       <div key={l.key}>
@@ -544,26 +542,15 @@ export function Admin({
                       </div>
                     ))}
                   </div>
-                  <p className="prose">
-                    Descuento: {currency(order.discount)}
-                    {order.code ? " / " + order.code : ""}
-                    <br />
-                    Precio total: <strong>{currency(order.total)}</strong>
-                  </p>
+                  <OrderTotals order={order} />
                   <button
-                    className="text-action"
+                    className="button button-outline"
                     onClick={() => receipt(order)}
                   >
                     <DownloadSimple size={18} />
                     Detalle PDF
                   </button>
-                  <h3 className="subheading">Historial</h3>
-                  {order.history.map((h, i) => (
-                    <p className="history" key={i}>
-                      {date(h.at)} · {h.status}
-                      {h.note ? " — " + h.note : ""}
-                    </p>
-                  ))}
+                  <OrderHistory history={order.history} />
                 </section>
                 <section className="admin-section">
                   <h2>Pago y despacho</h2>
@@ -600,50 +587,9 @@ export function Admin({
                       </button>
                     </form>
                   )}
-                  <p className="prose">
-                    Envío:{" "}
-                    {order.shipping != null
-                      ? currency(order.shipping)
-                      : "Por cotizar"}
-                    <br />
-                    Total a verificar:{" "}
-                    {currency(order.total + (order.shipping || 0))}
-                  </p>
-                  {order.report ? (
-                    <>
-                      <p className="prose">
-                        Medio: {order.report.method}
-                        <br />
-                        Operación: {order.report.reference}
-                        <br />
-                        {order.report.amountSource === "order-total"
-                          ? "Importe del pedido"
-                          : "Importe declarado"}
-                        : {currency(Number(order.report.amount))}
-                        <br />
-                        {order.report.paidAt && (
-                          <>
-                            Pago declarado: {order.report.paidAt}
-                            <br />
-                          </>
-                        )}
-                        Reporte recibido: {date(order.report.reported)}
-                      </p>
-                      <a
-                        className="text-action"
-                        href={order.report.file.data}
-                        download={order.report.file.name}
-                      >
-                        <DownloadSimple size={17} />
-                        Constancia: {order.report.file.name}
-                      </a>
-                    </>
-                  ) : (
-                    <p className="prose">
-                      El cliente todavía no reportó su pago.
-                    </p>
-                  )}
-                  {order.status === "En revisión" && (
+                  <OrderPayment order={order} />
+                  <AdminVoucher file={order.report?.file} />
+                  {order.status === "En revisión" && !observing && (
                     <form
                       className="form-grid"
                       onSubmit={(e) => {
@@ -693,7 +639,7 @@ export function Admin({
                       </button>
                       <button
                         type="button"
-                        className="text-action"
+                        className="button button-warning"
                         onClick={() => {
                           setObserving(true);
                         }}
@@ -730,9 +676,10 @@ export function Admin({
                       </button>
                       <button
                         type="button"
-                        className="text-action"
+                        className="button button-outline"
                         onClick={() => setObserving(false)}
                       >
+                        <ArrowLeft size={18} />
                         Volver
                       </button>
                     </form>
@@ -822,7 +769,7 @@ export function Admin({
                   )}
                   {["Por pagar", "Pago observado"].includes(order.status) && (
                     <button
-                      className="text-action"
+                      className="button button-danger"
                       onClick={() => {
                         setCancelConfirm(true);
                       }}
@@ -849,7 +796,7 @@ export function Admin({
                           Confirmar cancelación
                         </button>
                         <button
-                          className="text-action"
+                          className="button button-outline"
                           onClick={() => setCancelConfirm(false)}
                         >
                           <Package size={18} />
@@ -857,46 +804,9 @@ export function Admin({
                         </button>
                       </div>
                     )}
-                  <h3 className="subheading">Comunicación con el cliente</h3>
-                  <p className="prose">
-                    WhatsApp: {order.customer.phone}
-                    <br />
-                    Correo: {order.customer.email}
-                    <br />
-                    Asunto: Tu compra NOBRALTA · {order.id}
-                  </p>
-                  <label className="field">
-                    Mensaje de compra
-                    <textarea
-                      key={order.status}
-                      rows="5"
-                      defaultValue={`Hola ${order.customer.name}, gracias por elegir NOBRALTA. Tu pedido ${order.id} está: ${order.status}. Total de productos: ${currency(order.total)}. Recojo en Shalom ${order.agency.name}. Entrega estimada: 2–10 días.${order.guide ? " Guía: " + order.guide : ""}`}
-                      onChange={(e) => setNotice(e.target.value)}
-                    />
-                  </label>
-                  <button
-                    className="text-action"
-                    onClick={async () => {
-                      await navigator.clipboard.writeText(
-                        notice ||
-                          `Hola ${order.customer.name}, gracias por elegir NOBRALTA. Tu pedido ${order.id} está: ${order.status}. Total ${currency(order.total)}. Shalom ${order.agency.name}. Entrega: 2–10 días.`,
-                      );
-                      setMessage(
-                        "Mensaje copiado. Puedes revisarlo y adjuntar el detalle PDF antes de enviarlo.",
-                      );
-                    }}
-                  >
-                    <Copy size={18} />
-                    Copiar mensaje
-                    <ArrowRight size={17} />
-                  </button>
-                  <p className="form-hint">
-                    Prepara el detalle PDF y las pruebas de despacho para
-                    adjuntarlos en tu canal de atención. El envío del mensaje se
-                    realiza fuera de esta pantalla.
-                  </p>
+                  <OrderCommunication order={order} onCopied={setMessage} />
                   {notice && (
-                    <p role="status" className="form-hint">
+                    <p role="status" className="admin-order-notice">
                       {notice}
                     </p>
                   )}

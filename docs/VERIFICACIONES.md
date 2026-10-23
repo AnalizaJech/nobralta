@@ -20,3 +20,6 @@ Con un pedido En revisión de prueba, gap entre Ver pagos y primera tarjeta medi
 
 ## Colores admin r24 — 23/10/2026
 11 módulos revisados a1440/1024/768/390px sin overflow ni errores de ejecución. Trabajos: pausa cambia Publicada→Pausada y publicación restaura el estado; fixtures restaurados. Colores y hover de Nueva/Editar/Pausar comprobados en navegador; badges con icono y colores diferentes. Contraste de texto de primarios, secundarios y cuatro tonos de badges calculado: todos superan4.5:1.
+
+## Gestión de pedidos r25 — 23/10/2026
+Fixture de pedido En revisión con voucher PNG: vista previa decodificada, ampliación/cierre nativo comprobados; PDF válido cargado en iframe. No errores de ejecución. Detalle revisado a1440/1024/768/390px sin desbordamiento, separación de Copiar mensaje20px respecto al textarea y ningún botón con dos iconos. Revisión en los11 módulos también sin botones con dos iconos. Importe incorrecto mantiene En revisión y el correcto cambia a Pago verificado; observación puede abrirse y cancelarse. Encabezado de tabla negro/blanco y hover comprobados. Fixtures restaurados.

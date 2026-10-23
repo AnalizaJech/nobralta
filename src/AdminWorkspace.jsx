@@ -140,7 +140,6 @@ export function AdminOverview({
                   </small>
                 </span>
                 <b>{currency(o.total)}</b>
-                <ArrowRight size={18} />
               </button>
             ))
           ) : (
@@ -157,7 +156,6 @@ export function AdminOverview({
               <b>
                 {orders.filter((o) => o.status === "Pago verificado").length}
               </b>
-              <ArrowRight size={17} />
             </button>
             <button onClick={() => onOrders("En preparación")}>
               <Truck size={20} />
@@ -165,7 +163,6 @@ export function AdminOverview({
               <b>
                 {orders.filter((o) => o.status === "En preparación").length}
               </b>
-              <ArrowRight size={17} />
             </button>
           </div>
         </section>
@@ -192,7 +189,6 @@ export function AdminOverview({
                         "stock-indicator " + (stock === 0 ? "is-out" : "")
                       }
                     >
-                      <WarningCircle size={16} />
                       {stock === 0
                         ? "Agotado"
                         : stock + " unidades disponibles"}
@@ -223,7 +219,6 @@ export function AdminOverview({
                   <Icon size={20} />
                   <span>{s}</span>
                   <b>{scoped.filter((o) => o.status === s).length}</b>
-                  <ArrowRight size={16} />
                 </button>
               );
             })}

@@ -13,6 +13,9 @@ import {
   EyeSlash,
   SignOut,
   MapPin,
+  UserCircle,
+  Receipt,
+  Package,
 } from "@phosphor-icons/react";
 import { digest, currency, date, receipt, phases } from "./store";
 export function Auth({ users, setUsers, onLogin }) {
@@ -598,67 +601,108 @@ export function OrderDetail({ order, onReport, settings }) {
       <div className="order-detail-title">
         <div>
           <p>{date(order.created)}</p>
-          <h2>{order.id}</h2>
+          <h2>Pedido {order.id}</h2>
         </div>
         <span className="status">{order.status}</span>
       </div>
       <TrackingJourney order={order} />
-      <div className="order-lines">
-        {order.lines.map((p) => (
-          <div key={p.key}>
-            <AssetImage src={p.image} alt="" />
-            <span>
-              {p.name}
-              <small>
-                {p.color} / {p.size} · {p.qty} unidades
-              </small>
-            </span>
-            <strong>{currency(p.price * p.qty)}</strong>
-          </div>
-        ))}
+      <section className="customer-order-card">
+        <h3>
+          <Package size={21} />
+          Prendas del pedido
+        </h3>
+        <div className="order-lines">
+          {order.lines.map((p) => (
+            <div key={p.key}>
+              <AssetImage src={p.image} alt="" />
+              <span>
+                {p.name}
+                <small>
+                  {p.color} / {p.size} · {p.qty} unidades
+                </small>
+              </span>
+              <strong>{currency(p.price * p.qty)}</strong>
+            </div>
+          ))}
+        </div>
+      </section>
+      <div className="order-facts customer-order-facts">
+        <section className="customer-order-card">
+          <h3>
+            <MapPin size={21} />
+            Recojo Shalom
+          </h3>
+          <strong>{order.agency.name}</strong>
+          <p>
+            {order.agency.region} · {order.agency.city}
+          </p>
+          {order.agency.address && <p>{order.agency.address}</p>}
+        </section>
+        <section className="customer-order-card">
+          <h3>
+            <UserCircle size={21} />
+            Destinatario
+          </h3>
+          <strong>
+            {order.customer.name} {order.customer.lastName}
+          </strong>
+          <dl>
+            <div>
+              <dt>DNI</dt>
+              <dd>{order.customer.dni}</dd>
+            </div>
+            <div>
+              <dt>Teléfono</dt>
+              <dd>{order.customer.phone}</dd>
+            </div>
+            <div>
+              <dt>Correo</dt>
+              <dd>{order.customer.email}</dd>
+            </div>
+          </dl>
+        </section>
+        <section className="customer-order-card">
+          <h3>
+            <Receipt size={21} />
+            Resumen de pago
+          </h3>
+          <dl>
+            <div>
+              <dt>Prendas</dt>
+              <dd>{currency(order.total)}</dd>
+            </div>
+            <div>
+              <dt>Envío</dt>
+              <dd>
+                {order.shipping != null
+                  ? currency(order.shipping)
+                  : "Por cotizar"}
+              </dd>
+            </div>
+            <div className="customer-order-total">
+              <dt>Precio total</dt>
+              <dd>{currency(order.total + (order.shipping || 0))}</dd>
+            </div>
+          </dl>
+          <p>Entrega: 2–10 días</p>
+          {order.guide && <p>Guía / OS: {order.guide}</p>}
+        </section>
       </div>
-      <div className="order-facts">
-        <p>
-          <strong>Recojo Shalom</strong>
-          <br />
-          {order.agency.name}
-          <br />
-          {order.agency.region} / {order.agency.city}
-        </p>
-        <p>
-          <strong>Destinatario</strong>
-          <br />
-          {order.customer.name} {order.customer.lastName}
-          <br />
-          DNI {order.customer.dni}
-          <br />
-          {order.customer.phone}
-          <br />
-          {order.customer.email}
-        </p>
-        <p>
-          <strong>Productos</strong>
-          <br />
-          {currency(order.total)}
-          <br />
-          Entrega: 2–10 días
-          <br />
-          {order.guide
-            ? "Guía / OS: " + order.guide
-            : order.shipping != null
-              ? "Envío: " + currency(order.shipping)
-              : "Envío pendiente de cotizar"}
-          <br />
-          Total: {currency(order.total + (order.shipping || 0))}
-        </p>
-      </div>
-      <button className="text-action" onClick={() => receipt(order)}>
-        <DownloadSimple size={19} />
-        Descargar detalle PDF
-      </button>
-      <p className="form-hint">
-        El detalle de pedido no sustituye una boleta o factura electrónica.
-      </p>
+      <section className="customer-order-card customer-order-download">
+        <div>
+          <h3>Detalle de tu compra</h3>
+          <p>
+            El detalle del pedido no sustituye una boleta o factura electrónica.
+          </p>
+        </div>
+        <button
+          className="button button-outline"
+          onClick={() => receipt(order)}
+        >
+          <DownloadSimple size={19} />
+          Descargar detalle PDF
+        </button>
+      </section>
       {order.dispatchProof && (
         <a
           className="text-action"

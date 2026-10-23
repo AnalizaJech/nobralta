@@ -8421,3 +8421,26 @@ input:not(:disabled):-webkit-autofill:focus {
 .avatar-crop > label { display:grid; gap:8px; font-size:12px; margin:16px 0; }
 .avatar-crop input[type=range] { width:100%; accent-color:#622938; padding:0; height:24px; }
 .avatar-crop-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+[hidden] { display:none !important; }
+.customer-order-card { border:1px solid #dedee2; border-radius:18px; padding:26px; background:#fff; margin:26px 0; min-width:0; }
+.customer-order-card h3 { display:flex; gap:10px; align-items:center; margin:0 0 22px; font:600 17px/1.5 var(--body); }
+.customer-order-card h3 > svg { flex-shrink:0; color:#622938; }
+.customer-order-card p { margin:10px 0 0; font-size:13px; line-height:1.8; color:#52525b; overflow-wrap:anywhere; }
+.customer-order-card > strong { display:block; font-size:14px; line-height:1.8; }
+.order-detail .customer-order-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin:26px 0; }
+.customer-order-facts .customer-order-card { margin:0; }
+.customer-order-card dl { margin:18px 0 0; }
+.customer-order-card dl > div { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin:12px 0; font-size:13px; line-height:1.8; }
+.customer-order-card dt { color:#52525b; }
+.customer-order-card dd { margin:0; text-align:right; overflow-wrap:anywhere; min-width:0; }
+.customer-order-total { padding-top:16px; border-top:1px solid #dedee2; font-weight:600; }
+.customer-order-total dd { color:#622938; }
+.customer-order-download { display:flex; gap:24px; align-items:center; justify-content:space-between; }
+.customer-order-download h3 { margin-bottom:8px; }
+.customer-order-download .button { flex-shrink:0; gap:10px; }
+.customer-order-card .order-lines { margin:0; }
+@media(max-width:1000px){ .order-detail .customer-order-facts { grid-template-columns:1fr; } }
+@media(max-width:640px){ .customer-order-card { padding:22px; } .customer-order-download { flex-direction:column; align-items:flex-start; } .customer-order-download .button { max-width:100%; } }
+.order-detail .tracking-events ol > li { padding:18px; margin-top:12px; border:0; border-radius:12px; background:#f8f8fa; gap:20px; }
+.order-detail .tracking-events ol > li time { color:#52525b; line-height:1.8; }
+@media(max-width:640px){ .order-detail .tracking-events ol > li { grid-template-columns:1fr; gap:8px; } }

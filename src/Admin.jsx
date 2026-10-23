@@ -116,6 +116,7 @@ export function Admin({
   log,
   onExit,
   onAccount,
+  onBeforeOverlay,
   onSearch,
   onBag,
   bagCount,
@@ -309,7 +310,7 @@ export function Admin({
   );
   return (
     <div className="admin-app" data-ui ref={adminRoot}>
-      <a className="skip-link" href="#contenido">
+      <a className="skip-link" href="#admin-contenido">
         Ir al contenido
       </a>
       <header className="admin-header">
@@ -342,25 +343,37 @@ export function Admin({
             />
           )}
         </button>
-        <div className="admin-header-actions">
+        <div
+          className="admin-header-actions"
+          onPointerDownCapture={onBeforeOverlay}
+        >
           <button
             className="icon-button"
             aria-label="Mi cuenta"
-            onClick={onAccount}
+            onClick={() => {
+              setMobileNav(false);
+              onAccount();
+            }}
           >
             <UserCircle size={23} />
           </button>
           <button
             className="icon-button"
             aria-label="Buscar prendas"
-            onClick={onSearch}
+            onClick={() => {
+              setMobileNav(false);
+              onSearch();
+            }}
           >
             <MagnifyingGlass size={22} />
           </button>
           <button
             className="icon-button"
             aria-label={`Abrir bolsa, ${bagCount} prendas`}
-            onClick={onBag}
+            onClick={() => {
+              setMobileNav(false);
+              onBag();
+            }}
           >
             <Handbag size={23} />
             {bagCount > 0 && <span className="bag-count">{bagCount}</span>}
@@ -404,7 +417,7 @@ export function Admin({
             ))}
           </div>
         </nav>
-        <main className="admin-main" id="contenido" inert={mobileNav}>
+        <main className="admin-main" id="admin-contenido" inert={mobileNav}>
           <div className="admin-title">
             <div>
               <h1>{tab}</h1>

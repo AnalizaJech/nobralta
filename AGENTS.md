@@ -110,3 +110,6 @@ Buscar agencia debe mostrar resultados directamente seleccionables debajo del in
 
 ## Ajustes r28 — 23/10/2026, prioridad sobre r26
 El propietario pide quitar todos los rótulos de prueba/demostración en la UI de pagos. Nombres/titulares normales y QR únicamente subido por admin para Yape o Plin; retirar QR de muestra. Conservar QR propio existente al migrar. Foto de perfil con recorte cuadrado interactivo (arrastre, zoom, posición), aplicar/cancelar antes de guardar. Admin cabecera igual al cliente: cuenta, buscar y carrito, sin cerrar sesión redundante; salir desde cuenta. Resultados de agencia deben ocupar exactamente todo el ancho del input en el grid.
+
+## Retorno a administración y detalle cliente r29 — 23/10/2026
+Cuenta/búsqueda/bolsa abiertas desde admin deben cerrar con X de vuelta al módulo, estado de filtros/edición y scroll originales; mantener Admin montado y ocultarlo temporalmente, sin enviar al hero. Capturar scroll antes de foco de cabecera; búsqueda también debe restaurarlo. Logo sigue llevando expresamente a tienda. Cliente: título Pedido + código, prendas/recojo/destinatario/resumen/descarga en contenedores coherentes, movimientos con fondo y espaciado.

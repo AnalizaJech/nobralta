@@ -46,3 +46,6 @@ Selector de imagen compartido OptionalImage: vista circular de perfil y cuadrada
 
 ## Ajustes r28
 QR configurable por administrador, sin rótulos de demostración en UI. Avatar admite encuadre cuadrado antes de guardarse; controles de zoom y posición accesibles. Admin replica las tres acciones de cabecera del cliente (cuenta, buscar, bolsa), conservando logo centrado y menú a la izquierda. Resultados de agencias ocupan todas las columnas del formulario para igualar el ancho del buscador.
+
+## Retorno y detalle cliente r29
+La navegación auxiliar preserva el contexto del área administrativa montada. El cierre restaura scroll y foco. Detalle cliente titula Pedido más código; tarjetas blancas con borde neutro, radio18px, padding26px, iconos borgoña y campos etiquetados. Secciones en tres columnas o apiladas; historial desplegado con filas contenidas y descarga con acción independiente.

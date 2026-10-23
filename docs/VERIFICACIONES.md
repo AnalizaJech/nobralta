@@ -32,3 +32,6 @@ Selección directa de Larcomar guarda idshalom-661 y completa Lima/dirección. M
 
 ## Ajustes r28
 Anchos input/resultados iguales:555.33px en1440,453.83 en1024,686 en768 y308 en390. Recorte con zoom guarda JPEG400x400, persiste tras reload y permite eliminar. Pagos ya sin rótulos de prueba; migración quita QR de muestra y preserva QR subido. Upload/cambio/eliminación QR admin continúa funcionando. Cabecera sin logout y sin overflow a1440/1024/768/390/360; cuenta y búsqueda abren sus secciones.
+
+## Retorno y detalle r29
+En Catálogo admin a600px de scroll, abrir/cerrar cuenta, búsqueda y bolsa mediante clic de puntero devuelve exactamente a600px y conserva Catálogo. Se utilizó clic por coordenadas visibles para evitar que el auto-scroll de locator.click alterase la posición antes del evento. Cliente con pedido En revisión: título Pedido NB-UX-29, cinco contenedores y movimientos desplegables;1440/1024/768/390 sin overflow. Fixtures restaurados, sin errores de ejecución.

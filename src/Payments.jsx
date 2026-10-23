@@ -28,7 +28,6 @@ export function paymentMethods(settings) {
 export function CheckoutPayment({ settings, total }) {
   const methods = paymentMethods(settings).filter((x) => x.active && x.account),
     [method, setMethod] = useState(""),
-    [report, setReport] = useState(false),
     [filename, setFilename] = useState("");
   const selected = methods.find((x) => x.name === method);
   return (
@@ -51,8 +50,11 @@ export function CheckoutPayment({ settings, total }) {
           name="method"
           aria-label="Medio de pago"
           value={method}
-          onChange={(e) => setMethod(e.target.value)}
-          required={report}
+          onChange={(e) => {
+            setMethod(e.target.value);
+            setFilename("");
+          }}
+          required
         >
           <option value="">Elige el medio de pago</option>
           {(methods.length
@@ -82,17 +84,8 @@ export function CheckoutPayment({ settings, total }) {
             : "Los datos de pago se confirmarán al revisar tu pedido."}
         </p>
       )}
-      <label className="checkbox">
-        <input
-          name="reportPayment"
-          type="checkbox"
-          checked={report}
-          onChange={(e) => setReport(e.target.checked)}
-        />
-        Ya realicé un pago y quiero adjuntar mi voucher
-      </label>
-      {report && (
-        <div className="voucher-fields">
+      {method && (
+        <div className="voucher-fields" key={method}>
           <label className="field">
             Número de operación
             <input name="reference" required placeholder="Ej. 123456789" />
@@ -133,8 +126,12 @@ export function CheckoutPayment({ settings, total }) {
           </p>
         </div>
       )}
-      <button className="button button-dark full" type="submit">
-        {report ? "Confirmar y enviar voucher" : "Confirmar mi pedido"}
+      <button
+        className="button button-dark full"
+        type="submit"
+        disabled={!method}
+      >
+        Confirmar y enviar voucher
         <Check size={19} />
       </button>
     </aside>

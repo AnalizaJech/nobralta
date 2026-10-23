@@ -779,6 +779,10 @@ export function App() {
     );
   }
   function createOrder(customer, agency, report) {
+    if (!report?.file?.data) {
+      setCodeMessage("Adjunta tu voucher para confirmar el pedido.");
+      return;
+    }
     if (
       applied &&
       !affiliates.some(

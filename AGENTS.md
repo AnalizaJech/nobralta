@@ -77,3 +77,6 @@ Seguimiento en superficie blanca, borde gris y radio16px. Estado con icono segú
 
 ## Compra separada y vouchers — 22/10/2026
 Continuar compra abre pantalla checkout limpia, sin filas/resumen de carrito ni aviso de añadido. Login devuelve a checkout. Datos de recojo a la izquierda, Pago y voucher a la derecha; una columna móvil. La bolsa se conserva hasta confirmar pedido y puede volver a editarse. Voucher opcional al marcar pago realizado: plataforma, operación, importe, fecha y JPG/PNG/PDF <=750KB; registro pasa En revisión, nunca Pago verificado automático. Administrador configura múltiples plataformas/bancos con titular/cuenta/visibilidad en Medios de pago; redes se editan en Configuración. Todo persiste solo en navegador de este prototipo. QA flujo completo admin-configuración/cliente-voucher y fixture restaurado, móvil390 sin overflow.
+
+## Voucher obligatorio — 23/10/2026
+Prioridad sobre flujo opcional anterior: elegir plataforma despliega automáticamente operación/importe/fecha/voucher; sin checkbox. Plataforma y voucher obligatorios antes de confirmar; guardar siempre reporte En revisión. Cambiar plataforma limpia la constancia anterior. QA: intento sin archivo no crea pedido; con archivo válido queda En revisión. Vista390 sin overflow.

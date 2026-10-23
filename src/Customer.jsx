@@ -306,7 +306,9 @@ export function DeliveryForm({
         setBusy(true);
         try {
           let report;
-          if (f.reportPayment) {
+          if (!f.method)
+            throw Error("Elige la plataforma de pago para continuar.");
+          {
             const file = data.get("voucher");
             if (
               !file?.size ||

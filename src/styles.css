@@ -8401,3 +8401,11 @@ input:not(:disabled):-webkit-autofill:focus {
 .checkout-payment-qr span { font-size:12px; color:#52525b; }
 .payment-instructions .payment-demo-note, .payment-demo-note { color:#805019; background:#fff3df; padding:14px 16px; border-radius:12px; font-size:12px; line-height:1.8; margin:16px 0; }
 @media(max-width:640px) { .optional-image { flex-direction:column; align-items:flex-start; padding:20px; } .optional-image-actions { gap:10px; } }
+.agency-search-results { max-height:340px; overflow-y:auto; overscroll-behavior:contain; padding:12px; border:1px solid #dedee2; border-radius:16px; background:#fff; margin-top:-12px; }
+.agency-search-results > p { padding:8px 12px; margin:0 0 8px; font-size:12px; line-height:1.7; color:#52525b; }
+.agency-search-results > button { display:flex; align-items:flex-start; gap:14px; width:100%; text-align:left; border:1px solid transparent; border-radius:12px; padding:16px; background:#fff; }
+.agency-search-results > button:hover:not(:disabled), .agency-search-results > button:focus-visible { background:#f6edf1; border-color:#d7b8c4; }
+.agency-search-results > button > svg { flex-shrink:0; color:#622938; margin-top:3px; }
+.agency-search-results strong { display:block; font-size:13px; line-height:1.7; }
+.agency-search-results small { display:block; font-size:12px; line-height:1.8; color:#52525b; overflow-wrap:anywhere; }
+.agency-search-results > button:disabled { opacity:.55; }

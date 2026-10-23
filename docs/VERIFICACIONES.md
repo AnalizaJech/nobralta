@@ -26,3 +26,6 @@ Fixture de pedido En revisión con voucher PNG: vista previa decodificada, ampli
 
 ## Perfil/pagos r26 — 23/10/2026
 Foto PNG cargada, decodificada, guardada y conservada tras reload; eliminación guardada comprobada. Yape demo muestra número y QR válido como imagen; BCP muestra cuenta y retira el QR. Admin cambia y elimina QR guardando configuración. Pruebas con fixtures restaurados. Checkout y admin sin overflow a390px; evidencia r26 en output/playwright. QR local generado con qrcode, contenido textual NOBRALTA - YAPE DE PRUEBA - NO REALIZAR PAGOS, sin payload de transferencia.
+
+## Búsqueda de agencias r27
+Selección directa de Larcomar guarda idshalom-661 y completa Lima/dirección. Megaplaza elegida con ArrowDown y Enter. Estado sin coincidencias comprobado. Vista390px sin overflow. Fixtures restaurados.

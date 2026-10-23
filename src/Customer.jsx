@@ -297,10 +297,9 @@ export function DeliveryForm({
     (a) =>
       (a.public !== false || a.receives) &&
       (!region || a.region === region) &&
-      (a.id === agency ||
-        cleanAgency([a.name, a.city, a.district, a.address].join(" ")).includes(
-          cleanAgency(agencyQuery),
-        )),
+      cleanAgency([a.name, a.city, a.district, a.address].join(" ")).includes(
+        cleanAgency(agencyQuery),
+      ),
   );
   const selectedAgency = agencies.find((a) => a.id === agency);
   return (
@@ -433,7 +432,23 @@ export function DeliveryForm({
             <input
               type="search"
               value={agencyQuery}
-              onChange={(e) => setAgencyQuery(e.target.value)}
+              onChange={(e) => {
+                setAgencyQuery(e.target.value);
+                setAgency("");
+              }}
+              onKeyDown={(e) => {
+                if (
+                  agencyQuery.trim() &&
+                  ["ArrowDown", "Enter"].includes(e.key)
+                ) {
+                  e.preventDefault();
+                  e.currentTarget
+                    .closest(".agency-search")
+                    .nextElementSibling?.querySelector("button:not(:disabled)")
+                    ?.focus();
+                }
+              }}
+              aria-controls="agency-search-results"
               placeholder="Distrito, agencia o dirección"
             />
             <span className="form-hint">
@@ -442,6 +457,44 @@ export function DeliveryForm({
               para recojo
             </span>
           </label>
+          {agencyQuery.trim() && (
+            <div
+              className="agency-search-results wide"
+              id="agency-search-results"
+              aria-label="Resultados de agencias"
+            >
+              <p role="status">
+                {options.length
+                  ? "Selecciona una agencia para continuar."
+                  : "No encontramos agencias. Prueba otro nombre o departamento."}
+              </p>
+              {options.map((a) => (
+                <button
+                  type="button"
+                  key={a.id}
+                  disabled={!a.active || a.receives === false}
+                  aria-label={"Seleccionar agencia " + a.name}
+                  onClick={() => {
+                    setAgency(a.id);
+                    setRegion(a.region);
+                    setAgencyQuery("");
+                  }}
+                >
+                  <MapPin size={20} />
+                  <span>
+                    <strong>{a.name}</strong>
+                    <small>
+                      {a.region} · {a.district}
+                    </small>
+                    <small>{a.address || "Sin dirección publicada"}</small>
+                    {(!a.active || a.receives === false) && (
+                      <small>No disponible para recojo</small>
+                    )}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
           <label className="field wide">
             Agencia Shalom de recojo
             <Select
@@ -450,6 +503,7 @@ export function DeliveryForm({
               value={agency}
               onChange={(e) => {
                 setAgency(e.target.value);
+                setAgencyQuery("");
                 const selected = agencies.find((a) => a.id === e.target.value);
                 if (selected) setRegion(selected.region);
               }}

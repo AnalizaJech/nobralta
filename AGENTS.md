@@ -104,3 +104,6 @@ Tablas admin con encabezado negro y texto blanco; hover de filas rosado muy suav
 
 ## Perfil y pagos de prueba r26 — 23/10/2026
 Mis datos permite foto opcional JPG/PNG/WebP hasta500KB, vista previa, reemplazo/eliminación y persistencia al guardar cambios. Avatar también visible en saludo de cuenta. Seed de medios demoYape/BCP/Plin por solicitud del propietario, conservando configuraciones previas; identificar datos como prueba, sin pagos reales. QR de muestra codifica texto de prueba, no transferencia. Admin permite subir/cambiar/quitar QR y marcar/desmarcar medio de prueba; comprador ve titular, número/cuenta y QR según plataforma seleccionada.
+
+## Búsqueda de agencias r27 — 23/10/2026
+Buscar agencia debe mostrar resultados directamente seleccionables debajo del input, no solo contadores que exijan abrir otro selector. Resultado con nombre/ubicación/dirección, pausa y sin recepción deshabilitados. Selección completa agencia/departamento y cierra resultados. Al escribir otra consulta limpiar agencia previa; ArrowDown/Enter permite pasar al primer resultado habilitado. Mantener selector alternativo.

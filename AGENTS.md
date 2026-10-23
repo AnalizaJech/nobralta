@@ -83,3 +83,6 @@ Prioridad sobre flujo opcional anterior: elegir plataforma despliega automática
 
 ## Pago simplificado e inputs claros — 23/10/2026
 Se quitan importe editable y fecha/hora de pago de checkout y reenvío de constancia. Importe del reporte se obtiene del total del pedido (más envío si ya fue cotizado en reenvío), amountSource=order-total; reported se registra automáticamente al enviar. No inventar fecha real de pago: paidAt queda solo en registros históricos donde el cliente la declaró. Admin muestra Importe del pedido y Reporte recibido. Campos editables y búsqueda blancos; neutralizar autofill azul/gris del navegador. QA sin voucher no crea pedido, con voucher guarda importe=total y fecha de reporte,390 sin overflow.
+
+## Vista previa de voucher y resumen de código — 23/10/2026
+VoucherUpload compartido en checkout y reenvío: preview de JPG/PNG, nombre/tamaño, Cambiar voucher, Eliminar, PDF abrible. Borrar limpia el FileList y mantiene obligación de adjuntar; URLs blob se revocan. Volver al carrito debajo de Confirmar y enviar voucher, mismo ancho/alto y12px entre acciones. Código aplicado dentro del resumen de pago con código, porcentaje y ahorro; sin mensaje de éxito suelto al pie. QAimagen/cambio/borrado/PDF y confirmación En revisión con descuento;390 sin overflow.

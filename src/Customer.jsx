@@ -1,4 +1,4 @@
-import { CheckoutPayment, paymentMethods } from "./Payments";
+import { CheckoutPayment, paymentMethods, VoucherUpload } from "./Payments";
 import { DateField } from "./DateField";
 import { TrackingJourney } from "./Experiences";
 import { Select } from "./Select";
@@ -265,6 +265,8 @@ export function Profile({ user, setUsers, onLogout }) {
   );
 }
 export function DeliveryForm({
+  onBack,
+  applied,
   settings,
   user,
   agencies,
@@ -482,7 +484,13 @@ export function DeliveryForm({
           el uso de mis datos para atender el pedido.
         </label>
       </section>
-      <CheckoutPayment settings={settings} total={total} />
+      <CheckoutPayment
+        settings={settings}
+        total={total}
+        onBack={onBack}
+        applied={applied}
+        discount={discount}
+      />
       {submitError && (
         <p className="field-error checkout-error" role="alert">
           {submitError}
@@ -632,30 +640,7 @@ export function OrderDetail({ order, onReport, settings }) {
               required
               spellCheck={false}
             />
-            <label className="field">
-              Constancia
-              <input
-                type="file"
-                accept="image/png,image/jpeg,application/pdf"
-                onChange={(e) => {
-                  const f = e.target.files[0];
-                  if (
-                    f &&
-                    (!["image/png", "image/jpeg", "application/pdf"].includes(
-                      f.type,
-                    ) ||
-                      f.size > 750000)
-                  ) {
-                    setFile(null);
-                    e.target.value = "";
-                    setMessage("Adjunta JPG, PNG o PDF de hasta 750 KB.");
-                  } else {
-                    setFile(f);
-                    setMessage("");
-                  }
-                }}
-              />
-            </label>
+            <VoucherUpload onFileChange={setFile} />
             <p className="form-hint">
               Hasta 750 KB. La constancia no confirma el dinero recibido.
             </p>

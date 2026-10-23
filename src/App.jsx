@@ -1,3 +1,4 @@
+import { DiscountNotice } from "./Payments";
 import { nameProduct } from "./catalog-names";
 import { ProductCard } from "./ProductCard";
 import { Navigation } from "./Navigation";
@@ -624,6 +625,11 @@ export function App() {
     header = useRef(null);
   const count = bag.reduce((n, p) => n + p.qty, 0),
     total = bag.reduce((n, p) => n + p.price * p.qty, 0);
+  const discountTotal =
+    Math.round(
+      bag.filter((p) => !p.packId).reduce((n, p) => n + p.price * p.qty, 0) *
+        (applied?.percent || 0),
+    ) / 100;
   useEffect(() => {
     if (screen === "checkout") setCartNotice("");
   }, [screen]);
@@ -1860,35 +1866,19 @@ export function App() {
                               Aplicar
                             </button>
                           </div>
-                          <p role="status">{codeMessage}</p>
-                          {applied && bag.some((p) => !p.packId) && (
-                            <p className="discount-line">
-                              Descuento {applied.percent}%
-                              <strong>
-                                −
-                                {money(
-                                  Math.round(
-                                    bag
-                                      .filter((p) => !p.packId)
-                                      .reduce(
-                                        (n, p) => n + p.price * p.qty,
-                                        0,
-                                      ) * applied.percent,
-                                  ) / 100,
-                                )}
-                              </strong>
-                              <button
-                                className="icon-button"
-                                aria-label="Quitar código"
-                                onClick={() => {
-                                  setApplied(null);
-                                  setCodeMessage("");
-                                }}
-                              >
-                                <X size={14} />
-                              </button>
+                          {!applied && codeMessage && (
+                            <p className="code-feedback" role="status">
+                              {codeMessage}
                             </p>
                           )}
+                          <DiscountNotice
+                            applied={applied}
+                            discount={discountTotal}
+                            onRemove={() => {
+                              setApplied(null);
+                              setCodeMessage("");
+                            }}
+                          />
                         </div>
                         <div className="cart-total">
                           <span>Precio total</span>
@@ -1935,18 +1925,15 @@ export function App() {
               <div className="checkout-page">
                 <div className="checkout-page-heading">
                   <h2>Completa tu compra.</h2>
-                  <button
-                    className="button button-outline"
-                    onClick={() => {
-                      setCheckout(false);
-                      setScreen("bag");
-                    }}
-                  >
-                    Volver al carrito
-                  </button>
                 </div>
                 {bag.length ? (
                   <DeliveryForm
+                    onBack={() => {
+                      setCheckout(false);
+                      setScreen("bag");
+                    }}
+                    applied={applied}
+                    discount={discountTotal}
                     user={user}
                     settings={settings}
                     agencies={agencies}
@@ -1965,7 +1952,13 @@ export function App() {
                 ) : (
                   <p>Tu carrito está vacío.</p>
                 )}
-                {codeMessage && <p role="status">{codeMessage}</p>}
+                {codeMessage &&
+                  !codeMessage.startsWith("Código aplicado:") &&
+                  !codeMessage.startsWith("El pack ya") && (
+                    <p className="code-feedback" role="status">
+                      {codeMessage}
+                    </p>
+                  )}
               </div>
             )}
             {screen === "account" &&

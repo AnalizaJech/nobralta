@@ -6,7 +6,7 @@ const hooks = {
   pima: "El básico que hace más por tu look.",
   cuero: "Cuero con textura. Actitud sin esfuerzo.",
   racer: "La capa que cambia todo.",
-  denim: "Corte recto. Una buena caída sobre tus botas.",
+  denim: "Tiro medio. Apertura sutil para tus botas.",
   harness: "La base firme de tu próximo look.",
   archivo: "Espíritu de archivo, listo para hoy.",
   camisero: "Frente limpio. Carácter propio.",

@@ -1,3 +1,4 @@
+import { nameProduct } from "./catalog-names";
 export const additionalTones = {
   Crema: "#e9d6ad",
   Marrón: "#513326",
@@ -80,6 +81,7 @@ export const leatherPrices = {
   "abrigo-cuero": 589,
 };
 export function updateCollection(product) {
+  product = nameProduct(product);
   if (leatherPrices[product.id])
     product = { ...product, price: leatherPrices[product.id] };
   if (product.id === "archivo")

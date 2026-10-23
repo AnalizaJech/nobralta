@@ -30,7 +30,7 @@ const aliases = {
   camiseta: "pima",
   remera: "pima",
   tshirt: "pima",
-  abrigo: "gabardina",
+  botines: "botin",
   zapatos: "botas",
   vaquero: "jeans",
   chompa: "cafarena",
@@ -62,6 +62,8 @@ export function recommendations(products, query) {
         p.name +
           " " +
           p.category +
+          " " +
+          (p.searchTerms || "") +
           " " +
           p.variants.map((v) => v.color).join(" "),
       );

@@ -1,3 +1,4 @@
+import { nameProduct } from "./catalog-names";
 import { ProductCard } from "./ProductCard";
 import { Navigation } from "./Navigation";
 import { additionalTones, newJackets, updateCollection } from "./collection-v4";
@@ -146,7 +147,7 @@ const initialProducts = [
     sizes: ["28", "30", "32", "34"],
     variants: [variant("Negro", "pantalon-negro")],
     description:
-      "Tiro definido, pinza limpia y caída larga. Una nueva forma de llevar la sastrería.",
+      "Corte recto, raya frontal y bolsillos laterales. Una base versátil para conjuntos de sastrería.",
     stage: "Sastrería",
   },
   {
@@ -560,6 +561,11 @@ export function App() {
         });
       });
       localStorage.setItem("nobralta.shalom-leather-r14", "1");
+    }
+    if (!localStorage.getItem("nobralta.catalog-names-r15")) {
+      setProducts((items) => items.map(nameProduct));
+      setBag((items) => items.map(nameProduct));
+      localStorage.setItem("nobralta.catalog-names-r15", "1");
     }
     const missing = initialProducts.filter(
       (p) => !products.some((a) => a.id === p.id),

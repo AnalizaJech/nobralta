@@ -68,3 +68,6 @@ Las opciones de cuenta/combobox seleccionadas conservan fondo oscuro y texto bla
 
 ## Directorio Shalom y cuero — 22/10/2026
 Directorio oficial snapshot495 agencias/25 regiones desde shalom.com.pe/agencias; documentación docs/SHALOM.md. Departamento primero, selector agencia filtrado, búsqueda por texto y dirección visible. Precios cuero: Archivo429, Club439, biker449, Heritage459, Medianoche469, Abrigo589. Packs Medianoche599 y biker+harness579. Actualizar catálogo/carrito persistidos por migración, sin alterar órdenes históricas. Racer Archivo v2 usa referencia del propietario: cuello banda, cierre recto, bolsillo de pecho y dos laterales con cremallera, imagen local con alfa.
+
+## Nomenclatura comercial — 22/10/2026
+Nombres descriptivos verificados con referentes comerciales y comparación visual, documentados en docs/NOMBRES-CATALOGO.md. Usar café racer/biker/cuello camisero según corte; abrigo cuero simple no es trench cruzado. Jean bootcut de tiro medio; botín Chelsea con arnés y punta cuadrada. No usar nombres de marcas/modelos ajenos ni inferir fibra/acabado certificado por foto. Alias antiguos conservados en búsqueda; historial de pedidos intacto. QA390/1440 sin overflow; búsquedas cafe racer, biker, chelsea, bootcut y racer archivo correctas.

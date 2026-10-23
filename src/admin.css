@@ -1373,7 +1373,7 @@
     gap: 2px;
   }
   .admin-app .admin-header .icon-button {
-    width: 40px;
+    width: 44px;
     height: 44px;
     min-height: 44px;
   }
@@ -1515,4 +1515,34 @@
   .admin-app .admin-header > a {
     width: 128px;
   }
+}
+
+/* Section actions keep a clear gap before their content. */
+.admin-app .admin-section > .section-title {
+  margin: 0 0 24px;
+  padding: 0;
+  min-height: 46px;
+  gap: 20px;
+}
+.admin-app .button.admin-payments-link {
+  background: #622938;
+  border: 1px solid #622938;
+  color: #fff;
+  flex-shrink: 0;
+}
+.admin-app .button.admin-payments-link:hover {
+  background: #451b28;
+  border-color: #451b28;
+  color: #fff;
+}
+.admin-app .admin-header .icon-button {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.admin-app .admin-nav-group > button {
+  border-radius: 999px;
 }

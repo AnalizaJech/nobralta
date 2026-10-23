@@ -92,3 +92,6 @@ Prioridad sobre el directorio anterior: snapshot oficial de 565 registros, 509 p
 
 ## Pulido administrativo — 23/10/2026, r22
 El propietario rechaza listas visualmente planas tipo tabla en stock y contenedores sin diseño. Cabecera admin igual al cliente: logo centrado, menú a la izquierda y cerrar sesión a la derecha. No botón volver/ver tienda: el logo lleva a tienda. El menú cubre toda el área bajo cabecera en todas las pantallas, bloquea el contenido posterior, admite Escape y reinicia scroll al abrir. Stock y catálogo con imágenes/tarjetas; mensajes con icono, título y buen padding. Acciones primarias negras con hover borgoña, secundarias claras y destructivas con acento borgoña. Iconos Phosphor semánticos junto a acciones; selección no cambia al hover.
+
+## Espaciado y botones admin r23 — 23/10/2026
+Encabezados con acciones dentro de contenedores admin conservan 24px de margen antes del contenido; no permitir que reglas antiguas lo anulen. Ver pagos usa borgoña de marca con hover más oscuro. Iconos de cabecera cuadrados con radio50% (46px escritorio/44px móvil); opciones de navegación con extremos completamente redondeados como los controles del cliente.

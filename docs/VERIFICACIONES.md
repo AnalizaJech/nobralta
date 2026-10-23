@@ -14,3 +14,6 @@ Build de GitHub Pages y cuatro pruebas Sites correctos. Advertencia conocida de 
 
 ## Pulido admin r22 — 23/10/2026
 Recorrido de los 11 módulos a 1440, 1024, 768 y 390 px: sin desbordamientos ni errores de ejecución; menú cubre exactamente el alto disponible bajo cabecera. Escape devuelve el foco y el fondo permanece inerte durante el menú. Mensajes de postulaciones, stock y catálogo revisados visualmente. Acciones visibles de los módulos incorporan iconos semánticos. Guardado de stock/precio desde nueva tarjeta, promoción de código, configuración social y pausa/habilitación de agencias comprobados con fixtures restaurados. Build de Pages y cuatro pruebas Sites correctos; se conserva aviso Vite de bundle grande.
+
+## Espaciado y botones r23 — 23/10/2026
+Con un pedido En revisión de prueba, gap entre Ver pagos y primera tarjeta medido: 24px en 1440/1024/768/390px. Borgoña por defecto y hover oscuro comprobados. Iconos46x46px desktop/tablet y44x44px móvil, radio50%; menú999px. Sin overflow ni errores de ejecución, fixture restaurado. Se corrigió la regla heredada admin-section/section-title que anulaba el margen.

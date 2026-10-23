@@ -115,10 +115,10 @@ export function AdminOverview({
       </dl>
       <div className="admin-home-grid">
         <section className="admin-section">
-          <div className="section-title">
+          <div className="section-title admin-attention-header">
             <h2>Atender ahora</h2>
             <button
-              className="button button-outline"
+              className="button admin-payments-link"
               onClick={() => onOrders("En revisión")}
             >
               Ver pagos

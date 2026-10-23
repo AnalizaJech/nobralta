@@ -290,7 +290,7 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
         setMessage("Medios de pago guardados.");
       }}
     >
-      <h2>Medios de pago</h2>
+      <h2>Plataformas y cuentas</h2>
       <p>
         Configura los datos que verá el comprador. Las constancias se revisan
         desde Pedidos.

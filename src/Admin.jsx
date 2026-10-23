@@ -1,5 +1,12 @@
+import "./admin.css";
+import {
+  AdminOverview,
+  AgencyManager,
+  StockEditor,
+  CustomerDirectory,
+  StoreSettings,
+} from "./AdminWorkspace";
 import { PaymentMethodsAdmin } from "./Payments";
-import { socialChannels } from "./Merchandising";
 import { JobsManager } from "./Jobs";
 import { Select } from "./Select";
 import { AssetImage, assetUrl } from "./AssetImage";
@@ -23,7 +30,7 @@ import {
   Clock,
 } from "@phosphor-icons/react";
 import { currency, date, phases, receipt, now } from "./store";
-import { Field, Profile } from "./Customer";
+import { Field } from "./Customer";
 const modules = [
   ["Resumen", ChartBar],
   ["Pedidos", Receipt],
@@ -37,6 +44,37 @@ const modules = [
   ["Trabajos", Users],
   ["Configuración", Gear],
 ];
+const navGroups = [
+  {
+    title: "Operación diaria",
+    items: ["Resumen", "Pedidos", "Envíos", "Medios de pago"],
+  },
+  { title: "Tienda", items: ["Catálogo", "Promociones"] },
+  {
+    title: "Clientes y equipo",
+    items: ["Clientes", "Afiliados", "Personal", "Trabajos"],
+  },
+  { title: "Preferencias", items: ["Configuración"] },
+];
+const descriptions = {
+  Resumen:
+    "Pagos pendientes, próximos despachos y existencias que requieren atención.",
+  Pedidos:
+    "Consulta pedidos, revisa vouchers y actualiza cada etapa de la entrega.",
+  Envíos:
+    "Busca ubicaciones de Shalom y administra las agencias disponibles para recojo.",
+  "Medios de pago":
+    "Configura plataformas, titulares y cuentas visibles al comprar.",
+  Catálogo: "Actualiza nombres, precios y unidades por color y talla.",
+  Promociones:
+    "Administra conjuntos, packs y códigos de descuento de la tienda.",
+  Clientes: "Encuentra los datos de contacto y las compras de cada cliente.",
+  Afiliados: "Gestiona vendedores, códigos, comisiones y liquidaciones.",
+  Personal: "Organiza el equipo, los turnos y los pagos registrados.",
+  Trabajos: "Publica convocatorias y revisa las postulaciones recibidas.",
+  Configuración:
+    "Actualiza atención al cliente, redes sociales y los datos de tu cuenta.",
+};
 export function Admin({
   user,
   users,
@@ -79,7 +117,21 @@ export function Admin({
     [cancelConfirm, setCancelConfirm] = useState(false),
     [period, setPeriod] = useState("all");
   const [packLength, setPackLength] = useState(2);
+  const [catalogQuery, setCatalogQuery] = useState(""),
+    [catalogCategory, setCatalogCategory] = useState("Todas"),
+    [promoComposer, setPromoComposer] = useState(false),
+    [promoType, setPromoType] = useState("pack");
+  const filteredCatalog = catalog.filter(
+    (p) =>
+      (catalogCategory === "Todas" || p.category === catalogCategory) &&
+      (p.name + " " + p.category)
+        .toLowerCase()
+        .includes(catalogQuery.toLowerCase()),
+  );
   useEffect(() => setPackLength(editing?.qty || 2), [editing]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [tab, selected, editing?.id]);
   const order = orders.find((o) => o.id === selected);
   const paid = orders.filter((o) =>
     ["Pago verificado", "En preparación", "Enviado", "Entregado"].includes(
@@ -96,6 +148,10 @@ export function Admin({
   const pending = orders.filter((o) => o.status === "En revisión");
   function choose(t) {
     setTab(t);
+    setQuery("");
+    setStatus("Todos");
+    setPromoComposer(false);
+    setPromoType("pack");
     setMobileNav(false);
     setSelected(null);
     setEditing(null);
@@ -167,9 +223,9 @@ export function Admin({
       colors,
       id: editing?.id || crypto.randomUUID(),
       active: f.active === "on",
-      price: Number(f.price),
-      qty: Number(f.qty),
-      discount: Number(f.discount),
+      price: f.type === "pack" ? Number(f.price) : 0,
+      qty: f.type === "pack" ? Number(f.qty) : 0,
+      discount: f.type === "code" ? Number(f.discount) : 0,
     };
     setPromos((a) =>
       editing ? a.map((v) => (v.id === editing.id ? p : v)) : [...a, p],
@@ -177,6 +233,7 @@ export function Admin({
     log("Promoción", p.title);
     setEditing(null);
     e.currentTarget.reset();
+    setPromoComposer(false);
     setMessage("Promoción guardada. La tienda refleja los cambios.");
   }
   const visibleOrders = orders.filter(
@@ -213,6 +270,7 @@ export function Admin({
         <button
           className="icon-button admin-menu-toggle"
           aria-label="Navegación administrativa"
+          aria-expanded={mobileNav}
           onClick={() => setMobileNav(!mobileNav)}
         >
           <img
@@ -241,48 +299,34 @@ export function Admin({
           className={"admin-nav " + (mobileNav ? "is-expanded" : "")}
           aria-label="Administración"
         >
-          {modules.map(([name, Icon]) => (
-            <button
-              key={name}
-              className={tab === name ? "current" : ""}
-              onClick={() => choose(name)}
-              aria-current={tab === name ? "page" : undefined}
-            >
-              <Icon size={18} />
-              {name}
-              {name === "Pedidos" && pending.length > 0 && (
-                <span>{pending.length}</span>
-              )}
-            </button>
+          {navGroups.map((group) => (
+            <div className="admin-nav-group" key={group.title}>
+              <p>{group.title}</p>
+              {group.items.map((name) => {
+                const Icon = modules.find((m) => m[0] === name)[1];
+                return (
+                  <button
+                    key={name}
+                    className={tab === name ? "current" : ""}
+                    onClick={() => choose(name)}
+                    aria-current={tab === name ? "page" : undefined}
+                  >
+                    <Icon size={19} />
+                    <span className="admin-nav-label">{name}</span>
+                    {name === "Pedidos" && pending.length > 0 && (
+                      <span className="admin-nav-count">{pending.length}</span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           ))}
         </nav>
         <main className="admin-main" id="contenido">
-          <form
-            className="admin-global-search"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setTab("Pedidos");
-              setSelected(null);
-            }}
-          >
-            <label className="sr-only" htmlFor="admin-find">
-              Buscar pedido o cliente
-            </label>
-            <input
-              id="admin-find"
-              placeholder="Buscar pedido, cliente o DNI…"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <button className="button button-dark">
-              Buscar
-              <ArrowRight size={18} />
-            </button>
-          </form>
           <div className="admin-title">
             <div>
-              <p>Operación / {user.name}</p>
               <h1>{tab}</h1>
+              <p className="admin-page-description">{descriptions[tab]}</p>
             </div>
             {tab === "Resumen" && (
               <label>
@@ -306,154 +350,27 @@ export function Admin({
             </p>
           )}
           {tab === "Resumen" && (
-            <>
-              <div className="metric-strip">
-                <div>
-                  <span>Ventas verificadas</span>
-                  <strong>{currency(revenue)}</strong>
-                  <small>
-                    {scopedPaid.length} pedidos con abono confirmado
-                  </small>
-                </div>
-                <div>
-                  <span>Por revisar</span>
-                  <strong>{pending.length}</strong>
-                  <small>Reportes de pago recibidos</small>
-                </div>
-                <div>
-                  <span>Ticket promedio</span>
-                  <strong>
-                    {currency(
-                      scopedPaid.length ? revenue / scopedPaid.length : 0,
-                    )}
-                  </strong>
-                  <small>Solo pedidos verificados</small>
-                </div>
-                <div>
-                  <span>Pedidos registrados</span>
-                  <strong>{scoped.length}</strong>
-                  <small>En el periodo seleccionado</small>
-                </div>
-              </div>
-              <div className="admin-columns">
-                <section className="admin-section">
-                  <div className="section-title">
-                    <h2>Atender primero</h2>
-                    <button
-                      className="text-action"
-                      onClick={() => choose("Pedidos")}
-                    >
-                      Ver pedidos
-                      <ArrowRight size={17} />
-                    </button>
-                  </div>
-                  {pending.length ? (
-                    pending.slice(0, 5).map((o) => (
-                      <button
-                        className="queue-row"
-                        key={o.id}
-                        onClick={() => {
-                          setTab("Pedidos");
-                          setSelected(o.id);
-                        }}
-                      >
-                        <span>
-                          <strong>{o.id}</strong>
-                          <small>
-                            {o.customer.name} {o.customer.lastName}
-                          </small>
-                        </span>
-                        <span>{currency(o.total)}</span>
-                        <ArrowRight size={18} />
-                      </button>
-                    ))
-                  ) : (
-                    <div className="quiet-empty">
-                      <h3>No hay pagos pendientes de revisión.</h3>
-                      <p>Los reportes de tus clientes aparecerán aquí.</p>
-                    </div>
-                  )}
-                  <h3 className="subheading">Prendas con existencias bajas</h3>
-                  {catalog
-                    .filter(
-                      (p) =>
-                        Object.entries(inventory)
-                          .filter(([key]) => key.startsWith(p.id + "|"))
-                          .reduce((n, [, v]) => n + v, 0) < 10,
-                    )
-                    .map((p) => (
-                      <button
-                        className="queue-row"
-                        key={p.id}
-                        onClick={() => {
-                          setTab("Catálogo");
-                          setEditing(p);
-                        }}
-                      >
-                        <span>{p.name}</span>
-                        <span>
-                          {Object.entries(inventory)
-                            .filter(([key]) => key.startsWith(p.id + "|"))
-                            .reduce((n, [, v]) => n + v, 0)}{" "}
-                          unidades
-                        </span>
-                      </button>
-                    ))}
-                </section>
-                <section className="admin-section">
-                  <h2>Pedidos por estado</h2>
-                  <div className="state-distribution">
-                    {phases.map((s) => {
-                      const n = scoped.filter((o) => o.status === s).length;
-                      return (
-                        <div key={s}>
-                          <span>{s}</span>
-                          <meter
-                            value={n}
-                            max={Math.max(1, scoped.length)}
-                            aria-label={s}
-                          />
-                          <strong>{n}</strong>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <h3 className="subheading">Ventas por prenda</h3>
-                  {catalog.map((p) => (
-                    <div className="revenue-row" key={p.id}>
-                      <span>{p.name}</span>
-                      <strong>
-                        {currency(
-                          scopedPaid
-                            .flatMap((o) => o.lines)
-                            .filter((l) => l.id === p.id)
-                            .reduce((n, l) => n + l.price * l.qty, 0),
-                        )}
-                      </strong>
-                    </div>
-                  ))}
-                  <p className="form-hint">
-                    Importes de productos antes de distribución de descuentos
-                    generales. No incluye envío ni margen de mercadería.
-                  </p>
-                </section>
-              </div>
-              <section className="admin-section">
-                <h2>Actividad reciente</h2>
-                {audit.slice(0, 8).map((a, i) => (
-                  <div className="audit-row" key={i}>
-                    <time>{date(a.at)}</time>
-                    <span>{a.action}</span>
-                    <span>{a.detail}</span>
-                  </div>
-                ))}
-                {!audit.length && (
-                  <p className="quiet-empty">
-                    Aún no hay movimientos registrados.
-                  </p>
-                )}
-              </section>
-            </>
+            <AdminOverview
+              orders={orders}
+              catalog={catalog}
+              inventory={inventory}
+              scoped={scoped}
+              scopedPaid={scopedPaid}
+              revenue={revenue}
+              audit={audit}
+              onOrders={(state) => {
+                choose("Pedidos");
+                setStatus(state);
+              }}
+              onOrder={(id) => {
+                choose("Pedidos");
+                setSelected(id);
+              }}
+              onStock={(p) => {
+                choose("Catálogo");
+                setEditing(p);
+              }}
+            />
           )}
           {tab === "Pedidos" && !order && (
             <>
@@ -479,7 +396,11 @@ export function Admin({
                   </Select>
                 </label>
               </div>
-              <div className="table-scroll">
+              <div
+                className="table-scroll"
+                tabIndex={0}
+                aria-label={"Tabla de " + tab}
+              >
                 <table className="admin-table">
                   <thead>
                     <tr>
@@ -573,7 +494,7 @@ export function Admin({
                     Descuento: {currency(order.discount)}
                     {order.code ? " / " + order.code : ""}
                     <br />
-                    Total productos: <strong>{currency(order.total)}</strong>
+                    Precio total: <strong>{currency(order.total)}</strong>
                   </p>
                   <button
                     className="text-action"
@@ -930,6 +851,33 @@ export function Admin({
                 <h2>Prendas y variantes</h2>
                 <span>{catalog.length} productos</span>
               </div>
+              {!editing && (
+                <div className="admin-filterbar">
+                  <label className="field">
+                    Buscar prenda
+                    <input
+                      type="search"
+                      value={catalogQuery}
+                      onChange={(e) => setCatalogQuery(e.target.value)}
+                      placeholder="Nombre o categoría"
+                    />
+                  </label>
+                  <label className="field">
+                    Categoría
+                    <Select
+                      aria-label="Categoría del catálogo"
+                      value={catalogCategory}
+                      onChange={(e) => setCatalogCategory(e.target.value)}
+                    >
+                      <option>Todas</option>
+                      {[...new Set(catalog.map((p) => p.category))].map((c) => (
+                        <option key={c}>{c}</option>
+                      ))}
+                    </Select>
+                  </label>
+                  <span>{filteredCatalog.length} productos</span>
+                </div>
+              )}
               {editing ? (
                 <form
                   className="admin-section form-grid"
@@ -998,32 +946,18 @@ export function Admin({
                     />
                   </div>
                   <h3>Unidades por color y talla</h3>
-                  <div className="stock-grid">
-                    {editing.variants.flatMap((v) =>
-                      editing.sizes.map((s) => {
-                        const key = [editing.id, v.color, s].join("|");
-                        return (
-                          <Field
-                            key={key}
-                            label={v.color + " / " + s}
-                            name={"sku:" + key}
-                            type="number"
-                            min="0"
-                            step="1"
-                            required
-                            defaultValue={inventory[key] ?? 0}
-                          />
-                        );
-                      }),
-                    )}
-                  </div>
+                  <StockEditor product={editing} inventory={inventory} />
                   <button className="button button-dark">
                     Guardar producto
                     <Check size={18} />
                   </button>
                 </form>
               ) : (
-                <div className="table-scroll">
+                <div
+                  className="table-scroll"
+                  tabIndex={0}
+                  aria-label={"Tabla de " + tab}
+                >
                   <table className="admin-table">
                     <thead>
                       <tr>
@@ -1035,10 +969,27 @@ export function Admin({
                       </tr>
                     </thead>
                     <tbody>
-                      {catalog.map((p) => (
+                      {filteredCatalog.map((p) => (
                         <tr key={p.id}>
-                          <td>{p.name}</td>
-                          <td>{p.variants.map((v) => v.color).join(", ")}</td>
+                          <td>
+                            <div className="admin-product-cell">
+                              <AssetImage src={p.variants[0].image} alt="" />
+                              <div>
+                                <strong>{p.name}</strong>
+                                <small>{p.category}</small>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <strong>{p.variants.length} colores</strong>
+                            <small>
+                              {p.variants
+                                .slice(0, 3)
+                                .map((v) => v.color)
+                                .join(", ")}
+                              {p.variants.length > 3 ? "…" : ""}
+                            </small>
+                          </td>
                           <td className="numeric">{currency(p.price)}</td>
                           <td className="numeric">
                             {Object.entries(inventory)
@@ -1064,9 +1015,27 @@ export function Admin({
           )}
           {tab === "Promociones" && (
             <>
-              <div className="admin-columns">
+              <div
+                className={
+                  "promo-workspace" +
+                  (editing || promoComposer ? " is-editing" : "")
+                }
+              >
                 <section className="admin-section">
-                  <h2>Campañas de la tienda</h2>
+                  <div className="section-title">
+                    <h2>Campañas de la tienda</h2>
+                    <button
+                      className="button button-dark"
+                      onClick={() => {
+                        setEditing(null);
+                        setPromoComposer(true);
+                        setPromoType("pack");
+                      }}
+                    >
+                      Nueva campaña
+                      <Plus size={18} />
+                    </button>
+                  </div>
                   {promos.map((p) => (
                     <div className="management-row" key={p.id}>
                       <div>
@@ -1083,7 +1052,11 @@ export function Admin({
                       <div>
                         <button
                           className="text-action"
-                          onClick={() => setEditing(p)}
+                          onClick={() => {
+                            setEditing(p);
+                            setPromoType(p.type);
+                            setPromoComposer(true);
+                          }}
                         >
                           Editar
                         </button>
@@ -1104,180 +1077,174 @@ export function Admin({
                     </div>
                   ))}
                 </section>
-                <form
-                  className="admin-section form-grid"
-                  key={editing?.id || "new"}
-                  onSubmit={savePromo}
-                >
-                  <h2>{editing ? "Editar campaña" : "Nueva campaña"}</h2>
-                  <Field
-                    label="Título de la promoción"
-                    name="title"
-                    defaultValue={editing?.title}
-                    required
-                  />
-                  <Field
-                    label="Descripción breve"
-                    name="subtitle"
-                    defaultValue={editing?.subtitle}
-                    required
-                  />
-                  <label className="field">
-                    Tipo
-                    <Select name="type" defaultValue={editing?.type || "pack"}>
-                      <option value="pack">Pack de prendas</option>
-                      <option value="code">Código de descuento</option>
-                    </Select>
-                  </label>
-                  <div className="form-grid two">
-                    {Array.from(
-                      {
-                        length: Math.max(
-                          2,
-                          Math.min(5, Number(packLength) || 2),
-                        ),
-                      },
-                      (_, i) => (
-                        <label className="field" key={i}>
-                          Prenda {i + 1} del pack
-                          <Select
-                            name={"productSlot" + i}
-                            defaultValue={
-                              editing?.productIds?.[i] ||
-                              (editing?.secondaryProductId &&
-                              i === Number(editing?.qty) - 1
-                                ? editing.secondaryProductId
-                                : editing?.productId) ||
-                              "pima"
-                            }
-                          >
-                            {catalog.map((p) => (
-                              <option key={p.id} value={p.id}>
-                                {p.name}
-                              </option>
-                            ))}
-                          </Select>
-                        </label>
-                      ),
+                {(editing || promoComposer) && (
+                  <form
+                    className="admin-section form-grid"
+                    key={editing?.id || "new"}
+                    onSubmit={savePromo}
+                  >
+                    <h2>{editing ? "Editar campaña" : "Nueva campaña"}</h2>
+                    <Field
+                      label="Título de la promoción"
+                      name="title"
+                      defaultValue={editing?.title}
+                      required
+                    />
+                    <Field
+                      label="Descripción breve"
+                      name="subtitle"
+                      defaultValue={editing?.subtitle}
+                      required
+                    />
+                    <label className="field">
+                      Tipo
+                      <Select
+                        name="type"
+                        value={promoType}
+                        onChange={(e) => setPromoType(e.target.value)}
+                      >
+                        <option value="pack">Pack de prendas</option>
+                        <option value="code">Código de descuento</option>
+                      </Select>
+                    </label>
+                    {promoType === "pack" && (
+                      <>
+                        <div className="form-grid two">
+                          {Array.from(
+                            {
+                              length: Math.max(
+                                2,
+                                Math.min(5, Number(packLength) || 2),
+                              ),
+                            },
+                            (_, i) => (
+                              <label className="field" key={i}>
+                                Prenda {i + 1} del pack
+                                <Select
+                                  name={"productSlot" + i}
+                                  defaultValue={
+                                    editing?.productIds?.[i] ||
+                                    (editing?.secondaryProductId &&
+                                    i === Number(editing?.qty) - 1
+                                      ? editing.secondaryProductId
+                                      : editing?.productId) ||
+                                    "pima"
+                                  }
+                                >
+                                  {catalog.map((p) => (
+                                    <option key={p.id} value={p.id}>
+                                      {p.name}
+                                    </option>
+                                  ))}
+                                </Select>
+                              </label>
+                            ),
+                          )}
+                        </div>
+                        <Field
+                          label="Colores sugeridos, en orden"
+                          name="colors"
+                          defaultValue={editing?.colors?.join(", ") || ""}
+                          placeholder="Blanco, Negro, Carbón"
+                        />
+                        <div className="form-grid two">
+                          <Field
+                            label="Cantidad en pack"
+                            name="qty"
+                            type="number"
+                            min="2"
+                            max="5"
+                            value={packLength}
+                            onChange={(e) => setPackLength(e.target.value)}
+                          />
+                          <Field
+                            label="Precio del pack (S/)"
+                            name="price"
+                            type="number"
+                            min="1"
+                            step="0.01"
+                            defaultValue={editing?.price || 99}
+                          />
+                        </div>
+                      </>
                     )}
-                  </div>
-                  <Field
-                    label="Colores sugeridos, en orden"
-                    name="colors"
-                    defaultValue={editing?.colors?.join(", ") || ""}
-                    placeholder="Marfil, Negro, Índigo"
-                  />
-                  <div className="form-grid two">
-                    <Field
-                      label="Cantidad en pack"
-                      name="qty"
-                      type="number"
-                      min="2"
-                      max="5"
-                      value={packLength}
-                      onChange={(e) => setPackLength(e.target.value)}
-                    />
-                    <Field
-                      label="Precio del pack (S/)"
-                      name="price"
-                      type="number"
-                      min="1"
-                      step="0.01"
-                      defaultValue={editing?.price || 99}
-                    />
-                    <Field
-                      label="Código (solo descuento)"
-                      name="code"
-                      defaultValue={editing?.code}
-                      pattern="[A-Za-z0-9_-]{3,24}"
-                    />
-                    <Field
-                      label="Descuento (%)"
-                      name="discount"
-                      type="number"
-                      min="1"
-                      max="50"
-                      defaultValue={editing?.discount || 10}
-                    />
-                    <Field
-                      label="Inicio"
-                      name="start"
-                      type="date"
-                      defaultValue={editing?.start || "2026-10-21"}
-                      required
-                    />
-                    <Field
-                      label="Fin"
-                      name="end"
-                      type="date"
-                      defaultValue={editing?.end || "2026-12-31"}
-                      required
-                    />
-                  </div>
-                  <label className="checkbox">
-                    <input
-                      name="active"
-                      type="checkbox"
-                      defaultChecked={editing?.active ?? true}
-                    />
-                    Publicar en la tienda
-                  </label>
-                  <p className="form-hint">
-                    Los packs permiten elegir color y talla de cada unidad. Los
-                    códigos no se acumulan con packs. Revisa la vigencia antes
-                    de publicar.
-                  </p>
-                  <button className="button button-dark">
-                    Guardar campaña
-                    <Check size={18} />
-                  </button>
-                  {editing && (
-                    <button
-                      type="button"
-                      className="text-action"
-                      onClick={() => setEditing(null)}
-                    >
-                      Cancelar edición
+                    <div className="form-grid two">
+                      {promoType === "code" && (
+                        <>
+                          <Field
+                            label="Código de descuento"
+                            name="code"
+                            defaultValue={editing?.code}
+                            pattern="[A-Za-z0-9_\-]{3,24}"
+                          />
+                          <Field
+                            label="Descuento (%)"
+                            name="discount"
+                            type="number"
+                            min="1"
+                            max="50"
+                            defaultValue={editing?.discount || 10}
+                          />
+                        </>
+                      )}
+                      <Field
+                        label="Inicio"
+                        name="start"
+                        type="date"
+                        defaultValue={editing?.start || "2026-10-21"}
+                        required
+                      />
+                      <Field
+                        label="Fin"
+                        name="end"
+                        type="date"
+                        defaultValue={editing?.end || "2026-12-31"}
+                        required
+                      />
+                    </div>
+                    <label className="checkbox">
+                      <input
+                        name="active"
+                        type="checkbox"
+                        defaultChecked={editing?.active ?? true}
+                      />
+                      Publicar en la tienda
+                    </label>
+                    <p className="form-hint">
+                      Los packs permiten elegir color y talla de cada unidad.
+                      Los códigos no se acumulan con packs. Revisa la vigencia
+                      antes de publicar.
+                    </p>
+                    <button className="button button-dark">
+                      Guardar campaña
+                      <Check size={18} />
                     </button>
-                  )}
-                </form>
+                    {(editing || promoComposer) && (
+                      <button
+                        type="button"
+                        className="text-action"
+                        onClick={() => {
+                          setEditing(null);
+                          setPromoComposer(false);
+                        }}
+                      >
+                        Cancelar edición
+                      </button>
+                    )}
+                  </form>
+                )}
               </div>
             </>
           )}
           {tab === "Clientes" && (
-            <section className="admin-section">
-              <h2>Cuentas de clientes</h2>
-              {users
-                .filter((u) => u.role === "customer")
-                .map((u) => (
-                  <div className="management-row" key={u.id}>
-                    <div>
-                      <h3>
-                        {u.name} {u.lastName}
-                      </h3>
-                      <p>
-                        {u.email}
-                        <br />
-                        {u.phone}
-                      </p>
-                      <small>
-                        {orders.filter((o) => o.userId === u.id).length} pedidos
-                        registrados
-                      </small>
-                    </div>
-                    <button
-                      className="text-action"
-                      onClick={() => {
-                        setTab("Pedidos");
-                        setQuery(u.name);
-                      }}
-                    >
-                      Ver pedidos
-                      <ArrowRight size={17} />
-                    </button>
-                  </div>
-                ))}
-            </section>
+            <CustomerDirectory
+              users={users}
+              orders={orders}
+              onOrders={(name) => {
+                choose("Pedidos");
+                setQuery(name);
+              }}
+            />
           )}
           {tab === "Afiliados" && (
             <div className="admin-columns">
@@ -1431,7 +1398,7 @@ export function Admin({
                 <Field
                   label="Código único"
                   name="code"
-                  pattern="[A-Za-z0-9_-]{3,24}"
+                  pattern="[A-Za-z0-9_\-]{3,24}"
                   required
                 />
                 <Field
@@ -1458,68 +1425,11 @@ export function Admin({
             </div>
           )}
           {tab === "Envíos" && (
-            <div className="admin-columns">
-              <section className="admin-section">
-                <h2>Agencias de recojo</h2>
-                <p className="prose">
-                  Entrega comunicada: {settings.delivery}. La selección del
-                  cliente conserva departamento, ciudad y agencia.
-                </p>
-                {agencies.map((a) => (
-                  <div className="management-row" key={a.id}>
-                    <div>
-                      <h3>{a.name}</h3>
-                      <p>
-                        {a.region} / {a.city}
-                      </p>
-                    </div>
-                    <button
-                      className="text-action"
-                      onClick={() =>
-                        setAgencies((b) =>
-                          b.map((v) =>
-                            v.id === a.id ? { ...v, active: !v.active } : v,
-                          ),
-                        )
-                      }
-                    >
-                      {a.active ? "Desactivar" : "Activar"}
-                    </button>
-                  </div>
-                ))}
-              </section>
-              <form
-                className="admin-section form-grid"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const f = Object.fromEntries(new FormData(e.currentTarget));
-                  setAgencies((a) => [
-                    ...a,
-                    { ...f, id: crypto.randomUUID(), active: true },
-                  ]);
-                  log("Agencia Shalom", f.name);
-                  e.currentTarget.reset();
-                  setMessage("Agencia agregada al selector de recojo.");
-                }}
-              >
-                <h2>Agregar agencia</h2>
-                <Field label="Nombre exacto en Shalom" name="name" required />
-                <Field label="Departamento" name="region" required />
-                <Field label="Ciudad / provincia" name="city" required />
-                <label className="checkbox">
-                  <input type="checkbox" required />
-                  Verifiqué la agencia en el directorio oficial de Shalom.
-                </label>
-                <button className="button button-dark">
-                  Guardar agencia
-                  <Plus size={18} />
-                </button>
-                <p className="form-hint">
-                  La lista inicial es un extracto del directorio público.
-                  Confirma vigencia y servicio antes de cotizar.
-                </p>
-              </form>
-            </div>
+            <AgencyManager
+              agencies={agencies}
+              setAgencies={setAgencies}
+              log={log}
+            />
           )}
           {tab === "Medios de pago" && (
             <PaymentMethodsAdmin
@@ -1628,64 +1538,14 @@ export function Admin({
             />
           )}
           {tab === "Configuración" && (
-            <div className="admin-columns">
-              <section className="admin-section">
-                <Profile user={user} setUsers={setUsers} onLogout={onLogout} />
-              </section>
-              <form
-                className="admin-section form-grid"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const f = Object.fromEntries(new FormData(e.currentTarget));
-                  setSettings((s) => ({ ...s, ...f }));
-                  log("Configuración", "Atención actualizada");
-                  setMessage("Configuración guardada.");
-                }}
-              >
-                <h2>Contacto y atención</h2>
-                <Field
-                  label="Correo de atención"
-                  name="email"
-                  type="email"
-                  defaultValue={settings.email}
-                />
-                <Field
-                  label="Teléfono de atención"
-                  name="phone"
-                  type="tel"
-                  defaultValue={settings.phone}
-                />
-                <Field
-                  label="Horario de revisión"
-                  name="review"
-                  defaultValue={settings.review}
-                />
-                <Field
-                  label="Plazo de entrega"
-                  name="delivery"
-                  defaultValue={settings.delivery}
-                  required
-                />
-                <h3>Redes sociales</h3>
-                <p className="form-hint">
-                  Enlaces provisionales. Sustitúyelos por los perfiles oficiales
-                  antes de publicar.
-                </p>
-                {socialChannels.map(([id, label, Icon, fallback]) => (
-                  <Field
-                    key={id}
-                    label={label}
-                    name={"social_" + id}
-                    type="url"
-                    defaultValue={settings["social_" + id] || fallback}
-                  />
-                ))}
-                <button className="button button-dark">
-                  Guardar configuración
-                  <Check size={18} />
-                </button>
-              </form>
-            </div>
+            <StoreSettings
+              settings={settings}
+              setSettings={setSettings}
+              user={user}
+              setUsers={setUsers}
+              onLogout={onLogout}
+              log={log}
+            />
           )}
         </main>
       </div>

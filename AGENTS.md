@@ -86,3 +86,6 @@ Se quitan importe editable y fecha/hora de pago de checkout y reenvío de consta
 
 ## Vista previa de voucher y resumen de código — 23/10/2026
 VoucherUpload compartido en checkout y reenvío: preview de JPG/PNG, nombre/tamaño, Cambiar voucher, Eliminar, PDF abrible. Borrar limpia el FileList y mantiene obligación de adjuntar; URLs blob se revocan. Volver al carrito debajo de Confirmar y enviar voucher, mismo ancho/alto y12px entre acciones. Código aplicado dentro del resumen de pago con código, porcentaje y ahorro; sin mensaje de éxito suelto al pie. QAimagen/cambio/borrado/PDF y confirmación En revisión con descuento;390 sin overflow.
+
+## Directorio completo y administración — 23/10/2026
+Prioridad sobre el directorio anterior: snapshot oficial de 565 registros, 509 públicos y 500 destinos con recepción, incluidos cinco Puntos PRO. Cliente busca globalmente sin exigir departamento previo; registros internos nunca se ofrecen para recojo. Conservar pausas y agencias manuales al migrar. Admin sigue la paleta blanca, gris neutro y negro del cliente, sin verdes o cremas. Navegación agrupada por operación, tienda, clientes/equipo y preferencias; filtros contextuales, tablas paginadas, inventario por color desplegable y configuración separada por atención, redes y perfil.

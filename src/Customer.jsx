@@ -287,8 +287,8 @@ export function DeliveryForm({
       .toLowerCase();
   const options = agencies.filter(
     (a) =>
-      a.active &&
-      a.region === region &&
+      (a.public !== false || a.receives) &&
+      (!region || a.region === region) &&
       (a.id === agency ||
         cleanAgency([a.name, a.city, a.district, a.address].join(" ")).includes(
           cleanAgency(agencyQuery),
@@ -307,6 +307,9 @@ export function DeliveryForm({
           f = Object.fromEntries(data);
         setBusy(true);
         try {
+          const destination = agencies.find((a) => a.id === f.agency);
+          if (!destination?.active || destination.receives === false)
+            throw Error("Elige una agencia habilitada para recoger tu pedido.");
           let report;
           if (!f.method)
             throw Error("Elige la plataforma de pago para continuar.");
@@ -341,11 +344,7 @@ export function DeliveryForm({
           const customer = Object.fromEntries(
             ["name", "lastName", "dni", "phone", "email"].map((k) => [k, f[k]]),
           );
-          onSubmit(
-            customer,
-            agencies.find((a) => a.id === f.agency),
-            report,
-          );
+          onSubmit(customer, destination, report);
         } catch (error) {
           setSubmitError(error.message);
         } finally {
@@ -408,9 +407,8 @@ export function DeliveryForm({
                 setAgency("");
                 setAgencyQuery("");
               }}
-              required
             >
-              <option value="">Elige tu departamento</option>
+              <option value="">Todos los departamentos</option>
               {[
                 ...new Set(
                   agencies.filter((a) => a.active).map((a) => a.region),
@@ -422,9 +420,8 @@ export function DeliveryForm({
                 ))}
             </Select>
           </label>
-          {region && (
-            <label className="field wide agency-search">
-              Buscar agencia en {region}
+          <label className="field wide agency-search">
+              {region ? `Buscar agencia en ${region}` : "Buscar agencia Shalom"}
               <input
                 type="search"
                 value={agencyQuery}
@@ -432,30 +429,38 @@ export function DeliveryForm({
                 placeholder="Distrito, agencia o dirección"
               />
               <span className="form-hint">
-                {options.length} agencias coincidentes
+                {options.length} ubicaciones coincidentes ·{" "}
+                {options.filter((a) => a.active && a.receives !== false).length}{" "}
+                para recojo
               </span>
-            </label>
-          )}
+          </label>
           <label className="field wide">
             Agencia Shalom de recojo
             <Select
               name="agency"
               aria-label="Agencia Shalom de recojo"
-              disabled={!region}
               value={agency}
-              onChange={(e) => setAgency(e.target.value)}
+              onChange={(e) => {
+                setAgency(e.target.value);
+                const selected = agencies.find((a) => a.id === e.target.value);
+                if (selected) setRegion(selected.region);
+              }}
               required
             >
               <option value="">
-                {!region
-                  ? "Primero elige un departamento"
-                  : options.length
-                    ? "Elige tu agencia"
-                    : "No hay coincidencias"}
+                {options.length ? "Elige tu agencia" : "No hay coincidencias"}
               </option>
               {options.map((a) => (
-                <option key={a.id} value={a.id}>
-                  {a.district} — {a.name}
+                <option
+                  key={a.id}
+                  value={a.id}
+                  disabled={!a.active || a.receives === false}
+                >
+                  {a.region} · {a.district} — {a.name}
+                  {a.pointPro ? " · Punto PRO" : ""}
+                  {a.receives === false
+                    ? " · No recibe envíos"
+                    : !a.active ? " · Pausada" : ""}
                 </option>
               ))}
             </Select>

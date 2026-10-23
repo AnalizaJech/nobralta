@@ -28,3 +28,6 @@ Playwright CLI en sesión aislada. Revisiones a320/390/768/1440; imágenes sin e
 
 ## Reglas vigentes de revisión4, prioridad sobre anatomía anterior
 Menú jerárquico de compra/servicio/descubrimiento. Cierre único en navbar, sin banda secundaria. Cards con color, talla y Añadir al carrito directo; acceso al detalle mediante imagen/nombre. Contenedores de packs alineados y look de tres prendas coordinadas. Móvil: una card por fila para selección legible. Todos los colores con fotografías locales; no filtros CSS para recolor. Véase docs/REVISION-4.md para inventario de cambios y QA.
+
+## Administración — revisión 23/10/2026
+Área de trabajo con fondo blanco, texto negro y superficies grises neutras; botones y controles compartidos con la tienda. Navegación agrupada por tarea y encabezados con descripción funcional. El resumen prioriza vouchers pendientes, preparación, despachos y stock bajo. Directorio y clientes usan búsqueda y paginación; catálogo resume variantes y despliega stock por color al editar. Promociones abren su formulario bajo demanda y muestran solo los campos del tipo elegido. Configuración divide atención, redes y perfil. En tablet y móvil el menú se contrae y las tablas conservan desplazamiento interno sin ampliar el viewport.

@@ -7,7 +7,25 @@
     "district": "Bagua",
     "name": "BAGUA CAPITAL",
     "address": "JR. AMAZONAS C-9 MZ. 126 LT. 25, BAGUA - BAGUA - AMAZONAS, REF. FRENTE AL PARQUE JERUSALEN Y/O COSTADO DE AVICOLA YACEG",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-738",
+    "officialId": 738,
+    "region": "Amazonas",
+    "city": "Bagua",
+    "district": "Aramango",
+    "name": "PRUEBAGENERACION",
+    "address": "Calle rio Marañon 189",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-49",
@@ -17,6 +35,10 @@
     "district": "Jazan",
     "name": "PEDRO RUIZ",
     "address": "AV. SACSAHUAMAN N° 513 - PEDRO RUIZ, REF. A MEDIA CUADRA DE LA UGEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -27,6 +49,10 @@
     "district": "Chachapoyas",
     "name": "CHACHAPOYAS CO DOS DE MAYO",
     "address": "JR. DOS DE MAYO CDRA. 15 S/N CHACHAPOYAS, REFERENCIA: JUNTO A TERMINAL DE COMBIS ETSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -37,6 +63,10 @@
     "district": "Chachapoyas",
     "name": "CHACHAPOYAS JR GRAU",
     "address": "JR. GRAU 270, REF. JUNTO A LA AGENCIA DE VIAJES MONTEVERDE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -47,6 +77,10 @@
     "district": "Luya",
     "name": "LUYA",
     "address": "JR. RAMÓN CASTILLA 1247 LUYA - AMAZONAS, REF. ENTRE EL COLEGIO SECUNDARIO RAMÓN CASTILLA Y EL JR. JOSÉ GÁLVEZ, A MEDIA CDRA. DEL AGENTE DE VENTA DE PASAJES DE CIVA, MÓVIL Y TRANSPORTE CHICLAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -57,6 +91,10 @@
     "district": "Bagua Grande",
     "name": "BAGUA GRANDE",
     "address": "AV. CHACHAPOYAS 1094 SECTOR GONCHILLO, REF. A 2 CUADRAS DE LA CLÍNICA SEÑOR DE LOS MILAGROS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -67,7 +105,25 @@
     "district": "Abancay",
     "name": "ABANCAY",
     "address": "AV. PANAMERICANA S/N - ABANCAY - APURÍMAC, REF. A 100 METROS DE LA COMISARÍA DE BELLAVISTA, AL COSTADO DE MADERERA VEGA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-734",
+    "officialId": 734,
+    "region": "Apurímac",
+    "city": "Abancay",
+    "district": "Curahuasi",
+    "name": "CURAHUASI (POR DEFINIR)",
+    "address": "AV. PANAMERICANA S/N",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-9",
@@ -77,6 +133,10 @@
     "district": "Andahuaylas",
     "name": "ANDAHUAYLAS",
     "address": "AV. MALINAS 1355 POCHCCOTA, ANDAHUAYLAS - ANDAHUAYLAS -  APURÍMAC, REF. AL COSTADO DE LA EX CANCHA EL CENTENARIO O ALTURA DE LA UNIVERSIDAD UNSAAC",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -87,7 +147,25 @@
     "district": "Challhuahuacho",
     "name": "CHALLHUAHUACHO",
     "address": "BARRIO WICHAYPAMPA LT. 13 - 15 - 16, CHALLHUAHUACHO - COTABAMBAS - APURÍMAC, REF. A DOS CDRAS DEL TERMINAL TERRESTRE DE CHALLHUAHUACHO / A ESPALDAS DEL TALLER E&L",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-484",
+    "officialId": 484,
+    "region": "Arequipa",
+    "city": "Arequipa",
+    "district": "Arequipa",
+    "name": "AEROPUERTO AREQUIPA",
+    "address": "Aeropuerto Internacional Alfredo Rodríguez",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-142",
@@ -97,6 +175,10 @@
     "district": "Cerro Colorado",
     "name": "ASOC LAS FLORES -  AV 54",
     "address": "ASOC. VIVIENDA INTERES SOCIAL ALDO MORO MZ. C LT. 21, CERRO COLORADO - AREQUIPA - AREQUIPA, REF. AL LADO DEL SISTEMA ELÉCTRICO EL PROFE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -107,6 +189,10 @@
     "district": "Cerro Colorado",
     "name": "ASOC. NUEVO HORIZONTE - AV. 54",
     "address": "NUEVO HORIZONTE MZ.H LOTE 12 - CERRO COLORADO - AREQUIPA, REF. CON AV.54 A CUATRO CDRAS. DE INKAFARMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -117,6 +203,10 @@
     "district": "Cerro Colorado",
     "name": "AUTOPISTA LA JOYA",
     "address": "ASOC. URBANIZADORA PERUARBO SECTOR PERU ZONA I MZ. B4 LT. 4 - AUTOPISTA LA JOYA - AREQUIPA, REF. AUTOPISTA AREQUIPA - LA JOYA, A DOS CDRAS. DEL SAUNA CANDAMO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -127,6 +217,10 @@
     "district": "Alto Selva Alegre",
     "name": "AV AUGUSTO SALAZAR BONDY",
     "address": "AUGUSTO SALAZAR BONDY MZ J LT 4 ALTO SELVA ALEGRE - AREQUIPA, REF.  A MEDIA CDRA. DE LA IGLESIA GUADALUPE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -137,6 +231,10 @@
     "district": "Cayma",
     "name": "AV CHARCANI",
     "address": "AV. CHARCANI 401 ASOC. JOSE OLAYA, REF. FRENTE AL COLEGIO MENDEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -147,6 +245,10 @@
     "district": "Paucarpata",
     "name": "AV JESUS",
     "address": "AV. JESÚS N° 1100 PAUCARPATA – AREQUIPA, REF. CON ESQUINA ARTURO VILLEGAS N° 101.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -157,6 +259,10 @@
     "district": "Alto Selva Alegre",
     "name": "AV LIMA",
     "address": "AV. LIMA N° 406 – ALTO SELVA ALEGRE - AREQUIPA, REF. ESQUINA CON AV. OBRERA CUADRA 20",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -167,6 +273,10 @@
     "district": "Cerro Colorado",
     "name": "AV LOS INCAS",
     "address": "AV. LOS INCAS N° 604 SEMIRURAL PACHACUTEC – CERRO COLORADO - AREQUIPA, REF. ESQUINA CON CALLE SAN MARTIN SEMIRURAL PACHACUTEC",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -177,6 +287,10 @@
     "district": "Arequipa",
     "name": "AV PARRA 379",
     "address": "AV. PARRA 379 - Arequipa",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -187,6 +301,10 @@
     "district": "Cerro Colorado",
     "name": "AV PUMACAHUA",
     "address": "URB. SAN FELIPE AV PUMACAHUA LT 14, CERRO COLORADO AREQUIPA, ref. A DOS CDRAS. ANTES DE LLEGAR AL METRO CENCOSUD / EX NOTARIA CONCHA REVILLA.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -197,6 +315,10 @@
     "district": "Socabaya",
     "name": "AV SOCABAYA - LOS TORITOS",
     "address": "AV. SOCABAYA 301 - URB. SAN MARTÍN DE SOCABAYA, REF. AL FRENTE DEL PARQUE VICTOR BARRIGA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -207,6 +329,10 @@
     "district": "Socabaya",
     "name": "AV. HORACIO ZEVALLOS",
     "address": "ASENTAMIENTO URBANO MUNICIPAL HORACIO ZEBALLOS GAMEZ SECTOR E MZ. 1 LT. 18 SOCABAYA - AREQUIPA, REF. AL COSTADO DEL COLEGIO JOULE Y/O 2 CDRAS. DEL PENAL DE SOCABAYA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -217,6 +343,10 @@
     "district": "Cerro Colorado",
     "name": "CIUDAD MUNICIPAL",
     "address": "MZ. A, SUB LT. 2 A, ASENTAMIENTO POBLACIONAL ASOCIACIÓN CENTRO INDUSTRIAL LAS CANTERAS, CERRO COLORADO - AREQUIPA, REF. AL COSTADO DEL GRIFO PRIMAX",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -227,6 +357,10 @@
     "district": "Uchumayo",
     "name": "CONGATA",
     "address": "URB. EL CARMEN M. E. LT. 1 CONGATA DEL DISTRITO UCHUMAYO  - AREQUIPA, REF. A DOS CDRAS. DE LA COMISARIA CONGATA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -237,6 +371,10 @@
     "district": "La Joya",
     "name": "EL CRUCE LA JOYA",
     "address": "LATERAL 12 C LT. 32, EL CRUCE LA JOYA - AREQUIPA, REF. AL COSTADO DEL GRIFO PRIMAX DE LA JOYA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -247,6 +385,10 @@
     "district": "Jacobo Hunter",
     "name": "JACOBO HUNTER",
     "address": "CALLE ARGENTINA # 405 - A, JACOBO HUNTER - AREQUIPA, REF. FRENTE AL CAJERO DE CAJA AREQUIPA Y ESQUINA CON EL BANCO CAJA AREQUIPA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -257,6 +399,10 @@
     "district": "Arequipa",
     "name": "MALL LAMBRAMANI",
     "address": "AV. LAMBRAMANI 325, AREQUIPA - AREQUIPA- AREQUIPA, REF. DENTRO DEL MALL LAMBRAMANI (SOTANO PISO -4)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -267,6 +413,10 @@
     "district": "Mariano Melgar",
     "name": "MARIANO MELGAR",
     "address": "CALLE ANCASH N° 202 - MARIANO MELGAR, REF. A LA ALTURA DEL COLISEO DEL NIÑO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -277,6 +427,10 @@
     "district": "Miraflores",
     "name": "MIRAFLORES AREQUIPA",
     "address": "URB. RESIDENCIAL FELIPE SANTIAGO SALAVERRY - CALLE TENIENTE RODRÍGUEZ MZ. H LT. 11, MIRAFLORES - AREQUIPA - AREQUIPA, REF. A MEDIA CDRA. DE LA COMPAÑIA DE BOMBERO DE MIRAFLORES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -287,6 +441,10 @@
     "district": "Cayma",
     "name": "PLAZA LA TOMILLA",
     "address": "AV. RAMÓN CASTILLA N° 1000 - B  LA TOMIllA  CAYMA  -  REFERENCIA: EN LA MISMA PLAZA TOMIlla",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -297,6 +455,10 @@
     "district": "Paucarpata",
     "name": "URB MANUEL PRADO",
     "address": "CALLE BELÉN N°100 - A URB. MANUEL PRADO - PAUCARPATA  REFERENCIA: A ESPALDAS DEL CC. MALL AVENTURA PORONGOCHE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -307,6 +469,10 @@
     "district": "Sachaca",
     "name": "VARIANTE UCHUMAYO CO",
     "address": "VARIANTE DE UCHUMAYO KM 4.5 VALLE CHILI SECTOR ALTO CURAL, PARCELA 662, SACHACA - AREQUIPA - AREQUIPA, REF. A 50 MTS. DEL ÓVALO VOLVO VARIANTE UCHUMAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -317,6 +483,10 @@
     "district": "Yura",
     "name": "YURA",
     "address": "MZ. O LT. 4 ZNA 2 CIUDAD DE DIOS - YURA - AREQUIPA, REF. CARRETERA YURA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -327,6 +497,10 @@
     "district": "Cerro Colorado",
     "name": "ZAMACOLA",
     "address": "CALLE YAVARÍ 507 B - ZAMACOLA - CERRO COLORADO – AREQUIPA, REF. A UNA CUADRA DE LA POSTA DE ZAMACOLA (MARCISA CAMPOS)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -337,6 +511,10 @@
     "district": "Camana",
     "name": "CAMANA",
     "address": "CALLE AGUSTÍN GAMARRA N° 451, CERCADO CAMANÁ, REFERENCIA: AL FRENTE DEL DELIVEY CASERITOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -347,6 +525,10 @@
     "district": "Chala",
     "name": "CHALA",
     "address": "AV. EMANCIPACION NRO. S/N MZ. 78 LT. 10. REF. A MEDIA CDRA. DEL PARQUE DEL NIÑO CHALINO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -357,6 +539,10 @@
     "district": "Aplao",
     "name": "APLAO",
     "address": "UBICA EN LA MANZANA X1, LOTE 07, DE LA CALLE 8 DE SETIEMBRE, APLAO - CASTILLA - AREQUIPA, REF. A UNA CDRA. DE MINISTERIAL PÚBLICO FISCALÍA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -367,6 +553,10 @@
     "district": "Majes",
     "name": "AV COLONIZADORES  CO",
     "address": "AV. LOTE COLONIZADORES. 4 PARCELA 180, MAJES - CAYLLOMA - AREQUIPA, REF. A MEDIA CDRA. DEL GRIFO EL EJE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -377,7 +567,25 @@
     "district": "Majes",
     "name": "CALLE YARABAMBA",
     "address": "CALLE YARABAMBA, MZ. Y LT 7. VILLA EL PEDREGAL, MAJES - CAYLLOMA - AREQUIPA, REF. A MEDIA CDRA. DE LA NOTARIA TERÁN BEJAR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-294",
+    "officialId": 294,
+    "region": "Arequipa",
+    "city": "Islay",
+    "district": "Mollendo",
+    "name": "CERCADO MOLLENDO",
+    "address": "CALLE DEAN VALDIVIA 388 CERCADO, REFERENCIA: ESQUINA CON BLONDEL",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-656",
@@ -387,6 +595,10 @@
     "district": "Cocachacra",
     "name": "COCACHACRA",
     "address": "CENTRO POBLADO COCACHACRA MZ. N5 SUB-LOTE 5B CALLE DEAN VALDIVIA, COCACHACRA - ISLAY - AREQUIPA, REF. DEL PARQUE SAN FRANCISCO UNA CDRA. HACIA ABAJO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -397,6 +609,10 @@
     "district": "Islay",
     "name": "MATARANI",
     "address": "ASENTAMIENTO HUMANO. PUERTO NUEVO MZ. I LT. 18 AV. BELLO HORIZONTE, ISLAY - ISLAY - AREQUIPA, REF. FRENTE AL PARQUE ECOLÓGICO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -407,7 +623,25 @@
     "district": "Mollendo",
     "name": "MOLLENDO CO",
     "address": "MARISCAL CASTILLA 472 –A, AREQUIPA - ISLAY - MOLLENDO, REF. AL COSTADO DE CEI “MI CARRUSEL”",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-720",
+    "officialId": 720,
+    "region": "Ayacucho",
+    "city": "Huamanga",
+    "district": "Ayacucho",
+    "name": "AEROPUERTO AYACUCHO",
+    "address": "Aeropuerto Internacional Alfredo Mendívil Duarte de Ayacucho",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-21",
@@ -417,6 +651,10 @@
     "district": "Ayacucho",
     "name": "AYACUCHO CO",
     "address": "AA.HH  COMPLEJO ARTESANAL T1 LT1 - ayacucho  -  rEFERENCIA :  a una cuadra de la puerta 2 del terminal terrestre libertadores de AMÉRICA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -427,6 +665,10 @@
     "district": "Carmen Alto",
     "name": "CARMEN ALTO",
     "address": "ASENTAMIENTO HUMANO CARMEN ALTO MZ B1 LOTE 9 ZONA II ACUCHIMAY CARMEN ALTO – HUAMANGA- AYACUCHO, REF. A 1 CUADRA DE LA MUNICIPALIDAD DE CARMEN ALTO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -437,6 +679,10 @@
     "district": "Jesus Nazareno",
     "name": "JESUS NAZARENO",
     "address": "JR. JOSÉ MARÍA EGUREN 451 - JESUS NAZARENO - HUAMANGA - AYACUCHO, REF. CRUCE CON JR. MARIANO MELGAR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -447,6 +693,10 @@
     "district": "San Juan Bautista",
     "name": "SAN JUAN BAUTISTA",
     "address": "AV. VENEZUELA N° 431 – URB. APROVISA, SAN JUAN BAUTISTA - HUAMANGA - AYACUCHO, REF. ALTURA DEL HOSTAL LA ORIENTAL, CERCA AL SEGURO DE ESSALUD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -457,6 +707,10 @@
     "district": "Huanta",
     "name": "HUANTA",
     "address": "JR. GERVASIO SANTILLANA N°976 - HUANTA - AYACUCHO. REF, CRUCE CON JR. REVOLUCIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -467,7 +721,25 @@
     "district": "Cajabamba",
     "name": "CAJABAMBA",
     "address": "JR. LARA N° 100 ,CAJABAMBA - CAJABAMBA - CAJAMARCA, REF. A UNA CDRA. DEL COMPLEJO DEPORTIVO “SANTA ANA”",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-482",
+    "officialId": 482,
+    "region": "Cajamarca",
+    "city": "Cajamarca",
+    "district": "Cajamarca",
+    "name": "AEROPUERTO CAJAMARCA",
+    "address": "aeropuerto MAYOR GENERAL FAP ARMANDO REVOREDO IGLESIAS",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-243",
@@ -477,6 +749,10 @@
     "district": "Cajamarca",
     "name": "BARRIO SAN JOSE",
     "address": "Jr. Chanchamayo N° 1162 - Barrio San José Cajamarca,  REFERENCIA: Paralela Con Jr. Huancavelica y Jr. Sara Macdougall.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -487,6 +763,10 @@
     "district": "Cajamarca",
     "name": "BARRIO SAN MARTÍN",
     "address": "JIRÓN LOS GLADIOLOS N° 336 BARRIO SAN MARTÍN, CAJAMARCA – CAJAMARCA – CAJAMARCA, REF. A LA ALTURA DE LA CDRA. 13 DE LA VÍA DE EVITAMIENTO SUR /A UNA CDRA. DE LA UNIVERSIDAD NACIONAL DE CAJAMARCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -497,6 +777,10 @@
     "district": "Los Banos Del Inca",
     "name": "BAÑOS DEL INCA",
     "address": "JR. CAHUIDE N° 242 – LOTIZ. HURTADO MILLER – BAÑOS DEL INCA – CAJAMARCA, REF. A ESPALDAS DE SENATI Y A UNA CDRA. DE LA BASE DE SERENAZGO DE BAÑOS DEL INCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -507,6 +791,10 @@
     "district": "Cajamarca",
     "name": "CAJAMARCA CO",
     "address": "Av. Independencia N° 787 Barrio Santa Elena",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -517,6 +805,10 @@
     "district": "Cajamarca",
     "name": "CAJAMARCA HORACIO ZEVALLOS",
     "address": "JR. EMILIO BARRANTES MZ X LOTE 3 URB. HORACIO ZEVALLOS - CAJAMARCA. REFERENCIA A UNA CUADRA DE LA UNIVERSIDAD PRIVADA DEL NORTE (UPN) Y VÍA DE EVITAMIENTO NORTE CUADRA 13.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -527,6 +819,10 @@
     "district": "Cajamarca",
     "name": "HUAMBOCANCHA BAJA",
     "address": "MZ. A LOTE S/N – BARRIO HUAMBOCANCHA BAJA – CAJAMARCA, REF. A UNA CDRA. DEL PARADERO DE LA P13/AL COSTADO DEL CAMPO DEPORTIVO EL PATRIARCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -537,6 +833,10 @@
     "district": "Jesus",
     "name": "HUARACLLA",
     "address": "MZ. A LOTE S/N CP HUARACLLA - JESUS - CAJAMARCA, REF. A UNA CDRA. DE LA I.E. JOSÉ OLAYA BALANDRA.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -547,6 +847,10 @@
     "district": "Celendin",
     "name": "CELENDIN",
     "address": "JR. PEDRO ORTIZ MONTOYA 148, REFERENCIA: ESQUINA CON AV. AMAZONAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -557,6 +861,10 @@
     "district": "Chota",
     "name": "CHOTA",
     "address": "AV. FRAY JOSÉ ARANA N 805 - REFERENCIA : frente al terminal angel divino",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -567,6 +875,10 @@
     "district": "Chilete",
     "name": "CHILETE - AGENTE",
     "address": "JR. SANTA ROSA N° 121, CHILETE – CONTUMAZÁ – CAJAMARCA, REF. A UNA CDRA. DEL TERRAPUERTO Y A 100 MTS. DEL PUENTE DE INGRESO A CHILETE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -577,6 +889,10 @@
     "district": "Yonan",
     "name": "TEMBLADERA  CAJAMARCA",
     "address": "JR. BOLOGNESI S/N – TEMBLADERA - YONAN - CONTUMAZÁ - CAJAMARCA, REF. AL FRENTE DEL PARQUE VÍCTOR RAÚL HAYA DE LA TORRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -587,6 +903,10 @@
     "district": "Cutervo",
     "name": "CUTERVO",
     "address": "av. SALOMÓN VILCHEZ murga  S/N. CDRA 9  REFERENCIA : FRENTE A LA CLÍNICA CUTERVO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -597,6 +917,10 @@
     "district": "Bambamarca",
     "name": "BAMBAMARCA",
     "address": "AV. TUPAC AMARU 1105, REFERENCIA: AL COSTADO DEL PARADERO AL CUMBE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -607,6 +931,10 @@
     "district": "Jaen",
     "name": "JAEN CO",
     "address": "AV. PAKAMMUROS CUADRA 6 S/N - referencia: ESQUINA CON CALLE LIBERTAD N° 490",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -617,6 +945,10 @@
     "district": "San Ignacio",
     "name": "SAN IGNACIO",
     "address": "PASAJE TRES N° 113 URB SANTA ROSA, CAJAMARCA - SAN IGNACIO, REF. FRENTE AL ESTADO MUNICIPAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -627,6 +959,10 @@
     "district": "Pedro Galvez",
     "name": "SAN MARCOS",
     "address": "JR. ADOLFO AMORIN BUENO N° 140 SAN MARCOS – CAJAMARCA, REF. AL  FRENTE DE LA PLAZA AGROPECUARIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -637,6 +973,10 @@
     "district": "San Miguel",
     "name": "SAN MIGUEL CAJAMARCA",
     "address": "JR. BOLOGNESI N° 717 – SAN MIGUEL – CAJAMARCA - CAJAMARCA, REF. AL COSTADO DEL COLISEO Y EL PARADERO DE LLAPA Y COCHÁN.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -647,7 +987,25 @@
     "district": "San Pablo",
     "name": "SAN PABLO  CAJAMARCA",
     "address": "JR. TNT. LORENZO IGLESIA N° 910 - SAN PABLO – CAJAMARCA - CAJAMARCA, REF. A MEDIA CDRA. DEL HOSPITAL SAN PABLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-480",
+    "officialId": 480,
+    "region": "Callao",
+    "city": "Callao",
+    "district": "Callao",
+    "name": "AEROPUERTO CALLAO",
+    "address": "AEROPUERTO INTERNACIONAL JORGE CHAVEZ",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-448",
@@ -657,6 +1015,10 @@
     "district": "Callao",
     "name": "AV  QUILCA",
     "address": "UNIDAD INMOBILIARIA N° 1, AV. QUILCA MZ. G SUB LT. 11C, URB. AEROPUERTO – SEGUNDO SECTOR - CALLAO, REF. CRUCE CON CALLE 1, FRENTE A LA IGLESIA DE TESTIGOS DE JEHOVÁ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -667,6 +1029,10 @@
     "district": "Callao",
     "name": "AV BERTELLO CALLAO",
     "address": "AV. ALEJANDRO BERTELLO BOLLATI MZ. B LT. 20 Y 21 – URB. PROGRESIVA BAHÍA BLANCA – CALLAO - CALLAO - CALLAO, REF. FRENTE AL MERCADO COSTA AZUL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -677,6 +1043,10 @@
     "district": "Callao",
     "name": "AV SAENZ PEÑA",
     "address": "AV. SAENZ PEÑA N° 414 - 416 - CALLAO - CALLAO, REF. CRUCE CON AV. MARCO POLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -687,6 +1057,10 @@
     "district": "Bellavista",
     "name": "BELLAVISTA CALLAO",
     "address": "AV. ELMER FAUCETT 1641 - URB. JARDINES VIRÚ MZ. B LT 46, BELLAVISTA - CALLAO, REF. A 2 CUADRAS DEL CRUCE DE AV. FAUCETT CON AV. VENEZUELA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -697,6 +1071,10 @@
     "district": "Callao",
     "name": "CALLAO FAUCETT",
     "address": "AV. ELMER FAUCETT N° 492",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -707,7 +1085,25 @@
     "district": "Mi Peru",
     "name": "MI PERU",
     "address": "V. VICTOR RAUL HAYA DE LA TORRE MZ. A LT. 02 ASENTAMIENTO HUMANO CONFRATERNIDAD - III SECTOR - MI PERU – CALLAO - CALLAO, REF. CRUCE CON AV. AREQUIPA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-540",
+    "officialId": 540,
+    "region": "Callao",
+    "city": "Callao",
+    "district": "Callao",
+    "name": "OUTLET ARAUCO FAUCETT",
+    "address": "AV. ELMER FAUCETT 3443 - CALLAO, REF. AL COSTADO DEL AEROPUERTO JORGE CHÁVEZ",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": true,
+    "active": false
   },
   {
     "id": "shalom-498",
@@ -717,6 +1113,10 @@
     "district": "La Perla",
     "name": "OVALO LA PERLA",
     "address": "AV. LA MARINA 530, URB. BENJAMIN DOIGG LOSSIO, LA PERLA, CALLAO, REF. A 3 CUADRAS DEL ÓVALO DE LA PERLA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -727,6 +1127,10 @@
     "district": "Ventanilla",
     "name": "PACHACUTEC  AV 150",
     "address": "AV. 150 IZQUIERDA MZ. W2 LT. 01 PROYECTO PILOTO NUEVO PACHACUTEC, VENTANILLA - CALLAO - CALLAO, REF. A 1 CDRA. DEL CRUCE AV. CAMINO DEL INCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -737,6 +1141,10 @@
     "district": "Ventanilla",
     "name": "PACHACUTEC PDRO CHINITAS",
     "address": "AV. 225 MZ. H SUB LT. T. 11 - ASOC  PROY. ESP. CIUDAD PACHACUTEC, REF. A 1 CDRA. DEL CRUCE CON AV. LOS PROYECTISTAS, VENTANILLA - LIMA - LIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -747,6 +1155,10 @@
     "district": "Ventanilla",
     "name": "PACHACUTEC PDRO VC",
     "address": "AV. 225 MZ F LOTE 2 SECTOR A GRUPO RESIDENCIAL A2 - PROYECTO PILOTO NUEVO PACHACUTEC, VENTANILLA - CALLAO - CALLAO, REF. FRENTE AL CENTRO DE SALUD 3 DE FEBRERO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -757,6 +1169,10 @@
     "district": "Ventanilla",
     "name": "PARAD.  LOS LICENCIADOS",
     "address": "CALLE 19, Mz. J Lt. 26 ZN - URB. Coop. De La Marina, REFERENCIA: AL COSTADO DE LUBRICENTRO PABLITO ROMERO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -767,6 +1183,10 @@
     "district": "Anta",
     "name": "ANTA IZCUCHACA",
     "address": "PARQUE DEL CARMEN LT. 1 MZ. B 2, ANTA - ANTA - CUSCO, REF. PARADERO CARMEN, PISTA PRINCIPAL IZCUCHACA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -777,6 +1197,10 @@
     "district": "Calca",
     "name": "CUSCO CALCA",
     "address": "AV. VILCANOTA MZ. A LT 4 CALCA - CUSCO, REF. FRENTE AL GRIFO PETRO PERÚ O EL ÓVALO PUMA - ENTRADA DE CALCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -787,6 +1211,10 @@
     "district": "Pisac",
     "name": "PISAC",
     "address": "AV VILCANOTA S/N, PISAC - CALCA - CUSCO, REF. A MEDIA CDRA. DEL PUENTE DE PISAC / CARRETERA A TARAY",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -797,6 +1225,10 @@
     "district": "Combapata",
     "name": "COMBAPATA",
     "address": "AV. SEÑOR DE HUANCA S/N - COMBAPATA - CANCHIS - CUSCO, REF. AL COSTADO DEL GRIFO SEÑOR DE QOYLLURITI - A ORILLAS DE LA MISMA CARRETERA A SICUANI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -807,6 +1239,10 @@
     "district": "Sicuani",
     "name": "SICUANI AV CONFEDERACION CO",
     "address": "AV. CONFEDERACION N° 659, REF. AL FRENTE DEL OVALO ENTRADA DE SICUANI / AL FRENTE DE LA COMISARIA DE TORCOMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -817,6 +1253,10 @@
     "district": "Sicuani",
     "name": "SICUANI AV MANUEL CALLO",
     "address": "JR. INAMBARI NRO. 208, SICUANI - CANCHIS - CUSCO, REF. AL FRENTE DEL BCP Y DE CAJA PIURA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -827,7 +1267,25 @@
     "district": "Santo Tomas",
     "name": "SANTO TOMAS",
     "address": "CALLE BOLOGNESI MZ. 02 LT. 25, SANTO TOMAS - CHUMBIVILCAS - CUSCO, REF. A ESPALDAS DE LA POLLERIA PICO DORADO Y A MEDIA CDRA. DE LA AV SANTA BARBARA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-481",
+    "officialId": 481,
+    "region": "Cusco",
+    "city": "Cusco",
+    "district": "Cusco",
+    "name": "AEROPUERTO CUSCO",
+    "address": "AEROPUERTO INTERNACIONAL ALEJANDRO VELASCO ASTETE",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-213",
@@ -837,6 +1295,10 @@
     "district": "Santiago",
     "name": "AV ANTONIO LORENA",
     "address": "Prolongación Av. Antonio Lorena # 140 - Santiago, Cusco, Referencia: al frente del cementerio Almudena",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -847,7 +1309,25 @@
     "district": "Wanchaq",
     "name": "AV PACHACUTEC",
     "address": "AV. PACHACUTEC 429 - WANCHAQ, REF. A 100 MTRS. DE LA PISCINA WANCHAQ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-736",
+    "officialId": 736,
+    "region": "Cusco",
+    "city": "Cusco",
+    "district": "Wanchaq",
+    "name": "AV. HUAYRUROPATA",
+    "address": "AV. TOMASA TITO CONDEMAYTA N1706, REF. AL COSTADO DEL TERMINAL DE SICUANI DE BUSES RÁPIDOS POR LA VIA DEL IPD",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-510",
@@ -857,6 +1337,10 @@
     "district": "San Sebastian",
     "name": "CACHIMAYO - SAN SEBASTIAN",
     "address": "URB. CACHIMAYO A-37 AV. LA CULTURA – SAN SEBASTIAN – CUSCO, REF. ENTRE PARADERO ENACO Y PARQUE CACHIMAYO, A 2 CUADRA DE LA UNIVERSIDAD ANDINA.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -867,6 +1351,10 @@
     "district": "San Sebastian",
     "name": "CUSCO CO VIA EVITAMIENTO",
     "address": "AV. EVITAMIENTO S/N UPS CHACAHUAYCO, SAN SEBASTIAN - CUSCO - CUSCO, REF. VÍA EVITAMIENTO EN EL PARADERO HORACIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -877,6 +1365,10 @@
     "district": "Wanchaq",
     "name": "CUSCO PARQUE INDUSTRIAL",
     "address": "AV. LAS AMERICAS MZ. E LT. 20, 2DA ETAPA, URB. PARQUE INDUSTRIAL, WANCHAQ - CUSCO, REF. AL FRENTE DE TALLERES PFURO, AL FRENTE DE MEDERERA URPI, PARALELA A LA AV VIA EXPRESA.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -887,6 +1379,10 @@
     "district": "Santiago",
     "name": "HUANCARO ",
     "address": "URB. VILLA UNION F-1-B HUANCARO, SANTIAGO - CUSCO - CUSCO, REF. FRENTE A LA IGLESIA DE LOS MORMONES/ A UNA CDRA. DEL MERCADO HUANCARO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -897,6 +1393,10 @@
     "district": "San Jeronimo",
     "name": "SAN JERONIMO",
     "address": "CALLE CIRO ALEGRÍA 226 - 224, REF. UNA CUADRA ANTES DEL PARADERO PENAL EN EL CARRIL DE BAJADA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -907,6 +1407,10 @@
     "district": "Cusco",
     "name": "TICA TICA",
     "address": "ARCO TICATICA PUSTIPATA, LT. N° A - 11 - 2, CUSCO, REF. EN LA AV. PRINCIPAL A 3 CDRAS. DEL MERCADO TICA TICA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -917,6 +1421,10 @@
     "district": "Santiago",
     "name": "URB. BANCOPATA AV. INDUSTRIAL",
     "address": "AV. INDUSTRIAL URB. BANCOPATA J-20, SANTIAGO - CUSCO, REF. A 2 CDRAS. DEL OVALO PACHACUTEC, FRENTE A LA EMPRESA COCA COLA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -927,6 +1435,10 @@
     "district": "Wanchaq",
     "name": "VELASCO ASTETE",
     "address": "VELASCO ASTETE D3 - WANCHAQ, REFERENCIA: A 2 CDRAS. DEL AEREOPUERTO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -937,6 +1449,10 @@
     "district": "San Sebastian",
     "name": "VIA EXPRESA SUR",
     "address": "URB. TUPAC AMARU B-1-2 SAN SEBASTIAN – CUSCO, REF. TERMINANDO LA VIA EXPRESA ZONA SUR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -947,6 +1463,10 @@
     "district": "Yauri ( Espinar )",
     "name": "ESPINAR",
     "address": "CALLE SAN JOSE N° 703 BARRIO PROGRESO, YAURI (ESPINAR) - ESPINAR - CUSCO, REF.  A MEDIA CDRA. DEL GRIFO SAN JOSE / A MEDIA CDRA. DE LA AV. TINTAYA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -957,6 +1477,10 @@
     "district": "Pichari",
     "name": "PICHARI",
     "address": "ASOC. GRAL. JUAN VELASCO A. MZ. B LT. 2 , PICHARI - LA CONVENCION – CUSCO, REF. AL COSTADO DE TECHO PROPIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -967,6 +1491,10 @@
     "district": "Santa Ana",
     "name": "QUILLABAMBA",
     "address": "JR. PUNO LT. 10 Y 11 MZ. G URB. SANTA ANA, CUSCO - LA CONVENCION - SANTA ANA, REF. A MEDIA CDRA.l DEL ESTADIO MUNICIPAL DE QUILLABAMBA / CRUCE CON PROLONGACION Jr. MARTIN PIO CONCHA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -977,6 +1505,10 @@
     "district": "Ocongate",
     "name": "OCONGATE",
     "address": "SECT. MAYO UCJO S/N, OCONGATE - QUISPICANCHI - CUSCO, REF. A LA ESPALDA DEL TERMINAL DE BUSES DE OCONGATE / A ORILLAS DE LA CARRETA A MAZUKO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -987,6 +1519,10 @@
     "district": "Oropesa",
     "name": "OROPESA",
     "address": "MZ. C LT. 3 DEL PREDIO DENOMINADO FRACCIÓN \"B\" QUISPICANCHIS – PUNA PUNABAMBA, REF. AL COSTADO DE PANIFICADORA LOS MARQUESES, A ORILLAS DE LA CTRA. A PAUCARTAMBO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -997,6 +1533,10 @@
     "district": "Urcos",
     "name": "URCOS",
     "address": "MAYUPATA S/N PAUCARBAMBA, URCOS - QUISPICANCHI - CUSCO REFERENCIA: AL FRENDE DEL ESTADIO MUNICIPAL DE URCOS / AL FRENTE DEL TERMINAL TERRESTRE DE URCOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1007,6 +1547,10 @@
     "district": "Chinchero",
     "name": "CHINCHERO",
     "address": "AV. MATEO PUMACAHUA S/N, CHINCHERO - URUBAMBA - CUSCO, ref AL COSTADO DE LA CAJA CUSCO / EN LA MISMA CARRETERA A URUBAMBA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1017,6 +1561,10 @@
     "district": "Urubamba",
     "name": "CUSCO URUBAMBA",
     "address": "LT. E-3 FRACCIÓN -1, SECTOR PATAHUASI, URUBAMBA – URUBAMBA - CUSCO, REF. A UNA CDRA. DE LA CARRETERA A OLLANTAYTAMBO / A MEDIA CDRA. DEL PARQUE TERESITA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1027,6 +1575,10 @@
     "district": "Huancavelica",
     "name": "BARRIO STA ANA CO",
     "address": "AV. UNIVERSITARIA 1003 - HUANCAVELICA, REF. A 1 CDRA. DE LA ESCUELA SANTA ANA Y A 3 CDRAS. DEL PUENTE DEL EJÉRCITO (BARRIO SANTA ANA)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1037,6 +1589,10 @@
     "district": "Huancavelica",
     "name": "BARRIO YANANACO",
     "address": "AV. ANDRÉS A. CÁCERES N° 198, HUANCAVELICA – HUANCAVELICA – HUANCAVELICA, REF. A MEDIA CDRA. DE LA PLAZOLETA \"TUPAC AMARU\" Y EN LA ESQUINA CON CALLE OROPEZA (BARRIO YANANACO)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1047,6 +1603,10 @@
     "district": "Ambo",
     "name": "AMBO",
     "address": "AV. LAS AMERICAS 501, REF. AL FRENTE DEL COLEGIO JUAN JOSÉ CRESPO Y CASTILLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1057,6 +1617,10 @@
     "district": "Amarilis",
     "name": "AMARILIS CO",
     "address": "JR. LOS PINOS LOTE 3 -D2 URB LOS PINOS - AMARILIS - HUÁNUCO, REF. A LA ESPALDA DE TOYOTA HUÁNUCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1067,6 +1631,10 @@
     "district": "Huanuco",
     "name": "JR MAYRO",
     "address": "JR. MAYRO N° 344, REF. A UNA CDRA. DEL PARQUE SAN PEDRO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1077,6 +1645,10 @@
     "district": "Jose Crespo Y Castil",
     "name": "AUCAYACU",
     "address": "JR. CHICLAYO 247 0C-02 CENT AUCAYU, LEONCIO PRADO, HUÁNUCO, REF. ATRÁS DEL ESTADIO MUNICIPAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1087,6 +1659,10 @@
     "district": "Rupa Rupa",
     "name": "TINGO MARIA CO BUENOS AIRES",
     "address": "CALLE ROSARIO CENTRAL, REFERENCIA: SEGUNDA ENTRADA DE BUENOS AIRES, EN LA MISMA ESQUINA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1097,6 +1673,10 @@
     "district": "Rupa Rupa",
     "name": "TINGO MARÍA - LEONCIO PRADO",
     "address": "AV. TITO JAIME 914, RUPA RUPA-  LEONCIO PRADO - HUANUCO, REF. A DOS CDRAS. DE LA PLAZA DE ARMAS LEONCIO PARDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1107,6 +1687,10 @@
     "district": "Chincha Alta",
     "name": "CALLE LOS ANGELES",
     "address": "CALLE LOS ÁNGELES N° CASA 217 01 - A SIN BARRIIO CERCADO, CHINCHA ALTA - CHINCHA - ICA, REF. A 2 CDRAS. DE LA PLAZA DE ARMAS DE CHNCHA PASANDO ELECTRODUNAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1117,6 +1701,10 @@
     "district": "Pueblo Nuevo",
     "name": "CHINCHA PUEBLO NUEVO",
     "address": "AA. HH. LOS ALAMOS, CALLE LOS LAURELES MZ. 17 LT. 11- A, REF. A 2 CDRAS. DE LA POSTA LOS ÁLAMOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1127,6 +1715,10 @@
     "district": "Chincha Alta",
     "name": "PROLONG LUIS MASSARO",
     "address": "PROLONGACION LUIS MASSARO  N°247 -  CHINCHA ALTA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1137,6 +1729,10 @@
     "district": "Sunampe",
     "name": "SUNAMPE  CO",
     "address": "CARR. PANAMERICANA SUR NRO. 198 -B , SIN BARRIO CERCADO SUNAMPE, SUNAMPE - CHINCHA - ICA, REF. ANTIGUA PANAMERICANA SUR FRENTE A LA ENTRADA DE GROCIO PRADO.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1147,6 +1743,10 @@
     "district": "Ica",
     "name": "ICA AV. JJ ELIAS",
     "address": "MANZANA B, SUB-LOTE 02 DEL FUNDO LA PALMA ICA, REF. CRUCE DE AV. CUTERVO CON AV. J.J ELIAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1157,6 +1757,10 @@
     "district": "Ica",
     "name": "ICA SAN JOAQUIN",
     "address": "Pasaje Grau N° 101 San Joaquin - ICA  REFERENCIA : A 1 cdra de Petro Peru",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1167,6 +1771,10 @@
     "district": "Santiago",
     "name": "ICA SANTIAGO",
     "address": "CENTRO POBLADO SANTIAGO MZ. E, LT. 01 SECTOR II SANTIAGO - ICA - ICA, REF. FRENTE A LA COMISARIA DE SANTIAGO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1177,6 +1785,10 @@
     "district": "Subtanjalla",
     "name": "ICA SUBTANJALLA CO",
     "address": "C.P - SECTOR MACACONA /PREDIO PARCELA 214 LOTE 2, SUBTANJALLA - ICA - ICA, REF. PANAMERICANA SUR FRENTE A LA ENTRADA DEL ARRABAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1187,6 +1799,10 @@
     "district": "Ica",
     "name": "ICA URB. MANZANILLA",
     "address": "AV. MANUEL SANTANA CHIRI N°359 A1 – ICA, REF. CRUCE CON CALLE BALTAZAR CARAVEDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1197,6 +1813,10 @@
     "district": "La Tinguina",
     "name": "LA TINGUIÑA",
     "address": "CALLE FRANCISCO SALES SOTELO N° 298 SUB LOTE 3, LA TINGUIÑA - ICA – ICA, REF. CRUCE DE LA AV.FRNCISCO SALES SOTELO Y AV. JOSE CARLOS MARIATEGUI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1207,6 +1827,10 @@
     "district": "Parcona",
     "name": "PARCONA",
     "address": "CP. DE PARCONA -CERCADO (PRIMERA ETAPA) MZ. B LOTE 16 PARCONA - ICA, REF. AV. 18 DE FEBRERO Y CRUCE DE AV. NATIVIDAD PACO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1217,6 +1841,10 @@
     "district": "Salas",
     "name": "SALAS ICA",
     "address": "SUB LOTE 01 ZONA PANAMERICANA SUR KM. 293.350, SALAS GUADALUPE -  ICA - ICA, REF. FRENTE AL ESTADIO DE SALAS GUADALUPE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1227,7 +1855,25 @@
     "district": "Nazca",
     "name": "AV CIRCUNVALACION NAZCA",
     "address": "EN LA ESQUINA DE LA AV. CIRCUNVALACIÓN CON CALLE S/N, HOY CALLE LAS MERCEDES S/N NASCA - REFERENCIA: AL LADO DE LA IEP JEAN PIAGET",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-518",
+    "officialId": 518,
+    "region": "Ica",
+    "city": "Nazca",
+    "district": "El Ingenio",
+    "name": "EL INGENIO",
+    "address": "AV. PRINCIPAL TULIN 204, EL INGENIO - NAZCA - ICA, REF. FREMTE  A A LA PLAZA DE TULIN",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-131",
@@ -1237,6 +1883,10 @@
     "district": "Marcona",
     "name": "SAN JUAN DE MARCONA",
     "address": "A. H. SAN MARTÍN DE PORRES E-28 SAN JUAN DE MARCONA - NAZCA - ICA, REF. ENTRE EL HOTEL SAN MARTIN Y EL MINIMARKET LANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1247,6 +1897,10 @@
     "district": "Vista Alegre",
     "name": "VISTA ALEGRE CO",
     "address": "CARRETERA PANAMERICANA SUR N\\u00b0 906, VISTA ALEGRE - NAZCA -\\u00a0ICA, REF. FRENTE AL AEROPUERTO DE VISTA ALEGRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1257,6 +1911,10 @@
     "district": "Pisco",
     "name": "AV ABRAHAM VALDELOMAR CO",
     "address": "AV. ABRAHAM VALDELOMAR NRO. PUERTA 965 PISCO - PISCO - ICA, REF. A UNA CDRA. POR LA POSTA SAN MARTIN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1267,6 +1925,10 @@
     "district": "Pisco",
     "name": "LA VILLA  CRUCE PISCO",
     "address": "C. P. OBLACION VILLA LOS ANGELES MZ.A LT 13 B LA VILLA PISCO-PISCO-ICA, REF. A 100 METROS CON DIRECCIÓN AL SUR DEDL CRUCE PANAMERICANA ANTIGUA C/N AV. FERMÍN TANGÜIS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1277,6 +1939,10 @@
     "district": "San Clemente",
     "name": "SAN CLEMENTE",
     "address": "AV. LOS LIBERTADORES GRUPO NÚMERO 1 MZ,91 LOTE 7ª SAN CLEMENTE - PISCO - ICA, REF. LIBERTADORES SEXTA CUADRA,FRENTE DEL GRIFO SANTA ROSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1287,6 +1953,10 @@
     "district": "La Merced",
     "name": "LA MERCED",
     "address": "AV. PERU 931 SECTOR PAMPA DEL CARMEN, LA MERCED  -CHANCHAMAYO - JUNÍN, REF. FRENTE A LA COOPERATIVA CHANCHAMAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1297,6 +1967,10 @@
     "district": "Perene",
     "name": "PERENE",
     "address": "AV. MARGINAL S/N AA.VV SAN JACINTO - PERENE - CHANCHAMAYO - JUNIN, REF. ANTES DEL ULTIMO ROMPEMUELLE DE SAN JACINTO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1307,6 +1981,10 @@
     "district": "Bajo Pichanaqui",
     "name": "PICHANAKI",
     "address": "AV. VENUS LT. 20 CIUDAD SATÉLITE - REF. ( A 1 CUADRA Y MEDIA DEL PARQUE DE SATÉLITE)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1317,6 +1995,10 @@
     "district": "San Ramon",
     "name": "SAN RAMÓN",
     "address": "JR. UCAYALI 102 - SAN RAMÓN, REFERENCIA: FRENTE A LA CAJA HUANCAYO Y EL PARQUE EL AVIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1327,6 +2009,10 @@
     "district": "Chupaca",
     "name": "CHUPACA",
     "address": "JR. RAMON CASTILLA 201, CHUPACA - CHUPACA - JUNIN, REF. A UNA CDRA. DE LA PLAZA PRINCIPAL DE CHUPACA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1337,6 +2023,10 @@
     "district": "Concepcion",
     "name": "CONCEPCION",
     "address": "CARRETERA CENTRAL LT. 7 - MZ. E5, CONCEPCIÓN - CONCEPCIÓN - JUNÍN, REF. ESQUINA CON TUPAC AMARU",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1347,6 +2037,10 @@
     "district": "El Tambo",
     "name": "AV CIRCUNVALACIÓN CRUCE CON MARIATEGUI",
     "address": "AV. CIRCUNVALACIÓN 480 T-1, EL TAMBO - HUANCAYO - JUNIN, REF. ESQUINA CON PROLONGACIÓN MARIATEGUI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1357,6 +2051,10 @@
     "district": "El Tambo",
     "name": "AV MARISCAL CASTILLA CO PARQUE INDUSTRIAL",
     "address": "AV MARISCAL CASTILLA 2769  RefERENCIA : Frente al colegio Andres bello",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1367,6 +2065,10 @@
     "district": "Chilca",
     "name": "CHILCA HUANCAYO",
     "address": "JR. 28 DE JULIO N° 935, REF. ESQUINA 28 DE JULIO Y SANTOS CHOCANO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1377,6 +2079,10 @@
     "district": "Chilca",
     "name": "CHILCA LEONCIO PRADO",
     "address": "JR. LEONICO PRADO 656, CHILCA – HUANCAYO - JUNÍN REFERENCIA: ESQUINA CON JIRON JOSE OLAYA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1387,6 +2093,10 @@
     "district": "El Tambo",
     "name": "CIUDAD UNIVERSITARIA",
     "address": "Jr Tarma Nro. 37 - 24, EL TAMBO - HUANCAYO - JUNÍN REF. AL COSTADO DE LA FACULTaD DE INGENIERÍA  METALÚRGICA UNCP",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1397,6 +2107,10 @@
     "district": "Huancayo",
     "name": "HUANCAYO JR. ICA",
     "address": "JR. ICA Nº 1143 - HUANCAYO, REFERENCIA: ENTRE EL JR. ICA Y EL JR. TACNA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1407,6 +2121,10 @@
     "district": "Pilcomayo",
     "name": "PILCOMAYO",
     "address": "PLAZA INDEPENDENCIA 131, PILCOMAYO - HUANCAYO - JUNÍN, REF. PLAZA PRINCIPAL DE PILCOMAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1417,6 +2135,10 @@
     "district": "El Tambo",
     "name": "PIO  PATA",
     "address": "AV. HUANCAVELICA 1201, EL TAMBO - HUANCAYO - JUNÍN, REF. ESQUINA CON EL JR. LA VICTORIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1427,6 +2149,10 @@
     "district": "San Agustin",
     "name": "SAN AGUSTIN DE CAJAS",
     "address": "CARRETERA CENTRAL KM 7.5 S/N SAN AGUSTIN – HUANCAYO – JUNÍN, REF. FRENTE A LA ENVASADORA SOLGAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1437,6 +2163,10 @@
     "district": "Huancayo",
     "name": "SAN CARLOS HUANCAYO",
     "address": "PJ. SAN FERNANDO 209 HUANCAYO - HUANCAYO - JUNIN, REF. ESQUINA DEL JR. SAN FERNANDO Y MÁRTIRES DEL PERIODISMO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1447,7 +2177,25 @@
     "district": "Sapallanga",
     "name": "SAPALLANGA",
     "address": "CA. CORONEL CISNEROS 598, REF. ESQUINA CON AV. MARISCAL CACERES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-182",
+    "officialId": 182,
+    "region": "Junín",
+    "city": "Huancayo",
+    "district": "Huancayo",
+    "name": "TERMINAL DE BUS",
+    "address": "Av. Evitamiento s/n - counter N°13",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-401",
@@ -1457,6 +2205,10 @@
     "district": "Huancayo",
     "name": "TERMINAL LOS ANDES",
     "address": "AV. FERROCARRIL S/N - HUANCAYO - COUNTER N° 14, REF. TERMINAL TERRESTRE LOS ANDES, FRENTE AL OPEN PLAZA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1467,6 +2219,10 @@
     "district": "Jauja",
     "name": "JAUJA",
     "address": "Jr. ESTANISLAO MARQUEZ 286, YAUYOS - JAUJA - JUNÍN, REF. ESQUINA CON JR. 4 DE ENERO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1477,6 +2233,10 @@
     "district": "Jauja",
     "name": "TERMINAL JAUJA",
     "address": "JR.LUIS BARDALES S/N, JAUJA – JAUJA – JUNÍN, REF. TERMINAL TERRESTRE HATUN XAUXA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1487,6 +2247,10 @@
     "district": "Mazamari",
     "name": "MAZAMARI",
     "address": "JR. JORGE CHAVEZ NRO 144 LT. 8A JUNÍN - SATIPO– MAZAMARI, REF. CERCA A LA VÍA PRINCIPAL, AL COSTADO DEL HOSPEDAJE LUJÁN 1ER PISO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1497,6 +2261,10 @@
     "district": "Pangoa",
     "name": "PANGOA",
     "address": "AV. MARGINAL S/N NÚMERO VILLA CHAVINI PANGOA - SATIPO - JUNÍN, REF. AL COSTADO DE LA TIENDA HONDA INVERSIONES ARAUCO SAN MARTÍN DE PANGOA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1507,6 +2275,10 @@
     "district": "Satipo",
     "name": "SATIPO",
     "address": "JR. FRANCISCO IRAZOLA 1077 - JUNÍN , REF. FÁBRICA LA SATIPEÑA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1517,6 +2289,10 @@
     "district": "Tarma",
     "name": "TARMA",
     "address": "JR. AMAZONAS NRO. 1164 TARMA - JUNÍN, REF. ENTRE JR. AMAZONAS CON AV. VIENRICH",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1527,6 +2303,10 @@
     "district": "La Oroya",
     "name": "LA OROYA",
     "address": "AV. ARÉVALO S/N (CARRETERA CENTRAL) - ANEXO EL TAMBO - SANTA ROSA DE SACCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1537,6 +2317,10 @@
     "district": "Casa Grande",
     "name": "CASA GRANDE",
     "address": "CALLE LUIS SÁNCHEZ N° 152 SECTOR PARTE ALTA. CASA GRANDE - ASCOPE - LA LIBERTAD, REF. CRUCE CON AV. ESTADIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1547,6 +2331,10 @@
     "district": "Paijan",
     "name": "PAIJAN",
     "address": "AV. PANAMERICANA NRO. 2321 LA LIBERTAD - ASCOPE - PAIJAN, REF. A 1 CDRA. DEL ESTADIO MUNICIPAL DE PAIJÁN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1557,6 +2345,10 @@
     "district": "Chepen",
     "name": "CHEPEN",
     "address": "PROLONGACION EZEQUIEL GONZALES CACEDA 193 - SEC. CHEPEN, FRENTE AL COLISEO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1567,6 +2359,10 @@
     "district": "Pacanga",
     "name": "PACANGUILLA",
     "address": "CARRETERA PANAMERICANA  # 835 - URB. PACANGUILLA - DISTRITO PACANGA, REFERENCIA: EN LA MISMA PANAMERICANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1577,6 +2373,10 @@
     "district": "Otuzco",
     "name": "OTUZCO",
     "address": "AV. ALFREDO GUTIÉRREZ N° 120 - Otuzco - Otuzco - La Libertad.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1587,6 +2387,10 @@
     "district": "Guadalupe",
     "name": "CIUDAD DE DIOS",
     "address": "MZ. A LT. 01 CPM CIUDAD DE DIOS - SEC. LOS ÁNGELES – GUADALUPE – LA LIBERTAD, REF. AL COSTADO DEL MOLINO SAMÁN Y A DOS CUADRAS DEL CRUCE A CAJAMARCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1597,6 +2401,10 @@
     "district": "Guadalupe",
     "name": "GUADALUPE LA LIBERTAD",
     "address": "AV. NILLA CERRUTY N° 299 - GUADALUPE – PACASMAYO – LA LIBERTAD, ref. AL COSTADO DEL GRIFO REPSOL - NEOTECH",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1607,6 +2415,10 @@
     "district": "Pacasmayo",
     "name": "PACASMAYO CENTRO",
     "address": "AV. GONZALO UGAZ SALCEDO S/N - PACASMAYO - LA LIBERTAD, REF. AL COSTADO DEL ESTADIO MUNICIPAL DE PACASMAYO / A MEDIA CDRA. DEL SUPERMERCADO TOTTUS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1617,6 +2429,10 @@
     "district": "Pacasmayo",
     "name": "PACASMAYO LAS PALMERAS",
     "address": "CTRA. PANAMERICANA NORTE N° MZ. P LT. 4A - A.H. LAS PALMERAS, REFERENCIA: ENTRE AV. SUCRE Y AV. LEONCIO PRADO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1627,6 +2443,10 @@
     "district": "San Pedro De Lloc",
     "name": "SAN PEDRO DE LLOC",
     "address": "AV. VÍA DE EVITAMIENTO N° 407, SAN PEDRO DE LLOC - PACASMAYO - LA LIBERTAD, REF. A MEDIA CDRA. DE LA CALLE LIBERTAD/ A MEDIA CDRA. DEL PARADERO DE LA VIA DE EVITAMIENTO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1637,6 +2457,10 @@
     "district": "Huamachuco",
     "name": "HUAMACHUCO",
     "address": "JR. SIMON BOLIVAR 763, HUAMACHUCO SANCHEZ CARRION - LA LIBERTAD, REF. ENTRE JR. INDEPENDECIA Y JR. ALFONSO UGARTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1647,6 +2471,10 @@
     "district": "El Porvenir",
     "name": "ALTO TRUJILLO",
     "address": "AV. PROLONGACIÓN 12 DE NOVIEMBRE, MZ. Q, LT. 25, REFERENCIA: A MEDIA CDRA. DE LA COMISARÍA ALTO TRUJILLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1657,6 +2485,10 @@
     "district": "Trujillo",
     "name": "ATAHUALPA",
     "address": "CALLE ATAHUALPA 481 – TRUJILLO – LA LIBERTAD, REF. A 1/2 CDRA DE LA AV LOS INCAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1667,6 +2499,10 @@
     "district": "El Porvenir",
     "name": "AV HERMANOS ANGULO",
     "address": "AV. HERMANOS ANGULO 628, TRUJILLO, REF. A ESPALDAS DE LA MUNICIPALIDAD EL PORVENIR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1677,6 +2513,10 @@
     "district": "Trujillo",
     "name": "AV HNOS UCEDA - AMERICA NORTE",
     "address": "AV. HERMANOS UCEDA MEZA N° 269 URB MIRAFLORES II ETAPA - TRUJILLO - TRUJILLO - LA LIBERTAD, REF. A UNA CDRA. DE AV. AMERICA NORTE. / ENTRE AV. MIRAFLORES Y AV. SALVADOR LARA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1687,6 +2527,10 @@
     "district": "Victor Larco Herrera",
     "name": "AV LARCO",
     "address": "AV. LARCO 865, TRUJILLO - TRUJILLO - LA LIBERTAD, REF.  MZ X LT 28 CUI SAN ANDRES V ETAPA TERCER SECTOR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1697,6 +2541,10 @@
     "district": "La Esperanza",
     "name": "AV TAHUANTINSUYO",
     "address": "AV. TAHUANTINSUYO N° 739, LA ESPERANZA – TRUJILLO – LA LIBERTAD, REF. DIAGONAL A GRIFO EL AMIGO. / ENTRE PASAJE SANTA ANA Y AV. LOS LAURELES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1707,6 +2555,10 @@
     "district": "El Porvenir",
     "name": "AV. 12 DE NOVIEMBRE",
     "address": "AV. 12 DE NOVIEMBRE M. W LOTE 19 MZ. 3A, EL PORVENIR - TRUJILLO - LA LIBERTAD, REF. AL FRENTE DEL COMPLETO DEPORTIVO JOSÉ CAIPO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1717,6 +2569,10 @@
     "district": "El Porvenir",
     "name": "AV. LAS MAGNOLIAS",
     "address": "AV. LAS MAGNOLIAS MZ. 25 LT. 2A NUEVO PORVENIR, EL PORVENIR - TRUJILLO - LA LIBERTAD, REF. A UNA CDRA. DEL PODER JUDICIAL CISAJ SEDE EL PORVENIR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1727,6 +2583,10 @@
     "district": "Trujillo",
     "name": "CALLE LIVERPOOL",
     "address": "Calle LiverpoOl N° 329 / Urb. Santa Isabel - Trujillo.  referencia : a una cuadra antes de la Iglesia de Mansiche",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1737,6 +2597,10 @@
     "district": "Trujillo",
     "name": "CALLE SANTA CRUZ - AMERICA SUR",
     "address": "CALLE SANTA CRUZ N° 389 CHICAGO - TRUJILLO - LA LIBERTAD, REF. A MEDIA CDRA. DE LA AV. AMERICA SUR/A MEDIA CUADRA DEL ESTADIO CHAN CHAN.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1747,6 +2611,10 @@
     "district": "Huanchaco",
     "name": "EL MILAGRO",
     "address": "AV. INDUSTRIAL MZ 23 LT. 13 SECTOR II – EL MILAGRO, HUANCHACO - TRUJILLO - LA LIBERTAD, REF. A 2 CDRAS. DE LA PLAZA DE ARMAS DE EL MILAGRO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1757,6 +2625,10 @@
     "district": "El Porvenir",
     "name": "JR. CAHUIDE",
     "address": "JR. CAHUIDE N° 342 AA.HH LA MERCED - EL PORVENIR - TRUJILLO - LA LIBERTAD, REF. A UNA CDRA. DEL ARCO DEL PORVENIR / A UNA CDRA. DE LA PARROQUIA EL BUEN PASTOR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1767,6 +2639,10 @@
     "district": "Moche",
     "name": "MOCHE",
     "address": "AV. LA MARINA LOTE 25 - B – MOCHE – TRUJILLO - LA LIBERTAD, REF. A MEDIA CDRA DE LA COMISARÍA DE MOCHE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1777,6 +2653,10 @@
     "district": "Huanchaco",
     "name": "OVALO HUANCHACO CO",
     "address": "CARRETERA VIA DE EVITAMIENTO 576.2 HUANCHAQUITO ALTO - TRUJILLO - LA LIBERTAD, REF. A 1 CDRA. DE OVALO HUANCHACO / AL COSTADO DE CONDOMINIO LAS BRISAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1787,6 +2667,10 @@
     "district": "Trujillo",
     "name": "OVALO PAPAL",
     "address": "URB. VISTA HERMOSA MZ. F LT. 11 PISO °1 TRUJILLO - TRUJILLO - LA LIBERTAD, REF. A ESPALDAS DEL METRO DEL OVALO PAPAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1797,7 +2681,25 @@
     "district": "Trujillo",
     "name": "TRUJILLO LA PERLA",
     "address": "AV. LA PERLA MZ. E LOTE 05 URB. INGENIERIA – TRUJILLO – LA LIBERTAD, REF. A 1 cDRA. DEL COLEGIO BRUNING",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-730",
+    "officialId": 730,
+    "region": "La Libertad",
+    "city": "Trujillo",
+    "district": "La Esperanza",
+    "name": "URB MANUEL AREVALO",
+    "address": "MZ. B21 LT. 05 URB MANUEL AREVALO III ETAPA B, REF. CRUCE CON AV. CAHUIDE A UNA CDRA. DEL COMPLEJO DEPORTIVO PAZ Y AMISTAD",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-284",
@@ -1807,7 +2709,25 @@
     "district": "La Esperanza",
     "name": "WICHANZAO",
     "address": "MZ. 1 LT. 23 AA.HH WICHANZAO – LA ESPERANZA – TRUJILLO – LA LIBERTAD, REF. AL COSTADO DEL ALMACÉN SUNAT. / DIAGONAL AL HOSPITAL DE ALTA COMPLEJIDAD VIRGEN DE LA PUERTA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-483",
+    "officialId": 483,
+    "region": "La Libertad",
+    "city": "Trujillo",
+    "district": "Trujillo",
+    "name": "aperopuerto TRUJILLO",
+    "address": "Aeropuerto Internacional Capitán FAP Carlos Martinez de Pinillos",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-112",
@@ -1817,6 +2737,10 @@
     "district": "Chao",
     "name": "CHAO",
     "address": "AV. VICTOR RAUL HAYA DE LA TORRE 575 CHAO - VIRU, REF. A MEDIA CDRA. DE LA COMISARÍA DE CHAO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1827,6 +2751,10 @@
     "district": "Viru",
     "name": "PUENTE VIRU",
     "address": "PANAMERICANA NORTE N° 933 PUENTE VIRÚ - VIRÚ - LA LIBERTAD, REF. a MEDIA CDRA. DEL GRIFO ZONA ETNA/MEDIA CDRA. DEL SEMAFORO ZONA ETNA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1837,7 +2765,25 @@
     "district": "Viru",
     "name": "VIRU CENTRO",
     "address": "CALLE PUNO N° 125 - MZ. 32 LT. 7A - VIRÚ - LA LIBERTAD, REF. A MEDIA CDRA. DEL CRUCE DE LA AV. VIRU CON LA CALLE JORGE CHAVEZ / A MEDIA CDRA. DE LA PLAZUELA MARIA PARADO DE BELLIDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-486",
+    "officialId": 486,
+    "region": "Lambayeque",
+    "city": "Chiclayo",
+    "district": "Chiclayo",
+    "name": "AEROPUERTOCHICLAYO",
+    "address": "Aeropuerto Internacional Capitán FAP José Abelardo Quiñones Gonzáles",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-502",
@@ -1847,6 +2793,10 @@
     "district": "Jose Leonardo Ortiz ",
     "name": "AV  BALTA CDRA. 36",
     "address": "AV. JOSE BALTA N° 3653 C.P.M. PRIMERO DE MAYO JOSE LEONARDO ORTIZ -CHICLAYO -LAMBAYEQUE, REF. ENTRE LA AV. BALTA Y NÉSTOR BARSALLO / A 2 CUADRAS DE LA AV. CHICLAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1857,6 +2807,10 @@
     "district": "Chiclayo",
     "name": "AV LAS AMERICAS",
     "address": "AV. LAS AMÉRICAS LT. 42 MZ. D, URB. MONTERRICO - I ETAPA, CHICLAYO - CHICLAYO - LAMBAYEQUE, REF. A MEDIA CDRA. ENTRE LA AV. COLECTORA Y AV. LAS AMERICAS Y A MEDIA CDRA. DEL GRIFO SR. DE SIPÁN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1867,6 +2821,10 @@
     "district": "La Victoria",
     "name": "AV VICTOR R. HAYA CO",
     "address": "av. VÍCTOR RAUL HAYA DE LA TORRE 2470 La Victoria - Chiclayo  REFERENCIA : ENTRE LA VIA EVITAMIENTO Y PANAMERICANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1877,6 +2835,10 @@
     "district": "Chiclayo",
     "name": "CALLE TACNA",
     "address": "CALLE. TACNA N° 1095 -CHICLAYO- CHICLAYO - LAMBAYEQUE, REF. INTERSECCIÓN CON AV. JOSE QUIÑONES / A ESPALDAS DEL SUPERMERCADO MAKRO CHICLAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1887,6 +2849,10 @@
     "district": "Jose Leonardo Ortiz ",
     "name": "CALLE TAHUANTINSUYO",
     "address": "CALLE TAHUANTINSUYO 995 - URB. SAN LORENZO - JOSE LEONARDO ORTIZ - CHICLAYO - LAMBAYEQUE, REF. ENTRE LA CDRA. 2 DE AV. AMÉRICA Y LA CALLE TAHUANTINSUYO/A MEDIA CDRA. DE LA IGLESIA LOS MORMONES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1897,7 +2863,25 @@
     "district": "Chongoyape",
     "name": "CHONGOYAPE",
     "address": "AV. ATAHUALPA N° 1200 - CHONGOYAPE - CHICLAYO - LAMBAYEQUE, REF. INTERSECCION CON CALLE IQUITOS / A 2 CDRAS. DE LA INTERSECCION CON LA AV. CHICLAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-735",
+    "officialId": 735,
+    "region": "Lambayeque",
+    "city": "Chiclayo",
+    "district": "La Victoria",
+    "name": "CHOSICA DEL NORTE CO (POR DEFINIR)",
+    "address": "MZ. 1 LOTE 1C-2 URB. LOTIZACION CHOSICA DEL NORTE, REF. A MEDIA CDRA. DE LA INTERSECCIÓN CON CALLE SAN MARTIN / A UNOS MTS. DE ALBORADA EVENTOS Y RECEPCIONES",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-158",
@@ -1907,6 +2891,10 @@
     "district": "Chiclayo",
     "name": "MIRAFLORES CHICLAYO",
     "address": "AV. PANAMERICANA 975 PP JJ LUIS ALBERTO SANCHEZ, CHICLAYO - CHICLAYO - LAMBAYEQUE, REF. A MEDIA CDRA. DEL OVALO SEÑOR DE SIPAN / AL FRENTE DE DERCO CENTER",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1917,6 +2905,10 @@
     "district": "Monsefu",
     "name": "MONSEFU",
     "address": "AV. VENEZUELA N° 221, MONSEFÚ - CHICLAYO - LAMBAYEQUE, REF. REF 01: A MEDIA CDRA. DE LA CALLE DIEGO FERRE Y A CDRA. Y MEDIA DEL PARQUE ARTESANAL DE MONSEFÚ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1927,6 +2919,10 @@
     "district": "Patapo",
     "name": "PATAPO",
     "address": "AV. CHONGOYAPE N° S/N SECTOR CERRO MIRADOR, PATAPO - CHICLAYO - LAMBAYEQUE, REF. A UNA CDRA. Y MEDIA DE LA INTERSECCIÓN CON AV TRAPICHE / AL FRENTE DEL POLIDEPORTIVO DEL CERRO MIRADOR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1937,7 +2933,25 @@
     "district": "Pimentel",
     "name": "PIMENTEL",
     "address": "CALLE MIGUEL GRAU MZ B LOTE 3 - PIMENTEL - CHICLAYO - LAMBAYEQUE, REF. AL COSTADO DE LA COMISARIA DE PIMENTEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-739",
+    "officialId": 739,
+    "region": "Lambayeque",
+    "city": "Chiclayo",
+    "district": "Pimentel",
+    "name": "PIMENTEL (POR DEFINIR)",
+    "address": "CALLE . JUAN VELASCO ALVARADO N° 472 , PIMENTEL - CHICLAYO - LAMBAYEQUE. REFERENCIAS: INTERSECCIÓN CON LA CALLE CIRO ALEGRIA. / A UNAS CUADRAS DEL CENTRO DE SALUD \"PIMENTEL\".",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-649",
@@ -1947,6 +2961,10 @@
     "district": "Pomalca",
     "name": "POMALCA",
     "address": "CALLE 25 MZ. I LT. 6 SECT. 6 SAN JUAN, POMALCA - CHICLAYO - LAMBAYEQUE, REF. A UNA CDRA. Y MEDIA DE LA INTERSECCIÓN CON AV. SAN MARTIN/ AL FRENTE DE LA IGLESIA MORMON",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1957,6 +2975,10 @@
     "district": "Reque",
     "name": "REQUE",
     "address": "AV. MARISCAL RAMON CASTILLA MZ. 4 LOTE 14, REQUE - CHICLAYO - LAMBAYEQUE, REF. A MEDIA CDRA. DE LA INTERSECCION CON CALLE SAN MARTIN / A UNOS MTRS DE ALBORADA EVENTOS Y RECEPCIONES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1967,6 +2989,10 @@
     "district": "Tuman",
     "name": "TUMAN",
     "address": "AV. CHOTA N° 288 SECTOR ACAPULCO, TUMAN - CHICLAYO - LAMBAYEQUE, REF. AL COSTADO DEL RESTAURANT MANOS CHOTANAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1977,6 +3003,10 @@
     "district": "Ferrenafe",
     "name": "FERREÑAFE",
     "address": "AV. ANDRÉS A. CÁCERES N°550A, REFERENCIA: AL COSTADO DEL GRIFO PRIMAX",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1987,6 +3017,10 @@
     "district": "Jayanca",
     "name": "JAYANCA",
     "address": "CALLE DIEGO FERRE N°1321 - JAYANCA - LAMBAYEQUE, REF. AL FRENTE DEL CENTRO DE SALUD DE JAYANCA / A MEDIA CDRA. DEL GRIFO ASIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -1997,6 +3031,10 @@
     "district": "Lambayeque",
     "name": "LAMBAYEQUE CENTRO",
     "address": "AV. FEDERICO VILLARREAL N° 491, LAMBAYEQUE - LAMBAYEQUE - LAMBAYEQUE, REF. A MEDIA CDRA. DE LA INTERSECCION DE LA AV. FEDERICO VILLARREAL CON CALLE EMILIANO NIÑO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2007,6 +3045,10 @@
     "district": "Lambayeque",
     "name": "LAMBAYEQUE PANAMERICANA",
     "address": "CALLE PARAGUAY MZ. D LT 2A UNIDAD VECINAL INDOAMÉRICA - LAMBAYEQUE, REF. AL COSTADO DE LA FÁBRICA DE KINKONES BRUNING / A 01 CUADRA DEL PUENTE LAMBAYEQUE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2017,6 +3059,10 @@
     "district": "Morrope",
     "name": "MORROPE",
     "address": "CALLE TAHUANTINSUYO N° 821, MORROPE - LAMBAYEQUE, REF. FRENTE AL PARQUE INFANTIL DE MORROPE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2027,6 +3073,10 @@
     "district": "Motupe",
     "name": "MOTUPE",
     "address": "AV. EL MAESTRO N° 447 - MOTUPE - LAMBAYEQUE- LAMBAYEQUE, REF. EN LA CARRETERA FERNANDO BELAUNDE TERRY (PANAMERICANA NORTE) / AL FRENTE DEL GRIFO AVA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2037,6 +3087,10 @@
     "district": "Olmos",
     "name": "OLMOS",
     "address": "AV. AUGUSTO B. LEGUÍA MZ. 87 LT. 32  - OLMOS - LAMBAYEQUE, REF. AL FRENTE DE LA COMISARIA DE OLMOS.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2047,6 +3101,10 @@
     "district": "Tucume",
     "name": "TUCUME",
     "address": "CALLE FEDERICO VILLARREAL NRO. 1157, REF. FRENTE AL MOLINO SANTAMARÍA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2057,6 +3115,10 @@
     "district": "Barranca",
     "name": "BARRANCA",
     "address": "JR. ANDRES REYES BUITRON 416. BARRANCA - BARRANCA – LIMA, REF. A 2 CDRS. DEL PARQUE EL OLVIVAR / A MTRS. DE LA CASA DEL MAESTRO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2067,6 +3129,10 @@
     "district": "Paramonga",
     "name": "PARAMONGA",
     "address": "AV. CENTRAL N° 305 MZ. N1 LT. 17, rEF. URB. MIGUEL GRAU",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2077,6 +3143,10 @@
     "district": "Supe",
     "name": "SUPE",
     "address": "AV. FRANCISCO VIDAL 1120, SUPE - BARRANCA - LIMA, REF. AL COSTADO DE LUBRICENTRO CIRIACO Y MEDIA CDRA. DE LA CRUZ MISIONERA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2087,6 +3157,10 @@
     "district": "Chilca",
     "name": "ANT PANAM SUR CDRA 11",
     "address": "ANTIGUA PANAMERICANA SUR CDRA. 11 MZ. 46, LT. 08. CHILCA - CAÑETE - LIMA, REF. A MEDIA CDRA. DEL HOTEL EL PACÍFICO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2097,6 +3171,10 @@
     "district": "Imperial",
     "name": "CAÑETE IMPERIAL",
     "address": "JR. AUGUSTO B. LEGUÍA N.º 457, MZ E, CENTRO POBLADO IMPERIAL, IMPERIAL - CAÑETE - lima, ref. CEVICHERÍA BRISAS DEL MAR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2107,7 +3185,25 @@
     "district": "San Vicente De Canet",
     "name": "CAÑETE SAN VICENTE",
     "address": "AA.HH. VÍCTOR ANDRÉS BELAUNDE MZ. B LT. 12, SAN VICENTE DE CAÑETE - CAÑETE - LIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-433",
+    "officialId": 433,
+    "region": "Lima",
+    "city": "Cañete",
+    "district": "San Vicente De Canet",
+    "name": "JR. SANTA RITA - CAÑETE (POR DEFINIR)",
+    "address": "JR. SANTA RITA 399, REF. CRUCE CON AV. LIBERTADORES",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-156",
@@ -2117,6 +3213,10 @@
     "district": "Mala",
     "name": "MALA",
     "address": "Av. Marchand # 250, distrito de Mala .    referencia:  a unas casas frente a la distribuidora primax gas",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2127,6 +3227,10 @@
     "district": "Nuevo Imperial",
     "name": "NUEVO IMPERIAL CO",
     "address": "FUNDO SANTA ADELA, MZ. A, LOTES 8 Y 9 – CARRETERA CAÑETE A YAUYOS NUEVO IMPERIAL - CAÑETE - LIMA, REF. AL COSTADO DEL RESTAURANT LA RUTA BRAVA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2137,6 +3241,10 @@
     "district": "Chancay",
     "name": "CHANCAY",
     "address": "PROLONGACIÓN SAN MARTÍN N°403 CHANCAY - REFERENCIA: A UNA CDRA. DE LA AV. PANAMERICANA NORTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2147,6 +3255,10 @@
     "district": "Huaral",
     "name": "HUARAL",
     "address": "HABILITACIÓN URBANA FUNDO ESQUIVEL P-21, MZ. C, LT. 5, 6, 8 y 9 DE LA URB. RESID. EL OLIVAR, CON INT. EN AV. CHANCAY, REF. A 1 M. DEL ESTADIO UNIÓN HUARAL, A 3 CDRAS. DE LOS 3 ARCOS INGRESO A HUARAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2157,6 +3269,10 @@
     "district": "San Antonio",
     "name": "JICAMARCA",
     "address": "AV. SINCHI ROCA MZ. P LT. 16A P lote 16A, AAHH LAS PRADERAS DE JICAMARCA – SECTOR EL CERCADO – ANEXO 22 JICAMARCA – HUAROCHIRI, REF. CERCA AL ARCO PORTON DE JICAMARCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2167,7 +3283,25 @@
     "district": "Huacho",
     "name": "HUACHO AV  INDACOCHEA",
     "address": "AV. MERCEDES INDACOCHEA 1276 HUACHO - HUAURA - LIMA, REF. INTERSECCIÓN CON PEDRO RUIZ GALLO, A 2 CDRAS. DE LA UNIVERSIDAD NACIONAL JOSÉ FAUSTINO SÁNCHEZ CARRIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-737",
+    "officialId": 737,
+    "region": "Lima",
+    "city": "Huaura",
+    "district": "Huacho",
+    "name": "HUACHO SAN MARTÍN CO (POR DEFINIR)",
+    "address": "PROLONGACION SAN MARTIN 1087, REF.  AL FRENTE DE LA PAZULEA VICTOR RAUL HAYA DE LA TORRE",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-394",
@@ -2177,6 +3311,10 @@
     "district": "Huaura",
     "name": "HUAURA",
     "address": "AV. LAS MALVINAS MZ. C LOTE 16 URB. EL ROSARIO SUR HUAURA, REF. A ESPALDAS DE LA PLAZA DE ARMAS, A 1 CDRA. DE LA CALLE LOS ALAMOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2187,6 +3325,10 @@
     "district": "Huacho",
     "name": "SALAVERRY HUACHO CO",
     "address": "PROLONGACIÓN salaverry  n° 764  huacho -  referencia : cruce con la av la paz  ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2197,6 +3339,10 @@
     "district": "Sayan",
     "name": "SAYAN",
     "address": "CALLE NARANJO N° 211.SAYAN - HUAURA - LIMA, REF. A MEDIA CDRA. DE LA PLAZA DE ARMAS Y DE LA MUNICIPALIDAD ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2207,7 +3353,25 @@
     "district": "Villa El Salvador",
     "name": "01 DE MAYO",
     "address": "AV. 01DE MAYO 1 SECT GP 23 - A MZ N LOTE 13 - V.E.S., REF. AV. PASTOR SEVILLA CON AV. 1 DE MAYO A 2 CUADRAS DEL HOSPITAL DE LA SOLIDARIDAD POR LA RUTA C",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-458",
+    "officialId": 458,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Punta Hermosa",
+    "name": "ALMACENES BSF",
+    "address": "CAR. AUTOPISTA PANAMERICANA SUR N° 2001 (KM. 38) INTERIOR H02A - PUNTA HERMOSA",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-654",
@@ -2217,7 +3381,25 @@
     "district": "Ancon",
     "name": "ANCON",
     "address": "CARRETERA SERPENTÍN DE PASAMAYO MZ. G LT. 3 SUBLT. B - ASOC. DE PROP. CASA HUERTA IND. PECUARIAS SAN PEDRO ZONA 4, ANCÓN - LIMA-LIMA, REF. A 1 CDRA. DEL OVALO DE ANCÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-236",
+    "officialId": 236,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "La Victoria",
+    "name": "AREA SHALOM EMPRESAS",
+    "address": "direccion",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-97",
@@ -2227,6 +3409,10 @@
     "district": "San Juan De Miraflores",
     "name": "ATOCONGO",
     "address": "AV. DE LOS HÉROES N° 228 - SAN JUAN DE MIRAFLORES - (ESTACIÓN ATOCONGO)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2237,6 +3423,10 @@
     "district": "Pueblo Libre",
     "name": "AV  BOLIVAR ",
     "address": "AV. BOLIVAR 1097, PUEBLO LIBRE - LIMA, REF. A MEDIA CDRA. DEL CRUCE AV. GRAL. JOSÉ MARÍA EGUSQUIZA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2247,6 +3437,10 @@
     "district": "San Martin De Porres",
     "name": "AV  CENTRAL  SMP",
     "address": "AV. CENTRAL MZ. A LT. 07, URB. PROGRAMA DE VIVIENDA LUCERITO DE NARANJAL, SAN MARTÍN DE PORRES - LIMA - LIMA, REF. A 5 CDRAS. DEL CRUCE CON AV. TANTAMAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2257,6 +3451,10 @@
     "district": "Ate-Vitarte",
     "name": "AV  ESPERANZA",
     "address": "AV. ESPERANZA MZ. K LT. 06 LAS AMERICAS - ATE VITARTE - LIMA, REF. PASANDO MERCADO RAUCANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2267,6 +3465,10 @@
     "district": "La Molina",
     "name": "AV  FLORA TRISTAN",
     "address": "AV. FLORA TRISTÁN N° 885, URB. SANTA PATRICIA III ETAPA, LA MOLINA - LIMA, REF.  A MEDIA CDRA. DE MOLISALUD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2277,7 +3479,25 @@
     "district": "La Molina",
     "name": "AV  LA FONTANA",
     "address": "Av la fontana 440 - La Molina (CC La Rotonda II local 1018)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-719",
+    "officialId": 719,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Lurigancho",
+    "name": "AV  LAS TORRES",
+    "address": "AV. LAS TORRES SUB. LT. 18A - 1D, FUNDO HUACHIPA, PARCELA MEDIA, LURIGANCHO - LIMA - LIMA, REF. AL FRENTE DEL CRUCE CON AV. MEDIA LUNA",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-109",
@@ -2287,6 +3507,10 @@
     "district": "Ate-Vitarte",
     "name": "AV  MARCO PUENTE",
     "address": "AV. MARCO PUENTE LLANOS 309, MZ. A, LT. 03",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2297,6 +3521,10 @@
     "district": "Cercado Lima",
     "name": "AV  NICOLAS DUEÑAS CDRA. 5 ",
     "address": "AV. NICOLAS DUEÑAS 584 MZ. C LT. 4 – AAHH PRIMERO DE SETIEMBRE, CERCADO DE LIMA – LIMA - LIMA, REF. A MEDIA CDRA. DEL CRUCE CON JR. PEDRO GAREZON",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2307,6 +3535,10 @@
     "district": "San Juan De Miraflores",
     "name": "AV  SAN JUAN PAMPLONA ALTA",
     "address": "AV. SAN JUAN MZ. 24 LT. 1, SECT. NUEVO HORIZONTE, PP. JJ PAMPLONA ALTA - SAN JUAN DE MIRAFLORES, REF. A 3 CDRAS. DEL CRUCE CON AV. SALVADOR ALLENDE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2317,6 +3549,10 @@
     "district": "Santa Anita",
     "name": "AV  SANTA ROSA - STA ANITA",
     "address": "AV. SANTA ROSA #147 – URB. SANTA ANITA MZ. B1 LT. 08 UNIDAD INMOBILIARIA N° 1 - SANTA ANITA - LIMA, REF. A UNA CDRA. DE LA CARRETERA CENTRAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2327,6 +3563,10 @@
     "district": "Carabayllo",
     "name": "AV  TUPAC AMARU KM. 19",
     "address": "JR. LOS SAUCES MZ. E LOTE 9 DEL AA. HH. VILLA MANUEL ESCORZA, REF. ENTRE PROLONGACION AV. PRIMAVERA Y JR. LOS SAUCES ALTURA DE AV. TUPAC AMARU KM. 19",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2337,6 +3577,10 @@
     "district": "La Molina",
     "name": "AV ALAMEDA DEL CORREGIDOR",
     "address": "AV. ALAMEDA DEL CORREGIDOR MZ. U LT. 19 UI 1 - URB LA CAPILLA, LA MOLINA - LIMA - LIMA, REF. A 2 CDRAS. DEL CRUCE CON ALAMEDA DE LOS CÓNDORES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2347,6 +3591,10 @@
     "district": "Puente Piedra",
     "name": "AV BUENOS AIRES",
     "address": "AV. BUENOS AIRES MZ. D, SUB-LOTE 188E1 ASOCIACIÓN DE POBLADORESMICAELA BASTIDAS, PUENTE PIEDRA - LIMA - LIMA, REF. A 2 CDRAS. DE LA DEMUNA DE PUENTE PIEDRA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2357,6 +3605,10 @@
     "district": "San Juan De Lurigancho",
     "name": "AV CENTRAL SJL",
     "address": "AV. CENTRAL MZ R9 LOTE 3 PROGRAMA CIUDAD MRCAL. CACERES, SECTOR II, BARRIO 3, GRUPO RESIDENCIAL R - SAN JUAN DE LURIGANCHO, REF. EN MEDIO DEL CRUCE CON LAS AV. EL MURO Y AMPLIACION ESTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2367,6 +3619,10 @@
     "district": "San Juan De Lurigancho",
     "name": "AV CIRCUNVALACION SJL",
     "address": "AV. CIRCUNVALACIÓN MZ. B-5 LT. 20 AA. HH. SARGENTO FERNANDO LORES TENAZOA COMUNA 20, SAN JUAN DE LURIGANCHO - LIMA, REF. A DOS CDRAS. DEL COLEGIO RAMIRO PRIALE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2377,6 +3633,10 @@
     "district": "Ate-Vitarte",
     "name": "AV EL SOL",
     "address": "AV. EL SOL MZ. S LT. 2 ZONA 03 - ASOC. PARQUE INDUSTRIAL EL ASESOR, SECTOR 010 ZONA 03 - ATE, REF. A UNA CUADRA Y MEDIA DE LA CARRETERA CENTRAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2387,6 +3647,10 @@
     "district": "Los Olivos",
     "name": "AV HUANDOY CON AV CENTRAL",
     "address": "AV. HUANDOY MZA. 72 LTE. 54 P.J. P.M.V. “CONFRATERNIDAD” - AAHH. ENRIQUE MILLA OCHOA LOS OLIVOS - LIMA, REF. A UNA CDRA. DEL CRUCE CON AV. CENTRAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2397,7 +3661,25 @@
     "district": "Los Olivos",
     "name": "AV HUANDOY CON MARAÑON",
     "address": "AV. PRÓCERES, MZ. 3, LT. 23 A.H. LAURA CALLER - LOS OLIVOS, REFERENCIA: CRUCE ENTRE AV. HUANDOY Y MARAÑÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-546",
+    "officialId": 546,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santa Anita",
+    "name": "AV HUAROCHIRI ENVIOS",
+    "address": "AV. HUAROCHIRI MZ. D8 LT. 13, URB. LOS CEDROS, SANTA ANITA - LIMA, REF. A MEDIA CDRA. DEL CRUCE CON AV. SANTA ROSA",
+    "public": true,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-431",
@@ -2407,6 +3689,10 @@
     "district": "San Martin De Porres",
     "name": "AV JOSE GRANDA CDRA 38",
     "address": "AV. JOSÉ GRANDA 3826 DE LA URB. CONDEVILLA SEÑOR Y VALDIVIESO MZ. M7 LT 20, 2 ETAPA, 2 SECTOR - S.M.P. , REF.  ENTRE AV. CONDEVILLA Y AV. LOS PRÓCERES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2417,6 +3703,10 @@
     "district": "San Martin De Porres",
     "name": "AV JOSE GRANDA CDRA. 25",
     "address": "AV. JOSE GRANDA 2546 - SAN MARTIN DE PORRES  -LIMA - LIMA, REF. A UNA CDRA. DEL ÓVALO JOSE GRANDA Y AV. UNIVERSITARIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2427,6 +3717,10 @@
     "district": "Lince",
     "name": "AV JOSE LEAL CDRA 6",
     "address": "AV. CORONEL JOSÉ LEAL 648, URB. FUNDO LOBATÓN, LINCE - LINCE, REF. PARALELA A LA CDRA. 6 DE LA AV. CANEVARO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2437,6 +3731,10 @@
     "district": "Carabayllo",
     "name": "AV JOSE SACO ROJAS",
     "address": "AV. JOSÉ SACO ROJAS MZ. A LT. 15 PROGRAMA DE VIVIENDA EL PINO, SAN ANTONIO - CARABAYLLO, REF. FRENTE AL CHIFA HONG FU Y A 3 CUADRAS DEL GRAN MERCADO EL PINO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2447,6 +3745,10 @@
     "district": "San Juan De Miraflores",
     "name": "AV LOS PRECURSORES / LAS AMERICAS",
     "address": "AV. LOS PRECURSORES MZ. B LT. 17 AA.HH EL INTI, SAN JUAN DE MIRAFLORES - LIMA - LIMA, REF. A 1 CDRA. DEL CRUCE CON AV. LOS PRÓCERES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2457,6 +3759,10 @@
     "district": "San Juan De Lurigancho",
     "name": "AV MALECON  CHECA CDRA. 1 ",
     "address": "AV. MALECÓN MIGUEL CHECA EGUIGUREN N° 167 Y 169 DE LA URB. ZÁRATE, SJL - LIMA, REF. ESQUINA CON AV. GRAN CHIMÚ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2467,6 +3773,10 @@
     "district": "Pachacamac",
     "name": "AV MANUEL VALLE",
     "address": "AV. MANUEL VALLE SUB - LOTE 2 - 1, NÚMERO DE PARCELA J, PROYECTO HUERTOS DE PACHACAMAC, VALLE LURÍN - PACHACAMAC - LIMA, REF. FRENTE AL ESTUDIO DE CANAL 4 (AMERICA TELEVISIÓN)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2477,6 +3787,10 @@
     "district": "La Victoria",
     "name": "AV MEXICO CO",
     "address": "AV. MEXICO 1125, LA VICTORIA - LIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2487,6 +3801,10 @@
     "district": "San Juan De Miraflores",
     "name": "AV MIGUEL GRAU  PAMPLONA ALTA",
     "address": "AV. ALMIRANTE MIGUEL GRAU MZ. Y3 LT. 29,PAMPLONA ALTA - SAN JUAN DE MIRAFLORES - LIMA, REF. A MEDIA CDRA. DEL MERCADO OLLANTAY PAMPLONAALTA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2497,6 +3815,10 @@
     "district": "Villa El Salvador",
     "name": "AV REVOLUCIÓN",
     "address": "AV. REVOLUCIÓN MZ. J LT. 19, SECTOR TERCERO, GRUPO RESIDENCIAL 9, PUEBLO JOVEN VILLA EL SALVADOR, VILLA EL SALVADOR - LIMA - LIMA, REF. CERCA AL CRUCE CON AV. JOSE CARLOS MARIATEGUI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2507,6 +3829,10 @@
     "district": "San Juan De Lurigancho",
     "name": "AV SANTA ROSA URB LOS ALAMOS",
     "address": "Av. Santa Rosa MZ. D1 lote 1 Urb. Los Alamos 2da Etapa  - referencia altura de la cuadra 13 del paradero canto grande",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2517,6 +3843,10 @@
     "district": "Santiago De Surco",
     "name": "AV TOMAS MARSANO - LA BOLICHERA",
     "address": "AV. SANTIAGO DE SURCO Nº 4348, URBANIZACIÓN LA VIRREYNA, SANTIAGO DE SURCO - LIMA, REF. AL LADO DE INTECI SEDE SURCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2527,6 +3857,10 @@
     "district": "Comas",
     "name": "AV TUPAC AMARU CDRA. 57",
     "address": "AV. TUPAC AMARU 5725-5727 - URB. HUAQUILLAY I ETAPA, COMAS - LIMA - LIMA, REF. A MEDIA CDRA. DEL BANCO DE LA NACIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2537,6 +3871,10 @@
     "district": "Comas",
     "name": "AV UNIV.  RETABLO",
     "address": "AV. UNIVERSITARIA N° 7241, REFERENCIA: EX BOULEVARD DE RETABLO / A 2 CDRAS DEL METRO DE BELAUNDE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2547,6 +3885,10 @@
     "district": "San Martin De Porres",
     "name": "AV UNIVERSITARIA CON IZAGUIRRE",
     "address": "AV. UNIVERSITARIA MZ. D LT. 01 ASOCIACIÓN DE VIVIENDA SAN JUAN DE DIOS, SAN MARTÍN DE PORRES - LIMA - LIMA, REF. A 1 CDRA. DEL CRUCE CON AV. CARLOS IZAGUIRRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2557,6 +3899,10 @@
     "district": "Brena",
     "name": "AV VENEZUELA",
     "address": "AV. VENEZUELA 1670 - BREÑA, REFERENCIA: AL COSTADO DEL POLICLÍNICO DE BREÑA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2567,7 +3913,25 @@
     "district": "San Juan De Lurigancho",
     "name": "AV. 13 DE ENERO",
     "address": "AV. 13 DE ENERO Nº2057, URB. SAN HILARIÓN, REFERENCIA: CERCA A LA ESTACIÓN LOS POSTES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-434",
+    "officialId": 434,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "AV. ALFREDO BENAVIDES",
+    "address": "AV. ALFREDO BENAVIDES 1851 - MIRAFLORES, REF. AL COSTADO DEL BEMBOS AURORA BENAVIDES",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-459",
@@ -2577,6 +3941,10 @@
     "district": "San Borja",
     "name": "AV. ANGAMOS",
     "address": "AV. ANGAMOS ESTE 2521 (EX AV. PRIMAVERA) - CONJUNTO HABITACIONAL LIMATAMBO -  SAN BORJA. REF. CERCA AL CRUCE DE AV. ANGAMOS ESTE CON AV. PRINCIPAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2587,7 +3955,39 @@
     "district": "Los Olivos",
     "name": "AV. ANGELICA GAMARRA",
     "address": "AV. ANGELICA GAMARRA DE LEON VALVERDE N° 621 URB EL TREBOL, LOS OLIVOS - LIMA, REF. A LA ALTURA DEL KFC / CRUCE CON AV. ALFA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-278",
+    "officialId": 278,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Surquillo",
+    "name": "AV. ARAMBURU",
+    "address": "AV. ARAMBURÚ 808, REFERENCIA: A 2 CDRAS. DE LA AV. PANAMÁ",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-276",
+    "officialId": 276,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Jesus Maria",
+    "name": "AV. ARENALES",
+    "address": "AV. ARENALES 391, REFERENCIA: A 2 CDRAS. DE AV. 28 DE JULIO A LA ESPALDA DE LA UTP",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-233",
@@ -2597,6 +3997,10 @@
     "district": "La Victoria",
     "name": "AV. CANADA",
     "address": "AV. CANADÁ 1603, REFERENCIA: ENTRE AV. CANADÁ CON AV. AVIACIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2607,6 +4011,10 @@
     "district": "San Juan De Miraflores",
     "name": "AV. CANEVARO",
     "address": "AV. CANEVARO 336 - A, REF. A 2 CUADRAS DE LA AV. VARGAS MACHUGA  Y A UNA CUADRA DE LA FISCALÍA PROVINCIAL PENAL DE S.J.M.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2617,6 +4025,10 @@
     "district": "San Martin De Porres",
     "name": "AV. CANTA CALLAO  CON ALISOS",
     "address": "AV. CANTA CALLAO, MZ. A LT. 3 URB. ARIZONA - 2DA ETAPA  ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2627,6 +4039,10 @@
     "district": "San Martin De Porres",
     "name": "AV. CANTA CALLAO CON IZAGUIRRE",
     "address": "AV. CANTA CALLAO MZ. A LT. 3 ASOC. BRISAS SANTA ROSA 1RA ETAPA, REF. A MEDIA CDRA. DEL COLEGIO AMISTAD Y/O A CUATRO CDRAS. DE LA AV. CARLOS IZAGUIRRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2637,6 +4053,10 @@
     "district": "Los Olivos",
     "name": "AV. CARLOS IZAGUIRRE CDRA. 14",
     "address": "CALLE DAVID ALVA MANZANA H LOTE 4 URB. CAJABAMBA LOS OLIVOS - LIMA, REF. ENTRE LA AV. CARLOS IZAGUIRRE CON LA AV. UNIVERSITARIA (FRENTE AL COLEGIO PAMER)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2647,6 +4067,10 @@
     "district": "San Martin De Porres",
     "name": "AV. CARLOS IZAGUIRRE CUADRA 23",
     "address": "AV. CARLOS IZAGUIRRE SUB LT. 8, MZ. C - ASOC. DE VIV. LOS NISPEROS, REFERENCIA: ENTRE AV. 12 DE OCTUBRE Y AV. SANTA ROSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2657,7 +4081,25 @@
     "district": "Villa El Salvador",
     "name": "AV. CESAR VALLEJO",
     "address": "AV. CESAR VALLEJO, MZ. F LT. 1 - SECT. 2, REFERENCIA: FRENTE A ESSALUD, AL COSTADO DEL MERCADO VILLA SUR",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-435",
+    "officialId": 435,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "AV. COMANDANTE ESPINAR",
+    "address": "AV. COMANDANTE ESPINAR 330-MIRAFLORES, REF. ENTRE EL CRUCE DE CALLE ENRIQUE PALACIOS Y LA AV. COMANDANTE ESPINAR",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-537",
@@ -2667,6 +4109,10 @@
     "district": "San Juan De Lurigancho",
     "name": "AV. DEL MERCADO",
     "address": "PROGRAMA CIUDAD MRCAL. CACERES, SECTOR III MZ. Q8 LT. 11 SAN JUAN DE LURIGANCHO - LIMA, REF. A MEDIA CDRA. DEL CRUCE DE AV. DEL MERCADO CON AV. AMPLIACION OESTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2677,6 +4123,10 @@
     "district": "San Martin De Porres",
     "name": "AV. DOMINICOS CDRA 14",
     "address": "AV. LOS DOMINICOS 1460 - URB. LOS CIPRESES MZ. Z LT. 4 - SAN MARTÍN DE PORRES, REF. A UNA CDRA. DEL CRUCE CON AV. SANTA ROSA AL LADO DEL MERCADO LOS CIPRESES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2687,7 +4137,25 @@
     "district": "Los Olivos",
     "name": "AV. DOS DE OCTUBRE",
     "address": "AV. 2 DE OCTUBRE MZ. H LT. 2 - LOS OLIVOS - PRO, REF. AV. 2 DE OCTUBRE CON AV. CANTA CALLAO, AL COSTADO DEL CENTRO DE SAlUD PRO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-728",
+    "officialId": 728,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santa Anita",
+    "name": "AV. FERROCARRIL - SANTA ANITA (POR DEFINIR)",
+    "address": "AV. EL FERROCARRIL 530 COOPERATIVA. LOS CHANCAS DE ANDAHUAYLAS MZ. F1 LT. 06, REF. CRUCE CON AV. RUISEÑORES",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-387",
@@ -2697,6 +4165,10 @@
     "district": "San Martin De Porres",
     "name": "AV. GERARDO UNGER CDRA 64",
     "address": "AV. GERARDO UNGER 6475, URB. SANTA LUISA, 1RA ETAPA, S.M.P., REF. ESQUINA CON AV. 22 DE AGOSTO, LÍMITE CON COMAS / A UNA CDRA. Y MEDIA DE LA COMISARIA SANTA LUZMILA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2707,7 +4179,39 @@
     "district": "Santa Anita",
     "name": "AV. HUAROCHIRÍ",
     "address": "AV. HUAROCHIRÍ MZ. E1 LT. 03 - URB. LOS CEDROS SANTA ANITA, REF. CRUCE DE AV. HUAROCHIRÍ CON AV. SANTA ANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-179",
+    "officialId": 179,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Borja",
+    "name": "AV. JAVIER PRADO",
+    "address": "AV. JAVIER PRADO ESTE N? 1810 - EST. 05 MZ. A - 1 LT. 04",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-190",
+    "officialId": 190,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "AV. JOSE PARDO",
+    "address": "AV. JOSE PARDO N?533",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-105",
@@ -2717,6 +4221,10 @@
     "district": "Pueblo Libre",
     "name": "AV. LA MARINA",
     "address": "AV. LA MARINA 1640 - REFERENCIA :  A UNA CUADRA DEL CENTRO COMERCIAL PLAZA SAN MIGUEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2727,6 +4235,10 @@
     "district": "La Molina",
     "name": "AV. LA MOLINA CDRA. 35",
     "address": "AV. LA MOLINA (EXAV. LA UNIVERSIDAD) #3551 TDA -7 MZ. H SUBLOTE 1C, URB. EL SOL DE LA MOLINA I ETAPA LA MOLINA - LIMA, REF. A MEDIA CDRA. DEL CRUCE CON AV. EL SOL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2737,6 +4249,10 @@
     "district": "Los Olivos",
     "name": "AV. LAS PALMERAS",
     "address": "AV. LAS PALMERAS N° 5236 URB. VILLA NORTE - LOS OLIVOS ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2747,6 +4263,10 @@
     "district": "Villa Maria Del Triunfo",
     "name": "AV. LIMA - VMT",
     "address": "AV. LIMA 2208 JOSÉ GÁLVEZ- VILLA MARÍA  DEL TRIUNFO, REFERENCIA: A DOS CDRAS. DE LA CURVA JOSÉ GÁLVEZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2757,6 +4277,10 @@
     "district": "San Martin De Porres",
     "name": "AV. LIMA CDRA 38",
     "address": "AV. LIMA 3899 - SMP, REF. A 3 CDRAS. DEL TOTTUS DE QUILCA CON AV. LIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2767,6 +4291,10 @@
     "district": "Los Olivos",
     "name": "AV. LOS PLATINOS",
     "address": "AV. LOS PLATINOS N°. 259, MZ. A - LT. 17, URB. LOTIZACIÓN INDUSTRIAL INFANTAS LOS OLIVOS - LIMA, REF. A DOS CDRAS. Y MEDIA DE LA AV. ALFREDO MENDIOLA Y/O PANAMERICANA NORTE (ALTURA DEL PARADERO CASETA)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2777,6 +4305,10 @@
     "district": "Villa El Salvador",
     "name": "AV. PASTOR SEVILLA",
     "address": "MZ. B LT. 3 BARRIO 3 SECTOR 2 - 4TA ETAPA - VES, REFERENCIA: POR EL ÓVALO CERRO LOMAS, FRENTE AL COLEGIO VIRGEN DEL ROSARIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2787,7 +4319,53 @@
     "district": "San Martin De Porres",
     "name": "AV. PERU 15",
     "address": "Av. Perú 1589, San Martin de Porres -  Lima. Referencia: a dos cuadras del CruCe con la Av. Canadá.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-191",
+    "officialId": 191,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santiago De Surco",
+    "name": "AV. PRIMAVERA 120",
+    "address": "Av. Primavera Nº 120 Tda. A-21 – Urb. Tambo de Monterrico",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-261",
+    "officialId": 261,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santiago De Surco",
+    "name": "AV. PRIMAVERA 1314",
+    "address": "AV. PRIMAVERA N° 1314, URB. C.C. MONTERRICO - SURCO, REFERENCIA: CRUCE JR. EL POLO",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-283",
+    "officialId": 283,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santiago De Surco",
+    "name": "AV. PRIMAVERA 264",
+    "address": "AV. PRIMAVERA 264 TDA 187 C.C. CHACARILLA – SANTIAGO DE SURCO - LIMA - LIMA, REF. C.C. CHACARILLA PRIMER PISO (PUERTA PRINCIPAL DEL CENTRO COMERCIAL)",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-432",
@@ -2797,7 +4375,39 @@
     "district": "Surquillo",
     "name": "AV. PRINCIPAL",
     "address": "LT. 12 MZ. G, AV. PRINCIPAL 995 (EX AV. UNO) URB. LOS SAUCES 2DA ETAPA, SURQUILLO, REF. CRUCE CON A. MANUEL VILLARÁN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-286",
+    "officialId": 286,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "AV. ROOSEVELT",
+    "address": "AV. ROOSEVELT 6297 (ANTES REP. PANAMÁ) - MIRAFLORES",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-180",
+    "officialId": 180,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Jesus Maria",
+    "name": "AV. SAN FELIPE",
+    "address": "AV. SAN FELIPE 1195 - JESÚS MARÍA",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-499",
@@ -2807,6 +4417,10 @@
     "district": "Puente Piedra",
     "name": "AV. SAN LORENZO",
     "address": "AV. SAN LORENZO MZ C LT 20 - ADP VIRGEN DE COPACABANA, PUENTE PIEDRA - LIMA. REF, A MEDIA CUADRA DEL PARQUE VIRGEN DE COPACABANA  ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2817,7 +4431,25 @@
     "district": "San Juan De Lurigancho",
     "name": "AV. SANTA ROSA CRUCE AV. EL SOL",
     "address": "AV. SANTA ROSA DE LIMA MZ. D LT. 4 - AAHH 2 DE SETIEMBRE - SAN JUAN DE LURIGANCHO, REF. A TRES CDRAS. DEL CRUCE CON AV. EL SOL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-437",
+    "officialId": 437,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Santiago De Surco",
+    "name": "AV. TOMÁS MARSANO",
+    "address": "AV. TOMÁS MARSANO 3767 - SANTIAGO DE SURCO, REF. A MEDIA CUADRA DE LA ESTACIÓN DE TREN AYACUCHO",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-228",
@@ -2827,6 +4459,10 @@
     "district": "Comas",
     "name": "AV. TRAPICHE",
     "address": "AV. TRAPICHE 886 A 16 2P 2 - URB. PINAR, REFERENCIA: FRENTE AL COMPLEJO DEPORTIVO WALON",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2837,6 +4473,10 @@
     "district": "Carabayllo",
     "name": "AV. TUPAC AMARU KM. 23.5",
     "address": "AV. TÚPAC AMARU KM. 23.5 - CARABAYLLO, REF. FRENTE A LA IGLESIA DE MORMONES - A UNA CDRA. DEL ÚLTIMO PARADERO DEL RÁPIDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2847,6 +4487,10 @@
     "district": "Comas",
     "name": "AV. UNIV. PARQUE SINCHI ROCA",
     "address": "AV. UNIVERSITARIA NORTE MZN. Q1 LTE. 030 URB. PRIMAVERA,COMAS-LIMA - LIMA, REF. A MEDIA CDRA. DEL INGRESO AL PARQUE ZONA SINCHI ROCA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2857,6 +4501,10 @@
     "district": "San Martin De Porres",
     "name": "AV. UNIVERSITARIA CDRA. 16",
     "address": "AV. UNIVERSITARIA 1619 - URB. MARIA GRACIA DE ANTARES MZ. B LT. 25 – SAN MARTIN DE PORRES - LIMA, REF. FRENTE AL PLAZA VEA DE UNIVERSITARIA CON TOMAS VALLE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2867,6 +4515,10 @@
     "district": "Villa Maria Del Triunfo",
     "name": "AV. VILLA MARIA",
     "address": "AV VILLA MARIA  MZ. G12 LT. 9 - B PS 1 SECT. VILLA MARIA DEL TRIUNFO, REF. AV. VILLA MARIA  A 2 CUADRAS DE LA MUNICIPALIDAD DE VMT Y AL COSTADO DE ESSALUD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2877,7 +4529,25 @@
     "district": "San Borja",
     "name": "AVIACION 2819",
     "address": "AV. AVIACIÓN 2819, URB. SAN BORJA SUR, REFERENCIA: AL FRENTE DE BEMBOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-273",
+    "officialId": 273,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Borja",
+    "name": "AVIACION 2999",
+    "address": "AV. AVIACIÓN 2999, REFERENCIA: A 1 CDRA. DE LA ESTACIÓN DEL TREN SAN BORJA SUR",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-229",
@@ -2887,6 +4557,10 @@
     "district": "Comas",
     "name": "AÑO NUEVO",
     "address": "AV. TUPAC AMARU N° 7837- 7839 MZ. C LT. 010 URB. POPULAR SAN JUAN BAUTISTA I ETAPA, COMAS - LIMA, REF. A UNA CDRA. DE LA ENTRADA DE COLLIQUE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2897,7 +4571,39 @@
     "district": "San Juan De Lurigancho",
     "name": "BAYOVAR",
     "address": "AV. FERNANDO WIESSE MZ. E8. LOTE 38B, MARISCAL CÁCERES BAYOVAR - SAN JUAN DE LURIGANCHO - LIMA, REF. AUXILIAR PRÓCERES DE LA INDEPENDENCIA, AL FRENTE DE LA UNIVERSIDAD SAN MARCOS – AGROINDUSTRIAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-209",
+    "officialId": 209,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Cercado Lima",
+    "name": "CAJA DISTRIBUCION LIMA",
+    "address": "",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-557",
+    "officialId": 557,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "La Victoria",
+    "name": "CAJA TRANSPORTE MEXICO",
+    "address": "cargando",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-588",
@@ -2907,7 +4613,53 @@
     "district": "Independencia",
     "name": "CALLE A  CON AV INDUSTRIAL",
     "address": "CALLE A, MZ. D LT. 26 URBANIZACIÓN PANAMERICANA (PRIMER PISO) INDEPENDENCIA - LIMA - LIMA, REF. A 1 CDRA. DEL CRUCE CON AV. INDUSTRIAL (LATERAL DE MEGAPLAZA)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-226",
+    "officialId": 226,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "CALLE BERLIN",
+    "address": "Calle Berlín 219  - Miraflores",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-287",
+    "officialId": 287,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Isidro",
+    "name": "CALLE LAS BEGONIAS",
+    "address": "CALLE LAS BEGONIAS 774 - SAN ISIDRO",
+    "public": true,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-436",
+    "officialId": 436,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Isidro",
+    "name": "CALLE MIGUEL DASSO",
+    "address": "CALLE MIGUEL DASSO 126 - SAN ISIDRO, REF. EN EL CRUCE DE CALLE LEONIDAS YEROVI Y CALLE MIGUEL DASSO",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-453",
@@ -2917,6 +4669,10 @@
     "district": "San Juan De Lurigancho",
     "name": "CAMPOY",
     "address": "AV. MALECÓN CHECA MZ. B LT. 7, URB. CAMPOY, SAN JUAN DE LURIGANCHO, REF. A 1 CDRA. DEL CRUCE DE AV. MALECÓN CHECA CON AV. SAN MARTÍN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2927,6 +4683,10 @@
     "district": "San Juan De Lurigancho",
     "name": "CANTO GRANDE",
     "address": "CALLE SAN MARTIN CON AV. COMERCIAL NORTE 189 - SAN JUAN DE LURIGANCHO, REF. A 1/2 CUADRA DE LA AV 6 DE CANTO GRANDE - AL COSTADO DEL PLAY PARK (PARQUE BOLOGNESI)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2937,7 +4697,39 @@
     "district": "Carabayllo",
     "name": "CARABAYLLO ESTABLO",
     "address": "AV. TUPAC AMARU N? 441 - 443, MZ. O2 LT. 35, REFERENCIA: PARADERO ESTABLO, A UNA CUADRA DE LA URB. SANTA ISABEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-733",
+    "officialId": 733,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Lurigancho",
+    "name": "CARAPONGO - LURIGANCHO (POR DEFINIR)",
+    "address": "AV. 24 DE SETIEMBRE MZ. A SUB LT. 9-A2 ASOC. NUEVO HORIZONTE, REF. A MEDIA CDRA. DEL CENTRO COMERCIAL MANTARO, FRENTE AL GRIFO PETROAMERICA",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-147",
+    "officialId": 147,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Lurigancho",
+    "name": "CD. TALLERES-HUACHIPA",
+    "address": "v",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-70",
@@ -2947,6 +4739,10 @@
     "district": "Chorrillos",
     "name": "CHORRILLOS CO",
     "address": "AV. SANTA ANITA N.° 580, CHORRILLOS - LIMA, REF. AL COSTADO DEL MERCADO SANTA ANITA, CRUCE CON SAN GENARO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2957,6 +4753,10 @@
     "district": "Chorrillos",
     "name": "CHORRILLOS LOS FAISANES",
     "address": "AV. LOS FAISANES 420, REFERENCIA: AL COSTADO DE LA TIENDA JOHN HOLDEN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2967,6 +4767,10 @@
     "district": "Lurigancho",
     "name": "CHOSICA",
     "address": "EL SOL 124 (PARQUE ECHENIQUE) LURIGANCHO - CHOSICA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2977,7 +4781,25 @@
     "district": "Cieneguilla",
     "name": "CIENEGUILLA KM. 14.5",
     "address": "AV. ARTERIAL HUAROCHIRI D MZ. B LT. 19, ASOC. DE VIVIENDAS LAS CUMBRES DE CIENEGUILLA, LIMA, REF. AL COSTADO DE LA TIENDA MASS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-275",
+    "officialId": 275,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Isidro",
+    "name": "CORPAC",
+    "address": "CALLE 21 785, REFERENCIA: AL COSTADO DEL MINISTERIO DEL INTERIOR",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-144",
@@ -2987,6 +4809,10 @@
     "district": "San Juan De Lurigancho",
     "name": "CRUZ DE MOTUPE",
     "address": "AV. FERNANDO WIESSE MZ. Q LOTE 1 AA.HH. CRUZ DE MOTUPE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -2997,6 +4823,10 @@
     "district": "Carabayllo",
     "name": "EL PROGRESO KM 22",
     "address": "AV. TUPAC AMARU 3493 – P.J. EL PROGRESO (PARTE BAJA) MZ. K LT. 11B ZONA II, CARABAYLLO - LIMA, REF. A UNA CDRA. DEL CRUCE CON LA AV. MANUEL PRADO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3007,6 +4837,10 @@
     "district": "Pachacamac",
     "name": "EL RETAMAL",
     "address": "AV. VICTOR MALASQUEZ MZ. B LT. 16 – ASOCIACIÓN DE VIVIENDA “EL SOL DE SAN FERNANDO” ZONA 5 – QUEBRADA DE MANCHAY, REF. A 2 CDRAS. DEL CRUCE CON AV. UNIÓN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3017,6 +4851,10 @@
     "district": "San Martin De Porres",
     "name": "FIORI",
     "address": "AV. MIGUEL ANGEL N° 235 - URB. FIORI 4TA ETAPA MZ. N-1 LT. 04 U.I N°6, SAN MARTÍN DE PORRES - LIMA, REF. A 1 CDRA. DEL CRUCE CON AV. MARCO POLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3027,6 +4865,10 @@
     "district": "San Martin De Porres",
     "name": "GERMÁN AGUIRRE",
     "address": "AV. GERMAN AGUIRRE UGARTE 649 URB. SAN GERMAN - SAN MARTIN DE PORRES, REF. A LA ALTURA DE LA CUADRA 6 DE LA AV. GERMAN AGUIRRE Y A 3 CUADRAS DE AV. TOMAS VALLE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3037,7 +4879,39 @@
     "district": "Santiago De Surco",
     "name": "HIGUERETA",
     "address": "Calle Barlovento N° 134 REFERENCIA: A 3 CDRAS DE POLVOS ROSADOS, CERCA AL ÓVALO HIGUERETA, surco",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-365",
+    "officialId": 365,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Lurigancho",
+    "name": "HUACHIPA CO",
+    "address": "HUACHIPA ESTE - MANZANA A18 LOTE 1, 2, 3 CALLE B, CALLE 08, CALLE A, REF. AL COSTADO DE INDUSTRIAS ELÉCTRICAS KBA",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-700",
+    "officialId": 700,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Lurigancho",
+    "name": "HUACHIPA CO 2",
+    "address": "HUACHIPA ESTE - MANZANA A18 LOTE 1, 2, 3 CALLE B, CALLE 08, CALLE A, REF. AL COSTADO DE INDUSTRIAS ELÉCTRICAS KBA",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-620",
@@ -3047,6 +4921,10 @@
     "district": "Ate-Vitarte",
     "name": "HUAYCAN  EL DESCANSO",
     "address": "AV. JOSE CARLOS MARIATEGUI MZA. B LTE 06, RESIDENCIAL PARIACHI SEC. 031 ZON. 05, ATE - LIMA - LIMA, REF. CRUCE CON LA AV. LOS INCAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3057,6 +4935,10 @@
     "district": "Ate-Vitarte",
     "name": "HUAYCAN AV HORACIO ZEVALLOS  ",
     "address": "AV. HORACIO ZEBALLOS MZ. V LT. 12 PROG. VIV. RESIDENCIAL PARIACHI (SEC. 031) ZONA 5, ATE - LIMA - LIMA, REF. FRENTE AL CIRCUITO DE MANEJO GARCILASO DE LA VEGA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3067,6 +4949,10 @@
     "district": "Ate-Vitarte",
     "name": "HUAYCAN AV JOSE C MARIATEGUI",
     "address": "AV. JOSÉ CARLOS MARIÁTEGUI Z. E LT. 23 UCV 5 (ZONA COMERCIO) - PUEBLO JOVEN \"PROYECTO ESPECIAL HUAYCÁN\" ATE VITARTE - LIMA, REF. A DOS CDRAS. DEL CRUCE CON AV. 15 DE JULIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3077,6 +4963,10 @@
     "district": "Ate-Vitarte",
     "name": "HUAYCAN ENTRADA",
     "address": "CTRA. CENTRAL KM. 17.5 MZ. I LT. 1 PRADERAS DE PARIACHI, REF. MISMA CTRA. CENTRAL A UNA CDRA. DEL PARADERO EL LAVADERO Y DOS CDRAS. DEL GRIFO EL NEGRO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3087,6 +4977,10 @@
     "district": "Jesus Maria",
     "name": "JESUS MARIA",
     "address": "AV. MARISCAL LUZURIAGA 584-586 JESÚS MARÍA - LIMA, REF. A CUADRA Y MEDIA DEL PARQUE SAN JOSÉ, PARALELO A LA AV. MELLO FRANCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3097,6 +4991,10 @@
     "district": "El Agustino",
     "name": "JIRON ANCASH",
     "address": "JR. ANCASH MZ. B LT. 11 AAHH ANCIETA ALTA, EL AGUSTINO - LIMA - LIMA, REF. FRENTE AL INGRESO DE AGUSTINO PLAZA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3107,6 +5005,10 @@
     "district": "Lince",
     "name": "JR CASANOVA CON PETIT THOUARS",
     "address": "JR. DOMINGO CASANOVA N°318 LINCE - LIMA, REF. CRUCE CON PETIT THOUARS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3117,6 +5019,10 @@
     "district": "San Juan De Lurigancho",
     "name": "JR CHINCHAYSUYO CDRA 4",
     "address": "JR. CHINCHAYSUYO 468 ZARATE, SAN JUAN DE LURIGANCHO - LIMA, REF. A 1 CDRA. DE TIENDAS 3 A",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3127,7 +5033,25 @@
     "district": "Brena",
     "name": "JR. HUARAZ -  BREÑA",
     "address": "JR. HUARAZ 1633, BREÑA -LIMA, REF. EN MEDIO DEL CRUCE DE JR. GRAL ORBEGOSO Y JR. CENTENARIO CON JR. HUARAZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-5",
+    "officialId": 5,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "La Victoria",
+    "name": "JR. LUNA PIZARRO",
+    "address": "JR. LUNA PIZARRO N° 701 - LA VICTORIA,  REFERENCIA: ESQUINA HIPÓLITO UNANUE",
+    "public": true,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-43",
@@ -3137,6 +5061,10 @@
     "district": "La Victoria",
     "name": "JR. RAYMONDI",
     "address": "JR. ANTONIO RAYMONDI NRO. 113",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3147,6 +5075,10 @@
     "district": "Independencia",
     "name": "LA CINCUENTA",
     "address": "AV. TUPAC AMARU N° 4708 - 4710, REF. A UNA CDRA. DEL PARADERO ESTACIÓN NARANJAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3157,6 +5089,10 @@
     "district": "Pachacamac",
     "name": "LA CURVA DE MANCHAY",
     "address": "AV. PROLONGACIÓN DE LA AV. LA MOLINA MZ. E LOTE 21. AH PAUL POBLET LIND, PACHACAMAC - LIMA, REF. A MEDIA CDRA. DE MI BANCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3167,6 +5103,24 @@
     "district": "Villa Maria Del Triunfo",
     "name": "LA TABLADA ZONA NUEVA",
     "address": "AV. PACHACÚTEC N° 4465, MZ. 36, LT. 18 ZONA NUEVA ESPERANZA - P.J. CÉSAR VALLEJO - VILLA MARÍA DEL TRIUNFO - LIMA - LIMA, REF. AL FRENTE DEL CRUCE CON AV. 01 DE MAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
+    "active": true
+  },
+  {
+    "id": "shalom-661",
+    "officialId": 661,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Miraflores",
+    "name": "LARCOMAR",
+    "address": "MALECÓN DE LA RESERVA 610, MIRAFLORES 15074, MIRAFLORES - LIMA - LIMA, REF. SÓTANO NIVEL A",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": true,
     "active": true
   },
   {
@@ -3177,6 +5131,10 @@
     "district": "Villa Maria Del Triunfo",
     "name": "LAS CONCHITAS",
     "address": "AV. PACHACUTEC 6779, MZ. N, LT. 20, VILLA MARIA DEL TRIUNFO - REFERENCIA: A UNA CDRA. DEL GRIFO REPSOL LAS CONCHITAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3187,6 +5145,10 @@
     "district": "Chorrillos",
     "name": "LAS DELICIAS DE VILLA",
     "address": "AV. 12 DE OCTUBRE MZ. A - 03, LT. 02, URB. ARIA - LAS DELICIAS DE VILLA, REF. A DOS CUADRAS DE LA AV. DEFENSORES DEL MORRO (EX AV. HUAYLAS)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3197,6 +5159,10 @@
     "district": "Cercado Lima",
     "name": "LIMA AV TINGO MARÍA",
     "address": "AV. TINGO MARÍA N°1252-A - CERCADO DE LIMA - LIMA, REF. A MEDIA CDRA. DEL CRUCE CON JR. GRAL. ORBEGOSO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3207,6 +5173,10 @@
     "district": "La Molina",
     "name": "LOS FRESNOS",
     "address": "AV. LOS FRESNOS 1305 TIENDA 2 - URB. PORTADA DEL SOL I ETAPA - LA MOLINA - LIMA, REF. A 3 CDRAS. DEL ÓVALO DE LOS CÓNDORES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3217,6 +5187,10 @@
     "district": "San Juan De Lurigancho",
     "name": "LOS PINOS",
     "address": "MZ. B1 LT. 25 URBANIZACIÓN LOS PINOS SAN JUAN DE LURIGANCHO, REF. AV. FERNANDO WIESSE - CERCA A LA ESTACIÓN SAN MARTÍN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3227,7 +5201,25 @@
     "district": "Ate-Vitarte",
     "name": "LOS SAUCES",
     "address": "AV. SANTA ROSA N°773 MANZANA “A” LOTE 6 URB LOS SAUCES - ATE - REFERENCIA: CRUCE CON LA AV SEPARADORA INDUSTRIAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-727",
+    "officialId": 727,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Ate-Vitarte",
+    "name": "LOS VIRREYES - ATE (POR DEFINIR)",
+    "address": "AV. LOS VIRREYES MZ. A LT. 21 URB. TILDA SEC. 010 ZN. 03, REF. A 2 CDRAS. DEL INNOVA SCHOOLS DE ATE VITARTE",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-186",
@@ -3237,6 +5229,10 @@
     "district": "Magdalena Del Mar",
     "name": "MAGDALENA DEL MAR",
     "address": "JR. AYACUCHO N° 756, REFERENCIA: A UNA CDRA. DEL MERCADO MODELO DE MAGDALESY A 3 CDRAS. DE LA IGLESIA CÚPULA DE SUCRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3247,6 +5243,10 @@
     "district": "Cercado Lima",
     "name": "MALVINAS - JR. GARCIA VILLóN",
     "address": "JR. PRESBÍTERO GARCÍA VILLON NRO. 560 CERCADO LIMA - LIMA, REF. A LA ALTURA DE LA CDRA. 5 DE AV. OSCAR R. BENAVIDES (EX AV. COLONIAL), EN MEDIO DE LAS AV. GUILLERMO DANSEY Y AV. OSCAR R. BENAVIDES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3257,6 +5257,10 @@
     "district": "Cercado Lima",
     "name": "MALVINAS - JR. RICARDO TRENEMAN",
     "address": "JR. RICARDO TRENEMAN N° 920, REFERENCIA: DENTRO DEL LOCAL FARENET",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3267,6 +5271,10 @@
     "district": "Pachacamac",
     "name": "MANCHAY TRES MARIAS",
     "address": "AV. VICTOR MALASQUEZ MZ. B11 SUB-LOTE 06-A - AAHH CENTRO POBLADO RURAL LOS HUERTOS DE MANCHAY SECTOR B PACHACAMAC - LIMA, REF.  A MEDIA CDRA. DEL PARADERO ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3277,6 +5285,38 @@
     "district": "San Juan De Miraflores",
     "name": "MARIA AUXILIADORA",
     "address": "AV. LOS HÉROES 1140 - SJM, REFERENCIA: UNA CDRA. ANTES DEL HOSPITAL MARÍA AUXILIADORA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
+    "active": true
+  },
+  {
+    "id": "shalom-450",
+    "officialId": 450,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Chorrillos",
+    "name": "MEGAPLAZA CHORRILLOS",
+    "address": "AV. ALAMEDA SUR 5, CHORRILLOS 15067, REF. CRUCE DE AV. ALAMEDA SUR CONAV. ALAMEDA SAN MARCOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": true,
+    "active": true
+  },
+  {
+    "id": "shalom-532",
+    "officialId": 532,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Independencia",
+    "name": "MEGAPLAZA INDEPENDENCIA",
+    "address": "CENTRO COMERCIAL MEGA PLAZA AV. ALFREDO MENDIOLA 3698 LIMA - INDEPENDENCIA. REF. PRIMER PISO DE MEGA PLAZA / AL COSTADO DEL ESTACIONAMIENTO DE BICICLETA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": true,
     "active": true
   },
   {
@@ -3287,6 +5327,10 @@
     "district": "Villa Maria Del Triunfo",
     "name": "NUEVA ESPERANZA VMT",
     "address": "AV. 26 DE NOVIEMBRE, 1728B - 1728C MZ. 90 SUB LOTE. 19B PUEBLO JOVEN NUEVA ESPERANZA, VILLA MARIA DEL TRIUNFO - LIMA, REF. A 3 CDRAS. DEL MERCADO VIRGEN DE LOURDES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3297,6 +5341,10 @@
     "district": "Lurin",
     "name": "NUEVO LURIN",
     "address": "AV. ANTIGUA PANAMERICANA SUR KM 37 MZ C LT 17 - FUNDO LAS SALINAS  - referencia a cuadra y media del mercado virgen de las mercedes.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3307,6 +5355,24 @@
     "district": "Puente Piedra",
     "name": "OVALO PUENTE PIEDRA ",
     "address": "AV. MIGUEL GRAUÂ MZ. A LT. 07 Y 08 URB. SAN MARTIN DE PORRES, CERCADO PUENTE PIEDRA - LIMA, REF. ESPALDAS DE TOTTUS DE PUENTE PIEDRA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
+    "active": true
+  },
+  {
+    "id": "shalom-662",
+    "officialId": 662,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "La Molina",
+    "name": "PARQUE LA MOLINA",
+    "address": "AV. LA MOLINA 2448, LA MOLINA 15026, LA MOLINA - LIMA - LIMA, REF. ESTACIONAMIENTO NIVEL -3",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": true,
     "active": true
   },
   {
@@ -3317,6 +5383,10 @@
     "district": "Villa Maria Del Triunfo",
     "name": "PESQUERO",
     "address": "AV. PACHACUTEC N° 3548, REFERENCIA: FRENTE A REAL PLAZA, A 1 CDRA. DE MAYORSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3327,7 +5397,25 @@
     "district": "Independencia",
     "name": "PLAZA NORTE ENTREGAS",
     "address": "Av. GERARDO UNGER NRO. 6917 INT. LB 19",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-244",
+    "officialId": 244,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Independencia",
+    "name": "PLAZA NORTE S. EXPRESS",
+    "address": "Av. GERARDO UNGER NRO. 6917 INT. LB 19",
+    "public": true,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-175",
@@ -3337,7 +5425,25 @@
     "district": "Los Olivos",
     "name": "PRO",
     "address": "AV. LOS PRÓCERES MZ. PP2 LT.21, URB. PUERTAS DE PRO - LOS OLIVOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-729",
+    "officialId": 729,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Luis",
+    "name": "PRUEBATIENDA",
+    "address": "Calle rio Marañon 189",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-73",
@@ -3347,6 +5453,10 @@
     "district": "Puente Piedra",
     "name": "PUENTE ARICA",
     "address": "PANAMERICANA NORTE  KM 32.5 , A 1/2  CUADRA DEL PUENTE ARICA  - AL COSTADO DEL GRIFO REPSOL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3357,6 +5467,10 @@
     "district": "Lurin",
     "name": "PUENTE LURIN",
     "address": "ANTIGUA PANAMERICANA SUR, LOTE 2, MZ. B, PRIMER PISO LURÍN - LIMA, REF. A CDRA. Y MEDIA DEL CRUCE CON AV. SANTA CRUZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3367,6 +5481,10 @@
     "district": "El Agustino",
     "name": "PUENTE NUEVO",
     "address": "AV 1° DE MAYO 3071 - URB HUANCAYO  referencia : FRENTE AL GRIFO REPSOL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3377,6 +5495,10 @@
     "district": "Ate-Vitarte",
     "name": "PUENTE SANTA ANITA",
     "address": "Av. Nicolás Ayllón N° 3080  - Ate vitarte",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3387,6 +5509,38 @@
     "district": "Punta Hermosa",
     "name": "PUNTA HERMOSA ",
     "address": "AV. GARCIA RADA MZ.B LT.04, AAHH ASOCIACION DE VIVIENDA Y DESARROLLO INTEGRAL NUEVA GENERACION, PUNTA HERMOSA - LIMA, REF. A UNA CDRA. DEL PARADERO PEATONAL DE PUNTA HERMOSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
+    "active": true
+  },
+  {
+    "id": "shalom-673",
+    "officialId": 673,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Villa El Salvador",
+    "name": "Prueba sistemas",
+    "address": "av pruebas.",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
+  },
+  {
+    "id": "shalom-500",
+    "officialId": 500,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Jesus Maria",
+    "name": "REAL PLAZA SALAVERRY",
+    "address": "CENTRO COMERCIAL REAL PLAZA SALAVERRY, AV. GRAL. SALAVERRY 2370, JESÚS MARÍA 15076, REF. FRENTE A LA ESCUELA DE POSTGRADO UTP",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": true,
     "active": true
   },
   {
@@ -3397,7 +5551,25 @@
     "district": "Surquillo",
     "name": "REP. DE PANAMA",
     "address": "AV REPÚBLICA DE PANAMÁ N° 5115, REFERENCIA: costado del grifo Repsol.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-523",
+    "officialId": 523,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "Cieneguilla",
+    "name": "REPARTO SAN LUIS",
+    "address": "SAN LUIS",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-176",
@@ -3407,6 +5579,10 @@
     "district": "Rimac",
     "name": "RIMAC AV. AMANCAES",
     "address": "Av. Amancaes Nro. 644 urb. Ciudad y campo - Rimac",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3417,7 +5593,25 @@
     "district": "Rimac",
     "name": "RIMAC GUARDIA REPUBLICANA CDRA. 9",
     "address": "SECCIÓN INMOBILIARIA N°2 – PRIMER PISO LT. 11 DE LA MZ. 2, URB. VILLACAMPA RIMAC, REF. A UNA CDRA. DEL CRUCE CON AV. FELIPE ARANCIBIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-274",
+    "officialId": 274,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Isidro",
+    "name": "RIV. NAVARRETE",
+    "address": "AV. RIVERA NAVARRETE 465, REFERENCIA: CRUCE DE JAVIER PRADO CON RIVERA NAVARRETE",
+    "public": false,
+    "receives": false,
+    "ships": true,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-377",
@@ -3427,6 +5621,10 @@
     "district": "Ate-Vitarte",
     "name": "SANTA CLARA",
     "address": "Av. Pedro Ruíz Gallo Mz. H Lt. 3. Asoc. Viv. Villa San Luis, Santa Clara - Ate Vitarte - LimaRef: Entre el Real Plaza y la UTP Santa Clara",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3437,6 +5635,10 @@
     "district": "Lurigancho",
     "name": "SANTA MARÍA DE HUACHIPA",
     "address": "AV. CIRCUNVALACIÓN MZ. A LT. 1 - D C - P SANTA MARÍA DE HUACHIPA - LURIGANCHO - CHOSICA, REF. ENTRE LA AV. CIRCUNVALACIÓN Y LA AV. HUACHIPA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3447,6 +5649,10 @@
     "district": "Santa Rosa",
     "name": "SANTA ROSA",
     "address": "MZ. L 23 URB. COOVITIOMAR,  - SANTA ROSA - LIMA, REF. CRUCE DE INGRESO A SANTA ROSA Y/O AL COSTADO DE IMAGEN DE SANTA ROSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3457,6 +5663,10 @@
     "district": "Carabayllo",
     "name": "SANTO DOMINGO",
     "address": "AV. A MZ. L2 LT. 20 URB. SANTO DOMINGO – VI ETAPA CARABAYLLO - LIMA, REF. EN EL CRUCE DE LAS AV. CHILLON TRAPICHE Y AV. CAMINO REAL ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3467,6 +5677,10 @@
     "district": "Los Olivos",
     "name": "SEGUNDA DE PRO",
     "address": "AV. ALFREDO MENDIOLA 8161 URB. PRO, LOS OLIVOS - LIMA - LIMA, REF. A UNA CDRA. DEL COLEGIO JOSÉ MARÍA ARGUEDAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3477,6 +5691,10 @@
     "district": "San Juan De Lurigancho",
     "name": "SJL- LAS FLORES",
     "address": "AV. CANTO GRANDE N°. 2570 - URB. GANIMEDES, REFERENCIA: A 3 CDRAS. DE PLAZA VEA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3487,6 +5705,10 @@
     "district": "San Juan De Lurigancho",
     "name": "SJL-AV.PROCERES",
     "address": "AV. PRÓCERES DE LA INDEPENDENCIA NRO.  1295 - 1299 REFERENCIA: AL COSTADO DEL BANCO DE LA NACIÓN DE AV. LOS TUSILAGOS OESTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3497,6 +5719,10 @@
     "district": "San Martin De Porres",
     "name": "SMP AV BERTELLO",
     "address": "AV. ALEJANDRO BERTELLO BOLLATI MZ. H LT. 2-A - ASOC. DE VIV. SAN REMO II ETAPA, SAN MARTÍN DE PORRES - LIMA - LIMA, REF. A MEDIA CDRA. DEL CRUCE CON AV. CANTA CALLAO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3507,6 +5733,10 @@
     "district": "San Martin De Porres",
     "name": "SMP AV PACASMAYO",
     "address": "AV. PACASMAYO MZ. A LT. 03 – URB. SANTA FE DE NARANJAL, SAN MARTÍN DE PORRES - LIMA - LIMA, REF. A 3 CDRAS. DEL CRUCE CON AV. EL SOL DE NARANJAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3517,6 +5747,10 @@
     "district": "San Martin De Porres",
     "name": "SMP-AV. PROCERES",
     "address": "AV. PRÓCERES N° 588 URB. COVICEM, REF. A 2 CDRAS. DE TOMÁS VALLE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3527,6 +5761,10 @@
     "district": "Santiago De Surco",
     "name": "SURCO MATEO PUMACAHUA",
     "address": "AV. SAN JUAN MZ A LOTE 01 MATEO PUMACAHUA - SURCO, REF. A 2 CUADRAS DE LA AV. TUPAC AMARU ENTRE EL LÍMITE DE CHORRILLOS Y SURCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3537,6 +5775,10 @@
     "district": "Carabayllo",
     "name": "TUNGASUCA",
     "address": "AV. TRAPICHE MZ. P LT. 48, URB. TUNGASUCA REFERENCIA: AUX. AV. CHIMPU OCLLO CON AUX. CHILLÓN TRAPICHE, A 1 CUADRA DEL MERCADO QATUNA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3547,6 +5789,10 @@
     "district": "Ate-Vitarte",
     "name": "URB SANTA ELVIRA ",
     "address": "AV. FERROCARRIL MZ. C LT. 19 PARCELA 3, URB. SANTA ELVIRA SEC. 018 ZONA 3, REF. A MEDIA CDRA. DEL CRUCE CON AV. DE LA CULTURA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3557,6 +5803,10 @@
     "district": "Santa Anita",
     "name": "URB UNIVERSAL",
     "address": "JR. CESAR VALLEJO 302 MZ. B1 LT. 02 URB UNIVERSAL, SANTA ANITA- LIMA-LIMA, REF. A 1 CDRA. DEL CRUCE CON AV. TUPAC AMARU",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3567,6 +5817,10 @@
     "district": "Comas",
     "name": "URB. REPARTICIÓN",
     "address": "AV. TUPAC AMARU 3184 URB. REPARTICION, COMAS - LIMA - LIMA, REF. A MEDIA CDRA. DE AV. VICTOR ANDRES BELAUNDE Y/O FRENTE A DOLLARCITY",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3577,7 +5831,25 @@
     "district": "Puente Piedra",
     "name": "ZAPALLAL",
     "address": "AV. ANCÓN 678, REF. A LA ESPALDA DEL PRECIO UNO DE FUNDICION",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-731",
+    "officialId": 731,
+    "region": "Lima",
+    "city": "Lima",
+    "district": "San Juan De Lurigancho",
+    "name": "pruebaTEST",
+    "address": "terminal de prueba bambamarca prueba de caracteres especiales en web de shalom U{HOWshvfisjvposrvjosv **",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-378",
@@ -3587,6 +5859,10 @@
     "district": "Villa El Salvador",
     "name": "ÓVALO MARIÁTEGUI",
     "address": "AV. PASTOR SEVILLA SECT. 6 - GP 7 - MZ. A - LOTE 05  - V.E.S., REF. A 2 CUADRAS DEL ÓVALO MARIÁTEGUI CON 3 DE OCTUBRE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3597,7 +5873,25 @@
     "district": "Churin",
     "name": "CHURÍN",
     "address": "AV. VÍA DE EVITAMIENTO N° N/S CHURÍN - OYÓN - LIMA, REF. A MEDIA CDRA. DE LA PLAZA DE ARMAS Y DE LA MUNICIPALIDAD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-252",
+    "officialId": 252,
+    "region": "Loreto",
+    "city": "Alto Amazonas",
+    "district": "Yurimaguas",
+    "name": "PUERTO YURIMAGUAS",
+    "address": "Shalom",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-234",
@@ -3607,7 +5901,25 @@
     "district": "Yurimaguas",
     "name": "YURIMAGUAS",
     "address": "CALLE JORGE CHÁVEZ N° 300, REFERENCIA: ESQUINA CON PROGRESO, AL COSTADO DE ENAPU",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-493",
+    "officialId": 493,
+    "region": "Loreto",
+    "city": "Maynas",
+    "district": "Iquitos",
+    "name": "AEROPUERTO IQUITOS",
+    "address": "Aeropuerto Coronel Francisco secada Vignetta",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-594",
@@ -3617,6 +5929,10 @@
     "district": "Iquitos San Juan Bautista",
     "name": "AV JOSE A. QUIÑONES",
     "address": "AV. JOSÉ ABELARDO QUIÑONES # 2475 SAN JUAN BAUTISTA - MAYNAS - LORETO, REF. FRENTE A LA UNIVERSIDAD CIENTÍFICA DEL PERÚ (UCP)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3627,6 +5943,10 @@
     "district": "Iquitos San Juan Bautista",
     "name": "AV PARTICIPACION PARCELA",
     "address": "AV. PARTICIPACIÓN PARCELA 9-A SAN JUAN BAUTISTA - MAYNAS - LORETO, REF. FRENTE AL LAVADERO OSITO Y A MEDIA CDRA. DEL PARQUE 1 DE ENERO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3637,6 +5957,10 @@
     "district": "Iquitos San Juan Bautista",
     "name": "CTRA IQUITOS NAUTA",
     "address": "CARRETERA IQUITOS NAUTA, S/N MZ. K - LT. 20, SAN JUAN BAUTISTA - MAYNAS - LORETO, REF. AL COSTADO DE LA DISTRIBUIDORA AMAZON GAS.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3647,6 +5971,10 @@
     "district": "Iquitos",
     "name": "IQUITOS  AV TUPAC AMARU",
     "address": "AV.  TUPAC AMARU CON - CALLE LOURDES DE LEÓN #479 IQUITOS MAYNAS - LORETO, REF. FRENTE A LA BOTICA THIAGOFAMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3657,6 +5985,10 @@
     "district": "Iquitos",
     "name": "IQUITOS CO JR. BOLOGNESI",
     "address": "JR. FRANCISCO BOLOGNESI #941 CON JR. BERMÚDEZ, IQUITOS - MAYNAS - LORETO, REF. FRENTE A LA UNIVERSIDAD NACIONAL DE LA AMAZONIA PERUANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3667,7 +5999,25 @@
     "district": "Iquitos",
     "name": "IQUITOS JR PABLO ROSSEL",
     "address": "JR PABLO ROSSEL 590 CON NANAY, REF. FRENTE AL CETPRO AMERICAN COMPUTER",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-364",
+    "officialId": 364,
+    "region": "Loreto",
+    "city": "Maynas",
+    "district": "Iquitos",
+    "name": "PUERTO IQUITOS",
+    "address": ".......",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-605",
@@ -3677,6 +6027,10 @@
     "district": "Punchana",
     "name": "PUNCHANA",
     "address": "CALLE BORJA N°648 PUNCHANA - MAYNAS - LORETO, REF. AL COSTADO DE LA FARMACIA SAN CARLOS CENTRO MÉDICO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3687,7 +6041,25 @@
     "district": "Iberia",
     "name": "IBERIA",
     "address": "AV. JORGE CHAVEZ MZ. H1 SUB LOTE 11-B, IBERIA - TAHUAMANU - MADRE DE DIOS, REF. A UNA CDRA. DE LA EMPRESA REAL DORADO / A UNA CDRA. Y MEDIA DE LA AV JOSE ALDAMIZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-487",
+    "officialId": 487,
+    "region": "Madre De Dios",
+    "city": "Tambopata",
+    "district": "Tambopata",
+    "name": "AEROPUERTO PUERTO MALDONADO",
+    "address": "Aeropuerto Internacional Padre Aldamiz",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-516",
@@ -3697,6 +6069,10 @@
     "district": "Tambopata",
     "name": "AV 15 DE AGOSTO",
     "address": "AV. 15 DE AGOSTO N° 529, TAMBOPATA - TAMBOPATA - MADRE DE DIOS, REF. A ESPALDAS DEL COLEGIO CARLOS FERMIN FITZCARRALD / CRUCE CON JR. ICA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3707,6 +6083,10 @@
     "district": "Las Piedras",
     "name": "EL TRIUNFO",
     "address": "AV. INTEROCEANICA KM. 1 , LAS PIEDRAS - TAMBOPATA - MADRE DE DIOS, REF. AL COSTADO DEL GRIFO VIRGEN NATIVIDAD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3717,6 +6097,10 @@
     "district": "Inambari",
     "name": "MAZUKO",
     "address": "AV. LOS PIONEROS, LT. 2 Y 3, INAMBARI – TAMBOPATA - MADRE DE DIOS, REF. AL COSTADO DEL TERMINAL TERRESTRE DE MAZUKO / AL PIE DE LA CARRETERA AL RIO INAMBARI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3727,6 +6111,10 @@
     "district": "Tambopata",
     "name": "TAMBOPATA AV CIRCUNVALACION",
     "address": "AV. CIRCUNVALACION MZ. C LT. 01, TAMBOPATA - TAMBOPATA - MADRE DE DIOS, REF. A DOS CDRAS. DE LA CARRETERA INTEROCEANICA SUR / CRUCE CON JR. LAS MERCEDES CABELLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3737,6 +6125,10 @@
     "district": "Tambopata",
     "name": "TAMBOPATA AV UCAYALI  CO",
     "address": "AV. UCAYALI N° 473 - TAMBOPATA - TAMBOPATA - MADRE DE DIOS, REF. AL COSTADO DE MOTOS SSENDA. AL FRENTE DEL COLEGIO SANTA FE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3747,6 +6139,10 @@
     "district": "Ilo",
     "name": "ILO CO PAMPA INALAMBRICA",
     "address": "URB. CIUDAD DEL PESCADOR, MZ. J LT. 18-19, REFERENCIA: A DOS CUADRAS DEL PODER JUDICIAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3757,6 +6153,10 @@
     "district": "Pacocha",
     "name": "ILO PACOCHA",
     "address": "AGRUPACIÓN DE FAMILIAS PUEBLO NUEVO M.Z E2 LT. COM2A SECT. II – ILO - MOQUEGUA, REF. AL COSTADO DEL BANCO BCP",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3767,6 +6167,10 @@
     "district": "Ilo",
     "name": "ILO PUERTO",
     "address": "JR. CALLAO PROLONGACIÓN MZ. N, LT. 19 - A, REFERENCIA: A MEDIA CDRA. DE LA COOPERATIVA CUAJONE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3777,6 +6181,10 @@
     "district": "Moquegua",
     "name": "CALLE LIMA",
     "address": "CALLE LIMA 190 - MARISCAL NIETO - MOQUEGUA, REF. A DOS CUADRAS DEL PARQUE LOS HÉROES/ALAMEDA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3787,6 +6195,10 @@
     "district": "Moquegua",
     "name": "CHEN CHEN",
     "address": "MZ. C LT. 24 – ASOCIACIÓN CÉSAR VIZCARRA – CENTRO POBLADO CHEN CHEN , MOQUEGUA –MARISCAL NIETO – MOQUEGUA, REF. AL COSTADO DEL OVALO CHEN CHEN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3797,6 +6209,10 @@
     "district": "Moquegua",
     "name": "QUEBRADA LAS LECHUZAS CO",
     "address": "SECTOR QUEBRADA LAS LECHUZAS MOQUEGUA CALLE N°1 MZ H LT. 04, MOQUEGUA - MARISCAL NIETO - MOQUEGUA, REF. QUEBRADA DE LECHUZAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3807,6 +6223,10 @@
     "district": "Moquegua",
     "name": "SAN ANTONIO",
     "address": "Av. Santa Fortunata Mz. N5 Lt. 10 Asoc. Villa Moquegua San Antonio. referencia : A una cuadra de la Casa de la Mujer",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3817,6 +6237,10 @@
     "district": "Oxapampa",
     "name": "OXAPAMPA",
     "address": "MZ. 239 SUB LOTE H – 1 OXAPAMPA - OXAPAMPA - PASCO, REF. ENTRE AV. ANGÉLICA FREY Y JR. LIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3827,6 +6251,10 @@
     "district": "Villa Rica",
     "name": "VILLA RICA",
     "address": "AV. LEOPOLDO KRAUSSE N° 442 VILLA RICA - OXAPAMPA - PASCO, REF. ENTRE EL JR. POZUZO Y JR. COOPERATIVA, AL COSTADO DE LA NOTARÍA GUERRA Y A 20 METROS DE LA PLAZA PRINCIPAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3837,6 +6265,10 @@
     "district": "Chaupimarca",
     "name": "CERRO DE PASCO",
     "address": "JR. HUARICAPCHA S/N A.H. TUPAC AMARU CHAUPIMARCA, REFERENCIA: FRENTE AL NUEVO TERMINAL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3847,6 +6279,10 @@
     "district": "Huayllay",
     "name": "HUAYLLAY",
     "address": "calle Lima S/N Barrio Arenales  Huayllay  Pasco   - REFERENCIA: AL COSTADO DEL COLEGIO CESAR VALLEJO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3857,6 +6293,10 @@
     "district": "Ayabaca",
     "name": "AYABACA",
     "address": "CALLE BOLOGNESI N° 136, REF. A 2 CUADRAS DE LA PLAZA DE ARMAS DE AYABACA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3867,6 +6307,10 @@
     "district": "Paimas",
     "name": "PAIMAS",
     "address": "AV. SULLANA S/N, REF. FRENTE AL COMPLEJO EDUCATIVO JUAN VELASCO ALVARADO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3877,6 +6321,10 @@
     "district": "Huancabamba",
     "name": "HUANCABAMBA",
     "address": "AV. RAMON CASTILLA 0351 HUANCABAMBA - PIURA, REF. A 1 CUADRA DE LA CAPILLA RAMON CASTILLA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3887,6 +6335,10 @@
     "district": "Chulucanas",
     "name": "CHULUCANAS",
     "address": "JR. HUANCAVELICA N° 548   REFERENCIA : AL LADO DEL TERMINAL DE RONCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3897,6 +6349,10 @@
     "district": "Morropon",
     "name": "MORROPON",
     "address": "JR. ADRIANZÉN N° 099, MORROPON - MORROPON - PIURA, REF, A ESPALDAS DE DEL TERMINAL TERRESTRE DE TRAMPSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3907,6 +6363,10 @@
     "district": "Paita",
     "name": "PAITA",
     "address": "MZ. H LT. 14 URB. SOL Y MAR  - PAITA, REFERENCIA: AL COSTADO DE LA EMPRESA SAN MIGUEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3917,7 +6377,25 @@
     "district": "26 De Octubre",
     "name": "AAHH SANTA ROSA PIURA",
     "address": "URB. SANTA ROSA MZ. D LT. 7, SECT. 7, 26 DE OCTUBRE - PIURA. REF. AV. RAUL MATA LA CRUZ CON CIRCUNVALACIÓN AL FRENTE DE REPUESTOS FRANK|",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-491",
+    "officialId": 491,
+    "region": "Piura",
+    "city": "Piura",
+    "district": "Piura",
+    "name": "AEROPUERTO PIURA",
+    "address": "Aeropuerto Internacional Guillermo Concha Ibérico",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-613",
@@ -3927,6 +6405,10 @@
     "district": "Piura",
     "name": "AV RAUL MATA LA CRUZ- DOS GRIFOS",
     "address": "AV. RAÚL MATA LA CRUZ LT. 11 MZ. C URB. LOS JARDINES - CORPIURA, - PIURA - PIURA - PIURA, REF. A UNA CDRA. DE LOS 2 GRIFOS EN TODA LA AV. RAÚL MATA LA CRUZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3937,6 +6419,10 @@
     "district": "Castilla",
     "name": "AV TACNA",
     "address": "AV. TACNA 503 CASTILLA - PIURA, REFERENCIA: FRENTE A UGEL DE CASTILLA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3947,6 +6433,10 @@
     "district": "Piura",
     "name": "AV. GRAU",
     "address": "Av. grau manzana N, lote 33 - urbanización la alborada. ref. Grau con marcavelica",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3957,6 +6447,10 @@
     "district": "26 De Octubre",
     "name": "AV. GULLMAN",
     "address": "A.A.H.H. CONSUELO DE VELASCO 1 ETAPA SECTOR B MZ LT.18  26 DE OCTUBRE – PIURA, REF. CRUCE AV. CIRCUNVALACIÓN CON AV. GULLMAN AL COSTADO DE LA FERRETERIA LOS REYES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3967,6 +6461,10 @@
     "district": "Piura",
     "name": "AV. LUIS EGUIGUREN",
     "address": "AV. MÁLAGA MZ. A LT.20 INT. 105 PIURA, REF. A MEDIA CUADRA DE HONDA DEL PERU S.A. EN EL CRUCE DE AV. LUIS EGUIGUREN CON SULLANA NORTE ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3977,6 +6475,10 @@
     "district": "26 De Octubre",
     "name": "CALLE EMAÚS",
     "address": "CALLE TRES N° 102, SUBLOTE N° 1D MZ. Y - ZONA INDUSTRIAL II, DISTRITO 26 DE OCTUBRE - REFERENCIA: AL COSTADO DE SENATI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3987,6 +6489,10 @@
     "district": "Catacaos",
     "name": "CATACAOS",
     "address": "AV. FRANCISCO BOLOGNESI MZ. 60 LT. 37 CATACAOS - PIURA - PIURA, REF. AL LADO DEL EX PRONEI",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -3997,6 +6503,10 @@
     "district": "La Union",
     "name": "LA UNION",
     "address": "AV. LIMA N° 590  REFERENCIA : frente a tiendas chancafe",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4007,6 +6517,10 @@
     "district": "Las Lomas",
     "name": "LAS LOMAS",
     "address": "JR. MIGUEL GRAU MZ. H LT. 7, LAS LOMAS - PIURA, REF. AL COSTADO DE CAJA HUANCAYO Y AL COSTADO DE COMISARIA LAS LOMAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4017,6 +6531,10 @@
     "district": "26 De Octubre",
     "name": "PARQUE INDUSTRIAL CO PIURA FUTURA",
     "address": "URB. PARQUE INDUSTRIAL PIURA FUTURA MZ. G, LT. 1A. 26 DE OCTUBRE - PIURA, REFERENCIA: AL FRENTE DEL GRIFO PETRO PERÚ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4027,6 +6545,10 @@
     "district": "Castilla",
     "name": "TACALA",
     "address": "CARR. PANAMERICANA A-2 AH. ALMIRANTE MIGUEL GRAU I ETAPA, CASTILLA - PIURA - PIURA, REF. AL COSTADO DE CERÁMICAS SAN LORENZO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4037,6 +6559,10 @@
     "district": "Tambo Grande",
     "name": "TAMBO GRANDE",
     "address": "AA. HH. EL HUERTO MZ. E LT. 08 TAMBO GRANDE – PIURA - PIURA, REF. ATRÁS DEL COLEGIO INA 54 AGROPECUARIO, A LA ALTURA DEL CAMPO CAMPESTRE RIVERA DEL RÍO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4047,6 +6573,10 @@
     "district": "Sechura",
     "name": "SECHURA",
     "address": "MZ. B LT. 23 A. H. LOS JARDINES SUR ESTE, SECHURA - SECHURA - PIURA, REF. AL COSTADO DE LA EMPRESA FUNDICION CORONADO SRL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4057,6 +6587,10 @@
     "district": "Bellavista",
     "name": "BELLAVISTA SULLANA",
     "address": "CALLE MOQUEGUA 381, BELLAVISTA, REF. REST. PARRILLADAS CHAVELOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4067,6 +6601,10 @@
     "district": "Ignacio Escudero",
     "name": "IGNACIO ESCUDERO",
     "address": "AV. PANAMERICANA CALLE 26 LOTE 3, IGNACIO ESCUDERO - SULLANA - PIURA, REF. FRENTE A LA INSTITUCIÓN EDUCATIVA IGNACIO ESCUDERO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4077,6 +6615,10 @@
     "district": "Sullana",
     "name": "SULLANA CO ZONA INDUSTRIAL",
     "address": "CTRA. SULLANA Nº S/N MZ. K, LT. 06 - ZONA INDUSTRIAL MUNICIPAL, REFERENCIA: AL COSTADO DEL HOTEL COCO SUITE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4087,6 +6629,10 @@
     "district": "Sullana",
     "name": "SULLANA SANTA ROSA",
     "address": "Carretera Panamericana Norte Nº 790 SULLANA   REFERENCIA : FRENTE AL COLEGIO CHIQUITITOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4097,6 +6643,10 @@
     "district": "El Alto",
     "name": "EL ALTO",
     "address": "AV. BOLOGNESI O-37 CENTRO EL ALTO, REFERENCIA: A ESPALDAS DE LA MUNICIPALIDAD DE EL ALTO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4107,6 +6657,10 @@
     "district": "Los Organos",
     "name": "LOS ORGANOS",
     "address": "Av. Panamericana Norte P-29 - URB. Cercado zona URBANA,  Referencia al frente de grifo de troncos o grifo San Pedro",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4117,6 +6671,10 @@
     "district": "Mancora",
     "name": "MÁNCORA",
     "address": "AV. GRAU NRO. 432 MÁNCORA - TALARA - PIURA, REF. FRENTE AL PARADERO DE AUTOS DE LOS ÓRGANOS EN TODA LA PANAMERICANA NORTE.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4127,6 +6685,10 @@
     "district": "Parinas",
     "name": "TALARA  CO ASOC CALIFORNIA",
     "address": "ASOCIACIÓN CALIFORNIA C - 03 FRENTE A CARRETERA NEGRITOS, TALARA - PARIÑAS, REFERENCIA: AL COSTADO DEL RESTAURANTE MI TORETE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4137,6 +6699,10 @@
     "district": "Parinas",
     "name": "TALARA ALTA 9 DE OCTUBRE",
     "address": "MZ. N-10 AA.HH 9 DE OCTUBRE TALARA ALTA, PARIÑAS - TALARA - PIURA, REF. A 1 CDRA. ANTES DE AMECFA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4147,6 +6713,10 @@
     "district": "Parinas",
     "name": "TALARA BAJA PARQUE 22",
     "address": "PARQUE 22 – 03 LATERAL. TALARA BAJA, PARIÑAS - TALARA - PIURA. REF. FRENTE A MINSA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4157,6 +6727,10 @@
     "district": "Azangaro",
     "name": "AZANGARO",
     "address": "AV. PRÓCERES S/N, AZÁNGARO - PUNO, REF. A DOS CDRAS. DEL PARQUE DE LA MADRE / A ORILLAS DE LA MISMA AV. PROCERES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4167,6 +6741,10 @@
     "district": "Desaguadero",
     "name": "DESAGUADERO",
     "address": "AV. PANAMERICANA N° 1158 - 1160, DESAGUADERO - CHUCUITO - PUNO, REF. AL COSTADO DEL GRIFO BARTOLOMÉ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4177,6 +6755,10 @@
     "district": "Ilave",
     "name": "ILAVE",
     "address": "JR. BOLOGNESI NRO. 866 BARRIO CRUZANI, EL COLLAO - PUNO, REF. A UNA CUADRA DEL COLISEO Y DEL CEMENTERIO DE ILAVE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4187,6 +6769,10 @@
     "district": "Ayaviri",
     "name": "AYAVIRI",
     "address": "JR. SANTA ROSA PROLONGACIÓN S/N MAGISTERIAL - PUNO - MELGAR - AYAVIRI, REF. A 50 METROS DEL ÓVALO, SALIDA A JULIACA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4197,6 +6783,10 @@
     "district": "Puno",
     "name": "ALTO PUNO",
     "address": "URB. SAN PEDRO-ALTO PUNO, AV LA CULTURA N° 160, PUNO - PUNO - PUNO, REF. A TRES CDRAS. DE LA AV. QUE VA A JULIACA / A DOS CDRAS. DEL GRIFO BRONCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4207,6 +6797,10 @@
     "district": "Puno",
     "name": "AV  4 DE NOVIEMBRE CO",
     "address": "AV. 4 DE NOVIEMBRE N° 474-B Y 486-B BARRIO SANTA ROSA, PUNO - PUNO – PUNO, REF. A UNA CDRA. DE SUNAFIL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4217,6 +6811,10 @@
     "district": "Puno",
     "name": "AV COSTANERA",
     "address": "AV. COSTANERA N° 211 CON JR. LOS INCAS - PUNO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4227,7 +6825,25 @@
     "district": "Puno",
     "name": "SALCEDO",
     "address": "URB. AZIRUNI TEPRO I ETAPA MZ. 18 LT. 52 JR LOS ROSALES – SALCEDO PUNO, REF. A UNA CDRA. DE LA AV. ESTUDIANTE / A DOS CDRAS. DE SENATI PUNO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-485",
+    "officialId": 485,
+    "region": "Puno",
+    "city": "San Roman",
+    "district": "Juliaca",
+    "name": "AEROPUERTO JULIACA",
+    "address": "Aeropuerto Internacional Inca Manco Capac",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-604",
@@ -4237,6 +6853,10 @@
     "district": "Juliaca",
     "name": "AV  INDEPENDENCIA",
     "address": "AV. INDEPENDENCIA NRO. 1538 MZ. A1 LT. 04 URB. HORACIO ZEBALLOS GAMEZ, JULIACA - SAN ROMÁN - PUNO, AL FRENTE DEL GRIFO SAN CARLOS / CRUCE CON JR 21 DE ENEROREF.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4247,6 +6867,10 @@
     "district": "Juliaca",
     "name": "AV HEROES DEL PACIFICO CO",
     "address": "AV. HÉROES DE LA GUERRA DEL PACIFICO KM 3.5, JULIACA - SAN ROMÁN - PUNO, REF. AL FRENTE DEL GRIFO LEON SERVICE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4257,6 +6881,10 @@
     "district": "Juliaca",
     "name": "AV. HUANCANE CDRA. 9",
     "address": "JR. SILLUSTANI N° 202, SAN ROMAN - JULIACA, REF. A 3 CDRAS. DEL HOSPITAL CARLOS MONGE MEDRANO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4267,6 +6895,10 @@
     "district": "Juliaca",
     "name": "AV. LAMPA",
     "address": "AV. LAMPA MZ. B2 LT. 3 URB. SANTA ADRIANA, JULIACA - SAN ROMÁN - PUNO, REF. A MEDIA CDRA. DE LA POSTA DE SALUD DE LA URB. SANTA ADRIANA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4277,6 +6909,10 @@
     "district": "Juliaca",
     "name": "AV. MODESTO BORDA",
     "address": "AV. MODESTO BORDA MZ. A LT. 04 URB. ARRABAL DON JULIO, JULIACA - SAN ROMAN - PUNO, REF. DOS CDRAS. ANTES DEL GRIFO BLANCO / A DOS CDRAS. DEL SALON DE EVENTOS PARAISO AZUL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4287,6 +6923,10 @@
     "district": "Juliaca",
     "name": "JR AGUSTIN GAMARRA",
     "address": "JR. AGUSTIN GAMARRA MZ. R1 LT. 09 URB. HUANCANE, JULIACA - SAN ROMÁN - PUNO, REF. A UNA CDRA. DE LA AV. HUANCANE / CRUCE CON JR. ALBERTO CUENTAS ZABALA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4297,6 +6937,10 @@
     "district": "Juliaca",
     "name": "JR. MAMA OCLLO",
     "address": "Jr. Mama Ocllo 915 - B ( Cruce con Jr Azángaro )",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4307,6 +6951,10 @@
     "district": "Juliaca",
     "name": "LAS MERCEDES",
     "address": "JR. PORVENIR N° 228 URB. LAS MERCEDES, SAN ROMAN - PUNO, REF. A UNA CDRA. DE LA AV. CIRCUNVALACION OESTE - A UNA CDRA. DEL TERMINAL LAS MERCEDES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4317,6 +6965,10 @@
     "district": "Bellavista",
     "name": "SAN MARTIN BELLAVISTA",
     "address": "AV. LIMA S/N C-4 MZ 71 – LOTE A – TERCER PISO, BELLAVISTA- BELLAVISTA- SAN MARTIN, REF. ESPALDAS DE FERRETERÍA EL IMAN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4327,6 +6979,10 @@
     "district": "San Jose De Sisa",
     "name": "SAN JOSE DE SISA",
     "address": "JR. BOLOGNESI CDRA 6, SAN JOSE DE SISA - EL DORADO - SAN MARTIN, REF. ALTURA DE JR LAMAS Y JR ELADIO TAPULLIMA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4337,6 +6993,10 @@
     "district": "Saposoa",
     "name": "SAPOSOA",
     "address": "AV. LORETO S/N - SAPOSOA - EL HUALLAGA - SAN MARTIN, REF. EN EL HOSTAL EL GATO, A UNA CDRA. Y MEDIA DE LA PLAZA DE ARMAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4347,6 +7007,10 @@
     "district": "Lamas",
     "name": "LAMAS",
     "address": "JR. 16 DE OCTUBRE N°1137, REFERENCIA: A LA ESPALDA DEL GRIFO VARGAS TELLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4357,6 +7021,10 @@
     "district": "Juanjui",
     "name": "JUANJUI  CENTRO",
     "address": "JR. SARGENTO LOREZ N° 568, JUANJUI - MARISCAL CÁCERES - SAN MARTIN, REF. A UNA CDRA. DE DEL JR. HUALLAGA CDRA. 11 Y A UNA CDRA. DE IMPORTACIONES PATRICIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4367,6 +7035,10 @@
     "district": "Juanjui",
     "name": "JUANJUÍ FERNANDO BELAUNDE TERRY CO",
     "address": "CARRETERA FERNANDO TERRY KM. 1 S/N REFERENCIA: AL COSTADO DE PARADERO DE AUTOS HUALLAGA EXPRESS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4377,6 +7049,10 @@
     "district": "Moyobamba",
     "name": "MOYOBAMBA  CENTRO",
     "address": "JR. SERAFÍN FILOMENO N°279, MOYOBAMBA - MOYOBAMBA - SAN MARTÍN, REF. A UNA CUADRA IMEDIA DEL CUMO (CENTRO CULTURAL DE MOYOBAMBA)",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4387,6 +7063,10 @@
     "district": "Moyobamba",
     "name": "MOYOBAMBA  CO",
     "address": "JR. 20 de abril  2138 -  REFERENCIA : Altura de la  pampa del  hambre",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4397,6 +7077,10 @@
     "district": "Soritor",
     "name": "SORITOR",
     "address": "JR. MIGUEL GRAU CDRA 7 N°741 MZ.05 LTE.16B, SORITOR - MOYOBAMBA - SAN MARTÍN, REF. A MEDIA CDRA. DE LA IGLESIA ASAMBLEAS DE DIOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4407,6 +7091,10 @@
     "district": "Picota",
     "name": "PICOTA",
     "address": "AV. FERNANDO BELAUNDE TERRY LOTE 2B PICOTA - PICOTA - SAN MARTIN. REF, A UNA CDRA. DE LA COMISARIA DE PICOTA SALIDA A BELLAVISTA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4417,6 +7105,10 @@
     "district": "Nueva Cajamarca",
     "name": "NUEVA CAJAMARCA",
     "address": "AV. CAJAMARCA NORTE MZ. 51 LT. 15, REFERENCIA: AL COSTADO DE ESSALUD",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4427,6 +7119,10 @@
     "district": "Pardo Miguel",
     "name": "PARDO MIGUEL NARANJOS",
     "address": "JR. MIGUEL GRAU 101 MZ. 34 LT. 6, PARDO MIGUEL - RIOJA - SAN MARTIN, REF. AV. MARGINAL CDRA 5",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4437,6 +7133,10 @@
     "district": "Rioja",
     "name": "RIOJA",
     "address": "CTRA. FERNANDO BELAÚNDE TERRY N° 415, REFERENCIA: AL COSTADO DE LA CLÍNICA CHILCON HOPE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4447,7 +7147,25 @@
     "district": "Elias Soplin Vargas ",
     "name": "SEGUNDA JERUSALEN",
     "address": "JR. LIMA MZ. 43 LT. 08 , ELIAS SOPLIN VARGAS - RIOJA - SAN MARTIN, REF. AL COSTADO DE TIENDA CHINGAY",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-488",
+    "officialId": 488,
+    "region": "San Martín",
+    "city": "San Martin",
+    "district": "Tarapoto",
+    "name": "AEROPUERTO TARAPOTO",
+    "address": "Aeropuerto Guillermo del Castillo Paredes",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-320",
@@ -4457,6 +7175,10 @@
     "district": "Tarapoto",
     "name": "JR LEONCIO PRADO",
     "address": "JR. LEONCIO PRADO N° 1175, REFERENCIA: A UNA CUADRA DEL INSTITUTO MARÍA PARADO DE BELLIDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4467,6 +7189,10 @@
     "district": "Tarapoto",
     "name": "JR. RAMÓN CASTILLA",
     "address": "JR. RAMON CASTILLA N°1362 TARAPOTO - SAN MARTIN, REF. A MEDIA CDRA. DE MANNUCCI MOTOR S.A.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4477,6 +7203,10 @@
     "district": "Tarapoto",
     "name": "JR. TAHUANTINSUYO",
     "address": "JR. TAHUANTINSUYO N° 158 - TARAPOTO - SAN MARTÍN, REF. AL COSTADO DEL GRIFO SAN MARTÍN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4487,6 +7217,10 @@
     "district": "Tarapoto",
     "name": "TARAPOTO CO JR ALFONSO UGARTE",
     "address": "JR. ALFONSO UGARTE N°2283 - TARAPOTO - SAN MARTIN - SAN MARTIN, REF. FRENTE A LA CANCHA SINTÉTICO EL GOLAZO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4497,6 +7231,10 @@
     "district": "Morales",
     "name": "TARAPOTO JR. SARGENTO LOREZ",
     "address": "JR. SARGENTO LOREZ N° 264, MORALES - SAN MARTIN, REF. A UNA CDRA. Y MEDIA DE LA PLAZA DE MORALES, FRENTE A VULCANO GAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4507,6 +7245,10 @@
     "district": "La Banda De Shilcayo",
     "name": "TARAPOTO LA BANDA DE SHILCAYO",
     "address": "JR. PERÚ N°186, REFERENCIA: A 2 CDRS. DE LA PLAZA DE LA BANDA DE SHILCAYO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4517,6 +7259,10 @@
     "district": "Tocache",
     "name": "AV FERNANDO BELAUNDE",
     "address": "AV. FERNANDO BELAUNDE C-09 MZ H6 (21), LT. 04, CERCADO DE TOCACHE, REF. FRENTE AL MERCADILLO DE TOCACHE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4527,6 +7273,10 @@
     "district": "Tocache",
     "name": "JR  FREDY ALIAGA CO",
     "address": "JR. FREDY ALIAGA N°3046 -TOCACHE - TOCACHE - SAN MARTIN, REF. AL COSTADO DEL RECREO CAMPESTRE ESTRAGOS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4537,7 +7287,25 @@
     "district": "Uchiza",
     "name": "UCHIZA",
     "address": "AV. LEONCIO PRADO N°524 - UCHIZA - TOCACHE - SAN MARTIN, REF. A MEDIA CDRA. DE LA PLAZA CENTRAL / FRENTE A COOPACT",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-490",
+    "officialId": 490,
+    "region": "Tacna",
+    "city": "Tacna",
+    "district": "Tacna",
+    "name": "AEROPUERTO TACNA",
+    "address": "Aeropuerto Internacional Coronel Carlos Ciriani Santa Rosa",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-290",
@@ -4547,6 +7315,10 @@
     "district": "Tacna",
     "name": "AV  VIGIL",
     "address": "AV. VIGIL 1636, REFERENCIA: A UNA CDRA. DE LA PLAZA GRAU",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4557,6 +7329,10 @@
     "district": "Tacna",
     "name": "AV EJERCITO",
     "address": "AV. LITORAL NRO. 306 – PARA CHICO (ANTERIOR AV. EJÉRCITO PROLONGACIÓN 306 TACNA), TACNA - TACNA - TACNA, REF. DENTRO DEL ESTABLECIMIENTO DEL GRIFO PRIMAX",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4567,6 +7343,10 @@
     "district": "Tacna",
     "name": "AV. ARIAS ARAGUEZ",
     "address": "CALLE ARIAS ARAGUEZ N° 836  TACNA, REF. A UNA CDRA. ANTES DE LLEGAR AL COLISEO PERÚ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4577,6 +7357,10 @@
     "district": "Coronel Gregorio Albarracin Lanchipa",
     "name": "AV. MUNICIPAL",
     "address": "ASOCIACIÓN LAS VILCAS  MZ. E LT. 16, GREGORIO ALBARRACÍN LANCHIPA - TACNA REF. FRENTE AL MERCADO HÉROES DEL CENEPA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4587,6 +7371,10 @@
     "district": "Tacna",
     "name": "POCOLLAY",
     "address": "PUEBLO TRADICIONAL POCOLLAY MZ. T LOTE 01 , POCOLLAY - TACNA - TACNA, REF. A UNA CDRA. DEL CENTRO DE SALUD POCOLLAY",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4597,6 +7385,10 @@
     "district": "Ciudad Nueva",
     "name": "TACNA CIUDAD NUEVA",
     "address": "CIUDAD NUEVA MZ 46 LT 12 COMITÉ 10 CIUDAD NUEVA - TACNA, REF. A UNA CDRA. DE LA PLAZA JOSÉ OLAYA DE CIUDAD NUEVA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4607,6 +7399,10 @@
     "district": "Tacna",
     "name": "TACNA CO AV. JORGE BASADRE",
     "address": "Av. Jorge Basadre Grohmann Oeste n° 366 - tACNA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4617,6 +7413,10 @@
     "district": "Coronel Gregorio Albarracin Lanchipa",
     "name": "VILLA SAN FRANCISCO",
     "address": "ASOC. VILLA SAN FRANCISCO MZ. 94 LT. 22, REFERENCIA: CERCA A CAJA CUSCO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4627,6 +7427,10 @@
     "district": "Coronel Gregorio Albarracin Lanchipa",
     "name": "VIÑANIS",
     "address": "PROMUVI VIÑANI, AMP. I ETAPA, MZ. 574, LT. 09 – CORONEL GREGORIO ALBARRACÍN LANCHIPA – TACNA - TACNA, REF. A MEDIA CDRA. DEL ÓVALO LOS MOLLES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4637,7 +7441,25 @@
     "district": "Zorritos",
     "name": "ZORRITOS",
     "address": "AV. 28 DE JULIO N° 205 MZ. 14 LT. 04 LOS PINOS TUMBES, CONTRALMIRAANTE VILLAR - ZORRITOS - TUMBES",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-492",
+    "officialId": 492,
+    "region": "Tumbes",
+    "city": "Tumbes",
+    "district": "Tumbes",
+    "name": "AEROPUERTO TUMBES",
+    "address": "Aeropuerto Internacional Pedro Canga Rodríguez",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-463",
@@ -4647,6 +7469,10 @@
     "district": "Corrales",
     "name": "CORRALES",
     "address": "AV. HUÁSCAR Nº 311 INT. 01 CENTRO, CORRALES - TUMBES, REF. A ESPALDAS DE LA PLAZA DE ARMAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4657,6 +7483,10 @@
     "district": "La Cruz",
     "name": "LA CRUZ  TUMBES",
     "address": "JR. PIURA 105 CALETA LA CRUZ, LA CRUZ - TUMBES, REF. FRENTE A CTR. PANAMERICANA NORTE Y AL FRENTE DE MOTOREPUESTOS Y MULTISERVICIOS LUJAN",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4667,6 +7497,10 @@
     "district": "Tumbes",
     "name": "PAMPA GRANDE TUMBES",
     "address": "MZ. 0U LT. 00A AA.HH. PAMPA GRANDE, TUMBES, REF. FRENTE A LA AV. UNIVERSITARIA, Y AL FRENTE A LA IGLESIA MORMONES Y AL LADO DE UN LAVADERO DE AUTOS.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4677,6 +7511,10 @@
     "district": "Tumbes",
     "name": "TUMBES - AV ARICA",
     "address": "Av. Arica N° 227 - Tumbes.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4687,6 +7525,10 @@
     "district": "Tumbes",
     "name": "TUMBES CO - PANAMERICANA NORTE KM 2360",
     "address": "AV. PANAMERICANA NORTE S/N VILLA PRIMAVERA - TUMBES. REF. PASANDO SENATI FRENTE A AGRIPAC",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4697,6 +7539,10 @@
     "district": "Tumbes",
     "name": "TUMBES PUYANGO",
     "address": "URB. ANDRÉS ARAUJO MORÁN MZ. 28-A LOTE 03 CALLE JACINTO SEMINARIO, REF. AL COSTADO DEL MERCADO PUYANGO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4707,6 +7553,10 @@
     "district": "Aguas Verdes",
     "name": "AGUAS VERDES",
     "address": "AV TUMBES S/N LOTE 09 MZ 17 , A.H TOMAS ARIZOLA OLAYA , SECTOR II - REFERENCIA : A UNA CUADRA DEL PARQUE TOMAS ARIZOLA.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4717,7 +7567,25 @@
     "district": "Zarumilla",
     "name": "ZARUMILLA",
     "address": "JIRON INDEPENDENCIA 309 ZARUMILLA, REF. ATRÁS DE LA PLAZA DE ARMAS Y FRENTE AL DORADO PASANDO 5 CASAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
+  },
+  {
+    "id": "shalom-489",
+    "officialId": 489,
+    "region": "Ucayali",
+    "city": "Coronel Portillo",
+    "district": "Pucallpa Calleria",
+    "name": "AEROPUERTO PUCALLPA",
+    "address": "Aeropuerto David Abensur Rengifo",
+    "public": false,
+    "receives": false,
+    "ships": false,
+    "pointPro": false,
+    "active": false
   },
   {
     "id": "shalom-612",
@@ -4727,6 +7595,10 @@
     "district": "Pucallpa Calleria",
     "name": "CALLERIA AV SAENZ PEÑA",
     "address": "AV. SAENZ PEÑA 229, CALLERIA - CORONEL PORTILLO - UCAYALI, REF. A DOS CUADRAS DEL OVALO DE FEDERICO BASADRE Y SAENZ PEÑA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4737,6 +7609,10 @@
     "district": "Pucallpa Calleria",
     "name": "CALLERIA JR JOSE GALVEZ",
     "address": "Jr. Jose Galvez 147 calleria - CORONEL PORTILLO - Ucayali.  RefERENCIA :  a media cuadra de la Av. Centenario",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4747,6 +7623,10 @@
     "district": "Pucallpa Manantay",
     "name": "MANANTAY  AV AGUAYTIA",
     "address": "AV. AGUAYTIA MZ., 26 LT. 20 MANANTAY - CORONEL PORTILLO - UCAYALI, REF. A MEDIA CDRA. DEL NUEVO MERCADO DE SAN FERNANDO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4757,6 +7637,10 @@
     "district": "Pucallpa Manantay",
     "name": "MANANTAY AV TUPAC AMARU",
     "address": "AV. TUPAC AMARU 2315 MANANTAY - CORONEL PORTILLO - UCAYALI, REF. A MEDIA CDRA. DE LA POLLERIA EMANUEL",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4767,6 +7651,10 @@
     "district": "Pucallpa Yarinacocha",
     "name": "PUCALLPA CO FEDERICO BASADRE",
     "address": "CARRETERA FEDERICO BASADRE KM 6.800 YARINACOCHA - CORONEL PORTILLO - UCAYALI, REF. Entrada del Asentamiento Humano Alan Sisley/Al costado de la empresa JVJ Service Oriente SAC",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4777,6 +7665,10 @@
     "district": "Pucallpa Yarinacocha",
     "name": "YARINACOCHA  AV UNIVERSITARIA",
     "address": "AV. UNIVERSITARIA MZA A LOTE 6, YARINACOCHA - CORONEL PORTILLO - UCAYALI, REF. A MEDIA CDRA. DEL LOCAL ROKALPA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4787,6 +7679,10 @@
     "district": "Pucallpa Yarinacocha",
     "name": "YARINACOCHA CENTRO",
     "address": "JR. TUPAC AMARU, MZ. 50, LT. 07, REFERENCIA: A ESPALDA DE MAESTRANZA DE YARINACOCHA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4797,6 +7693,10 @@
     "district": "Aguaytia",
     "name": "AGUAYTÍA",
     "address": "U. VECINAL BARRIO UNIDO MZ. 1 LT. 2, PADRE ABAD - UCAYALI, REF. AL COSTADO DEL TERMINAL TERRESTRE DE AGUAYTIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4807,6 +7707,10 @@
     "district": "Carhuaz",
     "name": "CARHUAZ",
     "address": "CARRETERA CENTRAL 00S/N CENT CARHUAZ - CARHUAZ - ÁNCASH, ref. MEDIA CUADRA ANTES DE LLEGAR AL ESTADIO MUNICIPAL CAPITAN CARLOS MEJIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4817,6 +7721,10 @@
     "district": "Casma",
     "name": "CASMA",
     "address": "AV. MIGUEL GRAU MZ. D 4 LT. 1 CASMA - ANCASH, REF. FRENTE AL JARDÍN DE INFANCIA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4827,6 +7735,10 @@
     "district": "Huaraz",
     "name": "AV. 27 DE NOVIEMBRE CO",
     "address": "AV. 27 DE NOVIEMBRE CDRA. 20 S/N - VILLON BAJO, REFERENCIA: AL COSTADO DEL GRIFO PRIMAX",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4837,6 +7749,10 @@
     "district": "Independencia",
     "name": "HUARAZ INDEPENDENCIA",
     "address": "JR. CANDELARIA VILLAR N. 631, REF. ESQUINA CON CON JR. HUAYLAS CASA DE 4 PISOS AMARILLO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4847,6 +7763,10 @@
     "district": "Huarmey",
     "name": "HUARMEY",
     "address": "CARR. PANAMERICANA NORTE N° KM 293 SECT. PANAMERICANA HUARMEY – ANCASH, REF. A 4 CDRAS. DEL TERMINAL TERRESTRE DE SUR A NORTE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4857,6 +7777,10 @@
     "district": "Caraz",
     "name": "CARAZ",
     "address": "AV. 9 DE OCTUBRE N° 259 - HUAYLAS, REFERENCIA: AL COSTADO DE LA EMPRESA MÓVIL TOURS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4867,6 +7791,10 @@
     "district": "Chimbote",
     "name": "AV  JOSE GALVEZ",
     "address": "AV. JOSÉ GÁLVEZ 791, CHIMBOTE - SANTA - ANCASH, REF. A 1 CDRA. ANTES DE LLEGAR AL PUENTE GÁLVEZ",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4877,6 +7805,10 @@
     "district": "Chimbote",
     "name": "AV ENRIQUE MEIGGS",
     "address": "Av. Enrique Meiggs N° 2457.",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4887,6 +7819,10 @@
     "district": "Chimbote",
     "name": "AV. LOS PESCADORES CO",
     "address": "PAR. PARCELA N° 16757 - E SECTOR LA PERLA TRES CABEZAS - ANCASH, REF. FRENTE AL ESTADIO CENTENARIO",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4897,6 +7833,10 @@
     "district": "Nuevo Chimbote",
     "name": "AV. PACÍFICO BELEN",
     "address": "AA.HH. BELEN MZ O LT 28 - NUEVO CHIMBOTE - SANTA - ANCASH, REF. FRENTE AL GRIFO DOXA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4907,6 +7847,10 @@
     "district": "Nuevo Chimbote",
     "name": "GARATEA",
     "address": "URB. NICOLAS GARATEA MZ. 100 LT. 24 - NUEVO CHIMBOTE - SANTA - ANCASH, REF. FRENTE AL PARADERO AUTOS N.- GARATEA",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4917,6 +7861,10 @@
     "district": "Nuevo Chimbote",
     "name": "OVALO DE LA FAMILIA",
     "address": "Urbanización José Carlos Mariategui (ex UNICRETO) mz R 3 lt 3 Ref. A una cuadra del óvalo la familia",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4927,6 +7875,10 @@
     "district": "Santa",
     "name": "SANTA",
     "address": "PANAMERICANA NORTE KM 442 - B, SANTA, REF. AL LADO DE LA FERRETERIA LA LLAVE",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4937,6 +7889,10 @@
     "district": "Nuevo Chimbote",
     "name": "TRES DE OCTUBRE",
     "address": "AV. JOSÉ PARDO MZ. K, LT. 17 - TRES DE OCTUBRE, REFERENCIA: FRENTE AL ÓVALO LAS AMÉRICAS",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   },
   {
@@ -4947,6 +7903,10 @@
     "district": "Yungay",
     "name": "YUNGAY",
     "address": "JR. INDUSTRIAL, LTE. 14 - YUNGAY, REF. AL COSTADO DEL TERMINAL TERRESTRE Y LA TAPICERIA FREDY",
+    "public": true,
+    "receives": true,
+    "ships": true,
+    "pointPro": false,
     "active": true
   }
 ]

@@ -6,3 +6,8 @@ Build estático y pruebas de packaging: pasaron. Browser QA: tienda/admin320/390
 Controles comprobados: talla requerida, color/cantidad, compra, código válido/inválido, pack, registro, acceso, perfil persistente, creaciónpedido/agencia, cotización, reporte/archivo, verificación/preparación/despacho/entrega, PDF, campañas, liquidación afiliado y asistencia.
 
 PHP8.5.12, Composer2.10.3, LaravelInstaller5.25.3, extensiones y requisitosglobales verificados. npm audit0avisos al consultar. Evidencia detallada en design-qa.md y docs/entorno.
+
+## Directorio y administrador — 23/10/2026
+Fuente oficial Shalom: 565 registros, 509 públicos, 500 con recepción; cinco destinos PRO recuperados. En checkout se comprobaron 509 opciones de ubicación más placeholder, nueve sin recepción deshabilitadas; búsqueda global Larcomar, autocompletado de departamento y dirección. Sin desbordamiento a 390 px.
+Revisión de los 11 módulos admin a 1440, 1024, 768 y 390 px: sin desbordamiento horizontal de página ni fondos verdes heredados. Pruebas funcionales en navegador aislado: guardar precio/stock por talla, crear código de descuento, guardar pack existente, modificar enlace social, pausar/habilitar Larcomar y paginar el directorio. Pedido de prueba En revisión abierto desde Resumen y abono confirmado: Pago verificado. Fixtures restaurados al terminar; sin errores de ejecución en ese recorrido.
+Build de GitHub Pages y cuatro pruebas Sites correctos. Advertencia conocida de Vite por bundle principal mayor de 500 KB. Evidencia local ignorada en output/playwright/r21-*; no son pruebas de integración con Shalom ni de seguridad del servidor.

@@ -568,6 +568,28 @@ export function App() {
       setBag((items) => items.map(nameProduct));
       localStorage.setItem("nobralta.catalog-names-r15", "1");
     }
+    if (!localStorage.getItem("nobralta.shalom-full-r21")) {
+      setAgencies((items) => [
+        ...seedAgencies.map((a) => ({
+          ...a,
+          active:
+            a.receives && (items.find((x) => x.id === a.id)?.active ?? true),
+        })),
+        ...items.filter(
+          (a) =>
+            !a.officialId &&
+            ![
+              "canete-sv",
+              "canete-im",
+              "lima-brena",
+              "ica-jj",
+              "cusco-pi",
+              "trujillo-lp",
+            ].includes(a.id),
+        ),
+      ]);
+      localStorage.setItem("nobralta.shalom-full-r21", "1");
+    }
     const missing = initialProducts.filter(
       (p) => !products.some((a) => a.id === p.id),
     );

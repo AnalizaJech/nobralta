@@ -71,3 +71,6 @@ Directorio oficial snapshot495 agencias/25 regiones desde shalom.com.pe/agencias
 
 ## Nomenclatura comercial — 22/10/2026
 Nombres descriptivos verificados con referentes comerciales y comparación visual, documentados en docs/NOMBRES-CATALOGO.md. Usar café racer/biker/cuello camisero según corte; abrigo cuero simple no es trench cruzado. Jean bootcut de tiro medio; botín Chelsea con arnés y punta cuadrada. No usar nombres de marcas/modelos ajenos ni inferir fibra/acabado certificado por foto. Alias antiguos conservados en búsqueda; historial de pedidos intacto. QA390/1440 sin overflow; búsquedas cafe racer, biker, chelsea, bootcut y racer archivo correctas.
+
+## Seguimiento neutro — 22/10/2026
+Seguimiento en superficie blanca, borde gris y radio16px. Estado con icono según fase; indicador horizontal desktop y vertical móvil, activo negro/completados con check, pendientes neutros. Estimación aclara desde confirmar pago/destino, oculta en entregado/cancelado. Agencia con dirección y movimientos desplegables. No recuperar panel verde. Verificado390/1440 sin overflow y movimientos funcionales con fixture temporal restaurado.

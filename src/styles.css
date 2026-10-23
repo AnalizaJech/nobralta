@@ -7787,15 +7787,283 @@ textarea::placeholder {
 }
 
 /* La selección conserva su aspecto; salir mantiene la anatomía de la navegación. */
-.account-shell>nav>button.current:hover{background:#202023;color:#fff}
-.admin-nav button.current:hover{background:#19191b;color:#fff}
-.select-options>button[aria-selected="true"]:not(:disabled):hover{background:#19191b;color:#fff}
-.account-shell>nav>.account-signout{justify-content:flex-start!important;gap:13px;width:100%;min-height:55px;padding:0 16px;margin-top:0;text-align:left;font-size:13px}
-.account-shell>nav>.account-signout:hover{background:#622938;color:#fff;border-color:#622938}
-.account-shell>nav>.account-signout>svg{display:block;margin:0;flex:0 0 20px}
-.account-shell>nav>.account-signout>svg:last-child{margin-left:0;margin-right:0}
+.account-shell > nav > button.current:hover {
+  background: #202023;
+  color: #fff;
+}
+.admin-nav button.current:hover {
+  background: #19191b;
+  color: #fff;
+}
+.select-options > button[aria-selected="true"]:not(:disabled):hover {
+  background: #19191b;
+  color: #fff;
+}
+.account-shell > nav > .account-signout {
+  justify-content: flex-start !important;
+  gap: 13px;
+  width: 100%;
+  min-height: 55px;
+  padding: 0 16px;
+  margin-top: 0;
+  text-align: left;
+  font-size: 13px;
+}
+.account-shell > nav > .account-signout:hover {
+  background: #622938;
+  color: #fff;
+  border-color: #622938;
+}
+.account-shell > nav > .account-signout > svg {
+  display: block;
+  margin: 0;
+  flex: 0 0 20px;
+}
+.account-shell > nav > .account-signout > svg:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
 
-.delivery-form .agency-search{gap:8px}
-.delivery-form .agency-search>.form-hint{margin:0;font-size:12px;line-height:1.5}
-.delivery-form .custom-select>button>span{min-width:0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
-.delivery-form .select-options>button>span{white-space:normal;text-align:left;line-height:1.5}
+.delivery-form .agency-search {
+  gap: 8px;
+}
+.delivery-form .agency-search > .form-hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.delivery-form .custom-select > button > span {
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.delivery-form .select-options > button > span {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Seguimiento: una superficie neutra y una jerarquía continua. */
+.order-detail-title > .status {
+  background: #f4f4f5;
+  color: #333338;
+  border: 1px solid #e4e4e7;
+}
+.tracking-journey {
+  background: #fff;
+  border: 1px solid #dedee2;
+  border-radius: 16px;
+  padding: 28px;
+  margin: 28px 0 36px;
+}
+.tracking-current {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+.tracking-current .tracking-icon {
+  background: #19191b;
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex: 0 0 52px;
+}
+.tracking-current h3 {
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.tracking-current p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #52525b;
+  margin: 0;
+  max-width: 52ch;
+}
+.tracking-estimate {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 14px 18px;
+  background: #f4f4f5;
+  border-radius: 12px;
+  gap: 12px;
+  color: #52525b;
+  font-size: 12px;
+}
+.tracking-estimate strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: #19191b;
+  margin: 4px 0;
+}
+.tracking-estimate small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.tracking-steps {
+  margin: 32px 0;
+  padding: 0;
+  gap: 0;
+}
+.tracking-steps li {
+  gap: 12px;
+  font-size: 12px;
+  color: #71717a;
+}
+.tracking-steps li:after {
+  top: 17px;
+  background: #e4e4e7;
+  height: 1px;
+}
+.tracking-steps li > span {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #d4d4d8;
+  color: #71717a;
+  box-sizing: border-box;
+}
+.tracking-steps li > span > i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.tracking-steps li.complete > span,
+.tracking-steps li.current > span {
+  background: #19191b;
+  border-color: #19191b;
+  color: #fff;
+}
+.tracking-steps li.complete:after {
+  background: #19191b;
+}
+.tracking-steps li.complete,
+.tracking-steps li.current {
+  color: #19191b;
+}
+.tracking-steps li.current strong {
+  font-weight: 600;
+}
+.tracking-destination {
+  align-items: flex-start;
+  gap: 12px;
+  background: #f4f4f5;
+  border: 0;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #19191b;
+}
+.tracking-destination > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tracking-destination p {
+  margin: 0;
+}
+.tracking-destination small {
+  font-size: 12px;
+  color: #52525b;
+  margin-top: 4px;
+}
+.tracking-events {
+  margin-top: 18px;
+}
+.tracking-events summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 13px;
+  color: #19191b;
+  border: 0;
+  cursor: pointer;
+  list-style: none;
+}
+.tracking-events summary::-webkit-details-marker {
+  display: none;
+}
+.tracking-events[open] summary svg {
+  transform: rotate(90deg);
+}
+.tracking-events li {
+  border-color: #e4e4e7;
+  font-size: 13px;
+  line-height: 1.6;
+  gap: 24px;
+}
+.tracking-events time,
+.tracking-events p {
+  color: #52525b;
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .tracking-journey {
+    padding: 20px;
+    margin: 24px 0 30px;
+  }
+  .tracking-current {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .tracking-current > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+  .tracking-current h3 {
+    font-size: 21px;
+  }
+  .tracking-current p {
+    font-size: 13px;
+  }
+  .tracking-estimate {
+    margin: 4px 0 0;
+    flex: 1 0 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+  }
+  .tracking-estimate strong {
+    font-size: 18px;
+  }
+  .tracking-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 24px 0;
+  }
+  .tracking-steps li {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    min-height: 54px;
+  }
+  .tracking-steps li:after {
+    left: 17px;
+    top: 36px;
+    width: 1px;
+    height: 18px;
+  }
+  .tracking-steps li > span {
+    flex: 0 0 36px;
+  }
+  .tracking-destination {
+    padding: 16px;
+    font-size: 12px;
+  }
+  .tracking-events li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}

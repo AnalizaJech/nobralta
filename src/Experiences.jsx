@@ -480,30 +480,61 @@ export function TrackingJourney({ order }) {
     Entregado: "Pedido entregado. Gracias por elegir NOBRALTA.",
     Cancelado: "Este pedido fue cancelado.",
   };
+  const StatusIcon =
+    order.status === "Enviado"
+      ? Truck
+      : order.status === "Entregado"
+        ? Check
+        : order.status === "En preparación"
+          ? Package
+          : order.status === "Por pagar"
+            ? Clock
+            : Receipt;
   return (
-    <section className="tracking-journey">
+    <section className="tracking-journey" aria-label="Seguimiento del pedido">
       <div className="tracking-current">
         <span className="tracking-icon">
-          <Truck size={30} />
+          <StatusIcon size={26} />
         </span>
         <div>
           <h3>{order.status}</h3>
           <p>{descriptions[order.status]}</p>
         </div>
-        <div className="tracking-estimate">
-          <Clock size={18} />
-          <span>
-            Entrega estimada<strong>2–10 días</strong>
-          </span>
-        </div>
+        {!["Cancelado", "Entregado"].includes(order.status) && (
+          <div className="tracking-estimate">
+            <Clock size={18} />
+            <span>
+              Entrega estimada<strong>2–10 días</strong>
+              <small>Desde confirmar pago y destino</small>
+            </span>
+          </div>
+        )}
       </div>
-      <ol className="tracking-steps">
+      <ol className="tracking-steps" aria-label="Etapas del pedido">
         {steps.map((s, n) => (
           <li
             key={s}
-            className={n <= i && order.status !== "Cancelado" ? "done" : ""}
+            className={
+              order.status === "Cancelado"
+                ? ""
+                : n < i || order.status === "Entregado"
+                  ? "complete"
+                  : n === i
+                    ? "current"
+                    : ""
+            }
+            aria-current={
+              n === i && order.status !== "Cancelado" ? "step" : undefined
+            }
           >
-            <span>{n < i ? <Check size={16} /> : n + 1}</span>
+            <span aria-hidden="true">
+              {(n < i || order.status === "Entregado") &&
+              order.status !== "Cancelado" ? (
+                <Check size={16} />
+              ) : (
+                <i />
+              )}
+            </span>
             <strong>{s}</strong>
           </li>
         ))}
@@ -512,6 +543,7 @@ export function TrackingJourney({ order }) {
         <MapPin size={20} />
         <p>
           Recojo en <strong>{order.agency.name}</strong> · {order.agency.city}
+          {order.agency.address && <small>{order.agency.address}</small>}
           {order.guide && <small>Guía / OS: {order.guide}</small>}
         </p>
       </div>

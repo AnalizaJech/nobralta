@@ -7,7 +7,6 @@ import {
   Check,
 } from "@phosphor-icons/react";
 import { Select } from "./Select";
-import { DateField } from "./DateField";
 import { currency } from "./store";
 export function paymentMethods(settings) {
   return (
@@ -90,23 +89,6 @@ export function CheckoutPayment({ settings, total }) {
             Número de operación
             <input name="reference" required placeholder="Ej. 123456789" />
           </label>
-          <label className="field">
-            Importe pagado (S/)
-            <input
-              name="amount"
-              type="number"
-              min="0.01"
-              step="0.01"
-              required
-              placeholder="0.00"
-            />
-          </label>
-          <DateField
-            label="Fecha y hora del pago"
-            name="paidAt"
-            type="datetime-local"
-            required
-          />
           <label className="voucher-upload">
             <UploadSimple size={26} />
             <strong>{filename || "Adjuntar voucher de pago"}</strong>

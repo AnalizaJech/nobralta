@@ -80,3 +80,6 @@ Continuar compra abre pantalla checkout limpia, sin filas/resumen de carrito ni 
 
 ## Voucher obligatorio — 23/10/2026
 Prioridad sobre flujo opcional anterior: elegir plataforma despliega automáticamente operación/importe/fecha/voucher; sin checkbox. Plataforma y voucher obligatorios antes de confirmar; guardar siempre reporte En revisión. Cambiar plataforma limpia la constancia anterior. QA: intento sin archivo no crea pedido; con archivo válido queda En revisión. Vista390 sin overflow.
+
+## Pago simplificado e inputs claros — 23/10/2026
+Se quitan importe editable y fecha/hora de pago de checkout y reenvío de constancia. Importe del reporte se obtiene del total del pedido (más envío si ya fue cotizado en reenvío), amountSource=order-total; reported se registra automáticamente al enviar. No inventar fecha real de pago: paidAt queda solo en registros históricos donde el cliente la declaró. Admin muestra Importe del pedido y Reporte recibido. Campos editables y búsqueda blancos; neutralizar autofill azul/gris del navegador. QA sin voucher no crea pedido, con voucher guarda importe=total y fecha de reporte,390 sin overflow.

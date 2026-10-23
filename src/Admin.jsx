@@ -641,10 +641,17 @@ export function Admin({
                         <br />
                         Operación: {order.report.reference}
                         <br />
-                        Declarado: {currency(Number(order.report.amount))}
+                        {order.report.amountSource === "order-total"
+                          ? "Importe del pedido"
+                          : "Importe declarado"}
+                        : {currency(Number(order.report.amount))}
                         <br />
-                        Pago declarado: {order.report.paidAt}
-                        <br />
+                        {order.report.paidAt && (
+                          <>
+                            Pago declarado: {order.report.paidAt}
+                            <br />
+                          </>
+                        )}
                         Reporte recibido: {date(order.report.reported)}
                       </p>
                       <a

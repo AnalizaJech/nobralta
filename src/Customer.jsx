@@ -330,8 +330,8 @@ export function DeliveryForm({
             report = {
               method: f.method,
               reference: f.reference,
-              amount: f.amount,
-              paidAt: f.paidAt,
+              amount: total,
+              amountSource: "order-total",
               file: { name: file.name, type: file.type, data: image },
               reported: new Date().toISOString(),
             };
@@ -505,6 +505,8 @@ export function OrderDetail({ order, onReport, settings }) {
     reader.onload = () => {
       onReport(order.id, {
         ...f,
+        amount: order.total + (order.shipping || 0),
+        amountSource: "order-total",
         file: { name: file.name, type: file.type, data: reader.result },
         reported: new Date().toISOString(),
       });
@@ -629,20 +631,6 @@ export function OrderDetail({ order, onReport, settings }) {
               name="reference"
               required
               spellCheck={false}
-            />
-            <Field
-              label="Importe depositado (S/)"
-              name="amount"
-              type="number"
-              min="0.01"
-              step="0.01"
-              required
-            />
-            <Field
-              label="Fecha y hora del pago"
-              name="paidAt"
-              type="datetime-local"
-              required
             />
             <label className="field">
               Constancia

@@ -8225,3 +8225,34 @@ textarea::placeholder {
 .checkout-payment .date-control {
   background: #fff;
 }
+
+/* Blanco identifica campos editables, incluso cuando Chrome los autocompleta. */
+.field input:not(:disabled):not([type="checkbox"]):not([type="file"]),
+.field textarea:not(:disabled) {
+  background-color: #fff;
+  color: #19191b;
+  border-color: #c9c9d0;
+}
+input:not(:disabled):autofill {
+  background-color: #fff !important;
+  color: #19191b !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+}
+input:not(:disabled):-webkit-autofill,
+input:not(:disabled):-webkit-autofill:hover,
+input:not(:disabled):-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #19191b;
+  caret-color: #19191b;
+}
+.intelligent-search {
+  background: #fff;
+  border: 1px solid #c9c9d0;
+}
+.intelligent-search input {
+  background: transparent;
+  color: #19191b;
+}
+.intelligent-search input::placeholder {
+  color: #71717a;
+}

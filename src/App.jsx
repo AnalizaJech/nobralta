@@ -504,6 +504,63 @@ export function App() {
       );
       localStorage.setItem("nobralta.harness-tobillo-r5", "1");
     }
+    if (!localStorage.getItem("nobralta.shalom-leather-r14")) {
+      setAgencies(seedAgencies);
+      setProducts((items) => items.map(updateCollection));
+      setPromos((items) =>
+        items.map((p) =>
+          p.id === "racer-pack"
+            ? { ...p, price: 599 }
+            : p.id === "leather-pack"
+              ? { ...p, price: 579 }
+              : p,
+        ),
+      );
+      setBag((items) => {
+        const assigned = {};
+        return items.map((p) => {
+          const image =
+            p.id === "archivo" ? "/assets/racer-archivo-v2.webp" : p.image;
+          if (!["racer-pack", "leather-pack"].includes(p.packId))
+            return {
+              ...p,
+              image,
+              price: [
+                "cuero",
+                "archivo",
+                "racer",
+                "heritage",
+                "camisero",
+                "abrigo-cuero",
+              ].includes(p.id)
+                ? initialProducts.find((x) => x.id === p.id).price
+                : p.price,
+            };
+          const key = p.bundleId || p.packId,
+            group = items.filter((x) => (x.bundleId || x.packId) === key),
+            target = p.packId === "racer-pack" ? 599 : 579;
+          const regular = group.reduce(
+            (n, x) =>
+              n +
+              (initialProducts.find((y) => y.id === x.id)?.price || x.price),
+            0,
+          );
+          const isLast = group[group.length - 1] === p;
+          const price = isLast
+            ? Math.round((target - (assigned[key] || 0)) * 100) / 100
+            : Math.round(
+                ((target *
+                  (initialProducts.find((x) => x.id === p.id)?.price ||
+                    p.price)) /
+                  regular) *
+                  100,
+              ) / 100;
+          assigned[key] = (assigned[key] || 0) + price;
+          return { ...p, image, price };
+        });
+      });
+      localStorage.setItem("nobralta.shalom-leather-r14", "1");
+    }
     const missing = initialProducts.filter(
       (p) => !products.some((a) => a.id === p.id),
     );

@@ -43,7 +43,7 @@ export const newJackets = [
     category: "Chaquetas",
     price: 289,
     sizes: ["S", "M", "L", "XL"],
-    variants: [{ color: "Negro", image: "/assets/racer-archivo.webp" }],
+    variants: [{ color: "Negro", image: "/assets/racer-archivo-v2.webp" }],
     description:
       "Cuello de broche, un bolsillo de pecho y cuero de aspecto vivido. La pieza que funciona con tu polo y un denim recto.",
     stage: "De archivo",
@@ -71,7 +71,24 @@ export const newJackets = [
     stage: "Nueva pieza",
   },
 ];
+export const leatherPrices = {
+  cuero: 449,
+  archivo: 429,
+  racer: 469,
+  heritage: 459,
+  camisero: 439,
+  "abrigo-cuero": 589,
+};
 export function updateCollection(product) {
+  if (leatherPrices[product.id])
+    product = { ...product, price: leatherPrices[product.id] };
+  if (product.id === "archivo")
+    return {
+      ...product,
+      description:
+        "Cuello de banda, cierre central y un bolsillo de pecho con cremallera. Cuero negro de textura natural y corte masculino limpio.",
+      variants: [{ color: "Negro", image: "/assets/racer-archivo-v2.webp" }],
+    };
   if (product.id === "pima") {
     const variants = product.variants.filter((v) => v.color !== "Marfil");
     for (const v of additionalPolos) {

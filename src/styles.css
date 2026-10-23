@@ -7794,3 +7794,8 @@ textarea::placeholder {
 .account-shell>nav>.account-signout:hover{background:#622938;color:#fff;border-color:#622938}
 .account-shell>nav>.account-signout>svg{display:block;margin:0;flex:0 0 20px}
 .account-shell>nav>.account-signout>svg:last-child{margin-left:0;margin-right:0}
+
+.delivery-form .agency-search{gap:8px}
+.delivery-form .agency-search>.form-hint{margin:0;font-size:12px;line-height:1.5}
+.delivery-form .custom-select>button>span{min-width:0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.delivery-form .select-options>button>span{white-space:normal;text-align:left;line-height:1.5}

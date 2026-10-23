@@ -1,3 +1,4 @@
+import shalomAgencies from "./shalom-agencies.json";
 import { useState, useEffect } from "react";
 export const currency = (n) =>
   new Intl.NumberFormat("es-PE", { style: "currency", currency: "PEN" }).format(
@@ -42,50 +43,7 @@ export function useSaved(key, initial) {
   }, [key]);
   return [value, setValue];
 }
-export const agencies = [
-  {
-    id: "canete-sv",
-    region: "Lima",
-    city: "Cañete",
-    name: "CAÑETE SAN VICENTE",
-    active: true,
-  },
-  {
-    id: "canete-im",
-    region: "Lima",
-    city: "Cañete",
-    name: "CAÑETE IMPERIAL",
-    active: true,
-  },
-  {
-    id: "lima-brena",
-    region: "Lima",
-    city: "Lima",
-    name: "JR. HUARAZ - BREÑA",
-    active: true,
-  },
-  {
-    id: "ica-jj",
-    region: "Ica",
-    city: "Ica",
-    name: "ICA AV. JJ ELIAS",
-    active: true,
-  },
-  {
-    id: "cusco-pi",
-    region: "Cusco",
-    city: "Cusco",
-    name: "CUSCO PARQUE INDUSTRIAL",
-    active: true,
-  },
-  {
-    id: "trujillo-lp",
-    region: "La Libertad",
-    city: "Trujillo",
-    name: "TRUJILLO LA PERLA",
-    active: true,
-  },
-];
+export const agencies = shalomAgencies;
 export const initialPromos = [
   {
     id: "duo",

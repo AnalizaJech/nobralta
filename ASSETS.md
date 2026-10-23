@@ -42,3 +42,5 @@ Activos actuales nuevos: hero-vintage (foto horizontal), denim-route-indigo y de
 
 ## Ajuste de harness por referencia directa
 Reemplazo actual: harness-tobillo.png/webp. Caña corta al tobillo, punta alargada cuadrada suavizada y tacón bajo; elástico lateral, correa, hebilla y cadena discreta. Generado con la foto adjuntada como referencia; sin marca ajena. Los archivos harness-hombre anteriores se conservan para historial, sin usarlos en el catálogo actual.
+
+Racer Archivo v2: public/assets/racer-archivo-v2.png y .webp, generado a partir de referencia de diseño del propietario el22/10/2026;1086x1448, fondo transparente, sin persona/marca. Sustituye imagen de archivo anterior en catálogo.

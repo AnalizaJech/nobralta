@@ -65,3 +65,6 @@ Cuenta incluye Historial de compras debajo de Mis pedidos, con prendas, variante
 
 ## Estados seleccionados y salir — 22/10/2026
 Las opciones de cuenta/combobox seleccionadas conservan fondo oscuro y texto blanco al hover. Cerrar sesión alinea icono y texto a la izquierda con el resto de navegación, sin margen extra; hover vino #622938.
+
+## Directorio Shalom y cuero — 22/10/2026
+Directorio oficial snapshot495 agencias/25 regiones desde shalom.com.pe/agencias; documentación docs/SHALOM.md. Departamento primero, selector agencia filtrado, búsqueda por texto y dirección visible. Precios cuero: Archivo429, Club439, biker449, Heritage459, Medianoche469, Abrigo589. Packs Medianoche599 y biker+harness579. Actualizar catálogo/carrito persistidos por migración, sin alterar órdenes históricas. Racer Archivo v2 usa referencia del propietario: cuello banda, cierre recto, bolsillo de pecho y dos laterales con cremallera, imagen local con alfa.

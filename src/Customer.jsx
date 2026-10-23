@@ -272,10 +272,23 @@ export function DeliveryForm({
   total,
 }) {
   const [region, setRegion] = useState(""),
-    [agency, setAgency] = useState("");
+    [agency, setAgency] = useState(""),
+    [agencyQuery, setAgencyQuery] = useState("");
+  const cleanAgency = (s) =>
+    s
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   const options = agencies.filter(
-    (a) => a.active && (!region || a.region === region),
+    (a) =>
+      a.active &&
+      a.region === region &&
+      (a.id === agency ||
+        cleanAgency([a.name, a.city, a.district, a.address].join(" ")).includes(
+          cleanAgency(agencyQuery),
+        )),
   );
+  const selectedAgency = agencies.find((a) => a.id === agency);
   return (
     <form
       className="delivery-form"
@@ -340,29 +353,52 @@ export function DeliveryForm({
             onChange={(e) => {
               setRegion(e.target.value);
               setAgency("");
+              setAgencyQuery("");
             }}
             required
           >
-            <option value="">Seleccionar</option>
-            {[
-              ...new Set(agencies.filter((a) => a.active).map((a) => a.region)),
-            ].map((r) => (
-              <option key={r}>{r}</option>
-            ))}
+            <option value="">Elige tu departamento</option>
+            {[...new Set(agencies.filter((a) => a.active).map((a) => a.region))]
+              .sort((a, b) => a.localeCompare(b, "es"))
+              .map((r) => (
+                <option key={r}>{r}</option>
+              ))}
           </Select>
         </label>
+        {region && (
+          <label className="field wide agency-search">
+            Buscar agencia en {region}
+            <input
+              type="search"
+              value={agencyQuery}
+              onChange={(e) => setAgencyQuery(e.target.value)}
+              placeholder="Distrito, agencia o dirección"
+            />
+            <span className="form-hint">
+              {options.length} agencias coincidentes
+            </span>
+          </label>
+        )}
         <label className="field wide">
           Agencia Shalom de recojo
           <Select
             name="agency"
+            aria-label="Agencia Shalom de recojo"
+            disabled={!region}
             value={agency}
             onChange={(e) => setAgency(e.target.value)}
             required
           >
-            <option value="">Elige tu agencia</option>
+            <option value="">
+              {!region
+                ? "Primero elige un departamento"
+                : options.length
+                  ? "Elige tu agencia"
+                  : "No hay coincidencias"}
+            </option>
             {options.map((a) => (
               <option key={a.id} value={a.id}>
-                {a.city} / {a.name}
+                {a.district} — {a.name}
               </option>
             ))}
           </Select>
@@ -375,6 +411,7 @@ export function DeliveryForm({
             <strong>
               Recojo en {agencies.find((a) => a.id === agency)?.name}
             </strong>
+            <p>{selectedAgency?.address}</p>
             <p>Confirma que esta agencia corresponde a tu ubicación.</p>
           </div>
         </div>

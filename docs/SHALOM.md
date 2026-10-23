@@ -1,0 +1,4 @@
+# Agencias Shalom verificadas
+Fuente: https://shalom.com.pe/agencias, consulta 22/10/2026 (America/Bogota).
+La página oficial carga su directorio público en store_agencias. El snapshot src/shalom-agencies.json conserva únicamente registros con web=1, destino=1 y puntospro=0: 495 agencias en 25 departamentos/regiones, incluido Callao. No representa consulta de disponibilidad en tiempo real ni contratación de envío.
+Campos copiados: identificador, departamento, provincia, distrito, nombre y dirección. Los nombres de departamento/provincia/distrito se normalizan para lectura. La selección exige primero departamento, luego admite búsqueda por distrito, provincia, agencia o dirección. El directorio debe actualizarse desde la fuente oficial cuando cambie; las órdenes existentes conservan su agencia histórica.

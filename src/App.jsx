@@ -596,6 +596,20 @@ export function App() {
       });
       localStorage.setItem("nobralta.demo-payments-r26", "1");
     }
+    if (!localStorage.getItem("nobralta.payment-labels-r28")) {
+      setSettings((s) => ({
+        ...s,
+        paymentMethods: (s.paymentMethods || demoPaymentMethods).map(
+          ({ demo, ...m }) => ({
+            ...m,
+            name: m.name.replace(/ · Prueba/g, ""),
+            owner: m.owner?.replace(/ · Cuenta de prueba/g, ""),
+            qr: m.qr === "/assets/yape-demo-qr.png" ? "" : m.qr,
+          }),
+        ),
+      }));
+      localStorage.setItem("nobralta.payment-labels-r28", "1");
+    }
     if (!localStorage.getItem("nobralta.shalom-full-r21")) {
       setAgencies((items) => [
         ...seedAgencies.map((a) => ({
@@ -1036,7 +1050,28 @@ export function App() {
         setStaff={setStaff}
         audit={audit}
         log={log}
-        onExit={() => setAdmin(false)}
+        onExit={() => {
+          setAdmin(false);
+          setScreen(null);
+        }}
+        onAccount={() => {
+          setAdmin(false);
+          setScreen("account");
+          setSearch(false);
+        }}
+        onSearch={() => {
+          setAdmin(false);
+          setScreen(null);
+          setSearch(true);
+          setMenu(false);
+        }}
+        onBag={() => {
+          setAdmin(false);
+          setScreen("bag");
+          setCheckout(false);
+          setSearch(false);
+        }}
+        bagCount={count}
         onLogout={() => {
           setSession(null);
           setAdmin(false);

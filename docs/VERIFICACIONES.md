@@ -29,3 +29,6 @@ Foto PNG cargada, decodificada, guardada y conservada tras reload; eliminación 
 
 ## Búsqueda de agencias r27
 Selección directa de Larcomar guarda idshalom-661 y completa Lima/dirección. Megaplaza elegida con ArrowDown y Enter. Estado sin coincidencias comprobado. Vista390px sin overflow. Fixtures restaurados.
+
+## Ajustes r28
+Anchos input/resultados iguales:555.33px en1440,453.83 en1024,686 en768 y308 en390. Recorte con zoom guarda JPEG400x400, persiste tras reload y permite eliminar. Pagos ya sin rótulos de prueba; migración quita QR de muestra y preserva QR subido. Upload/cambio/eliminación QR admin continúa funcionando. Cabecera sin logout y sin overflow a1440/1024/768/390/360; cuenta y búsqueda abren sus secciones.

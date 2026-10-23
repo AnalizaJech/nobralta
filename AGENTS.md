@@ -107,3 +107,6 @@ Mis datos permite foto opcional JPG/PNG/WebP hasta500KB, vista previa, reemplazo
 
 ## Búsqueda de agencias r27 — 23/10/2026
 Buscar agencia debe mostrar resultados directamente seleccionables debajo del input, no solo contadores que exijan abrir otro selector. Resultado con nombre/ubicación/dirección, pausa y sin recepción deshabilitados. Selección completa agencia/departamento y cierra resultados. Al escribir otra consulta limpiar agencia previa; ArrowDown/Enter permite pasar al primer resultado habilitado. Mantener selector alternativo.
+
+## Ajustes r28 — 23/10/2026, prioridad sobre r26
+El propietario pide quitar todos los rótulos de prueba/demostración en la UI de pagos. Nombres/titulares normales y QR únicamente subido por admin para Yape o Plin; retirar QR de muestra. Conservar QR propio existente al migrar. Foto de perfil con recorte cuadrado interactivo (arrastre, zoom, posición), aplicar/cancelar antes de guardar. Admin cabecera igual al cliente: cuenta, buscar y carrito, sin cerrar sesión redundante; salir desde cuenta. Resultados de agencia deben ocupar exactamente todo el ancho del input en el grid.

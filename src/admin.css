@@ -2083,3 +2083,8 @@
   margin: auto;
   object-fit: contain;
 }
+.admin-app .admin-header-actions { display:flex; align-items:center; }
+.admin-app .admin-header-actions .icon-button { position:relative; }
+@media(max-width:700px) { .admin-app .admin-header { padding:0 12px; grid-template-columns:1fr auto 1fr; gap:6px; } .admin-app .admin-header > a, .admin-app .admin-header > a img { width:140px; } .admin-app .admin-header-actions { gap:0; } .admin-app .admin-header-actions .icon-button { width:36px; height:36px; min-height:36px; } }
+@media(max-width:380px) { .admin-app .admin-header > a, .admin-app .admin-header > a img { width:120px; } }
+.admin-app .admin-header-actions .bag-count { position:absolute; right:0; top:0; min-width:17px; height:17px; padding:0 4px; border-radius:50%; display:grid; place-items:center; background:#622938; color:#fff; font-size:9px; line-height:1; }

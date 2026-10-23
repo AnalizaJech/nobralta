@@ -82,27 +82,24 @@ export const initialAffiliates = [
 export const demoPaymentMethods = [
   {
     id: "demo-yape",
-    name: "Yape · Prueba",
-    owner: "NOBRALTA · Cuenta de prueba",
+    name: "Yape",
+    owner: "NOBRALTA",
     account: "900 000 000",
-    qr: "/assets/yape-demo-qr.png",
-    demo: true,
+    qr: "",
     active: true,
   },
   {
     id: "demo-bcp",
     name: "BCP · Transferencia",
-    owner: "NOBRALTA · Cuenta de prueba",
+    owner: "NOBRALTA",
     account: "191-0000000-0-00",
-    demo: true,
     active: true,
   },
   {
     id: "demo-plin",
-    name: "Plin · Prueba",
-    owner: "NOBRALTA · Cuenta de prueba",
+    name: "Plin",
+    owner: "NOBRALTA",
     account: "900 000 000",
-    demo: true,
     active: true,
   },
 ];

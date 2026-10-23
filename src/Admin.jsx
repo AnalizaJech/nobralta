@@ -26,7 +26,6 @@ import {
   Check,
   DownloadSimple,
   Plus,
-  SignOut,
   X,
   Package,
   ChartBar,
@@ -43,6 +42,9 @@ import {
   Prohibit,
   UserMinus,
   UserPlus,
+  UserCircle,
+  MagnifyingGlass,
+  Handbag,
 } from "@phosphor-icons/react";
 import { currency, date, phases, receipt, now } from "./store";
 import { Field } from "./Customer";
@@ -113,6 +115,10 @@ export function Admin({
   audit,
   log,
   onExit,
+  onAccount,
+  onSearch,
+  onBag,
+  bagCount,
   onLogout,
   onCancel,
   jobs,
@@ -336,13 +342,28 @@ export function Admin({
             />
           )}
         </button>
-        <div>
+        <div className="admin-header-actions">
           <button
             className="icon-button"
-            onClick={onLogout}
-            aria-label="Cerrar sesión"
+            aria-label="Mi cuenta"
+            onClick={onAccount}
           >
-            <SignOut size={20} />
+            <UserCircle size={23} />
+          </button>
+          <button
+            className="icon-button"
+            aria-label="Buscar prendas"
+            onClick={onSearch}
+          >
+            <MagnifyingGlass size={22} />
+          </button>
+          <button
+            className="icon-button"
+            aria-label={`Abrir bolsa, ${bagCount} prendas`}
+            onClick={onBag}
+          >
+            <Handbag size={23} />
+            {bagCount > 0 && <span className="bag-count">{bagCount}</span>}
           </button>
         </div>
       </header>

@@ -8399,7 +8399,6 @@ input:not(:disabled):-webkit-autofill:focus {
 .checkout-payment-qr { margin:20px 0; display:grid; gap:12px; justify-items:center; background:#fff; border-radius:14px; padding:20px; }
 .checkout-payment-qr img { width:210px; height:210px; max-width:100%; object-fit:contain; }
 .checkout-payment-qr span { font-size:12px; color:#52525b; }
-.payment-instructions .payment-demo-note, .payment-demo-note { color:#805019; background:#fff3df; padding:14px 16px; border-radius:12px; font-size:12px; line-height:1.8; margin:16px 0; }
 @media(max-width:640px) { .optional-image { flex-direction:column; align-items:flex-start; padding:20px; } .optional-image-actions { gap:10px; } }
 .agency-search-results { max-height:340px; overflow-y:auto; overscroll-behavior:contain; padding:12px; border:1px solid #dedee2; border-radius:16px; background:#fff; margin-top:-12px; }
 .agency-search-results > p { padding:8px 12px; margin:0 0 8px; font-size:12px; line-height:1.7; color:#52525b; }
@@ -8409,3 +8408,16 @@ input:not(:disabled):-webkit-autofill:focus {
 .agency-search-results strong { display:block; font-size:13px; line-height:1.7; }
 .agency-search-results small { display:block; font-size:12px; line-height:1.8; color:#52525b; overflow-wrap:anywhere; }
 .agency-search-results > button:disabled { opacity:.55; }
+/* Agency results span the same grid width as the search field. */
+.delivery-form .form-grid > .agency-search-results { grid-column:1 / -1; width:100%; min-width:0; max-width:100%; box-sizing:border-box; overflow-x:hidden; }
+.agency-search-results > button > span { min-width:0; }
+.avatar-crop { width:min(480px,94vw); max-height:94dvh; overflow:auto; padding:24px; border:1px solid #dedee2; border-radius:18px; background:#fff; color:#19191b; }
+.avatar-crop::backdrop { background:rgb(25 25 27 / 65%); }
+.avatar-crop-heading { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.avatar-crop-heading h3 { font:600 20px var(--body); margin:0; }
+.avatar-crop-heading .icon-button { width:40px; height:40px; border-radius:50%; background:#f4f4f6; display:grid; place-items:center; padding:0; }
+.avatar-crop > p { font-size:13px; line-height:1.8; margin:16px 0; }
+.avatar-crop canvas { display:block; width:100%; aspect-ratio:1; border:1px solid #dedee2; touch-action:none; cursor:grab; }
+.avatar-crop > label { display:grid; gap:8px; font-size:12px; margin:16px 0; }
+.avatar-crop input[type=range] { width:100%; accent-color:#622938; padding:0; height:24px; }
+.avatar-crop-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }

@@ -245,14 +245,6 @@ export function CheckoutPayment({
               <span>QR de {selected.name}</span>
             </div>
           )}
-          {selected.demo && (
-            <p className="payment-demo-note">
-              Datos de prueba · No realizar pagos.
-              {selected.qr
-                ? " El QR de muestra no procesa transferencias."
-                : ""}
-            </p>
-          )}
         </div>
       ) : (
         <p className="form-hint">
@@ -343,20 +335,6 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
             value={m.qr || ""}
             onChange={(value) => change(m.id, "qr", value)}
           />
-          <label className="checkbox">
-            <input
-              type="checkbox"
-              checked={!!m.demo}
-              onChange={(e) => change(m.id, "demo", e.target.checked)}
-            />
-            Identificar como datos de prueba
-          </label>
-          {m.demo && (
-            <p className="payment-demo-note">
-              Medio de prueba. Los datos y el QR no deben utilizarse para pagos
-              reales.
-            </p>
-          )}
           <label className="checkbox">
             <input
               type="checkbox"

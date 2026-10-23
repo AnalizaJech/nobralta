@@ -1,13 +1,25 @@
+import { AvatarCrop } from "./AvatarCrop";
 import { useRef, useState } from "react";
 import { UploadSimple, Trash, UserCircle, QrCode } from "@phosphor-icons/react";
 import { assetUrl } from "./AssetImage";
 export function OptionalImage({ value, onChange, label, avatar = false }) {
   const input = useRef(null),
     [error, setError] = useState(""),
-    [busy, setBusy] = useState(false);
+    [busy, setBusy] = useState(false),
+    [candidate, setCandidate] = useState(null);
   const Icon = avatar ? UserCircle : QrCode;
   return (
     <div className={"optional-image " + (avatar ? "is-avatar" : "is-qr")}>
+      {candidate && (
+        <AvatarCrop
+          image={candidate}
+          onApply={(data) => {
+            onChange(data);
+            setCandidate(null);
+          }}
+          onCancel={() => setCandidate(null)}
+        />
+      )}
       <div className="optional-image-preview">
         {value ? (
           <img src={assetUrl(value)} alt={label} />
@@ -52,7 +64,8 @@ export function OptionalImage({ value, onChange, label, avatar = false }) {
               const img = new Image();
               img.src = data;
               await img.decode();
-              onChange(data);
+              if (avatar) setCandidate(img);
+              else onChange(data);
             } catch {
               setError("No pudimos leer la imagen. Prueba con otra.");
             } finally {

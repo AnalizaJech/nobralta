@@ -43,3 +43,6 @@ Encabezados de tabla #19191b/#fff, filas hover #f8f1f4; acción de fila rosada q
 
 ## Foto opcional y QR r26
 Selector de imagen compartido OptionalImage: vista circular de perfil y cuadrada para QR, validación500KB, cambiar/eliminar y texto de ayuda. Foto guardada con datos de perfil. En checkout, instrucciones del medio incluyen cuenta destacada, QR de210px con fondo blanco y aviso de datos de prueba únicamente en medios demo.
+
+## Ajustes r28
+QR configurable por administrador, sin rótulos de demostración en UI. Avatar admite encuadre cuadrado antes de guardarse; controles de zoom y posición accesibles. Admin replica las tres acciones de cabecera del cliente (cuenta, buscar, bolsa), conservando logo centrado y menú a la izquierda. Resultados de agencias ocupan todas las columnas del formulario para igualar el ancho del buscador.

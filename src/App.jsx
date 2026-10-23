@@ -624,22 +624,9 @@ export function App() {
     header = useRef(null);
   const count = bag.reduce((n, p) => n + p.qty, 0),
     total = bag.reduce((n, p) => n + p.price * p.qty, 0);
-  function showDelivery() {
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => {
-        document.getElementById("delivery-details")?.scrollIntoView({
-          behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
-            .matches
-            ? "instant"
-            : "smooth",
-          block: "start",
-        });
-      }),
-    );
-  }
   useEffect(() => {
-    if (checkout && user && screen === "bag") showDelivery();
-  }, [checkout, screen, session]);
+    if (screen === "checkout") setCartNotice("");
+  }, [screen]);
   const returnScroll = useRef(0),
     returnFocus = useRef(null),
     previousScreen = useRef(null);
@@ -741,7 +728,7 @@ export function App() {
         : [...b, { ...product, ...a, key, size, qty: quantity }],
     );
     setCheckout(buy);
-    setScreen("bag");
+    setScreen(buy ? (user ? "checkout" : "account") : "bag");
   }
   function quickAdd(p, v, z) {
     const count = bag
@@ -791,7 +778,7 @@ export function App() {
         "% en prendas individuales.",
     );
   }
-  function createOrder(customer, agency) {
+  function createOrder(customer, agency, report) {
     if (
       applied &&
       !affiliates.some(
@@ -828,7 +815,8 @@ export function App() {
     const order = {
       id: "NB-" + Date.now().toString().slice(-8),
       created: now(),
-      status: "Por pagar",
+      status: report ? "En revisión" : "Por pagar",
+      report,
       userId: user.id,
       customer,
       agency,
@@ -840,7 +828,10 @@ export function App() {
       affiliateId: applied?.affiliateId,
       commissionAmount:
         Math.round((subtotal - discount) * (applied?.commission || 0)) / 100,
-      history: [{ at: now(), status: "Por pagar" }],
+      history: [
+        { at: now(), status: "Por pagar" },
+        ...(report ? [{ at: now(), status: "En revisión" }] : []),
+      ],
     };
     setOrders((a) => [order, ...a]);
     setInventory((a) => {
@@ -1525,13 +1516,15 @@ export function App() {
               ? product.name
               : screen === "account"
                 ? "Mi cuenta"
-                : screen === "bag"
-                  ? "Tu bolsa"
-                  : screen === "pack"
-                    ? "Tu pack"
-                    : screen === "order"
-                      ? "Mi pedido"
-                      : info
+                : screen === "checkout"
+                  ? "Completar compra"
+                  : screen === "bag"
+                    ? "Tu bolsa"
+                    : screen === "pack"
+                      ? "Tu pack"
+                      : screen === "order"
+                        ? "Mi pedido"
+                        : info
           }
         >
           <div className="dialog-content">
@@ -1779,12 +1772,7 @@ export function App() {
                 ) : (
                   <>
                     <h2>Buenas elecciones.</h2>
-                    <div
-                      className={
-                        "bag-layout" +
-                        (checkout && user ? " bag-layout--checkout" : "")
-                      }
-                    >
+                    <div className="bag-layout">
                       <div>
                         {bag.map((p) => (
                           <article className="bag-item" key={p.key}>
@@ -1842,23 +1830,6 @@ export function App() {
                           </article>
                         ))}
                       </div>
-                      {checkout && user && (
-                        <DeliveryForm
-                          user={user}
-                          agencies={agencies}
-                          total={
-                            total -
-                            Math.round(
-                              bag
-                                .filter((p) => !p.packId)
-                                .reduce((n, p) => n + p.price * p.qty, 0) *
-                                (applied?.percent || 0),
-                            ) /
-                              100
-                          }
-                          onSubmit={createOrder}
-                        />
-                      )}
                       <div className="order-summary">
                         <div>
                           <span>Subtotal</span>
@@ -1936,7 +1907,7 @@ export function App() {
                             onClick={() => {
                               setCheckout(true);
                               if (!user) setScreen("account");
-                              else showDelivery();
+                              else setScreen("checkout");
                             }}
                             aria-expanded={checkout && !!user}
                           >
@@ -1956,6 +1927,43 @@ export function App() {
                 )}
               </div>
             )}
+            {screen === "checkout" && user && (
+              <div className="checkout-page">
+                <div className="checkout-page-heading">
+                  <h2>Completa tu compra.</h2>
+                  <button
+                    className="button button-outline"
+                    onClick={() => {
+                      setCheckout(false);
+                      setScreen("bag");
+                    }}
+                  >
+                    Volver al carrito
+                  </button>
+                </div>
+                {bag.length ? (
+                  <DeliveryForm
+                    user={user}
+                    settings={settings}
+                    agencies={agencies}
+                    total={
+                      total -
+                      Math.round(
+                        bag
+                          .filter((p) => !p.packId)
+                          .reduce((n, p) => n + p.price * p.qty, 0) *
+                          (applied?.percent || 0),
+                      ) /
+                        100
+                    }
+                    onSubmit={createOrder}
+                  />
+                ) : (
+                  <p>Tu carrito está vacío.</p>
+                )}
+                {codeMessage && <p role="status">{codeMessage}</p>}
+              </div>
+            )}
             {screen === "account" &&
               (!user ? (
                 <Auth
@@ -1968,7 +1976,7 @@ export function App() {
                       setScreen(null);
                       setAdmin(true);
                     } else if (bag.length && checkout) {
-                      setScreen("bag");
+                      setScreen("checkout");
                     } else setScreen("account");
                   }}
                 />

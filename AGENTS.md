@@ -74,3 +74,6 @@ Nombres descriptivos verificados con referentes comerciales y comparación visua
 
 ## Seguimiento neutro — 22/10/2026
 Seguimiento en superficie blanca, borde gris y radio16px. Estado con icono según fase; indicador horizontal desktop y vertical móvil, activo negro/completados con check, pendientes neutros. Estimación aclara desde confirmar pago/destino, oculta en entregado/cancelado. Agencia con dirección y movimientos desplegables. No recuperar panel verde. Verificado390/1440 sin overflow y movimientos funcionales con fixture temporal restaurado.
+
+## Compra separada y vouchers — 22/10/2026
+Continuar compra abre pantalla checkout limpia, sin filas/resumen de carrito ni aviso de añadido. Login devuelve a checkout. Datos de recojo a la izquierda, Pago y voucher a la derecha; una columna móvil. La bolsa se conserva hasta confirmar pedido y puede volver a editarse. Voucher opcional al marcar pago realizado: plataforma, operación, importe, fecha y JPG/PNG/PDF <=750KB; registro pasa En revisión, nunca Pago verificado automático. Administrador configura múltiples plataformas/bancos con titular/cuenta/visibilidad en Medios de pago; redes se editan en Configuración. Todo persiste solo en navegador de este prototipo. QA flujo completo admin-configuración/cliente-voucher y fixture restaurado, móvil390 sin overflow.

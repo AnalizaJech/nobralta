@@ -93,3 +93,7 @@ Fondo blanco, menú jerárquico, selectores neutros y cierre en navbar. Cards co
 En el repositorio AnalizaJech/nobralta, abrir Settings → Pages → Build and deployment → Source: GitHub Actions. El flujo Publicar prototipo en GitHub Pages construye y publica dist/client en cada push a main. Si el primer despliegue se ejecutó antes de habilitar Pages, usar Actions → Publicar prototipo en GitHub Pages → Run workflow.
 URL prevista: https://analizajech.github.io/nobralta/
 La compilación con GITHUB_PAGES=true usa /nobralta/ para scripts, estilos e imágenes. El servidor local conserva /. Cuentas, pedidos y administración siguen siendo simulaciones locales del navegador, sin backend ni pagos reales.
+
+## Compra y administración de pagos
+Continuar mi compra abre una pantalla independiente: recojo y pago/voucher, sin el listado del carrito. Puede volver a editar la bolsa. Al confirmar, se crea el pedido; si adjunta constancia queda En revisión. Subir constancia no verifica el abono. Se mantiene la cotización separada de envío.
+Administrador → Medios de pago permite añadir varios medios con plataforma/banco, titular, cuenta/número/CCI y activación individual. Configuración conserva enlaces de las seis redes. No guardar claves bancarias. Configuración, pedidos y archivos son datos locales del navegador del prototipo; no se sincronizan entre dispositivos ni con GitHub Pages.

@@ -1,3 +1,4 @@
+import { PaymentMethodsAdmin } from "./Payments";
 import { socialChannels } from "./Merchandising";
 import { JobsManager } from "./Jobs";
 import { Select } from "./Select";
@@ -214,7 +215,12 @@ export function Admin({
           aria-label="Navegación administrativa"
           onClick={() => setMobileNav(!mobileNav)}
         >
-          <img src={assetUrl("/icons/menu-two.svg")} width="24" height="24" alt="" />
+          <img
+            src={assetUrl("/icons/menu-two.svg")}
+            width="24"
+            height="24"
+            alt=""
+          />
         </button>
         <div>
           <button className="text-action" onClick={onExit}>
@@ -1509,54 +1515,11 @@ export function Admin({
             </div>
           )}
           {tab === "Medios de pago" && (
-            <form
-              className="admin-section settings-form form-grid"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const f = Object.fromEntries(new FormData(e.currentTarget));
-                setSettings((s) => ({
-                  ...s,
-                  ...f,
-                  paymentActive: f.paymentActive === "on",
-                }));
-                log("Medios de pago", "Configuración actualizada");
-                setMessage("Medio de pago actualizado.");
-              }}
-            >
-              <h2>Instrucciones para el comprador</h2>
-              <Field
-                label="Medio de pago"
-                name="paymentName"
-                defaultValue={settings.paymentName}
-                required
-              />
-              <Field
-                label="Titular visible"
-                name="paymentOwner"
-                defaultValue={settings.paymentOwner}
-              />
-              <Field
-                label="Número / cuenta / CCI"
-                name="paymentAccount"
-                defaultValue={settings.paymentAccount}
-              />
-              <label className="checkbox">
-                <input
-                  type="checkbox"
-                  name="paymentActive"
-                  defaultChecked={settings.paymentActive}
-                />
-                Mostrar instrucciones de pago
-              </label>
-              <p className="form-hint">
-                No registres claves bancarias. Verifica los datos antes de
-                habilitar el medio. La aprobación de cada abono es manual.
-              </p>
-              <button className="button button-dark">
-                Guardar medio
-                <Check size={18} />
-              </button>
-            </form>
+            <PaymentMethodsAdmin
+              settings={settings}
+              setSettings={setSettings}
+              log={log}
+            />
           )}
           {tab === "Personal" && (
             <div className="admin-columns">

@@ -1,3 +1,4 @@
+import { CheckoutPayment, paymentMethods } from "./Payments";
 import { DateField } from "./DateField";
 import { TrackingJourney } from "./Experiences";
 import { Select } from "./Select";
@@ -264,6 +265,7 @@ export function Profile({ user, setUsers, onLogout }) {
   );
 }
 export function DeliveryForm({
+  settings,
   user,
   agencies,
   onSubmit,
@@ -273,7 +275,9 @@ export function DeliveryForm({
 }) {
   const [region, setRegion] = useState(""),
     [agency, setAgency] = useState(""),
-    [agencyQuery, setAgencyQuery] = useState("");
+    [agencyQuery, setAgencyQuery] = useState(""),
+    [submitError, setSubmitError] = useState(""),
+    [busy, setBusy] = useState(false);
   const cleanAgency = (s) =>
     s
       .normalize("NFD")
@@ -293,147 +297,195 @@ export function DeliveryForm({
     <form
       className="delivery-form"
       id="delivery-details"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        const f = Object.fromEntries(new FormData(e.currentTarget));
-        onSubmit(
-          f,
-          agencies.find((a) => a.id === f.agency),
-        );
+        if (busy) return;
+        setSubmitError("");
+        const data = new FormData(e.currentTarget),
+          f = Object.fromEntries(data);
+        setBusy(true);
+        try {
+          let report;
+          if (f.reportPayment) {
+            const file = data.get("voucher");
+            if (
+              !file?.size ||
+              file.size > 750000 ||
+              !["image/png", "image/jpeg", "application/pdf"].includes(
+                file.type,
+              )
+            )
+              throw Error("Adjunta un voucher JPG, PNG o PDF de hasta 750 KB.");
+            const image = await new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = () =>
+                reject(
+                  Error("No pudimos leer el voucher. Inténtalo otra vez."),
+                );
+              reader.readAsDataURL(file);
+            });
+            report = {
+              method: f.method,
+              reference: f.reference,
+              amount: f.amount,
+              paidAt: f.paidAt,
+              file: { name: file.name, type: file.type, data: image },
+              reported: new Date().toISOString(),
+            };
+          }
+          const customer = Object.fromEntries(
+            ["name", "lastName", "dni", "phone", "email"].map((k) => [k, f[k]]),
+          );
+          onSubmit(
+            customer,
+            agencies.find((a) => a.id === f.agency),
+            report,
+          );
+        } catch (error) {
+          setSubmitError(error.message);
+        } finally {
+          setBusy(false);
+        }
       }}
+      aria-busy={busy}
     >
-      <h3>¿Quién recogerá tu pedido?</h3>
-      <div className="form-grid two">
-        <Field
-          label="Nombres completos"
-          name="name"
-          defaultValue={user?.name}
-          autoComplete="given-name"
-          required
-        />
-        <Field
-          label="Apellidos completos"
-          name="lastName"
-          defaultValue={user?.lastName}
-          autoComplete="family-name"
-          required
-        />
-        <Field
-          label="DNI"
-          name="dni"
-          inputMode="numeric"
-          pattern="[0-9]{8}"
-          minLength={8}
-          maxLength={8}
-          required
-        />
-        <Field
-          label="Número de contacto"
-          name="phone"
-          defaultValue={user?.phone}
-          type="tel"
-          autoComplete="tel"
-          inputMode="tel"
-          pattern="[0-9+ ]{9,15}"
-          required
-        />
-        <Field
-          label="Correo electrónico"
-          name="email"
-          defaultValue={user?.email}
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <label className="field">
-          Departamento
-          <Select
-            aria-label="Departamento"
-            value={region}
-            onChange={(e) => {
-              setRegion(e.target.value);
-              setAgency("");
-              setAgencyQuery("");
-            }}
+      <section className="checkout-recipient">
+        <h3>¿Quién recogerá tu pedido?</h3>
+        <div className="form-grid two">
+          <Field
+            label="Nombres completos"
+            name="name"
+            defaultValue={user?.name}
+            autoComplete="given-name"
             required
-          >
-            <option value="">Elige tu departamento</option>
-            {[...new Set(agencies.filter((a) => a.active).map((a) => a.region))]
-              .sort((a, b) => a.localeCompare(b, "es"))
-              .map((r) => (
-                <option key={r}>{r}</option>
-              ))}
-          </Select>
-        </label>
-        {region && (
-          <label className="field wide agency-search">
-            Buscar agencia en {region}
-            <input
-              type="search"
-              value={agencyQuery}
-              onChange={(e) => setAgencyQuery(e.target.value)}
-              placeholder="Distrito, agencia o dirección"
-            />
-            <span className="form-hint">
-              {options.length} agencias coincidentes
-            </span>
+          />
+          <Field
+            label="Apellidos completos"
+            name="lastName"
+            defaultValue={user?.lastName}
+            autoComplete="family-name"
+            required
+          />
+          <Field
+            label="DNI"
+            name="dni"
+            inputMode="numeric"
+            pattern="[0-9]{8}"
+            minLength={8}
+            maxLength={8}
+            required
+          />
+          <Field
+            label="Número de contacto"
+            name="phone"
+            defaultValue={user?.phone}
+            type="tel"
+            autoComplete="tel"
+            inputMode="tel"
+            pattern="[0-9+ ]{9,15}"
+            required
+          />
+          <Field
+            label="Correo electrónico"
+            name="email"
+            defaultValue={user?.email}
+            type="email"
+            autoComplete="email"
+            required
+          />
+          <label className="field">
+            Departamento
+            <Select
+              aria-label="Departamento"
+              value={region}
+              onChange={(e) => {
+                setRegion(e.target.value);
+                setAgency("");
+                setAgencyQuery("");
+              }}
+              required
+            >
+              <option value="">Elige tu departamento</option>
+              {[
+                ...new Set(
+                  agencies.filter((a) => a.active).map((a) => a.region),
+                ),
+              ]
+                .sort((a, b) => a.localeCompare(b, "es"))
+                .map((r) => (
+                  <option key={r}>{r}</option>
+                ))}
+            </Select>
           </label>
-        )}
-        <label className="field wide">
-          Agencia Shalom de recojo
-          <Select
-            name="agency"
-            aria-label="Agencia Shalom de recojo"
-            disabled={!region}
-            value={agency}
-            onChange={(e) => setAgency(e.target.value)}
-            required
-          >
-            <option value="">
-              {!region
-                ? "Primero elige un departamento"
-                : options.length
-                  ? "Elige tu agencia"
-                  : "No hay coincidencias"}
-            </option>
-            {options.map((a) => (
-              <option key={a.id} value={a.id}>
-                {a.district} — {a.name}
+          {region && (
+            <label className="field wide agency-search">
+              Buscar agencia en {region}
+              <input
+                type="search"
+                value={agencyQuery}
+                onChange={(e) => setAgencyQuery(e.target.value)}
+                placeholder="Distrito, agencia o dirección"
+              />
+              <span className="form-hint">
+                {options.length} agencias coincidentes
+              </span>
+            </label>
+          )}
+          <label className="field wide">
+            Agencia Shalom de recojo
+            <Select
+              name="agency"
+              aria-label="Agencia Shalom de recojo"
+              disabled={!region}
+              value={agency}
+              onChange={(e) => setAgency(e.target.value)}
+              required
+            >
+              <option value="">
+                {!region
+                  ? "Primero elige un departamento"
+                  : options.length
+                    ? "Elige tu agencia"
+                    : "No hay coincidencias"}
               </option>
-            ))}
-          </Select>
-        </label>
-      </div>
-      {agency && (
-        <div className="agency-summary" role="status">
-          <MapPin size={22} />
-          <div>
-            <strong>
-              Recojo en {agencies.find((a) => a.id === agency)?.name}
-            </strong>
-            <p>{selectedAgency?.address}</p>
-            <p>Confirma que esta agencia corresponde a tu ubicación.</p>
-          </div>
+              {options.map((a) => (
+                <option key={a.id} value={a.id}>
+                  {a.district} — {a.name}
+                </option>
+              ))}
+            </Select>
+          </label>
         </div>
+        {agency && (
+          <div className="agency-summary" role="status">
+            <MapPin size={22} />
+            <div>
+              <strong>
+                Recojo en {agencies.find((a) => a.id === agency)?.name}
+              </strong>
+              <p>{selectedAgency?.address}</p>
+              <p>Confirma que esta agencia corresponde a tu ubicación.</p>
+            </div>
+          </div>
+        )}
+        <p className="form-hint">
+          Usaremos tu teléfono y correo para detalles de compra, pruebas de
+          despacho y agradecimiento. Entrega estimada: 2–10 días desde la
+          confirmación del pago y destino. El envío se cotiza antes de pagar.
+        </p>
+        <label className="checkbox">
+          <input type="checkbox" required />
+          Revisé mis datos, talla y agencia. Acepto las condiciones de compra y
+          el uso de mis datos para atender el pedido.
+        </label>
+      </section>
+      <CheckoutPayment settings={settings} total={total} />
+      {submitError && (
+        <p className="field-error checkout-error" role="alert">
+          {submitError}
+        </p>
       )}
-      <p className="form-hint">
-        Usaremos tu teléfono y correo para detalles de compra, pruebas de
-        despacho y agradecimiento. Entrega estimada: 2–10 días desde la
-        confirmación del pago y destino. El envío se cotiza antes de pagar.
-      </p>
-      <label className="checkbox">
-        <input type="checkbox" required />
-        Revisé mis datos, talla y agencia. Acepto las condiciones de compra y el
-        uso de mis datos para atender el pedido.
-      </label>
-      <div className="checkout-total">
-        <span>Precio total</span>
-        <strong>{currency(total)}</strong>
-      </div>
-      <button className="button button-dark full">
-        Confirmar mi pedido
-        <ArrowRight size={20} />
-      </button>
     </form>
   );
 }
@@ -547,19 +599,21 @@ export function OrderDetail({ order, onReport, settings }) {
         order.shipping != null && (
           <form className="report-form form-grid" onSubmit={report}>
             <h3>Reportar mi pago</h3>
-            {settings.paymentActive && settings.paymentAccount ? (
-              <p>
-                {settings.paymentName}
-                <br />
-                {settings.paymentOwner}
-                <br />
-                {settings.paymentAccount}
-              </p>
-            ) : (
+            {paymentMethods(settings)
+              .filter((m) => m.active && m.account)
+              .map((m) => (
+                <p key={m.id}>
+                  {m.name}
+                  <br />
+                  {m.owner}
+                  <br />
+                  {m.account}
+                </p>
+              ))}
+            {!paymentMethods(settings).some((m) => m.active && m.account) && (
               <p>
                 Recibirás las instrucciones de pago después de confirmar el
-                costo del envío. Reporta el abono solo cuando lo hayas
-                realizado.
+                costo del envío.
               </p>
             )}
             <Field

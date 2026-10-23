@@ -1,0 +1,6 @@
+# Inventario y envíos
+Stock por SKU/modelo/color/talla; existencias, reservado, disponible, vendido y devuelto. Movimientos auditados y reservas atómicas para evitar sobreventa. Descontar al confirmar flujo acordado, nunca dos veces al recibir un evento repetido.
+Datos mínimos: nombre/apellidos, documento exigido por transportista, teléfono, agencia de destino identificada; dirección solo si entrega domiciliaria. No exponer domicilio privado del vendedor en catálogo, sin ocultar información comercial legalmente exigible.
+Tarifa por origen, destino, servicio, peso y dimensiones del paquete. Distinguir envío cobrado, costo real, subsidio y pago en destino para no cobrar dos veces. Tarifa S/12 pendiente de validar por ruta. Si no hay tarifa válida: cotizar ANTES de solicitar pago.
+Preparar ficha privada para Shalom y lista de empaque. Integración de guías/rastreo no confirmada: carga manual inicial de OS/guía, agencia, fecha y prueba de despacho. Cliente ve solo su seguimiento mediante acceso protegido. Clave de recojo tratada como secreto; no en pantalla de TV ni enlaces públicos.
+Devolución física requiere inspección antes de reponer stock vendible. Reportar diferencias y prendas defectuosas por lote.

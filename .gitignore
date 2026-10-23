@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vite/
+*.log
+.playwright-cli/
+output/
+docs/entorno/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,8 @@
+# Arquitectura y mantenimiento
+Propuesta de arquitectura, no software construido. Laravel con versiones de soporte verificadas al implementar; interfaz responsive y panel móvil. Base relacional, colas para archivos/avisos, almacenamiento privado para constancias y público separado para catálogo.
+Eventos privados autenticados actualizan pedidos, pagos y stock; alternativas de refresco automático de respaldo. Reconexión recupera eventos desde servidor, no confía en estado local. WebSocket actualiza interfaz, no reemplaza transacciones de base de datos.
+Avisos en app abierta primero; push/correo mediante integración verificada después. No prometer WhatsApp automático sin proveedor autorizado y costos definidos.
+Panel muestra desconexión y último dato actualizado. Permisos en servidor por recurso, 2FA admin, sesiones revocables, URLs de seguimiento no enumerables y auditoría de acciones financieras. No guardar secretos de bancos.
+Pruebas esenciales: dos compradores última unidad, reenvío de formulario, doble aprobación concurrente, caída de cola, vencimiento mientras se carga prueba, conciliación de comisión, acceso indebido y restauración.
+Cambios: staging, respaldo, migraciones compatibles, despliegue controlado, plan de reversión de aplicación y recuperación de datos. Un rollback de código no revierte automáticamente migraciones. Actualizaciones de seguridad prioritarias y mantenimiento regular; no existe cero mantenimiento.
+Métricas: retraso de cola, errores de carga, tiempo de confirmación, stock inconsistente y fallos de notificación. Verificación de backups y restauración periódica. Presupuesto mensual aún pendiente.

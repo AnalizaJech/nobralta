@@ -1,0 +1,1142 @@
+[
+  {
+    "file": "public/assets/abrigo-cuero-negro.png",
+    "bytes": 2834985,
+    "sha256": "9158be40c29b4fd987ce80c118c4614799b1c5c48663e51fcc07a60e9174de57",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/abrigo-cuero-negro.webp",
+    "bytes": 367344,
+    "sha256": "9c397d03e298ef979561bb1473c1b34d6411ff89d8fe35700e4f54d469c02e3a",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/biker-real-cafe.png",
+    "bytes": 2691091,
+    "sha256": "fac339864fd6cce9519076bfbca1742114bf51ecb27c747999968e1629bd308e",
+    "size": [
+      1225,
+      1284
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/biker-real-cafe.webp",
+    "bytes": 431450,
+    "sha256": "7bc80beca3e0cac7c39a313a15c214dbe718605e621ccf661ebc150a8c4e81f6",
+    "size": [
+      1225,
+      1284
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/biker-real-negro.png",
+    "bytes": 2710688,
+    "sha256": "06727545e538b92f65ef73bb0cc5a48d03e9a3435a79f2f22991a2169d83cb29",
+    "size": [
+      1207,
+      1303
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/biker-real-negro.webp",
+    "bytes": 371916,
+    "sha256": "0c6c8b84149dc9f3098873763085ceea8445dd4ad580110fa5579d662776e31d",
+    "size": [
+      1207,
+      1303
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/blazer-negro.png",
+    "bytes": 2183971,
+    "sha256": "b0e56229e3454657cea6922ee6ba7846f015ea3ae1c923d5c69c7c83b7e77976",
+    "size": [
+      1101,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/blazer-negro.webp",
+    "bytes": 251866,
+    "sha256": "aab5c256ba8e9c2f5bb1887d4379d33705a62b79bc7c025500a0594df75fcceb",
+    "size": [
+      1101,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/bota-harness.png",
+    "bytes": 1761337,
+    "sha256": "eccd4b9826f611d0a0b45224f991a82b7db5380b636606c4c7aa9658772ed4fb",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/bota-harness.webp",
+    "bytes": 208216,
+    "sha256": "a970e3cd70e83923c4102b974a411ff5593d24d91a7578cf977543507fd16536",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/brand-n.svg",
+    "bytes": 770,
+    "sha256": "5b2bdddf7e414a232d6538d0ebf7dc37f4d0e4dfa216ce83b8215794be85c349"
+  },
+  {
+    "file": "public/assets/brand-wordmark.svg",
+    "bytes": 4322,
+    "sha256": "4063e7e3bbe99ddc63e2aa552e5993812088b70b814ab3151e9285562f9f1fe0"
+  },
+  {
+    "file": "public/assets/cafarena-negra.png",
+    "bytes": 2045730,
+    "sha256": "a27887b0730db4602571c6e9fa618ae31ba7cd525242c97e976d7ee9e5bdb475",
+    "size": [
+      1100,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/cafarena-negra.webp",
+    "bytes": 300856,
+    "sha256": "a418d660be48e1d349f299228868fd5ab23828b4e8d894e5b76cc12c5527c163",
+    "size": [
+      1100,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/camisa-marfil.png",
+    "bytes": 2087158,
+    "sha256": "11b12bd120bfbed6e2f58fb08c516368674df31d5398a2091961a11478296c1c",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/camisa-marfil.webp",
+    "bytes": 237830,
+    "sha256": "6e8defe54146207d918e8ac4a116583ddb19b8744111c6813539d4e6226b9b36",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/chaqueta-cafe.png",
+    "bytes": 2371107,
+    "sha256": "34a6842b01551c3874df2ef066858c717d172c40b34b7dbe41eb4725c35e4bfe",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/chaqueta-cafe.webp",
+    "bytes": 311884,
+    "sha256": "c6c08c2fcb0b058d8c0c77e60745f6333695c14d6ad166b78e910448bad8b203",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/chaqueta-negra.png",
+    "bytes": 2255984,
+    "sha256": "2f5f32c331c08805746a569d2b9db81f8febcd2b1ff7b1f80e27bf471b426d49",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/chaqueta-negra.webp",
+    "bytes": 241184,
+    "sha256": "d71e95e771f8f5146ce9ceb7fb00b7720c44ecbfb5301025e48b9ee731d72c53",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/cuero-camisero.png",
+    "bytes": 2813988,
+    "sha256": "2c201b573002c84ace3a3c10c62da00c171cd803cebba6c814153066883b5de3",
+    "size": [
+      1190,
+      1322
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/cuero-camisero.webp",
+    "bytes": 381790,
+    "sha256": "385e1a596589c08b4f9f2398a16db45ea0f3f0a8a992f6c404d3245b6dcf126e",
+    "size": [
+      1190,
+      1322
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/cuero-heritage.png",
+    "bytes": 2434396,
+    "sha256": "fe8a2b3157891d47bcde3adba59b02e835f1df8f1efa75f7c3fe3e8777ea0103",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/cuero-heritage.webp",
+    "bytes": 443692,
+    "sha256": "b153c47f22121c2b16c0ec097682920464f0b4ae93dfc52c177c0a6f2ecbd962",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/denim-route-carbon.png",
+    "bytes": 2581163,
+    "sha256": "29afa21565ccc277fe34c8dedb5e915ad0ac569e765e21691e31e4163f1b93e4",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/denim-route-carbon.webp",
+    "bytes": 344448,
+    "sha256": "004db32c38865805fde949a75a5428224bc0844af3ff26ee7e0eba6b75d894f4",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/denim-route-indigo.png",
+    "bytes": 2505921,
+    "sha256": "eef26924a6a7e60bcef5f6f08d1476ca03e77c8dd67e592e50b85ecf1f4e3d4e",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/denim-route-indigo.webp",
+    "bytes": 336016,
+    "sha256": "7896693929739b644855957897c1b3cb8e4561f23365626ddec0040d4b89740d",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/gabardina-arena.png",
+    "bytes": 1594395,
+    "sha256": "e08459d6655d6856f98c2f3e7372de11db1050661cc4a9aedc6b3dc9a63b18c9",
+    "size": [
+      1100,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/gabardina-arena.webp",
+    "bytes": 144414,
+    "sha256": "a6b23bf52f63d14432f030a30854e22d07a257116a2eea74e864b2e0ea2eb861",
+    "size": [
+      1100,
+      1429
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/harness-hombre.png",
+    "bytes": 2465265,
+    "sha256": "1be7597b4dffce88633bf273311060cf6f8cb116fac77b0a7975dae1e7316599",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/harness-hombre.webp",
+    "bytes": 396332,
+    "sha256": "59576d9cdef3c5299d8763866b8ff212bc53125ec0b6d6ba178dfa1cefb90c83",
+    "size": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/harness-tobillo.png",
+    "bytes": 1935678,
+    "sha256": "b3ccc0574ae0690ccc78daaf0a619945e3cd5ad1477a646080df0ebaf6a13cd2",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/harness-tobillo.webp",
+    "bytes": 296176,
+    "sha256": "d5ac1b34851df279dc37e212c3ddf78c238763e084801dbb7844d144685c7385",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/hero-editorial.png",
+    "bytes": 1748663,
+    "sha256": "490c4f546198716e11152efe5414d6c35d95177735378ff958c0d95193f5cfff",
+    "size": [
+      1466,
+      1073
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/hero-editorial.webp",
+    "bytes": 73448,
+    "sha256": "3b6e672b7e10a473d5e1a75b7604117ca8dade9ade5f87761be0457f5d2c7fed",
+    "size": [
+      1466,
+      1073
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/hero-mobile.png",
+    "bytes": 1720910,
+    "sha256": "a54f66a226ad48e3c9eea0b64fe774f6bbb814f18f8b4f61640f5b170266f137",
+    "size": [
+      887,
+      1774
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/hero-mobile.webp",
+    "bytes": 79156,
+    "sha256": "bcf03d21b9894f1e1a93bdf1602dd3f8a00ed625ffb38ea97643cf9a1b1d7d03",
+    "size": [
+      887,
+      1774
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/hero-vintage.png",
+    "bytes": 2280828,
+    "sha256": "57766a072368d245c06ab5e4ee25fd00199ce4fca80defcda4dcf1827f7455ff",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/hero-vintage.webp",
+    "bytes": 226964,
+    "sha256": "edafe945dcb2c84ec88b92d536680da736e077f23f761dce24f9e5d62a04a9a3",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "alpha": null
+  },
+  {
+    "file": "public/assets/jean-indigo.png",
+    "bytes": 1354989,
+    "sha256": "23424349259e673f36e3c2af48d463b655bb1879910cda69da97783d1f6bfbec",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/jean-indigo.webp",
+    "bytes": 193366,
+    "sha256": "653a3d4c060d69d395fa94f7c70b8ee3abbbad0771f49f6f4319cc67dbaeabbf",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/pantalon-negro.png",
+    "bytes": 1062765,
+    "sha256": "f5ff10948c1baa390a3e96e0eb0bd0e96b2580196e074e30ba8295d7b04234ca",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/pantalon-negro.webp",
+    "bytes": 93568,
+    "sha256": "d4ded139b2008e9513921fb508a734cab52c6e64ef72453e85c91a50394df954",
+    "size": [
+      1100,
+      1430
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-azul-acero.png",
+    "bytes": 2059357,
+    "sha256": "7141c0e7591e7ac72d57ea9a706968e7529f055b0ff4f77efb1a0843f5282030",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-azul-acero.webp",
+    "bytes": 191862,
+    "sha256": "5ada1c6a41701a7d43c687d4413d25201520a221b681b40811a7637a08a20340",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-azul-electrico.png",
+    "bytes": 2092622,
+    "sha256": "4a727ab77e61c2752d8b75242f8063c7951bacaa7bd83dc2bde7c4a53c5777b0",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-azul-electrico.webp",
+    "bytes": 189614,
+    "sha256": "da678c310ba2ac82653115de05bdc4a8f599282e69e4a8c2ee458f6134faf1d5",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-beige.png",
+    "bytes": 1996361,
+    "sha256": "61ff31d419455f5139a2ad568fe68a3d86c18f79c14e97d5b60e039d155bef56",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-beige.webp",
+    "bytes": 171838,
+    "sha256": "6999144b0081b1c8d5ff04394efb4c853fc0535dbec5b6376bffe087112f87aa",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-blanco.png",
+    "bytes": 1751044,
+    "sha256": "30710796546cbe7ddeae7f91fc397373a4f89bf9be1353b20d9fe01bff3c637a",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-blanco.webp",
+    "bytes": 112184,
+    "sha256": "7281c8e96a32aa0f2eea8f982ff787046eb7e70d8f924cb4e0692ff6a6b7d01e",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-camello.png",
+    "bytes": 1918592,
+    "sha256": "1e6a687fc3bf368769811c0338e2b406bb7acc105643faadb606f08354879a35",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-camello.webp",
+    "bytes": 167214,
+    "sha256": "7cc08a83e9db9da2708acadaaae74067c419d3ec48e6931970785b4ca300d50c",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-celeste.png",
+    "bytes": 1806641,
+    "sha256": "60bebe177947feb6551232e46d3d7a6b61a7394f4502ce41a217c735e5e1b7b4",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-celeste.webp",
+    "bytes": 124678,
+    "sha256": "c48549d004d4cb5cf71309784033ea89a74b42aecf5382fb07fc13c0888e6af3",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-cemento.png",
+    "bytes": 1983742,
+    "sha256": "e86611874aa40f84c57401ce3f858904d32702b29c1acfdc2235d5b861efc036",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-cemento.webp",
+    "bytes": 192972,
+    "sha256": "45d1b72f2e4feb8ff1aaae9bde98cc3906e9653930d8cd93749b1335f6095ae2",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-crema.png",
+    "bytes": 1811057,
+    "sha256": "238d5ea35add03f5280446f3bb983a376788a67da94abeada975e48123d5000d",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-crema.webp",
+    "bytes": 126238,
+    "sha256": "07515f571050e2a4d652700e70e8ce5c8b7e2c21f51385c132e0fe7f2fd0bf16",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-gris-claro.png",
+    "bytes": 2216546,
+    "sha256": "327c697e725b7db7f49c7b4d6cc4674025e7790ca1c5cc3676f2eb0e0b98b5a5",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-gris-claro.webp",
+    "bytes": 256562,
+    "sha256": "3dafb6e85d44fcb309961dd1fd8222e859ca5d479c1187a96604e2315774d5a5",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-gris-oscuro.png",
+    "bytes": 1911446,
+    "sha256": "938931573c79d5054e9a036963defd23edb541ae50b3f1bc202a7b6512858289",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-gris-oscuro.webp",
+    "bytes": 192058,
+    "sha256": "a74357f380f30dd11e55c465150d1baaaa1b5534b25a1187becf92ff6193c483",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-guinda.png",
+    "bytes": 1855312,
+    "sha256": "2361eedfc102c3b53022c65150e0104ee927083fa9f1902a53684f8c7e563cee",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-guinda.webp",
+    "bytes": 131994,
+    "sha256": "6f1935af218e48320040a29d48f5811fa92c4417f3ca798c6c1ee75b89faa305",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-marfil.png",
+    "bytes": 1401754,
+    "sha256": "50568625be596244abc31b65c404b339f8d572326a0c50187b8265d721000f7a",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-marfil.webp",
+    "bytes": 104826,
+    "sha256": "6c5550c78ab043f08463801aa921fbfc4775f101bd8b71abb0eb2c38cde9efd0",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-marron.png",
+    "bytes": 1916018,
+    "sha256": "3a3d89c170c51a882760f152011d1987c8963f3e8353d2847905eb4134e1ba3b",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-marron.webp",
+    "bytes": 162364,
+    "sha256": "062e72f1cd218cec8dbd4780beab7d831933776d48769edb1776cfc74d53e119",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-negro.png",
+    "bytes": 1436082,
+    "sha256": "ccdd243187aff23a233494956d48881a1f24164c1d7b9b8176cdbc36b9cdb009",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-negro.webp",
+    "bytes": 93210,
+    "sha256": "5026f2200237cd37e65ea11c641cd8ee9e8f37454277164f075a0b46dfcecb53",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-palo-rosa.png",
+    "bytes": 1935239,
+    "sha256": "1b935af0c23a31f954662e3cda5a70a83de19389e951873d406d645e0559c5db",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-palo-rosa.webp",
+    "bytes": 166686,
+    "sha256": "fd9b2c6d1c40bdae017eba3cc82b33c57529af82459caee3830831a44b9dd8fd",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-rojo.png",
+    "bytes": 1912775,
+    "sha256": "e701873c6c30f8d7dd127c7d80e7460d199863f294e3438049a1c9dba3787bcb",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-rojo.webp",
+    "bytes": 131104,
+    "sha256": "8f27950e00c55c58ab1a73513202d553b7e3e459bbd4afddeee2c90858ef9e15",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-verde.png",
+    "bytes": 1898042,
+    "sha256": "237405ff761227487069995a0ad38ea53e9d7674d778bede12fbbcb474fd356d",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-verde.webp",
+    "bytes": 168584,
+    "sha256": "d6fb9a77b32337e479f2f43cc316f569a64ba89f0cac9c381b4d950b9dac6696",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "public/assets/polo-vino.png",
+    "bytes": 1395138,
+    "sha256": "aa56ab605e1ffa7a331de6f35025d64c790dcb6b67e166b1c38a170550eaec75",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/polo-vino.webp",
+    "bytes": 102632,
+    "sha256": "2fc3e2b94e692cb7ecdc11494491c3a98e84a003c97ab7d789b5a3c02e6f680c",
+    "size": [
+      1145,
+      1374
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/racer-archivo.png",
+    "bytes": 2714178,
+    "sha256": "f1598f41f08d97c57bec575907184c84f20d73ca81df23f6ed2aa4a7270c16c6",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/racer-archivo.webp",
+    "bytes": 376194,
+    "sha256": "858d41d0f336e12888bdedb5a2dc1bc35d7e25a916d0767d0c4f53f3212aefb3",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/racer-medianoche.png",
+    "bytes": 2849494,
+    "sha256": "2decc8f67c0e984a1bf4a40bc9a4e283d11f2b318bf17d98efdfe513c556664e",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "public/assets/racer-medianoche.webp",
+    "bytes": 442468,
+    "sha256": "0e76a6b096de7508a440fa9887ca2ce2d619ca72a2920506077aa2c7f6fdaed9",
+    "size": [
+      1222,
+      1287
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ]
+  }
+]

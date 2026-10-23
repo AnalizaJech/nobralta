@@ -1,0 +1,102 @@
+[
+  {
+    "path": "assets\\bota-harness.png",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\bota-harness.webp",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\brand-n.svg",
+    "exists": true,
+    "same": false
+  },
+  {
+    "path": "assets\\brand-wordmark.svg",
+    "exists": true,
+    "same": false
+  },
+  {
+    "path": "assets\\hero-editorial.png",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\hero-editorial.webp",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\hero-mobile.png",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\hero-mobile.webp",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\jean-indigo.png",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\jean-indigo.webp",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\polo-negro.png",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "assets\\polo-negro.webp",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\InstrumentSerif-Italic.ttf",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\InstrumentSerif-Italic.woff2",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\instrumentserif-OFL.txt",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\InstrumentSerif-Regular.ttf",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\InstrumentSerif-Regular.woff2",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\manrope-OFL.txt",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\Manrope[wght].ttf",
+    "exists": true,
+    "same": true
+  },
+  {
+    "path": "fonts\\Manrope[wght].woff2",
+    "exists": true,
+    "same": true
+  }
+]

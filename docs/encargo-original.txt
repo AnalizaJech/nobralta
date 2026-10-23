@@ -1,0 +1,708 @@
+Actúa como arquitecto de software Laravel, especialista en ecommerce, UX/UI, análisis de negocio y documentación ejecutable para agentes de IA.
+
+Trabaja directamente sobre:
+C:\Users\JORGE\Desktop\emprendimiento
+
+OBJETIVO DE ESTA SESIÓN
+
+Auditar, corregir y completar esta bóveda de Obsidian para convertirla en la fuente de verdad del proyecto NOBRALTA y en un entorno de trabajo profesional para Codex y otros agentes.
+
+No quiero otra explicación genérica, una estructura vacía ni otro ZIP. Quiero archivos locales completos, conectados, revisables y utilizables para desarrollar el proyecto por etapas.
+
+Todavía NO construyas la aplicación, instales dependencias del proyecto, contrates servicios, registres dominios ni publiques nada.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. INSPECCIÓN Y PRESERVACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de editar:
+
+- Confirma que puedes acceder a la carpeta indicada.
+- Lee todos sus archivos relevantes, incluidos AGENTS.md, skills y configuración existente.
+- Identifica contenido desactualizado, duplicado, contradictorio o incompleto.
+- Conserva mis anotaciones, decisiones y modificaciones.
+- Antes de reorganizar, crea una copia de respaldo local fechada fuera de la bóveda activa. Excluye credenciales y archivos sensibles si los hubiera.
+- Si existe Git, revisa cambios pendientes y no descartes trabajo ajeno.
+- No inventes archivos existentes, decisiones aprobadas, pruebas realizadas ni integraciones disponibles.
+- No dependas de conversaciones anteriores: documenta el contexto necesario en la propia carpeta.
+
+Avanza con todo lo que esté claro. Pregunta solo cuando una decisión realmente bloquee una parte del trabajo y continúa las tareas independientes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. NEGOCIO Y DECISIONES CONFIRMADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Marca elegida: NOBRALTA.
+
+La elección del nombre está confirmada, pero NO su disponibilidad legal, de dominio o redes. Se hicieron búsquedas preliminares sin coincidencias identificadas; eso no demuestra inexistencia ni garantiza registro.
+
+País: Perú.
+Moneda inicial: PEN.
+Zona horaria de operación: America/Lima.
+Base inicial: casa privada en San Vicente de Cañete.
+No habrá tienda física ni atención pública en casa.
+Más adelante se evaluará alquilar un lugar, cuando el negocio pueda sostenerlo.
+
+Capital inicial:
+S/4,000 para mercadería y logística.
+No asumir que ese dinero también cubre desarrollo, hosting, publicidad, sueldos o alquiler: sus presupuestos están pendientes.
+
+Producto inicial:
+Polos de algodón Pima, corte slim, comprados directamente a fabricantes, con variedad de colores combinables.
+
+Restricción confirmada:
+No acepto ningún componente sintético.
+No basta con que la tela diga “100% algodón”.
+Se deben verificar tela, rib del cuello, hilo, etiquetas, estampados y acabados; revisar también empaque y protección logística.
+No anunciar “cero sintéticos” sin evidencia suficiente.
+No cambiar esta restricción para facilitar el abastecimiento; documentar la viabilidad y los costos pendientes.
+
+Expansión futura:
+- Jeans bootcut.
+- Chaquetas de cuero natural.
+- Botas tipo harness o botas con arnés.
+- Cafarenas.
+- Camisas, pantalones de vestir, blazers.
+- Gabardinas y otras prendas elegantes.
+
+La marca debe permitir esa expansión.
+No publicar categorías vacías como si ya existiera mercadería.
+
+El calentamiento global no es una temporada que vaya a terminar. Las compras de abrigo se decidirán por demanda, clima regional y ventas comprobadas, no por esperar que “acabe el calentamiento global”.
+
+No hay muestras aprobadas, precios de fabricante definitivos ni inventario real confirmado.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. MODELO OPERATIVO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Inicialmente:
+- Yo hago TikTok Lives.
+- Yo reviso los pagos.
+- Yo preparo y despacho.
+- Administro desde el celular.
+- Habrá vendedores afiliados con códigos creados por el administrador.
+
+Primera versión:
+Una tienda propia con afiliados.
+No es todavía un SaaS para tiendas independientes.
+Documentar posibles puntos de extensión sin implementar complejidad multitienda prematura.
+
+Seguridad física:
+- No mostrar ubicación en tiempo real, almacén, etiquetas o documentos en los Lives.
+- No publicar el domicilio como punto de atención.
+- No omitir por ello datos comerciales legalmente exigibles.
+- No prometer que un distrito es seguro por ausencia de noticias de robos.
+- Preferir almacenamiento privado y recorridos de despacho razonables.
+- No recomendar desplazamientos permanentes que consuman capital sin evaluar costos.
+
+TikTok:
+- Códigos de catálogo para identificar prendas.
+- Códigos de afiliado para atribuir ventas.
+- No diseñarlos para ocultar ventas, eludir moderación o incumplir políticas.
+- Verificar reglas aplicables al país, tipo de cuenta y modalidad de venta.
+- No asumir disponibilidad de TikTok Shop.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. PRECIOS, PRESUPUESTO Y RENTABILIDAD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+No convertir los precios sugeridos durante la planificación en costos confirmados.
+
+Se propusieron referencias como:
+- Polo: costo objetivo S/30; precio individual S/59 y Live S/49.
+- Jean: costo objetivo S/65; precio Live S/109.
+- Botín: costo objetivo S/100; precio Live S/169.
+- Chaqueta: costo objetivo S/300; precio Live S/499.
+
+TODOS esos valores son hipótesis, no cotizaciones aprobadas.
+No construir promociones finales con ellos sin verificar costos.
+
+Preparar modelo para:
+- Costo de compra.
+- Transporte hasta almacén.
+- Empaque.
+- Comisiones de cobro.
+- Comisión del afiliado.
+- Envío cobrado y costo real.
+- Subsidio de envío.
+- Descuentos y devoluciones.
+- Costos variables y costos fijos.
+- Margen de contribución.
+- Punto de equilibrio y capital disponible.
+
+No llamar ganancia neta a venta menos costo de producto.
+No confundir ROAS con rentabilidad.
+No garantizar que una compra “irá a la segura”.
+
+Importación:
+Comparar costo puesto en Perú, no solo precio de catálogo.
+Incluir flete, seguro cuando corresponda, tributos aplicables, despacho, defectos, tallas, mínimos, plazos y reposición.
+No asumir que importar será más barato.
+No diseñar fraccionamiento o mecanismos para eludir obligaciones.
+
+Formalización:
+La intención es tener una operación sencilla y con costos razonables, cumpliendo obligaciones.
+No existe una exención automática por invertir S/4,000.
+No fijar régimen tributario sin revisar condiciones, actividad e importaciones.
+Verificar fuentes oficiales y distinguir régimen tributario de régimen laboral.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. EXPERIENCIA Y DISEÑO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Mobile first, con adaptación real a:
+- Celular.
+- Tablet.
+- Laptop/escritorio.
+- TV.
+
+No basta con encoger o estirar una pantalla.
+
+Celular:
+Compra y administración claras, botones cómodos, acciones prioritarias accesibles, formularios breves y errores comprensibles.
+
+Tablet:
+Lista y detalle cuando el espacio lo permita.
+
+Laptop:
+Tablas, filtros y reportes eficientes.
+
+TV:
+Panel de lectura con cifras grandes, sin DNI, teléfonos, evidencias, claves ni información financiera privada.
+
+Dirección visual:
+Rockera elegante, editorial, sobria y profesional.
+El producto debe ser protagonista.
+La información debe ir al punto.
+La marca podrá crecer más allá del estilo rockero.
+
+Todos los controles y componentes deben estar estilizados.
+Esto NO significa eliminar HTML semántico.
+Conservar button, input, select, form, table, encabezados y enlaces correctos.
+No reemplazar controles accesibles por divs.
+No entregar controles visualmente predeterminados o sin acabado.
+
+Crear un sistema de diseño con:
+- Tokens de color.
+- Tipografía y licencias.
+- Escala tipográfica.
+- Espaciado.
+- Grillas y adaptación.
+- Bordes, radios y sombras.
+- Iconografía.
+- Fotografía y proporciones.
+- Animación moderada y reduced-motion.
+- Estados de interacción.
+- Reglas de redacción.
+
+Componentes:
+Botones, campos, selectores, tallas, muestras de color con nombre, cantidad, tarjetas, galería, precio, disponibilidad, acordeones, modales, paneles laterales, alertas, carga de archivos, tablas, paginación y seguimiento.
+
+Definir estados aplicables:
+Normal, hover, foco, presionado, deshabilitado, cargando, vacío, error, éxito, sin conexión y sin permisos.
+
+Accesibilidad:
+Objetivo WCAG 2.2 AA.
+Contraste, teclado, foco, etiquetas, errores asociados, zoom, reflujo, lector de pantalla y anuncios de cambios en tiempo real.
+44 px como objetivo interno de comodidad táctil, sin confundirlo con el mínimo normativo y sus excepciones.
+
+Fundamentos UX:
+Aplicar Hick-Hyman, Fitts, Gestalt, reconocimiento sobre recuerdo, divulgación progresiva, prevención de errores y visibilidad del estado.
+Explicar su aplicación concreta y cómo probarla.
+No tratarlos como fórmulas mágicas ni atribuir efectos psicológicos universales a colores.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. REFERENCIAS DE PRODUCTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Referencias aportadas:
+https://recloset.pe/es/products/ba-sh-black-ruched-mini-dress?variant=46230844375219
+
+https://www.calvinklein.pe/-chaqueta-para-hombre-4lf510g001/p
+
+https://theshowroom.pe/products/vestido-magnolia-verde
+
+Me interesa la sencillez de información y que vayan directo a la compra.
+
+En la sesión anterior:
+- The Showroom pudo leerse textualmente.
+- Recloset no pudo recuperarse.
+- Calvin Klein no devolvió contenido legible.
+- No hubo auditoría visual completa.
+
+Intenta revisarlas con las herramientas disponibles.
+No afirmar que viste una pantalla que no pudiste inspeccionar.
+No copiar marcas, textos o fotografías sin autorización.
+
+Ficha propuesta:
+Fotos, nombre, precio, color, talla, medidas, disponibilidad, compra, envío, próxima atención, composición, cuidados y cambios.
+Información esencial visible.
+Información secundaria organizada sin ocultar condiciones críticas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. HORARIOS Y COMPRA NOCTURNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Propuesta pendiente de aprobación:
+Compra disponible 24/7.
+Atención y revisión de pagos con horario anunciado.
+
+Horario provisional:
+Lunes a sábado 09:00–18:00, más atención durante Lives.
+No tratarlo como horario definitivo.
+
+Fuera de atención:
+- Catálogo conserva colores.
+- Mostrar próxima fecha/hora de revisión antes del pago.
+- Permitir comprar y reportar pago si ese modelo se aprueba.
+- No afirmar atención inmediata.
+- No confundir cerrado con agotado.
+
+Si se configura cierre de compras:
+Conservar carrito y explicar reapertura antes del checkout.
+No sorprender al cliente con una alerta solo después de intentar comprar.
+
+Configuración:
+Feriados, vacaciones, pausas y horario especial.
+Calcular próxima atención correctamente.
+
+Lives:
+Horarios de prueba, no “horas ideales” comprobadas:
+- Martes/jueves 20:00–21:30.
+- Alternar sábado 12:00–13:30 y domingo 19:30–21:00.
+Medir actividad de audiencia, pedidos pagados y margen por hora.
+No confundir horarios de publicación con horarios de compra en Live.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. PAGOS Y EVIDENCIAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+El administrador configura:
+- Tipo de medio.
+- Nombre público.
+- Entidad.
+- Moneda.
+- Titular.
+- Teléfono/cuenta/CCI cuando corresponda.
+- QR.
+- Instrucciones.
+- Activación y vigencia.
+- Orden de presentación.
+
+No almacenar claves bancarias.
+Cambios de destinatario protegidos con permisos, reautenticación y auditoría.
+Mantener versión de las instrucciones mostradas en cada pedido.
+
+El comprador reporta:
+- Medio receptor elegido entre los disponibles.
+- Banco o app de origen por separado si corresponde.
+- Número de operación como TEXTO, conservando ceros.
+- Importe y moneda.
+- Fecha/hora declaradas del pago.
+- Constancia.
+- Nombre del pagador cuando difiera, si resulta necesario para conciliar.
+
+Registrar automáticamente:
+Fecha/hora de recepción del servidor en UTC.
+Mostrar America/Lima.
+No confundir carga con pago.
+No usar EXIF o reloj del dispositivo como prueba fiable.
+
+Captura, OCR y referencia NO confirman un abono.
+Yo verificaré el movimiento real en Yape o banco.
+No asumir integración bancaria autorizada disponible.
+
+Estados separados:
+- Evidencia.
+- Reporte de pago.
+- Verificación.
+- Pedido.
+- Reserva.
+- Envío.
+
+Manejar:
+Pago correcto, no localizado, parcial, excesivo, tardío, duplicado, referencia repetida, pagador distinto, prueba ilegible y falla técnica.
+
+Referencias repetidas:
+No asumir unicidad global entre bancos.
+Alertar con contexto; no rechazar automáticamente por coincidencia aislada.
+
+Aprobación:
+Atómica e idempotente.
+Dos administradores no deben confirmar o aplicar stock dos veces.
+Registrar quién, cuándo, qué importe y motivo.
+
+Correcciones:
+Nuevas versiones; no sobrescribir historial.
+Un error técnico no equivale a fraude.
+No cancelar un abono real porque venció una reserva: conciliar y resolver stock, alternativa o devolución.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. ARCHIVOS, PRIVACIDAD Y RENDIMIENTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Propuestas técnicas configurables:
+- Hasta 2 imágenes de 10 MiB.
+- Límite de dimensiones/píxeles.
+- JPEG, PNG y WebP.
+- HEIC/HEIF solo con conversor instalado y probado.
+- PDF fuera del MVP salvo decisión expresa y flujo seguro.
+
+Validar:
+Autorización, firma real del archivo, formato, bytes, dimensiones, tasa de carga y límites de procesamiento.
+
+Flujo:
+Original privado en cuarentena.
+Nombre aleatorio y hash.
+Procesamiento en cola con límites de CPU, memoria y tiempo.
+Copias orientadas correctamente, sin EXIF/GPS.
+Miniatura y versión ampliable optimizadas.
+No alterar contenido con IA.
+
+Prioridad:
+Que números y texto sigan legibles.
+El objetivo de peso nunca justifica destruir información.
+Conservar original intacto conforme política de retención.
+
+Separar:
+Imágenes públicas de catálogo.
+Constancias y documentos privados.
+
+Acceso:
+Autorización por recurso y enlaces temporales.
+Sin caché pública, indexación ni enlaces enumerables.
+No enviar evidencias o datos personales a analítica o publicidad.
+
+Retención:
+Definir plazo y borrado de originales, derivados y respaldos con revisión correspondiente.
+No guardar todo para siempre por defecto.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10. INVENTARIO Y RESERVAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Inventario por SKU/modelo/color/talla y lote.
+Distinguir existencias, reservado, disponible, vendido, devuelto y defectuoso.
+Movimientos auditados.
+
+Reserva de 30 minutos:
+Es propuesta pendiente, no política confirmada.
+
+Concurrencia:
+Servidor valida disponibilidad.
+Evitar que dos compradores adquieran la última unidad.
+Eventos en tiempo real no reemplazan transacciones.
+
+Reporte presentado antes del vencimiento:
+No liberar silenciosamente mientras se procesa/revisa según política.
+
+Si vencimiento gana la carrera:
+Conciliar pago tardío y comprobar disponibilidad antes de comprometer stock.
+
+Idempotencia:
+Reintentar un formulario, job o evento no duplica pedidos, movimientos ni comisiones.
+
+Devolución:
+Inspección antes de reponer como vendible.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+11. SHALOM Y ENVÍOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Datos:
+Nombre y apellidos, documento requerido, teléfono y agencia de destino.
+Dirección solo cuando corresponda entrega domiciliaria.
+No pedir foto del DNI por defecto.
+
+Costos:
+Dependen de ruta, servicio, peso y dimensiones.
+S/12 es una idea comercial, no tarifa nacional confirmada.
+
+Distinguir:
+- Envío cobrado.
+- Costo real.
+- Subsidio.
+- Pago en destino.
+Evitar doble cobro.
+
+Si no hay tarifa válida:
+Cotizar antes de solicitar pago.
+
+MVP:
+Ficha para despacho, lista de empaque y registro manual de guía/OS.
+No hay API de Shalom confirmada.
+No inventar generación automática ni rastreo en vivo.
+
+Seguimiento privado.
+Proteger clave de recojo y datos del destinatario.
+No mostrarlos en TV o Live.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+12. AFILIADOS Y PERSONAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Afiliados:
+- Código único creado por administrador.
+- Un afiliado por pedido.
+- Reglas de atribución explícitas.
+- Separar UTM de código de afiliado.
+- Ventana y prioridad de atribución pendientes.
+- Guardar porcentaje y base aplicados en cada línea.
+- No modificar retroactivamente ventas previas.
+
+Base propuesta:
+Productos después de descuentos, excluyendo envío.
+Porcentaje pendiente de margen y acuerdo.
+No fijarlo arbitrariamente.
+
+Estados:
+Estimada, pendiente, aprobada, liquidada, pagada y ajuste/reversión.
+
+Devoluciones:
+Ajustar líneas afectadas.
+No borrar historia ni pagar dos veces.
+
+Liquidación:
+Detalle por pedido, corte, ajustes, adelantos si corresponden, pago y saldo.
+Persona puede observar una línea y recibir respuesta.
+
+Personal contratado:
+Separado de afiliados independientes.
+La subordinación real determina obligaciones, no el nombre asignado.
+
+Registrar:
+Vínculo, ingreso/cese, jornada, modalidad mensual/hora/día, remuneración, asistencia, pausas, preparación, atención posterior, permisos y correcciones.
+
+No calcular sueldo mensual únicamente por horas marcadas.
+No inventar fórmulas de beneficios, mínimos, nocturnidad o deducciones.
+Consultar normativa vigente y exigir revisión adecuada antes de nómina real.
+
+Propuesta de calendario:
+Adelanto de 40% el día 15 y saldo a fin de mes.
+NO aprobado todavía.
+
+No multas automáticas por pocas ventas, quejas, faltantes o renuncia.
+No eliminar remuneraciones o comisiones ganadas cuando alguien se retire.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+13. ARQUITECTURA Y OPERACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Laravel es la tecnología elegida.
+Verificar versiones actuales y soporte antes de fijar PHP, Laravel, frontend y librerías.
+
+Preferir monolito modular adecuado al tamaño del negocio.
+No sobredimensionar con microservicios o multitenancy prematuro.
+
+Documentar:
+- Módulos y límites.
+- Modelo de datos.
+- Estados y transiciones.
+- Transacciones e idempotencia.
+- Autorización por recurso.
+- Colas.
+- Eventos privados.
+- Almacenamiento público/privado.
+- Notificaciones.
+- Auditoría.
+- Backups.
+- Observabilidad.
+- Despliegue y recuperación.
+
+Tiempo real:
+Pedidos, pagos, stock y comisiones actualizados sin recargar.
+Mostrar desconexión.
+Recuperar estado canónico al reconectar.
+Respaldo mediante actualización automática cuando corresponda.
+No suponer que “tiempo real” significa consistencia financiera.
+
+Notificaciones:
+Distinguir avisos con web abierta de push con aplicación cerrada.
+WhatsApp/correo/push requieren integración real, permisos y costos.
+No prometer automatización no verificada.
+
+Mantenimiento:
+No existe cero mantenimiento.
+Staging, pruebas, dependencias fijadas, actualizaciones planificadas y parches.
+Respaldo y prueba de restauración.
+Rollback de código no revierte automáticamente cambios destructivos de base de datos.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+14. SEO, MARKETING Y CONTENIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SEO:
+HTML público rastreable.
+Jerarquía y enlaces internos.
+URLs estables.
+Títulos, H1 y descripciones.
+Canónicos.
+Variantes.
+Filtros y paginación.
+Sitemap.
+Robots/noindex aplicados correctamente.
+Estados agotados/retirados.
+Datos estructurados reales.
+Metadatos sociales.
+Rendimiento e imágenes.
+
+Noindex/robots no sustituyen autorización.
+Nunca incluir pedidos, pagos, evidencias o panel en contenido público.
+
+Verificar documentación oficial actual de Google.
+No inventar reseñas, GTIN, descuentos ni disponibilidad.
+No garantizar posicionamiento ni resultados enriquecidos.
+
+Marketing:
+Posicionamiento, segmentos, propuesta de valor, pilares de contenido, campañas, presupuesto y experimentos.
+Publicidad identificada y promociones reales.
+No escasez falsa, reseñas inventadas ni greenwashing.
+
+Analítica:
+Desde ficha y carrito hasta pago reportado, verificado, entrega y devolución.
+Deduplicar compra.
+No equiparar constancia con ingreso.
+No enviar DNI, teléfono, referencias bancarias ni constancias a herramientas publicitarias.
+Revisar consentimiento y minimización de datos.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+15. ESTRUCTURA DE LA BÓVEDA Y SKILLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Organiza de forma práctica. La estructura puede ajustarse tras inspección, pero debe incluir:
+
+- AGENTS.md raíz.
+- Índice de Obsidian.
+- Contexto confirmado.
+- Decisiones y propuestas pendientes.
+- Requisitos funcionales/no funcionales.
+- Journeys.
+- Sistema de diseño.
+- Arquitectura y modelo de datos.
+- Reglas de negocio.
+- SEO y marketing.
+- Operación y procedimientos.
+- Seguridad y privacidad.
+- Plan de implementación.
+- Matriz de aceptación y trazabilidad.
+- Fuentes con fecha y límites.
+- Prompts ejecutables por fase.
+- Skills reales para agentes.
+
+Skills en:
+.agents/skills/<nombre>/SKILL.md
+
+Cada skill:
+- YAML con name y description.
+- Activadores claros.
+- Entradas y archivos que debe leer.
+- Procedimiento accionable.
+- Reglas e invariantes.
+- Estados y excepciones relevantes.
+- Criterios de aceptación.
+- Comprobaciones que debe ejecutar.
+- Formato de entrega.
+- Límites y decisiones que no puede inventar.
+- Referencias relativas cuando aporten valor.
+- Sin dependencia de esta conversación ni herramientas privadas obligatorias.
+
+Cubrir:
+1. Planificación y requisitos.
+2. UX/UI y diseño visual.
+3. Arquitectura/desarrollo Laravel.
+4. Pagos y evidencias.
+5. Inventario y envíos.
+6. Afiliados y personal.
+7. SEO y marketing.
+8. Calidad, seguridad y operación.
+
+No fragmentar artificialmente ni repetir todo en cada skill.
+AGENTS.md debe indicar cómo elegir las skills pertinentes.
+
+La sesión anterior creó borradores de skills, pero su push remoto falló con HTTP 422.
+No asumir que existen o están instaladas.
+Inspeccionar los archivos reales y crear lo que falte localmente.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+16. PROMPTS PROFESIONALES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Crear prompts completos para:
+- Auditoría y cierre de requisitos.
+- Revisión de journeys.
+- Diseño visual y componentes.
+- Arquitectura y base del proyecto.
+- Catálogo y variantes.
+- Carrito/reservas.
+- Pagos/evidencias.
+- Despachos.
+- Afiliados.
+- Personal cuando corresponda.
+- SEO/medición.
+- Pruebas y lanzamiento.
+- Mantenimiento e incidentes.
+
+Cada prompt debe especificar:
+Objetivo, prerrequisitos, archivos a leer, skill aplicable, tarea, restricciones, casos límite, criterios de aceptación, pruebas y entrega esperada.
+
+No basta “actúa como experto”.
+No depender de que el agente recuerde un prompt anterior.
+No duplicar extensamente requisitos: referenciar la fuente de verdad.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+17. USER JOURNEYS PARA MI REVISIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Crear o completar:
+- Descubrimiento desde Live.
+- Elección de talla/color.
+- Compra normal.
+- Compra nocturna.
+- Pago y carga de constancia.
+- Corrección/rechazo/conciliación.
+- Preparación y envío.
+- Seguimiento.
+- Cancelación/cambio/devolución.
+- Atribución y liquidación de afiliado.
+- Configuración de cuentas por admin.
+- Asistencia y pago de personal.
+- Desconexión y recuperación.
+
+Cada journey:
+Actor, objetivo, precondiciones, pasos, respuesta del sistema, mensaje visible, excepciones, datos/permisos y criterios de aceptación.
+
+Añadir:
+[ ] Aprobar
+[ ] Modificar
+Paso:
+Cambio solicitado:
+Motivo:
+Decisión y fecha:
+
+No interpretar casillas vacías como aprobación.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+18. VALIDACIÓN Y ENTREGA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de terminar:
+- Verifica todos los enlaces internos de Obsidian.
+- Verifica frontmatter y estructura de skills.
+- Detecta referencias rotas y duplicación de fuentes de verdad.
+- Busca nombres antiguos y aclara cuál es la marca elegida.
+- Comprueba que propuestas no aparezcan como decisiones aprobadas.
+- Verifica que cada requisito importante tenga journey, regla, criterio de aceptación y fase asociada.
+- Prueba al menos dos skills con casos concretos sin construir la aplicación.
+- Distingue validación documental de pruebas de software.
+- No afirmar que “no falta nada”: identifica vacíos concretos.
+
+Entrega:
+1. Resumen breve de cambios.
+2. Ubicación del índice y prompt inicial.
+3. Skills creadas o actualizadas.
+4. Validaciones realmente realizadas.
+5. Decisiones que necesito responder, priorizadas por impacto.
+6. Orden recomendado para empezar a implementar después de mi revisión.
+
+Empieza ahora con la inspección de la carpeta y completa los entregables autorizados.

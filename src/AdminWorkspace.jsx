@@ -1,3 +1,4 @@
+import { AdminEmpty, AdminNotice } from "./AdminFeedback";
 import { useState, useEffect } from "react";
 import {
   ArrowRight,
@@ -9,12 +10,33 @@ import {
   Package,
   Receipt,
   Truck,
+  WarningCircle,
+  PencilSimple,
+  CheckCircle,
+  Clock,
+  CreditCard,
+  Users,
+  Pause,
+  Play,
+  Globe,
+  UserCircle,
+  Headset,
 } from "@phosphor-icons/react";
 import { Select } from "./Select";
 import { Field, Profile } from "./Customer";
 import { AssetImage } from "./AssetImage";
 import { socialChannels } from "./Merchandising";
 import { currency, date, phases } from "./store";
+const phaseIcons = {
+  "Por pagar": CreditCard,
+  "En revisión": Receipt,
+  "Pago observado": WarningCircle,
+  "Pago verificado": CheckCircle,
+  "En preparación": Package,
+  Enviado: Truck,
+  Entregado: CheckCircle,
+  Cancelado: Clock,
+};
 const normalize = (s) =>
   String(s || "")
     .normalize("NFD")
@@ -57,22 +79,34 @@ export function AdminOverview({
     <div className="admin-overview">
       <dl className="admin-facts">
         <div>
-          <dt>Ventas verificadas</dt>
+          <dt>
+            <CreditCard size={19} />
+            Ventas verificadas
+          </dt>
           <dd>{currency(revenue)}</dd>
           <small>{scopedPaid.length} pedidos verificados</small>
         </div>
         <div>
-          <dt>Vouchers por revisar</dt>
+          <dt>
+            <Receipt size={19} />
+            Vouchers por revisar
+          </dt>
           <dd>{pending.length}</dd>
           <small>Todos los pedidos pendientes</small>
         </div>
         <div>
-          <dt>Pedidos registrados</dt>
+          <dt>
+            <Package size={19} />
+            Pedidos registrados
+          </dt>
           <dd>{scoped.length}</dd>
           <small>En el periodo seleccionado</small>
         </div>
         <div>
-          <dt>Ticket promedio</dt>
+          <dt>
+            <CreditCard size={19} />
+            Ticket promedio
+          </dt>
           <dd>
             {currency(scopedPaid.length ? revenue / scopedPaid.length : 0)}
           </dd>
@@ -141,26 +175,40 @@ export function AdminOverview({
             Prendas con menos de 10 unidades en total.
           </p>
           {low.length ? (
-            low.slice(0, 6).map(({ p, stock }) => (
-              <button
-                className="task-row"
-                key={p.id}
-                onClick={() => onStock(p)}
-              >
-                <AssetImage src={p.variants[0].image} alt="" />
-                <span>
-                  <strong>{p.name}</strong>
-                  <small>
-                    {stock === 0 ? "Agotado" : stock + " unidades disponibles"}
-                  </small>
-                </span>
-                <ArrowRight size={17} />
-              </button>
-            ))
+            <div className="admin-stock-cards">
+              {low.slice(0, 6).map(({ p, stock }) => (
+                <button
+                  className="admin-stock-card"
+                  key={p.id}
+                  onClick={() => onStock(p)}
+                >
+                  <span className="admin-stock-image">
+                    <AssetImage src={p.variants[0].image} alt="" />
+                  </span>
+                  <span className="admin-stock-copy">
+                    <strong>{p.name}</strong>
+                    <span
+                      className={
+                        "stock-indicator " + (stock === 0 ? "is-out" : "")
+                      }
+                    >
+                      <WarningCircle size={16} />
+                      {stock === 0
+                        ? "Agotado"
+                        : stock + " unidades disponibles"}
+                    </span>
+                    <span className="stock-edit">
+                      <PencilSimple size={17} />
+                      Actualizar stock
+                    </span>
+                  </span>
+                </button>
+              ))}
+            </div>
           ) : (
-            <p className="admin-empty-text">
+            <AdminEmpty icon={CheckCircle} title="Existencias al día">
               No hay prendas con existencias bajas.
-            </p>
+            </AdminEmpty>
           )}
         </section>
       </div>
@@ -168,13 +216,17 @@ export function AdminOverview({
         <section className="admin-section">
           <h2>Estado de los pedidos</h2>
           <div className="admin-state-list">
-            {phases.map((s) => (
-              <button key={s} onClick={() => onOrders(s)}>
-                <span>{s}</span>
-                <b>{scoped.filter((o) => o.status === s).length}</b>
-                <ArrowRight size={16} />
-              </button>
-            ))}
+            {phases.map((s) => {
+              const Icon = phaseIcons[s];
+              return (
+                <button key={s} onClick={() => onOrders(s)}>
+                  <Icon size={20} />
+                  <span>{s}</span>
+                  <b>{scoped.filter((o) => o.status === s).length}</b>
+                  <ArrowRight size={16} />
+                </button>
+              );
+            })}
           </div>
         </section>
         <section className="admin-section">
@@ -213,7 +265,11 @@ export function AdminOverview({
             <span>{a.detail}</span>
           </div>
         ))}
-        {!audit.length && <p>No hay movimientos registrados.</p>}
+        {!audit.length && (
+          <AdminEmpty icon={Clock} title="Sin movimientos todavía">
+            Los cambios que guardes en la tienda aparecerán aquí.
+          </AdminEmpty>
+        )}
       </details>
     </div>
   );
@@ -331,7 +387,11 @@ export function AgencyManager({ agencies, setAgencies, log }) {
           </Select>
         </label>
       </div>
-      <div className="table-scroll" tabIndex={0} aria-label="Tabla de registros">
+      <div
+        className="table-scroll"
+        tabIndex={0}
+        aria-label="Tabla de registros"
+      >
         <table className="admin-table agency-table">
           <thead>
             <tr>
@@ -386,6 +446,7 @@ export function AgencyManager({ agencies, setAgencies, log }) {
                         );
                       }}
                     >
+                      {a.active ? <Pause size={17} /> : <Play size={17} />}
                       {a.active ? "Pausar" : "Habilitar"}
                     </button>
                   ) : (
@@ -397,10 +458,12 @@ export function AgencyManager({ agencies, setAgencies, log }) {
           </tbody>
         </table>
         {!rows.length && (
-          <div className="admin-empty">
-            <h3>No encontramos esa ubicación.</h3>
-            <p>Prueba otro nombre o limpia los filtros.</p>
-          </div>
+          <AdminEmpty
+            icon={MagnifyingGlass}
+            title="No encontramos esa ubicación"
+          >
+            Prueba otro nombre o limpia los filtros.
+          </AdminEmpty>
         )}
       </div>
       <Pagination
@@ -456,11 +519,7 @@ export function AgencyManager({ agencies, setAgencies, log }) {
         sin recepción se muestran para consulta administrativa, sin habilitarlos
         para el recojo del comprador.
       </p>
-      {message && (
-        <p className="save-message" role="status">
-          {message}
-        </p>
-      )}
+      <AdminNotice>{message}</AdminNotice>
     </div>
   );
 }
@@ -529,7 +588,11 @@ export function CustomerDirectory({ users, orders, onOrders }) {
         </label>
         <span>{rows.length} clientes</span>
       </div>
-      <div className="table-scroll" tabIndex={0} aria-label="Tabla de registros">
+      <div
+        className="table-scroll"
+        tabIndex={0}
+        aria-label="Tabla de registros"
+      >
         <table className="admin-table">
           <thead>
             <tr>
@@ -567,7 +630,9 @@ export function CustomerDirectory({ users, orders, onOrders }) {
         </table>
       </div>
       {!rows.length && (
-        <p className="admin-empty-text">No hay clientes con esa búsqueda.</p>
+        <AdminEmpty icon={Users} title="No encontramos clientes">
+          Prueba otro nombre, correo o teléfono.
+        </AdminEmpty>
       )}
       <Pagination
         page={page}
@@ -603,6 +668,13 @@ export function StoreSettings({
               setMessage("");
             }}
           >
+            {t === "Atención" ? (
+              <Headset size={18} />
+            ) : t === "Redes sociales" ? (
+              <Globe size={18} />
+            ) : (
+              <UserCircle size={18} />
+            )}
             {t}
           </button>
         ))}
@@ -676,11 +748,7 @@ export function StoreSettings({
           </button>
         </form>
       )}
-      {message && (
-        <p className="save-message" role="status">
-          {message}
-        </p>
-      )}
+      <AdminNotice>{message}</AdminNotice>
     </div>
   );
 }

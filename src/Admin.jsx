@@ -1,3 +1,4 @@
+import { AdminEmpty } from "./AdminFeedback";
 import "./admin.css";
 import {
   AdminOverview,
@@ -10,7 +11,7 @@ import { PaymentMethodsAdmin } from "./Payments";
 import { JobsManager } from "./Jobs";
 import { Select } from "./Select";
 import { AssetImage, assetUrl } from "./AssetImage";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -28,6 +29,13 @@ import {
   Truck,
   CreditCard,
   Clock,
+  PencilSimple,
+  Pause,
+  Play,
+  Prohibit,
+  Copy,
+  UserMinus,
+  UserPlus,
 } from "@phosphor-icons/react";
 import { currency, date, phases, receipt, now } from "./store";
 import { Field } from "./Customer";
@@ -132,6 +140,41 @@ export function Admin({
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [tab, selected, editing?.id]);
+  const menuTrigger = useRef(null);
+  const adminRoot = useRef(null);
+  useEffect(() => {
+    if (!mobileNav) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    adminRoot.current.querySelector(".admin-nav").scrollTop = 0;
+    const keydown = (e) => {
+      if (e.key === "Escape") {
+        setMobileNav(false);
+        menuTrigger.current?.focus();
+      }
+      if (e.key === "Tab") {
+        const controls = [
+          ...adminRoot.current.querySelectorAll(
+            ".admin-header button, .admin-header a, .admin-nav button",
+          ),
+        ].filter((n) => !n.disabled && n.getClientRects().length);
+        const first = controls[0],
+          last = controls.at(-1);
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", keydown);
+    return () => {
+      document.body.style.overflow = previous;
+      document.removeEventListener("keydown", keydown);
+    };
+  }, [mobileNav]);
   const order = orders.find((o) => o.id === selected);
   const paid = orders.filter((o) =>
     ["Pago verificado", "En preparación", "Enviado", "Entregado"].includes(
@@ -252,13 +295,14 @@ export function Admin({
         .includes(query.toLowerCase()),
   );
   return (
-    <div className="admin-app" data-ui>
+    <div className="admin-app" data-ui ref={adminRoot}>
       <a className="skip-link" href="#contenido">
         Ir al contenido
       </a>
       <header className="admin-header">
         <a
           href="#"
+          aria-label="NOBRALTA, ir a la tienda"
           onClick={(e) => {
             e.preventDefault();
             onExit();
@@ -266,25 +310,26 @@ export function Admin({
         >
           <AssetImage src="/assets/brand-wordmark.svg" alt="NOBRALTA" />
         </a>
-        <span>Centro de operación</span>
         <button
           className="icon-button admin-menu-toggle"
           aria-label="Navegación administrativa"
+          ref={menuTrigger}
+          aria-controls="admin-navigation"
           aria-expanded={mobileNav}
           onClick={() => setMobileNav(!mobileNav)}
         >
-          <img
-            src={assetUrl("/icons/menu-two.svg")}
-            width="24"
-            height="24"
-            alt=""
-          />
+          {mobileNav ? (
+            <X size={24} />
+          ) : (
+            <img
+              src={assetUrl("/icons/menu-two.svg")}
+              width="24"
+              height="24"
+              alt=""
+            />
+          )}
         </button>
         <div>
-          <button className="text-action" onClick={onExit}>
-            <ArrowLeft size={17} />
-            Ver tienda
-          </button>
           <button
             className="icon-button"
             onClick={onLogout}
@@ -298,31 +343,40 @@ export function Admin({
         <nav
           className={"admin-nav " + (mobileNav ? "is-expanded" : "")}
           aria-label="Administración"
+          id="admin-navigation"
         >
-          {navGroups.map((group) => (
-            <div className="admin-nav-group" key={group.title}>
-              <p>{group.title}</p>
-              {group.items.map((name) => {
-                const Icon = modules.find((m) => m[0] === name)[1];
-                return (
-                  <button
-                    key={name}
-                    className={tab === name ? "current" : ""}
-                    onClick={() => choose(name)}
-                    aria-current={tab === name ? "page" : undefined}
-                  >
-                    <Icon size={19} />
-                    <span className="admin-nav-label">{name}</span>
-                    {name === "Pedidos" && pending.length > 0 && (
-                      <span className="admin-nav-count">{pending.length}</span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          ))}
+          <div className="admin-nav-intro">
+            <h2>Administrar tienda</h2>
+            <p>Elige el área en la que quieres trabajar.</p>
+          </div>
+          <div className="admin-nav-groups">
+            {navGroups.map((group) => (
+              <div className="admin-nav-group" key={group.title}>
+                <p>{group.title}</p>
+                {group.items.map((name) => {
+                  const Icon = modules.find((m) => m[0] === name)[1];
+                  return (
+                    <button
+                      key={name}
+                      className={tab === name ? "current" : ""}
+                      onClick={() => choose(name)}
+                      aria-current={tab === name ? "page" : undefined}
+                    >
+                      <Icon size={19} />
+                      <span className="admin-nav-label">{name}</span>
+                      {name === "Pedidos" && pending.length > 0 && (
+                        <span className="admin-nav-count">
+                          {pending.length}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
         </nav>
-        <main className="admin-main" id="contenido">
+        <main className="admin-main" id="contenido" inert={mobileNav}>
           <div className="admin-title">
             <div>
               <h1>{tab}</h1>
@@ -443,9 +497,9 @@ export function Admin({
                   </tbody>
                 </table>
                 {!visibleOrders.length && (
-                  <p className="quiet-empty">
-                    No hay pedidos con estos criterios.
-                  </p>
+                  <AdminEmpty icon={Receipt} title="No encontramos pedidos">
+                    Prueba otro estado o busca por pedido, nombre o DNI.
+                  </AdminEmpty>
                 )}
               </div>
             </>
@@ -644,6 +698,7 @@ export function Admin({
                           setObserving(true);
                         }}
                       >
+                        <Receipt size={18} />
                         Observar el reporte
                       </button>
                     </form>
@@ -772,6 +827,7 @@ export function Admin({
                         setCancelConfirm(true);
                       }}
                     >
+                      <Prohibit size={18} />
                       Cancelar y liberar existencias
                     </button>
                   )}
@@ -783,18 +839,20 @@ export function Admin({
                           disponibles.
                         </p>
                         <button
-                          className="button button-dark"
+                          className="button button-danger"
                           onClick={() => {
                             onCancel(order.id);
                             setCancelConfirm(false);
                           }}
                         >
+                          <Prohibit size={18} />
                           Confirmar cancelación
                         </button>
                         <button
                           className="text-action"
                           onClick={() => setCancelConfirm(false)}
                         >
+                          <Package size={18} />
                           Conservar pedido
                         </button>
                       </div>
@@ -828,6 +886,7 @@ export function Admin({
                       );
                     }}
                   >
+                    <Copy size={18} />
                     Copiar mensaje
                     <ArrowRight size={17} />
                   </button>
@@ -953,62 +1012,39 @@ export function Admin({
                   </button>
                 </form>
               ) : (
-                <div
-                  className="table-scroll"
-                  tabIndex={0}
-                  aria-label={"Tabla de " + tab}
-                >
-                  <table className="admin-table">
-                    <thead>
-                      <tr>
-                        <th>Prenda</th>
-                        <th>Colores</th>
-                        <th className="numeric">Precio</th>
-                        <th className="numeric">Existencias</th>
-                        <th />
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filteredCatalog.map((p) => (
-                        <tr key={p.id}>
-                          <td>
-                            <div className="admin-product-cell">
-                              <AssetImage src={p.variants[0].image} alt="" />
-                              <div>
-                                <strong>{p.name}</strong>
-                                <small>{p.category}</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <strong>{p.variants.length} colores</strong>
-                            <small>
-                              {p.variants
-                                .slice(0, 3)
-                                .map((v) => v.color)
-                                .join(", ")}
-                              {p.variants.length > 3 ? "…" : ""}
-                            </small>
-                          </td>
-                          <td className="numeric">{currency(p.price)}</td>
-                          <td className="numeric">
-                            {Object.entries(inventory)
-                              .filter(([k]) => k.startsWith(p.id + "|"))
-                              .reduce((n, [, v]) => n + v, 0)}
-                          </td>
-                          <td>
-                            <button
-                              className="text-action"
-                              onClick={() => setEditing(p)}
-                            >
-                              Editar
-                              <ArrowRight size={16} />
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                <div className="admin-catalog-grid">
+                  {filteredCatalog.map((p) => {
+                    const stock = Object.entries(inventory)
+                      .filter(([k]) => k.startsWith(p.id + "|"))
+                      .reduce((n, [, v]) => n + v, 0);
+                    return (
+                      <article className="admin-catalog-card" key={p.id}>
+                        <div className="admin-catalog-image">
+                          <AssetImage src={p.variants[0].image} alt={p.name} />
+                          <span className="status">{p.category}</span>
+                        </div>
+                        <div className="admin-catalog-copy">
+                          <h3>{p.name}</h3>
+                          <strong>{currency(p.price)}</strong>
+                          <p>
+                            {p.variants.length} colores · {stock} unidades
+                          </p>
+                          <button
+                            className="button button-outline"
+                            onClick={() => setEditing(p)}
+                          >
+                            <PencilSimple size={18} />
+                            Editar producto
+                          </button>
+                        </div>
+                      </article>
+                    );
+                  })}
+                  {!filteredCatalog.length && (
+                    <AdminEmpty title="No encontramos esa prenda">
+                      Prueba otro nombre o cambia la categoría.
+                    </AdminEmpty>
+                  )}
                 </div>
               )}
             </>
@@ -1058,6 +1094,7 @@ export function Admin({
                             setPromoComposer(true);
                           }}
                         >
+                          <PencilSimple size={17} />
                           Editar
                         </button>
                         <button
@@ -1071,6 +1108,7 @@ export function Admin({
                             log("Promoción", p.active ? "Pausada" : "Activada");
                           }}
                         >
+                          {p.active ? <Pause size={17} /> : <Play size={17} />}
                           {p.active ? "Pausar" : "Activar"}
                         </button>
                       </div>
@@ -1228,6 +1266,7 @@ export function Admin({
                           setPromoComposer(false);
                         }}
                       >
+                        <X size={18} />
                         Cancelar edición
                       </button>
                     )}
@@ -1356,6 +1395,11 @@ export function Admin({
                           );
                         }}
                       >
+                        {a.active ? (
+                          <UserMinus size={18} />
+                        ) : (
+                          <UserPlus size={18} />
+                        )}
                         {a.active ? "Pausar" : "Activar"}
                       </button>
                     </div>
@@ -1490,6 +1534,7 @@ export function Admin({
                         );
                       }}
                     >
+                      <Clock size={18} />
                       {p.active ? "Marcar salida" : "Marcar entrada"}
                     </button>
                   </div>

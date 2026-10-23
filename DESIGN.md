@@ -31,3 +31,6 @@ Menú jerárquico de compra/servicio/descubrimiento. Cierre único en navbar, si
 
 ## Administración — revisión 23/10/2026
 Área de trabajo con fondo blanco, texto negro y superficies grises neutras; botones y controles compartidos con la tienda. Navegación agrupada por tarea y encabezados con descripción funcional. El resumen prioriza vouchers pendientes, preparación, despachos y stock bajo. Directorio y clientes usan búsqueda y paginación; catálogo resume variantes y despliega stock por color al editar. Promociones abren su formulario bajo demanda y muestran solo los campos del tipo elegido. Configuración divide atención, redes y perfil. En tablet y móvil el menú se contrae y las tablas conservan desplazamiento interno sin ampliar el viewport.
+
+## Pulido admin r22 — 23/10/2026
+Sustituye la navegación lateral: cabecera de marca centrada y menú de pantalla completa, con grupos en cuatro/dos/una columna según ancho. El logo sirve de retorno a tienda. Catálogo como galería de productos y stock bajo como tarjetas visuales con estado y acceso a edición. Métricas separadas, acciones de preparación/despacho con contorno y estados con iconos. Componentes AdminEmpty y AdminNotice unifican mensajes con padding y tipografía del sistema. Primarios negros/hover borgoña, secundarios blancos/hover gris y destructivos con borde borgoña.

@@ -1,3 +1,4 @@
+import { AdminNotice } from "./AdminFeedback";
 import { useState, useRef, useEffect } from "react";
 import {
   CreditCard,
@@ -329,7 +330,7 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
           </label>
           <button
             type="button"
-            className="button button-outline"
+            className="button button-danger"
             onClick={() => setMethods((ms) => ms.filter((x) => x.id !== m.id))}
           >
             <Trash size={18} />
@@ -362,7 +363,7 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
           Guardar medios
         </button>
       </div>
-      <p role="status">{message}</p>
+      <AdminNotice>{message}</AdminNotice>
     </form>
   );
 }

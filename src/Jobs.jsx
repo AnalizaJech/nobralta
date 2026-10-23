@@ -1,3 +1,4 @@
+import { AdminEmpty, AdminNotice } from "./AdminFeedback";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -6,6 +7,10 @@ import {
   Check,
   MapPin,
   Briefcase,
+  PencilSimple,
+  Pause,
+  Play,
+  Users,
 } from "@phosphor-icons/react";
 import { Field } from "./Customer";
 import { Select } from "./Select";
@@ -202,6 +207,7 @@ export function JobsManager({
                   className="button button-outline"
                   onClick={() => setEdit(j)}
                 >
+                  <PencilSimple size={18} />
                   Editar
                 </button>
                 <button
@@ -218,6 +224,7 @@ export function JobsManager({
                     );
                   }}
                 >
+                  {j.active ? <Pause size={18} /> : <Play size={18} />}
                   {j.active ? "Pausar" : "Publicar"}
                 </button>
               </div>
@@ -290,7 +297,7 @@ export function JobsManager({
             Guardar oportunidad
             <Check size={18} />
           </button>
-          <p role="status">{message}</p>
+          <AdminNotice>{message}</AdminNotice>
         </form>
       </div>
       <section className="admin-section">
@@ -325,9 +332,10 @@ export function JobsManager({
             </div>
           ))
         ) : (
-          <p className="quiet-empty">
-            Las postulaciones de Trabajos aparecerán aquí.
-          </p>
+          <AdminEmpty icon={Users} title="Todavía no hay postulaciones">
+            Las postulaciones de Trabajos aparecerán aquí. Publica una
+            oportunidad para recibirlas.
+          </AdminEmpty>
         )}
       </section>
     </div>

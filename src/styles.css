@@ -8563,3 +8563,5 @@ input:not(:disabled):-webkit-autofill:focus {
 .customer-order-download .button-wine { background:#622938; color:#fff; border:1px solid #622938; }
 .customer-order-download .button-wine:hover { background:#451b28; border-color:#451b28; }
 @media(max-width:640px) { .order-detail .tracking-events-toggle, .order-detail .customer-order-download .button { width:100%; } .order-detail .customer-order-download { padding:18px; gap:20px; } .customer-document-icon { width:44px; height:44px; } }
+.order-detail .customer-order-subsection dt { display:inline-flex; align-items:center; gap:9px; }
+.order-detail .customer-order-subsection dt > svg { color:#622938; flex-shrink:0; }

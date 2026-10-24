@@ -53,3 +53,6 @@ Playwright1440/390: alta con foto, dos tallas y existencias3/5; segunda alta de 
 
 ## r38 — Iconos en seguimiento y PDF
 Playwright1440/390:2 movimientos con estado/nota, control desplegable y descarga con1 icono cada uno; cierre con Enter correcto; sin desbordamiento móvil. PDF descargado desde seguimiento; render de1p y final del documento extenso6p revisados con iconos locales y texto sin solapamiento. Fixtures restaurados. Build Pages y4 tests de empaquetado correctos.
+
+## r39 — Iconos por campo
+Se verificó visualmente DNI/teléfono/correo con iconos propios a390px y en PDF descargado desde seguimiento. Ajuste del ancho y altura de filas PDF con icono para admitir saltos de línea. Flujo de historial/descarga sin overflow; generación local de SVG Phosphor actualizada.

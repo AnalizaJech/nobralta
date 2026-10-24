@@ -10,6 +10,9 @@ import {
   ArrowRight,
   DownloadSimple,
   FilePdf,
+  IdentificationCard,
+  Phone,
+  Envelope,
   Check,
   Eye,
   EyeSlash,
@@ -637,15 +640,24 @@ export function OrderDetail({ order, onReport, settings }) {
             </strong>
             <dl>
               <div>
-                <dt>DNI</dt>
+                <dt>
+                  <IdentificationCard size={18} aria-hidden="true" />
+                  DNI
+                </dt>
                 <dd>{order.customer.dni}</dd>
               </div>
               <div>
-                <dt>Teléfono</dt>
+                <dt>
+                  <Phone size={18} aria-hidden="true" />
+                  Teléfono
+                </dt>
                 <dd>{order.customer.phone}</dd>
               </div>
               <div>
-                <dt>Correo</dt>
+                <dt>
+                  <Envelope size={18} aria-hidden="true" />
+                  Correo
+                </dt>
                 <dd>{order.customer.email}</dd>
               </div>
             </dl>

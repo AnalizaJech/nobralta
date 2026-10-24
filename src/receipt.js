@@ -115,16 +115,23 @@ export async function buildReceipt(order) {
   };
   const icons = Object.fromEntries(
     await Promise.all(
-      ["UserCircle", "MapPin", "Receipt", "Truck", "FilePdf"].map(
-        async (name) => [
-          name,
-          await raster("/icons/pdf-" + name + ".svg", true),
-        ],
-      ),
+      [
+        "UserCircle",
+        "MapPin",
+        "Receipt",
+        "Truck",
+        "FilePdf",
+        "IdentificationCard",
+        "Phone",
+        "Envelope",
+      ].map(async (name) => [
+        name,
+        await raster("/icons/pdf-" + name + ".svg", true),
+      ]),
     ),
   );
-  const icon = (name, x, y) => {
-    if (icons[name]) pdf.addImage(icons[name].data, "PNG", x, y, 5, 5);
+  const icon = (name, x, y, size = 5) => {
+    if (icons[name]) pdf.addImage(icons[name].data, "PNG", x, y, size, size);
   };
   const wrap = (s, w, size = 10, bold = false) => {
     pdf.setFont("Manrope", bold ? "bold" : "normal");
@@ -172,7 +179,13 @@ export async function buildReceipt(order) {
     ...(order.guide ? [`Guía / OS: ${order.guide}`] : []),
   ].filter(Boolean);
   const blocks = [
-    { title: "DESTINATARIO", rows: recipient, x: 18, icon: "UserCircle" },
+    {
+      title: "DESTINATARIO",
+      rows: recipient,
+      x: 18,
+      icon: "UserCircle",
+      rowIcons: [null, "IdentificationCard", "Phone", "Envelope"],
+    },
     { title: "RECOJO EN SHALOM", rows: destination, x: 108, icon: "MapPin" },
   ];
   const blockHeight = Math.max(
@@ -181,7 +194,8 @@ export async function buildReceipt(order) {
       (b) =>
         18 +
         b.rows.reduce(
-          (n, r, i) => n + wrap(r, 72, 9, i === 0).length * 4.4 + 2,
+          (n, r, i) =>
+            n + wrap(r, b.rowIcons?.[i] ? 65 : 72, 9, i === 0).length * 4.4 + 2,
           0,
         ),
     ),
@@ -195,9 +209,11 @@ export async function buildReceipt(order) {
     txt(b.title, b.x + 14, y + 9, 8, true, wine);
     let py = y + 17;
     for (const [i, r] of b.rows.entries()) {
-      const rows = wrap(r, 72, 9, i === 0);
+      const rowIcon = b.rowIcons?.[i];
+      if (rowIcon) icon(rowIcon, b.x + 6, py - 3.4, 4.2);
+      const rows = wrap(r, rowIcon ? 65 : 72, 9, i === 0);
       for (const row of rows) {
-        txt(row, b.x + 6, py, 9, i === 0);
+        txt(row, b.x + (rowIcon ? 13 : 6), py, 9, i === 0);
         py += 4.4;
       }
       py += 2;

@@ -140,3 +140,6 @@ Evitar repetir la misma gestión en varios módulos. El costo de envío se modif
 
 ## Seguimiento e iconos r38
 Seguimiento cliente debe compartir el lenguaje visual de Pedidos admin: movimientos con badges semánticos e iconos, fecha/nota en línea de tiempo. Desplegable con superficie rosada, un icono y texto contextual Ver/Ocultar. PDF en bloque documental con FilePdf y descarga borgoña de un solo icono. PDF real incorpora los mismos iconos Phosphor en cabecera/destinatario/agencia/entrega/resumen, conservando fuentes y distribución. SVG locales reproducibles con scripts/build-pdf-icons.mjs, licencia incluida.
+
+## Destinatario r39
+Iconos por dato, no solo en título: IdentificationCard para DNI, Phone para teléfono y Envelope para correo, tanto en seguimiento como en las filas del PDF. Mantener etiquetas y valores legibles, iconos borgoña discretos y espacio para texto largo.

@@ -134,3 +134,6 @@ El PDF debe usar las mismas fuentes del sitio incrustadas: Manrope400/600 para d
 
 ## Resumen y logística r36
 El resumen pendiente muestra una sola cifra como Importe de productos, sin repetir un total ni tratar envío sin cotizar como cero confirmado. Al registrar envío en Logística se muestran subtotal de productos, envío y total a pagar en cliente/PDF. Logística permite confirmar costo por pedido antes de verificar el pago; registra fecha e historial. Costo 0 significa envío sin costo confirmado. Mantener la verificación del importe completo y no aprobar pedidos con envío pendiente.
+
+## Gestión y catálogo r37 — 23/10/2026
+Evitar repetir la misma gestión en varios módulos. El costo de envío se modifica solo desde Logística, no al despachar; Agencias Shalom identifica el directorio. Cuenta se administra desde el icono de cabecera, sin duplicarla en Configuración. Acciones importantes al comienzo de la sección/formulario, junto a su título, nunca únicamente al final de listas extensas. Trabajos muestra formulario solo al crear/editar. Catálogo permite nueva mercancía con categoría existente, descripción, precio, tallas, fotos por color y unidades por variante. PDF de catálogo comercial filtrado, con imágenes, precios y tallas; tipografías Manrope/Instrument incrustadas, sin datos internos ni envío automático de WhatsApp.

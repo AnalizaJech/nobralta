@@ -63,3 +63,6 @@ Sustituir Helvetica por Manrope incrustada (regular400 y semibold600); Instrumen
 - Un único importe de productos mientras se coordina el envío; desglose y total solo tras confirmar costo.
 - Nuevo módulo Logística con destino, cliente e importe editable por pedido en etapa de pago/revisión; acceso al detalle.
 - Misma lógica en seguimiento, administración y PDF, con registro de fecha e historial.
+
+## Gestión y catálogo r37
+Acciones de alta, guardado y descarga junto al encabezado de cada sección; móviles apilados con ancho completo y separación12px. Crear mercancía usa un único editor con fotos por color y stock por talla; validación antes de persistir. Catálogo PDF A4, cuatro productos por página, marca centrada, fondo blanco, imágenes neutras y precio borgoña, mismas fuentes incrustadas del recibo. Funciones separadas: directorio Agencias Shalom, cotización Logística, guía/constancia en Pedidos. Sin cuenta repetida en Configuración ni formulario de trabajo vacío permanente.

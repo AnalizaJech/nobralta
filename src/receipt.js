@@ -21,7 +21,7 @@ const stamp = (s) =>
     timeStyle: "short",
     timeZone: "America/Lima",
   }).format(new Date(s));
-async function raster(src, logo = false) {
+export async function raster(src, logo = false) {
   try {
     const image = new Image();
     image.src = assetUrl(src);
@@ -51,7 +51,7 @@ async function raster(src, logo = false) {
   }
 }
 let fontData;
-async function loadFonts(pdf) {
+export async function loadFonts(pdf) {
   const fonts = [
     ["pdf-Manrope-Regular.ttf", "Manrope", "normal"],
     ["pdf-Manrope-Semibold.ttf", "Manrope", "bold"],

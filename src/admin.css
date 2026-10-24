@@ -2094,3 +2094,22 @@
 .logistics-order-grid form { padding:22px; border-radius:14px; background:#f8f8fa; }
 .logistics-order-grid .button { justify-self:start; }
 @media(max-width:700px){ .logistics-order-grid { grid-template-columns:1fr; gap:20px; } }
+
+/* Administrative actions stay with their section, before long content. */
+.admin-heading-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.admin-app .section-title { flex-wrap:wrap; gap:20px; align-items:center; }
+.admin-app .section-title .button { margin:0; }
+.merchandise-variant { border:1px solid #dedee2; border-radius:16px; padding:24px; min-width:0; }
+.merchandise-variant legend { padding:0 8px; font-weight:600; }
+.merchandise-variant-layout { display:grid; grid-template-columns:180px minmax(0,1fr); gap:28px; }
+.merchandise-variant-layout img { width:100%; height:180px; object-fit:contain; background:#f6f6f8; border-radius:12px; margin-bottom:16px; }
+.merchandise-upload { position:relative; cursor:pointer; }
+.merchandise-upload input { position:absolute; width:1px; height:1px; opacity:0; }
+.merchandise-upload:focus-within { outline:2px solid #622938; outline-offset:3px; }
+.merchandise-editor .stock-grid { grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); }
+@media(max-width:700px) { .merchandise-variant-layout { grid-template-columns:1fr; } .admin-heading-actions { width:100%; } .admin-heading-actions .button { flex:1; } .merchandise-variant { padding:18px; } }
+.admin-app .agency-form-heading { grid-column:1/-1; }
+.admin-app .jobs-admin .admin-columns:has(>section:only-child) { grid-template-columns:1fr; }
+.admin-app .payment-admin-actions { display:flex; gap:12px; flex-wrap:wrap; margin:0; }
+.admin-app #job-editor { scroll-margin-top:130px; }
+@media(max-width:700px) { .admin-app .admin-heading-actions { flex-direction:column; align-items:stretch; } .admin-app .admin-heading-actions .button { flex:initial; width:100%; } }

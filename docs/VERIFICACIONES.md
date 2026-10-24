@@ -47,3 +47,6 @@ Pedido cliente: botón Volver a mi cuenta0, bloque de recojo de seguimiento1, ta
 
 ## Tipografía PDF r35
 Se generaron PDF de1 y6páginas con las fuentes de la tienda. Inspección de recursos PDF:3archivos FontFile2 incrustados, únicamente Manrope e Instrument en BaseFont; sin Helvetica. Páginas renderizadas con Poppler e inspeccionadas sin cortes/solapamientos. Nombres largos, acentos, precios y paginación conservados. Fuentes derivadas de TTF locales OFL mediante fontTools; sin dependencias nuevas de runtime.
+
+## r37 — Gestión y catálogo
+Playwright1440/390: alta con foto, dos tallas y existencias3/5; segunda alta de dos colores, validación por imagen faltante, categoría Camisas, persistencia al recargar y compra desde card (Blanco/M/S159). Editor de producto conserva guardado previo a campos. Trabajos: formulario0 antes de Nueva,1 al editar y0 tras guardar; confirmación visible. Módulos Medios de pago/Configuración/Trabajos/Agencias Shalom/Promociones/Personal/Afiliados sin overflow a390px. PDF filtrado1p y completo4p descargados desde navegador, primera/última páginas renderizadas e inspeccionadas. Assets QA solo en output ignorado; fixtures restaurados.

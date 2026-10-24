@@ -1,3 +1,4 @@
+import { NewMerchandise } from "./NewMerchandise";
 import { OrderLogistics } from "./OrderLogistics";
 import {
   OrderRecipient,
@@ -56,7 +57,7 @@ const modules = [
   ["Promociones", Tag],
   ["Clientes", Users],
   ["Afiliados", Users],
-  ["Envíos", Truck],
+  ["Agencias Shalom", Truck],
   ["Logística", Truck],
   ["Medios de pago", CreditCard],
   ["Personal", Clock],
@@ -66,7 +67,13 @@ const modules = [
 const navGroups = [
   {
     title: "Operación diaria",
-    items: ["Resumen", "Pedidos", "Logística", "Envíos", "Medios de pago"],
+    items: [
+      "Resumen",
+      "Pedidos",
+      "Logística",
+      "Agencias Shalom",
+      "Medios de pago",
+    ],
   },
   { title: "Tienda", items: ["Catálogo", "Promociones"] },
   {
@@ -81,11 +88,12 @@ const descriptions = {
   Pedidos:
     "Consulta pedidos, revisa vouchers y actualiza cada etapa de la entrega.",
   Logística: "Coordina el destino y confirma el costo de envío de cada pedido.",
-  Envíos:
+  "Agencias Shalom":
     "Busca ubicaciones de Shalom y administra las agencias disponibles para recojo.",
   "Medios de pago":
     "Configura plataformas, titulares y cuentas visibles al comprar.",
-  Catálogo: "Actualiza nombres, precios y unidades por color y talla.",
+  Catálogo:
+    "Agrega mercancías, gestiona existencias y prepara el catálogo para compartir.",
   Promociones:
     "Administra conjuntos, packs y códigos de descuento de la tienda.",
   Clientes: "Encuentra los datos de contacto y las compras de cada cliente.",
@@ -142,6 +150,8 @@ export function Admin({
     [cancelConfirm, setCancelConfirm] = useState(false),
     [period, setPeriod] = useState("all");
   const [packLength, setPackLength] = useState(2);
+  const [newMerchandise, setNewMerchandise] = useState(false);
+  const [catalogExporting, setCatalogExporting] = useState(false);
   const [catalogQuery, setCatalogQuery] = useState(""),
     [catalogCategory, setCatalogCategory] = useState("Todas"),
     [promoComposer, setPromoComposer] = useState(false),
@@ -636,8 +646,15 @@ export function Admin({
                         setNotice("Pago verificado.");
                       }}
                     >
+                      <div className="section-title">
+                        <h3>Verificación del pago</h3>
+                        <button className="button button-dark">
+                          Confirmar abono
+                          <Check size={18} />
+                        </button>
+                      </div>
                       <Field
-                        label="Importe de productos verificado (S/)"
+                        label="Importe total verificado (S/)"
                         name="verifiedAmount"
                         type="number"
                         min="0.01"
@@ -650,10 +667,7 @@ export function Admin({
                         Contrasté el abono en el movimiento real de la cuenta.
                         La constancia por sí sola no acredita pago.
                       </label>
-                      <button className="button button-dark">
-                        Confirmar abono
-                        <Check size={18} />
-                      </button>
+
                       <button
                         type="button"
                         className="button button-warning"
@@ -682,15 +696,19 @@ export function Admin({
                         setObserving(false);
                       }}
                     >
+                      <div className="section-title">
+                        <h3>Observación del pago</h3>
+                        <button className="button button-dark">
+                          Enviar observación
+                          <ArrowRight size={18} />
+                        </button>
+                      </div>
                       <Field
                         label="Qué debe corregir el cliente"
                         name="reason"
                         required
                       />
-                      <button className="button button-dark">
-                        Enviar observación
-                        <ArrowRight size={18} />
-                      </button>
+
                       <button
                         type="button"
                         className="button button-outline"
@@ -732,7 +750,6 @@ export function Admin({
                             {
                               status: "Enviado",
                               guide: f.guide,
-                              shipping: Number(f.shipping),
                               dispatchProof: proof,
                             },
                             "Despachado por Shalom",
@@ -749,16 +766,14 @@ export function Admin({
                         } else finish(null);
                       }}
                     >
+                      <div className="section-title">
+                        <h3>Datos de despacho</h3>
+                        <button className="button button-dark">
+                          Confirmar despacho
+                          <Truck size={18} />
+                        </button>
+                      </div>
                       <Field label="Guía / OS Shalom" name="guide" required />
-                      <Field
-                        label="Costo de envío (S/)"
-                        name="shipping"
-                        type="number"
-                        min="0"
-                        step="0.01"
-                        defaultValue={order.shipping ?? 0}
-                        required
-                      />
                       <label className="field">
                         Prueba de despacho (JPG, PNG o PDF)
                         <input
@@ -767,10 +782,6 @@ export function Admin({
                           accept="image/jpeg,image/png,application/pdf"
                         />
                       </label>
-                      <button className="button button-dark">
-                        Confirmar despacho
-                        <Truck size={18} />
-                      </button>
                     </form>
                   )}
                   {order.status === "Enviado" && (
@@ -835,9 +846,65 @@ export function Admin({
             <>
               <div className="section-title">
                 <h2>Prendas y variantes</h2>
-                <span>{catalog.length} productos</span>
+                <div className="admin-heading-actions">
+                  <button
+                    className="button button-outline"
+                    disabled={!filteredCatalog.length || catalogExporting}
+                    onClick={async () => {
+                      try {
+                        setCatalogExporting(true);
+                        setMessage("Preparando catálogo PDF…");
+                        const { buildCatalog } = await import("./catalogPdf");
+                        const pdf = await buildCatalog(
+                          filteredCatalog,
+                          inventory,
+                          settings,
+                        );
+                        pdf.save("NOBRALTA-Catalogo.pdf");
+                        setMessage("Catálogo PDF descargado.");
+                      } catch {
+                        setMessage(
+                          "No pudimos generar el catálogo. Inténtalo otra vez.",
+                        );
+                      } finally {
+                        setCatalogExporting(false);
+                      }
+                    }}
+                  >
+                    <DownloadSimple size={18} />
+                    {catalogExporting
+                      ? "Preparando PDF…"
+                      : "Descargar catálogo PDF"}
+                  </button>
+                  {!newMerchandise && !editing && (
+                    <button
+                      className="button button-dark"
+                      onClick={() => setNewMerchandise(true)}
+                    >
+                      <Plus size={18} />
+                      Nueva mercancía
+                    </button>
+                  )}
+                </div>
               </div>
-              {!editing && (
+              {newMerchandise && (
+                <NewMerchandise
+                  categories={[...new Set(catalog.map((p) => p.category))]}
+                  onCancel={() => setNewMerchandise(false)}
+                  onSave={(p, stock) => {
+                    setCatalog((a) => [p, ...a]);
+                    setInventory((a) => ({ ...a, ...stock }));
+                    setCatalogQuery("");
+                    setCatalogCategory("Todas");
+                    setNewMerchandise(false);
+                    log("Catálogo", p.name + " creado");
+                    setMessage(
+                      "Mercancía agregada a la tienda con sus fotos y existencias.",
+                    );
+                  }}
+                />
+              )}
+              {!editing && !newMerchandise && (
                 <div className="admin-filterbar">
                   <label className="field">
                     Buscar prenda
@@ -864,116 +931,122 @@ export function Admin({
                   <span>{filteredCatalog.length} productos</span>
                 </div>
               )}
-              {editing ? (
-                <form
-                  className="admin-section form-grid"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const f = Object.fromEntries(new FormData(e.currentTarget));
-                    setCatalog((a) =>
-                      a.map((p) =>
-                        p.id === editing.id
-                          ? {
-                              ...p,
-                              name: f.name,
-                              price: Number(f.price),
-                              originalPrice: Number(f.originalPrice) || null,
-                            }
-                          : p,
-                      ),
-                    );
-                    setInventory((a) => ({
-                      ...a,
-                      ...Object.fromEntries(
-                        Object.entries(f)
-                          .filter(([k]) => k.startsWith("sku:"))
-                          .map(([k, v]) => [k.slice(4), Number(v)]),
-                      ),
-                    }));
-                    log("Catálogo", f.name + " actualizado");
-                    setEditing(null);
-                    setMessage("Producto y existencias actualizados.");
-                  }}
-                >
-                  <div className="section-title">
-                    <h2>{editing.name}</h2>
-                    <button
-                      type="button"
-                      className="icon-button"
-                      aria-label="Cerrar edición"
-                      onClick={() => setEditing(null)}
-                    >
-                      <X size={20} />
-                    </button>
+              {!newMerchandise &&
+                (editing ? (
+                  <form
+                    className="admin-section form-grid"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const f = Object.fromEntries(
+                        new FormData(e.currentTarget),
+                      );
+                      setCatalog((a) =>
+                        a.map((p) =>
+                          p.id === editing.id
+                            ? {
+                                ...p,
+                                name: f.name,
+                                price: Number(f.price),
+                                originalPrice: Number(f.originalPrice) || null,
+                              }
+                            : p,
+                        ),
+                      );
+                      setInventory((a) => ({
+                        ...a,
+                        ...Object.fromEntries(
+                          Object.entries(f)
+                            .filter(([k]) => k.startsWith("sku:"))
+                            .map(([k, v]) => [k.slice(4), Number(v)]),
+                        ),
+                      }));
+                      log("Catálogo", f.name + " actualizado");
+                      setEditing(null);
+                      setMessage("Producto y existencias actualizados.");
+                    }}
+                  >
+                    <div className="section-title">
+                      <h2>{editing.name}</h2>
+                      <button className="button button-dark">
+                        Guardar producto
+                        <Check size={18} />
+                      </button>
+                      <button
+                        type="button"
+                        className="icon-button"
+                        aria-label="Cerrar edición"
+                        onClick={() => setEditing(null)}
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
+                    <div className="form-grid three">
+                      <Field
+                        label="Nombre"
+                        name="name"
+                        defaultValue={editing.name}
+                        required
+                      />
+                      <Field
+                        label="Precio actual (S/)"
+                        name="price"
+                        type="number"
+                        min="0.01"
+                        step="0.01"
+                        defaultValue={editing.price}
+                        required
+                      />
+                      <Field
+                        label="Precio anterior (opcional)"
+                        name="originalPrice"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        defaultValue={editing.originalPrice || ""}
+                      />
+                    </div>
+                    <h3>Unidades por color y talla</h3>
+                    <StockEditor product={editing} inventory={inventory} />
+                  </form>
+                ) : (
+                  <div className="admin-catalog-grid">
+                    {filteredCatalog.map((p) => {
+                      const stock = Object.entries(inventory)
+                        .filter(([k]) => k.startsWith(p.id + "|"))
+                        .reduce((n, [, v]) => n + v, 0);
+                      return (
+                        <article className="admin-catalog-card" key={p.id}>
+                          <div className="admin-catalog-image">
+                            <AssetImage
+                              src={p.variants[0].image}
+                              alt={p.name}
+                            />
+                            <span className="status">{p.category}</span>
+                          </div>
+                          <div className="admin-catalog-copy">
+                            <h3>{p.name}</h3>
+                            <strong>{currency(p.price)}</strong>
+                            <p>
+                              {p.variants.length} colores · {stock} unidades
+                            </p>
+                            <button
+                              className="button button-outline"
+                              onClick={() => setEditing(p)}
+                            >
+                              <PencilSimple size={18} />
+                              Editar producto
+                            </button>
+                          </div>
+                        </article>
+                      );
+                    })}
+                    {!filteredCatalog.length && (
+                      <AdminEmpty title="No encontramos esa prenda">
+                        Prueba otro nombre o cambia la categoría.
+                      </AdminEmpty>
+                    )}
                   </div>
-                  <div className="form-grid three">
-                    <Field
-                      label="Nombre"
-                      name="name"
-                      defaultValue={editing.name}
-                      required
-                    />
-                    <Field
-                      label="Precio actual (S/)"
-                      name="price"
-                      type="number"
-                      min="0.01"
-                      step="0.01"
-                      defaultValue={editing.price}
-                      required
-                    />
-                    <Field
-                      label="Precio anterior (opcional)"
-                      name="originalPrice"
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      defaultValue={editing.originalPrice || ""}
-                    />
-                  </div>
-                  <h3>Unidades por color y talla</h3>
-                  <StockEditor product={editing} inventory={inventory} />
-                  <button className="button button-dark">
-                    Guardar producto
-                    <Check size={18} />
-                  </button>
-                </form>
-              ) : (
-                <div className="admin-catalog-grid">
-                  {filteredCatalog.map((p) => {
-                    const stock = Object.entries(inventory)
-                      .filter(([k]) => k.startsWith(p.id + "|"))
-                      .reduce((n, [, v]) => n + v, 0);
-                    return (
-                      <article className="admin-catalog-card" key={p.id}>
-                        <div className="admin-catalog-image">
-                          <AssetImage src={p.variants[0].image} alt={p.name} />
-                          <span className="status">{p.category}</span>
-                        </div>
-                        <div className="admin-catalog-copy">
-                          <h3>{p.name}</h3>
-                          <strong>{currency(p.price)}</strong>
-                          <p>
-                            {p.variants.length} colores · {stock} unidades
-                          </p>
-                          <button
-                            className="button button-outline"
-                            onClick={() => setEditing(p)}
-                          >
-                            <PencilSimple size={18} />
-                            Editar producto
-                          </button>
-                        </div>
-                      </article>
-                    );
-                  })}
-                  {!filteredCatalog.length && (
-                    <AdminEmpty title="No encontramos esa prenda">
-                      Prueba otro nombre o cambia la categoría.
-                    </AdminEmpty>
-                  )}
-                </div>
-              )}
+                ))}
             </>
           )}
           {tab === "Promociones" && (
@@ -1055,7 +1128,13 @@ export function Admin({
                     key={editing?.id || "new"}
                     onSubmit={savePromo}
                   >
-                    <h2>{editing ? "Editar campaña" : "Nueva campaña"}</h2>
+                    <div className="section-title">
+                      <h2>{editing ? "Editar campaña" : "Nueva campaña"}</h2>
+                      <button className="button button-dark">
+                        Guardar campaña
+                        <Check size={18} />
+                      </button>
+                    </div>
                     <Field
                       label="Título de la promoción"
                       name="title"
@@ -1187,10 +1266,7 @@ export function Admin({
                       Los códigos no se acumulan con packs. Revisa la vigencia
                       antes de publicar.
                     </p>
-                    <button className="button button-dark">
-                      Guardar campaña
-                      <Check size={18} />
-                    </button>
+
                     {(editing || promoComposer) && (
                       <button
                         type="button"
@@ -1293,6 +1369,13 @@ export function Admin({
                                 setMessage("Liquidación registrada.");
                               }}
                             >
+                              <div className="section-title">
+                                <h3>Liquidación del afiliado</h3>
+                                <button className="button button-dark">
+                                  Registrar liquidación
+                                  <Check size={17} />
+                                </button>
+                              </div>
                               <Field
                                 label="Referencia de liquidación"
                                 name="reference"
@@ -1302,10 +1385,6 @@ export function Admin({
                                 <input type="checkbox" required />
                                 Verifiqué la liquidación y su pago.
                               </label>
-                              <button className="button button-dark">
-                                Registrar liquidación
-                                <Check size={17} />
-                              </button>
                             </form>
                           ) : (
                             <p>
@@ -1375,7 +1454,13 @@ export function Admin({
                   );
                 }}
               >
-                <h2>Nuevo vendedor</h2>
+                <div className="section-title">
+                  <h2>Nuevo vendedor</h2>
+                  <button className="button button-dark">
+                    Crear vendedor
+                    <Plus size={18} />
+                  </button>
+                </div>
                 <Field label="Nombre completo" name="name" required />
                 <Field
                   label="Código único"
@@ -1399,10 +1484,6 @@ export function Admin({
                   max="50"
                   required
                 />
-                <button className="button button-dark">
-                  Crear vendedor
-                  <Plus size={18} />
-                </button>
               </form>
             </div>
           )}
@@ -1426,7 +1507,7 @@ export function Admin({
               }}
             />
           )}
-          {tab === "Envíos" && (
+          {tab === "Agencias Shalom" && (
             <AgencyManager
               agencies={agencies}
               setAgencies={setAgencies}
@@ -1521,13 +1602,15 @@ export function Admin({
                   log("Personal", f.name + " agregado");
                 }}
               >
-                <h2>Agregar al equipo</h2>
+                <div className="section-title">
+                  <h2>Agregar al equipo</h2>
+                  <button className="button button-dark">
+                    Registrar persona
+                    <Plus size={18} />
+                  </button>
+                </div>
                 <Field label="Nombre completo" name="name" required />
                 <Field label="Función" name="job" required />
-                <button className="button button-dark">
-                  Registrar persona
-                  <Plus size={18} />
-                </button>
               </form>
             </div>
           )}
@@ -1544,9 +1627,6 @@ export function Admin({
             <StoreSettings
               settings={settings}
               setSettings={setSettings}
-              user={user}
-              setUsers={setUsers}
-              onLogout={onLogout}
               log={log}
             />
           )}

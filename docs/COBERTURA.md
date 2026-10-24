@@ -5,7 +5,7 @@ Actualización: instrucciones del propietario del 21/10/2026 prevalecen sobre el
 | Área | Recorrido local disponible | Traslado a Laravel |
 |---|---|---|
 | Identidad | Registro, inicio, roles cliente/admin, sesión y edición correo/teléfono | Auth de servidor, hash de contraseña resistente, verificación, recuperación, 2FA admin y policies |
-| Catálogo | Colores reales en imagen, tallas, filtros, precios, rebaja, agotado y existencias por variante | Oferta aprobada, SKU/lotes, composición y medidas verificadas, URLs canónicas/schema/SEO |
+| Catálogo | Alta de mercancías con fotos por color y unidades por talla, edición, filtros, precios, agotado y catálogo PDF filtrado | Oferta aprobada, SKU/lotes, composición y medidas verificadas, URLs canónicas/schema/SEO |
 | Compra | Bolsa, cantidades, pack configurable, cupón/vendedor, comprobación de disponibilidad | Precio canónico, transacciones, reservas atómicas, idempotencia y expiración |
 | Pedido | Destinatario completo, DNI, teléfono, correo y agencia por departamento/ciudad | Consentimientos, retención mínima, autorización por recurso, direcciones/directorio vigente |
 | Pago | Cotización previa, reporte con referencia textual, fecha declarada, hora recepción separada, constancia y verificación manual | Almacenamiento privado, antivirus/conversión, conciliación real, pago parcial/excesos/duplicados y auditoría inmutable |
@@ -26,3 +26,6 @@ Agencias iniciales: nombres extraídos del PDF público de servicios Shalom, con
 
 Política de no cambios/devoluciones: intención comercial confirmada; se conservó excepción de derechos por defectos/incumplimiento. Fuente normativa de referencia: Código de Protección y Defensa del Consumidor, Ley 29571, arts. 18, 19 y 97: https://www.gob.pe/institucion/indecopi/normas-legales/1244218-29571/ . No se afirmó revisión legal profesional ni se implementó una renuncia de derechos.
 
+
+## Gestión y catálogo r37 — 23/10/2026
+Alta y fotos se guardan en localStorage del navegador actual, sujetas a su capacidad; no hay carga de archivos a servidor ni sincronización entre dispositivos. Catálogo PDF A4 con fuentes incrustadas, fotos, precios y tallas disponibles; usa los filtros actuales. No incluye datos de clientes ni vouchers. Descarga manual para adjuntar por WhatsApp, sin envío de mensajes. Edición del costo de envío exclusivamente en Logística antes de la verificación; despacho conserva guía y constancia.

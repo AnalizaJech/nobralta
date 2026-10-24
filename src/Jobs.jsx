@@ -1,8 +1,9 @@
 import { AdminEmpty, AdminNotice, AdminBadge } from "./AdminFeedback";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArrowRight,
   ArrowLeft,
+  X,
   Plus,
   Check,
   MapPin,
@@ -226,6 +227,12 @@ export function JobsManager({
 }) {
   const [edit, setEdit] = useState(null),
     [message, setMessage] = useState("");
+  useEffect(() => {
+    if (edit)
+      document
+        .getElementById("job-editor")
+        ?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [edit]);
   return (
     <div className="jobs-admin">
       <div className="admin-columns">
@@ -277,75 +284,95 @@ export function JobsManager({
             </div>
           ))}
         </section>
-        <form
-          key={edit?.id || "new"}
-          className="admin-section form-grid"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const f = Object.fromEntries(new FormData(e.currentTarget)),
-              job = {
-                ...f,
-                id: edit?.id || crypto.randomUUID(),
-                active: f.active === "on",
-              };
-            setJobs((a) =>
-              edit?.id
-                ? a.map((j) => (j.id === edit.id ? job : j))
-                : [...a, job],
-            );
-            setEdit(null);
-            e.currentTarget.reset();
-            log("Trabajo", job.title + " guardado");
-            setMessage(
-              "Oportunidad guardada. La página Trabajos refleja la publicación.",
-            );
-          }}
-        >
-          <h2>{edit?.id ? "Editar oportunidad" : "Nueva oportunidad"}</h2>
-          <Field
-            label="Título del puesto"
-            name="title"
-            defaultValue={edit?.title}
-            required
-          />
-          <Field label="Área" name="area" defaultValue={edit?.area} required />
-          <Field
-            label="Ubicación / modalidad"
-            name="location"
-            defaultValue={edit?.location}
-            required
-          />
-          <Field
-            label="Tipo de vínculo"
-            name="type"
-            defaultValue={edit?.type}
-            required
-          />
-          <label className="field">
-            Descripción
-            <textarea
-              name="description"
-              defaultValue={edit?.description}
-              maxLength={5000}
+        {edit && (
+          <form
+            id="job-editor"
+            key={edit?.id || "new"}
+            className="admin-section form-grid"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const f = Object.fromEntries(new FormData(e.currentTarget)),
+                job = {
+                  ...f,
+                  id: edit?.id || crypto.randomUUID(),
+                  active: f.active === "on",
+                };
+              setJobs((a) =>
+                edit?.id
+                  ? a.map((j) => (j.id === edit.id ? job : j))
+                  : [...a, job],
+              );
+              setEdit(null);
+              e.currentTarget.reset();
+              log("Trabajo", job.title + " guardado");
+              setMessage(
+                "Oportunidad guardada. La página Trabajos refleja la publicación.",
+              );
+            }}
+          >
+            <div className="section-title">
+              <h2>{edit?.id ? "Editar oportunidad" : "Nueva oportunidad"}</h2>
+              <div className="admin-heading-actions">
+                <button
+                  type="button"
+                  className="button button-outline"
+                  onClick={() => setEdit(null)}
+                >
+                  <X size={18} />
+                  Cancelar
+                </button>
+                <button className="button button-dark">
+                  Guardar oportunidad
+                  <Check size={18} />
+                </button>
+              </div>
+            </div>
+            <Field
+              label="Título del puesto"
+              name="title"
+              defaultValue={edit?.title}
               required
-              rows={5}
             />
-          </label>
-          <label className="checkbox">
-            <input
-              name="active"
-              type="checkbox"
-              defaultChecked={edit?.active ?? false}
+            <Field
+              label="Área"
+              name="area"
+              defaultValue={edit?.area}
+              required
             />
-            Publicar en Trabajos
-          </label>
-          <button className="button button-dark">
-            Guardar oportunidad
-            <Check size={18} />
-          </button>
-          <AdminNotice>{message}</AdminNotice>
-        </form>
+            <Field
+              label="Ubicación / modalidad"
+              name="location"
+              defaultValue={edit?.location}
+              required
+            />
+            <Field
+              label="Tipo de vínculo"
+              name="type"
+              defaultValue={edit?.type}
+              required
+            />
+            <label className="field">
+              Descripción
+              <textarea
+                name="description"
+                defaultValue={edit?.description}
+                maxLength={5000}
+                required
+                rows={5}
+              />
+            </label>
+            <label className="checkbox">
+              <input
+                name="active"
+                type="checkbox"
+                defaultChecked={edit?.active ?? false}
+              />
+              Publicar en Trabajos
+            </label>
+          </form>
+        )}
       </div>
+      <AdminNotice>{message}</AdminNotice>
       <section className="admin-section">
         <h2>Postulaciones</h2>
         {applications.length ? (

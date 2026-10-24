@@ -301,7 +301,34 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
         setMessage("Medios de pago guardados.");
       }}
     >
-      <h2>Plataformas y cuentas</h2>
+      <div className="section-title">
+        <h2>Plataformas y cuentas</h2>{" "}
+        <div className="payment-admin-actions">
+          <button
+            type="button"
+            className="button button-outline"
+            onClick={() =>
+              setMethods((ms) => [
+                ...ms,
+                {
+                  id: crypto.randomUUID(),
+                  name: "",
+                  owner: "",
+                  account: "",
+                  active: false,
+                },
+              ])
+            }
+          >
+            <Plus size={18} />
+            Añadir medio
+          </button>
+          <button className="button button-dark">
+            <Check size={18} />
+            Guardar medios
+          </button>
+        </div>
+      </div>
       <p>
         Configura los datos que verá el comprador. Las constancias se revisan
         desde Pedidos.
@@ -353,31 +380,6 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
           </button>
         </fieldset>
       ))}
-      <div className="payment-admin-actions">
-        <button
-          type="button"
-          className="button button-outline"
-          onClick={() =>
-            setMethods((ms) => [
-              ...ms,
-              {
-                id: crypto.randomUUID(),
-                name: "",
-                owner: "",
-                account: "",
-                active: false,
-              },
-            ])
-          }
-        >
-          <Plus size={18} />
-          Añadir medio
-        </button>
-        <button className="button button-dark">
-          <Check size={18} />
-          Guardar medios
-        </button>
-      </div>
       <AdminNotice>{message}</AdminNotice>
     </form>
   );

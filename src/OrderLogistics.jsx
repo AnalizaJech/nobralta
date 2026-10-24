@@ -47,6 +47,13 @@ export function OrderLogistics({ orders, onQuote, onOrder }) {
                       );
                     }}
                   >
+                    <div className="section-title">
+                      <h3>Cotización del envío</h3>{" "}
+                      <button className="button button-dark">
+                        <Check size={18} />
+                        Confirmar envío
+                      </button>
+                    </div>
                     <Field
                       key={o.shipping ?? "pending"}
                       label="Costo de envío (S/)"
@@ -62,10 +69,6 @@ export function OrderLogistics({ orders, onQuote, onOrder }) {
                       verá el costo y el total actualizado; 0 indica envío sin
                       costo.
                     </p>
-                    <button className="button button-dark">
-                      <Check size={18} />
-                      Confirmar envío
-                    </button>
                   </form>
                 ) : (
                   <div>

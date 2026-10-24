@@ -23,7 +23,7 @@ import {
   Headset,
 } from "@phosphor-icons/react";
 import { Select } from "./Select";
-import { Field, Profile } from "./Customer";
+import { Field } from "./Customer";
 import { AssetImage } from "./AssetImage";
 import { socialChannels } from "./Merchandising";
 import { currency, date, phases } from "./store";
@@ -322,6 +322,49 @@ export function AgencyManager({ agencies, setAgencies, log }) {
     rows = visible.slice((current - 1) * 20, current * 20);
   return (
     <div className="agency-manager">
+      <details className="admin-section admin-add-agency">
+        <summary>
+          Agregar una agencia verificada
+          <Plus size={18} />
+        </summary>
+        <form
+          className="form-grid two"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const f = Object.fromEntries(new FormData(e.currentTarget));
+            setAgencies((ms) => [
+              ...ms,
+              {
+                ...f,
+                id: crypto.randomUUID(),
+                public: true,
+                receives: true,
+                active: true,
+              },
+            ]);
+            log("Agencia Shalom", f.name);
+            e.currentTarget.reset();
+            setMessage("Agencia agregada al directorio.");
+          }}
+        >
+          <div className="section-title agency-form-heading">
+            <h3>Datos de la agencia</h3>{" "}
+            <button className="button button-dark">
+              Guardar agencia
+              <Check size={18} />
+            </button>
+          </div>
+          <Field label="Nombre exacto" name="name" required />
+          <Field label="Departamento" name="region" required />
+          <Field label="Provincia" name="city" required />
+          <Field label="Distrito" name="district" required />
+          <Field label="Dirección" name="address" required />
+          <label className="checkbox">
+            <input type="checkbox" required />
+            Verifiqué que la agencia recibe envíos en Shalom.
+          </label>
+        </form>
+      </details>
       <div className="admin-directory-summary">
         <p>
           <strong>{agencies.length}</strong> registros del directorio ·{" "}
@@ -473,46 +516,7 @@ export function AgencyManager({ agencies, setAgencies, log }) {
         start={(current - 1) * 20 + 1}
         end={Math.min(current * 20, visible.length)}
       />
-      <details className="admin-section admin-add-agency">
-        <summary>
-          Agregar una agencia verificada
-          <Plus size={18} />
-        </summary>
-        <form
-          className="form-grid two"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const f = Object.fromEntries(new FormData(e.currentTarget));
-            setAgencies((ms) => [
-              ...ms,
-              {
-                ...f,
-                id: crypto.randomUUID(),
-                public: true,
-                receives: true,
-                active: true,
-              },
-            ]);
-            log("Agencia Shalom", f.name);
-            e.currentTarget.reset();
-            setMessage("Agencia agregada al directorio.");
-          }}
-        >
-          <Field label="Nombre exacto" name="name" required />
-          <Field label="Departamento" name="region" required />
-          <Field label="Provincia" name="city" required />
-          <Field label="Distrito" name="district" required />
-          <Field label="Dirección" name="address" required />
-          <label className="checkbox">
-            <input type="checkbox" required />
-            Verifiqué que la agencia recibe envíos en Shalom.
-          </label>
-          <button className="button button-dark">
-            Guardar agencia
-            <Check size={18} />
-          </button>
-        </form>
-      </details>
+
       <p className="form-hint">
         Directorio consultado el 23/10/2026. Los registros internos y los puntos
         sin recepción se muestran para consulta administrativa, sin habilitarlos
@@ -644,20 +648,13 @@ export function CustomerDirectory({ users, orders, onOrders }) {
     </section>
   );
 }
-export function StoreSettings({
-  settings,
-  setSettings,
-  user,
-  setUsers,
-  onLogout,
-  log,
-}) {
+export function StoreSettings({ settings, setSettings, log }) {
   const [section, setSection] = useState("Atención"),
     [message, setMessage] = useState("");
   return (
     <div className="store-settings">
       <div className="admin-subnav" aria-label="Secciones de configuración">
-        {["Atención", "Redes sociales", "Mi cuenta"].map((t) => (
+        {["Atención", "Redes sociales"].map((t) => (
           <button
             key={t}
             className={section === t ? "current" : ""}
@@ -678,11 +675,7 @@ export function StoreSettings({
           </button>
         ))}
       </div>
-      {section === "Mi cuenta" ? (
-        <section className="admin-section settings-panel">
-          <Profile user={user} setUsers={setUsers} onLogout={onLogout} />
-        </section>
-      ) : (
+      {
         <form
           key={section}
           className="admin-section form-grid settings-panel"
@@ -694,11 +687,17 @@ export function StoreSettings({
             setMessage("Cambios guardados.");
           }}
         >
-          <h2>
-            {section === "Atención"
-              ? "Contacto y entrega"
-              : "Perfiles de la tienda"}
-          </h2>
+          <div className="section-title">
+            <h2>
+              {section === "Atención"
+                ? "Contacto y entrega"
+                : "Perfiles de la tienda"}
+            </h2>
+            <button className="button button-dark">
+              <Check size={18} />
+              Guardar cambios
+            </button>
+          </div>
           {section === "Atención" ? (
             <>
               <Field
@@ -741,12 +740,8 @@ export function StoreSettings({
               ))}
             </>
           )}
-          <button className="button button-dark">
-            Guardar cambios
-            <Check size={18} />
-          </button>
         </form>
-      )}
+      }
       <AdminNotice>{message}</AdminNotice>
     </div>
   );

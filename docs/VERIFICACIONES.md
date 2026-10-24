@@ -41,3 +41,6 @@ Siete páginas informativas abiertas/cerradas desde footer a1440/1024/768/390px:
 
 ## PDF/Trabajos r33
 PDF generado en navegador con jsPDF: pedido corto1página y28prendas de nombres largos6páginas. Todas las páginas renderizadas con Poppler e inspeccionadas: sin corte/solapamiento, logo/imágenes, repetición de cabeceras, numeración y total correctos. Render de1página con envío por cotizar y6páginas con descuento/envío. Artefactos locales output/pdf/detalle-compra.pdf y detalle-extenso.pdf; ignorados por Git. Borders superior/inferior de intro/listado/proceso Trabajos comprobados0px.
+
+## Seguimiento compacto r34
+Pedido cliente: botón Volver a mi cuenta0, bloque de recojo de seguimiento1, tarjeta de recojo duplicada0; datos de compra agrupados en1panel.1440/1024/768/390 sin desbordamiento. Frase de confirmación retirada del checkout. Fixture restaurado.

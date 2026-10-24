@@ -1585,7 +1585,12 @@ export function App() {
               <details>
                 <summary>
                   ¿Cómo elegir mi talla?
-                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
+                  <Plus className="care-expand" size={19} aria-hidden="true" />
+                  <Minus
+                    className="care-collapse"
+                    size={19}
+                    aria-hidden="true"
+                  />
                 </summary>
                 <p>
                   Consulta las medidas de cada pieza antes de comprar. Compara
@@ -1595,7 +1600,12 @@ export function App() {
               <details>
                 <summary>
                   Envíos y revisión del pago
-                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
+                  <Plus className="care-expand" size={19} aria-hidden="true" />
+                  <Minus
+                    className="care-collapse"
+                    size={19}
+                    aria-hidden="true"
+                  />
                 </summary>
                 <p>
                   Recoge en la agencia Shalom que elijas. Entrega estimada de
@@ -1606,7 +1616,12 @@ export function App() {
               <details>
                 <summary>
                   Condiciones de compra
-                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
+                  <Plus className="care-expand" size={19} aria-hidden="true" />
+                  <Minus
+                    className="care-collapse"
+                    size={19}
+                    aria-hidden="true"
+                  />
                 </summary>
                 <p>{policy}</p>
               </details>
@@ -2118,13 +2133,6 @@ export function App() {
                       onReport={reportOrder}
                       settings={settings}
                     />
-                    <button
-                      className="text-action"
-                      onClick={() => setScreen("account")}
-                    >
-                      Volver a mi cuenta
-                      <ArrowRight size={18} />
-                    </button>
                   </div>
                 )}
               {screen === "pack" && pack && (

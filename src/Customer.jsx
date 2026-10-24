@@ -541,7 +541,6 @@ export function DeliveryForm({
                 Recojo en {agencies.find((a) => a.id === agency)?.name}
               </strong>
               <p>{selectedAgency?.address}</p>
-              <p>Confirma que esta agencia corresponde a tu ubicación.</p>
             </div>
           </div>
         )}
@@ -625,83 +624,71 @@ export function OrderDetail({ order, onReport, settings }) {
             </div>
           ))}
         </div>
-      </section>
-      <div className="order-facts customer-order-facts">
-        <section className="customer-order-card">
-          <h3>
-            <MapPin size={21} />
-            Recojo Shalom
-          </h3>
-          <strong>{order.agency.name}</strong>
-          <p>
-            {order.agency.region} · {order.agency.city}
-          </p>
-          {order.agency.address && <p>{order.agency.address}</p>}
-        </section>
-        <section className="customer-order-card">
-          <h3>
-            <UserCircle size={21} />
-            Destinatario
-          </h3>
-          <strong>
-            {order.customer.name} {order.customer.lastName}
-          </strong>
-          <dl>
-            <div>
-              <dt>DNI</dt>
-              <dd>{order.customer.dni}</dd>
-            </div>
-            <div>
-              <dt>Teléfono</dt>
-              <dd>{order.customer.phone}</dd>
-            </div>
-            <div>
-              <dt>Correo</dt>
-              <dd>{order.customer.email}</dd>
-            </div>
-          </dl>
-        </section>
-        <section className="customer-order-card">
-          <h3>
-            <Receipt size={21} />
-            Resumen de pago
-          </h3>
-          <dl>
-            <div>
-              <dt>Prendas</dt>
-              <dd>{currency(order.total)}</dd>
-            </div>
-            <div>
-              <dt>Envío</dt>
-              <dd>
-                {order.shipping != null
-                  ? currency(order.shipping)
-                  : "Por cotizar"}
-              </dd>
-            </div>
-            <div className="customer-order-total">
-              <dt>Precio total</dt>
-              <dd>{currency(order.total + (order.shipping || 0))}</dd>
-            </div>
-          </dl>
-          <p>Entrega: 2–10 días</p>
-          {order.guide && <p>Guía / OS: {order.guide}</p>}
-        </section>
-      </div>
-      <section className="customer-order-card customer-order-download">
-        <div>
-          <h3>Detalle de tu compra</h3>
-          <p>
-            El detalle del pedido no sustituye una boleta o factura electrónica.
-          </p>
+        <div className="order-facts customer-order-facts">
+          <section className="customer-order-subsection">
+            <h3>
+              <UserCircle size={21} />
+              Destinatario
+            </h3>
+            <strong>
+              {order.customer.name} {order.customer.lastName}
+            </strong>
+            <dl>
+              <div>
+                <dt>DNI</dt>
+                <dd>{order.customer.dni}</dd>
+              </div>
+              <div>
+                <dt>Teléfono</dt>
+                <dd>{order.customer.phone}</dd>
+              </div>
+              <div>
+                <dt>Correo</dt>
+                <dd>{order.customer.email}</dd>
+              </div>
+            </dl>
+          </section>
+          <section className="customer-order-subsection">
+            <h3>
+              <Receipt size={21} />
+              Resumen de pago
+            </h3>
+            <dl>
+              <div>
+                <dt>Prendas</dt>
+                <dd>{currency(order.total)}</dd>
+              </div>
+              <div>
+                <dt>Envío</dt>
+                <dd>
+                  {order.shipping != null
+                    ? currency(order.shipping)
+                    : "Por cotizar"}
+                </dd>
+              </div>
+              <div className="customer-order-total">
+                <dt>Precio total</dt>
+                <dd>{currency(order.total + (order.shipping || 0))}</dd>
+              </div>
+            </dl>
+          </section>
         </div>
-        <button
-          className="button button-outline"
-          onClick={() => receipt(order)}
-        >
-          <DownloadSimple size={19} />
-          Descargar detalle PDF
-        </button>
+        <div className="customer-order-download">
+          <div>
+            <h3>Detalle de tu compra</h3>
+            <p>
+              El detalle del pedido no sustituye una boleta o factura
+              electrónica.
+            </p>
+          </div>
+          <button
+            className="button button-outline"
+            onClick={() => receipt(order)}
+          >
+            <DownloadSimple size={19} />
+            Descargar detalle PDF
+          </button>
+        </div>
       </section>
       {order.dispatchProof && (
         <a

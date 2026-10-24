@@ -125,3 +125,6 @@ Las páginas del footer usan el mismo padding lateral de las secciones de tienda
 
 ## Trabajos y PDF r33 — 23/10/2026
 Evitar separadores redundantes en intro/listado/proceso de Trabajos; conservar solo el borde de las tarjetas. PDF de compra profesional: logo real, datos de pedido, destinatario y agencia en bloques, tabla negra con imágenes y precios, total borgoña, encabezados/pies repetidos y paginación. Usar assetUrl para assets en GitHub Pages. No cortar nombres largos ni filas entre páginas; mantener nota de que no sustituye comprobante tributario.
+
+## Seguimiento compacto r34
+Quitar Volver a mi cuenta del seguimiento y la frase Confirma que esta agencia corresponde a tu ubicación del checkout. Recojo se muestra solo en TrackingJourney, no repetir otra tarjeta con la misma agencia. Agrupar prendas/destinatario/pago/descarga en un panel, con columnas cuando haya espacio, evitando contenedores anchos apilados sin necesidad.

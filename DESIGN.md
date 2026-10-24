@@ -69,3 +69,6 @@ Acciones de alta, guardado y descarga junto al encabezado de cada sección; móv
 
 ## Seguimiento r38
 Historial cliente con timeline y badges con icono como gestión de pedidos. Control Ver/Ocultar movimientos rosado suave y hover más marcado, icono único sin rotación. Bloque de documento con icono PDF y descarga borgoña. Recibo A4 conserva Manrope/Instrument y agrega iconos Phosphor discretos de5mm en los títulos.
+
+## Administración compacta r40
+Logística es sección contextual dentro del detalle del pedido junto a pago/despacho; sin navegación independiente. Medios de pago: grid compacto de tarjetas blancas16px, plataforma/estado, titular, cuenta y estado QR con iconos; Editar secundario y Eliminar peligro. Editor único encima de la lista, acciones al inicio y scroll al abrir, cancelación sin persistencia. Guardar visible únicamente en editor. QR cuadrado con crop compartido, preview, arrastre/zoom/posición y salida PNG400px; recorte posterior disponible. Encabezados de módulos y formularios con icono semántico borgoña.

@@ -8,6 +8,9 @@ import {
   CaretLeft,
   CaretRight,
   Package,
+  Gear,
+  ChartBar,
+  MapPin,
   Receipt,
   Truck,
   WarningCircle,
@@ -116,7 +119,10 @@ export function AdminOverview({
       <div className="admin-home-grid">
         <section className="admin-section">
           <div className="section-title admin-attention-header">
-            <h2>Atender ahora</h2>
+            <h2>
+              <Receipt size={22} />
+              Atender ahora
+            </h2>
             <button
               className="button admin-payments-link"
               onClick={() => onOrders("En revisión")}
@@ -167,7 +173,10 @@ export function AdminOverview({
           </div>
         </section>
         <section className="admin-section">
-          <h2>Revisar existencias</h2>
+          <h2>
+            <Package size={22} />
+            Revisar existencias
+          </h2>
           <p className="admin-supporting">
             Prendas con menos de 10 unidades en total.
           </p>
@@ -210,7 +219,10 @@ export function AdminOverview({
       </div>
       <div className="admin-home-grid">
         <section className="admin-section">
-          <h2>Estado de los pedidos</h2>
+          <h2>
+            <Truck size={22} />
+            Estado de los pedidos
+          </h2>
           <div className="admin-state-list">
             {phases.map((s) => {
               const Icon = phaseIcons[s];
@@ -225,7 +237,10 @@ export function AdminOverview({
           </div>
         </section>
         <section className="admin-section">
-          <h2>Ventas por prenda</h2>
+          <h2>
+            <ChartBar size={22} />
+            Ventas por prenda
+          </h2>
           {best.length ? (
             best.map(({ p, amount }) => (
               <div className="revenue-row" key={p.id}>
@@ -348,7 +363,10 @@ export function AgencyManager({ agencies, setAgencies, log }) {
           }}
         >
           <div className="section-title agency-form-heading">
-            <h3>Datos de la agencia</h3>{" "}
+            <h3>
+              <MapPin size={21} />
+              Datos de la agencia
+            </h3>{" "}
             <button className="button button-dark">
               Guardar agencia
               <Check size={18} />
@@ -689,6 +707,7 @@ export function StoreSettings({ settings, setSettings, log }) {
         >
           <div className="section-title">
             <h2>
+              <Gear size={22} />
               {section === "Atención"
                 ? "Contacto y entrega"
                 : "Perfiles de la tienda"}

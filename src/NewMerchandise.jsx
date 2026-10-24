@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Plus, Trash, Check, X, UploadSimple } from "@phosphor-icons/react";
+import {
+  Plus,
+  Trash,
+  Check,
+  X,
+  UploadSimple,
+  Package,
+} from "@phosphor-icons/react";
 import { Field } from "./Customer";
 import { Select } from "./Select";
 import { AssetImage } from "./AssetImage";
@@ -67,7 +74,10 @@ export function NewMerchandise({ categories, onSave, onCancel }) {
       }}
     >
       <div className="section-title">
-        <h2>Nueva mercancía</h2>
+        <h2>
+          <Package size={22} />
+          Nueva mercancía
+        </h2>
         <div className="admin-heading-actions">
           <button
             type="button"

@@ -143,3 +143,6 @@ Seguimiento cliente debe compartir el lenguaje visual de Pedidos admin: movimien
 
 ## Destinatario r39
 Iconos por dato, no solo en título: IdentificationCard para DNI, Phone para teléfono y Envelope para correo, tanto en seguimiento como en las filas del PDF. Mantener etiquetas y valores legibles, iconos borgoña discretos y espacio para texto largo.
+
+## Administración r40 — prioridad sobre r36/r37
+Logística pertenece al detalle del pedido: cotizar y confirmar allí, sin módulo independiente ni enlace para salir del pedido. Medios de pago inicia compacto con tarjetas informativas, estado y Editar/Eliminar. Solo un editor abierto; Añadir/Editar muestran Guardar cambios/Cancelar arriba, guardar persiste un medio y cierra, cancelar descarta borrador. QR permite recorte cuadrado en carga y botón Recortar QR para imagen existente; PNG400x400 con margen blanco conservado por el usuario, sin afirmar validación bancaria ni del código. Mantener foto de perfil JPEG y flujo previo. Iconos Phosphor en títulos, datos y acciones administrativos, un único icono por botón.

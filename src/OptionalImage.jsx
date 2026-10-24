@@ -1,6 +1,12 @@
 import { AvatarCrop } from "./AvatarCrop";
 import { useRef, useState } from "react";
-import { UploadSimple, Trash, UserCircle, QrCode } from "@phosphor-icons/react";
+import {
+  UploadSimple,
+  Trash,
+  UserCircle,
+  QrCode,
+  Crop,
+} from "@phosphor-icons/react";
 import { assetUrl } from "./AssetImage";
 export function OptionalImage({ value, onChange, label, avatar = false }) {
   const input = useRef(null),
@@ -13,6 +19,7 @@ export function OptionalImage({ value, onChange, label, avatar = false }) {
       {candidate && (
         <AvatarCrop
           image={candidate}
+          qr={!avatar}
           onApply={(data) => {
             onChange(data);
             setCandidate(null);
@@ -64,8 +71,7 @@ export function OptionalImage({ value, onChange, label, avatar = false }) {
               const img = new Image();
               img.src = data;
               await img.decode();
-              if (avatar) setCandidate(img);
-              else onChange(data);
+              setCandidate(img);
             } catch {
               setError("No pudimos leer la imagen. Prueba con otra.");
             } finally {
@@ -84,6 +90,30 @@ export function OptionalImage({ value, onChange, label, avatar = false }) {
             <UploadSimple size={18} />
             {busy ? "Cargando…" : value ? "Cambiar imagen" : "Subir imagen"}
           </button>
+          {value && !avatar && (
+            <button
+              type="button"
+              className="button button-outline"
+              disabled={busy}
+              onClick={async () => {
+                setBusy(true);
+                setError("");
+                try {
+                  const img = new Image();
+                  img.src = assetUrl(value);
+                  await img.decode();
+                  setCandidate(img);
+                } catch {
+                  setError("No pudimos abrir la imagen. Vuelve a subirla.");
+                } finally {
+                  setBusy(false);
+                }
+              }}
+            >
+              <Crop size={18} />
+              Recortar QR
+            </button>
+          )}
           {value && (
             <button
               type="button"

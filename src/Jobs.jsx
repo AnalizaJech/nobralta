@@ -238,7 +238,10 @@ export function JobsManager({
       <div className="admin-columns">
         <section className="admin-section">
           <div className="section-title">
-            <h2>Oportunidades de trabajo</h2>
+            <h2>
+              <Briefcase size={22} />
+              Oportunidades de trabajo
+            </h2>
             <button className="button button-dark" onClick={() => setEdit({})}>
               <Plus size={18} />
               Nueva
@@ -311,7 +314,10 @@ export function JobsManager({
             }}
           >
             <div className="section-title">
-              <h2>{edit?.id ? "Editar oportunidad" : "Nueva oportunidad"}</h2>
+              <h2>
+                <Briefcase size={22} />
+                {edit?.id ? "Editar oportunidad" : "Nueva oportunidad"}
+              </h2>
               <div className="admin-heading-actions">
                 <button
                   type="button"
@@ -374,7 +380,10 @@ export function JobsManager({
       </div>
       <AdminNotice>{message}</AdminNotice>
       <section className="admin-section">
-        <h2>Postulaciones</h2>
+        <h2>
+          <Users size={22} />
+          Postulaciones
+        </h2>
         {applications.length ? (
           applications.map((a) => (
             <div className="application-row" key={a.id}>

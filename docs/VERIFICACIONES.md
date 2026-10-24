@@ -56,3 +56,6 @@ Playwright1440/390:2 movimientos con estado/nota, control desplegable y descarga
 
 ## r39 — Iconos por campo
 Se verificó visualmente DNI/teléfono/correo con iconos propios a390px y en PDF descargado desde seguimiento. Ajuste del ancho y altura de filas PDF con icono para admitir saltos de línea. Flujo de historial/descarga sin overflow; generación local de SVG Phosphor actualizada.
+
+## r40 — Pedido y medios compactos
+Playwright1440/390: menú sin Logística independiente, costo15 guardado desde pedido; medios con0 formularios y0 botones Guardar en reposo. Editar/cancelar conserva original; alta guarda QR400x400 PNG, recorte posterior/cancelar conserva imagen, edición actualiza cuenta y eliminación retira tarjeta. Guardar desaparece tras persistir. Sin overflow móvil; capturas desktop/móvil/crop/pedido inspeccionadas. Navegación por8 módulos sin errores de consola; fixtures locales restaurados. Build Pages y tests de empaquetado completados.

@@ -29,3 +29,6 @@ Política de no cambios/devoluciones: intención comercial confirmada; se conser
 
 ## Gestión y catálogo r37 — 23/10/2026
 Alta y fotos se guardan en localStorage del navegador actual, sujetas a su capacidad; no hay carga de archivos a servidor ni sincronización entre dispositivos. Catálogo PDF A4 con fuentes incrustadas, fotos, precios y tallas disponibles; usa los filtros actuales. No incluye datos de clientes ni vouchers. Descarga manual para adjuntar por WhatsApp, sin envío de mensajes. Edición del costo de envío exclusivamente en Logística antes de la verificación; despacho conserva guía y constancia.
+
+## Organización administrativa r40
+Logística se gestiona dentro de cada pedido, no como módulo independiente. Medios de pago ofrece lista compacta y editor por medio; alta/edición persisten solo al guardar, cancelar descarta borrador, eliminar actualiza configuración local. QR admite recorte cuadrado400px PNG y recorte de imagen existente; no valida que un QR corresponda al titular ni concilia transferencias. Almacén sigue siendo localStorage del navegador.

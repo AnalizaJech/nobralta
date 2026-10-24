@@ -1,9 +1,14 @@
 import { OptionalImage } from "./OptionalImage";
 import { AssetImage } from "./AssetImage";
-import { AdminNotice } from "./AdminFeedback";
+import { AdminNotice, AdminBadge, AdminEmpty } from "./AdminFeedback";
 import { useState, useRef, useEffect } from "react";
 import {
   CreditCard,
+  PencilSimple,
+  X,
+  UserCircle,
+  Bank,
+  QrCode,
   UploadSimple,
   Trash,
   Plus,
@@ -285,57 +290,100 @@ export function CheckoutPayment({
   );
 }
 export function PaymentMethodsAdmin({ settings, setSettings, log }) {
-  const [methods, setMethods] = useState(() => paymentMethods(settings)),
+  const [draft, setDraft] = useState(null),
     [message, setMessage] = useState("");
-  const change = (id, key, value) =>
-    setMethods((ms) =>
-      ms.map((m) => (m.id === id ? { ...m, [key]: value } : m)),
-    );
+  const methods = paymentMethods(settings);
+  const editor = useRef(null);
+  useEffect(() => {
+    if (draft)
+      editor.current?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [draft?.id]);
+  const change = (key, value) => setDraft((d) => ({ ...d, [key]: value }));
   return (
-    <form
-      className="admin-section payment-admin"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSettings((s) => ({ ...s, paymentMethods: methods }));
-        log("Medios de pago", "Configuración actualizada");
-        setMessage("Medios de pago guardados.");
-      }}
-    >
+    <div className="payment-admin-workspace">
       <div className="section-title">
-        <h2>Plataformas y cuentas</h2>{" "}
-        <div className="payment-admin-actions">
+        <h2>
+          <CreditCard size={22} />
+          Plataformas y cuentas
+        </h2>
+        {!draft && (
           <button
-            type="button"
-            className="button button-outline"
-            onClick={() =>
-              setMethods((ms) => [
-                ...ms,
-                {
-                  id: crypto.randomUUID(),
-                  name: "",
-                  owner: "",
-                  account: "",
-                  active: false,
-                },
-              ])
-            }
+            className="button button-dark"
+            onClick={() => {
+              setMessage("");
+              setDraft({
+                id: crypto.randomUUID(),
+                name: "",
+                owner: "",
+                account: "",
+                qr: "",
+                active: true,
+              });
+            }}
           >
             <Plus size={18} />
             Añadir medio
           </button>
-          <button className="button button-dark">
-            <Check size={18} />
-            Guardar medios
-          </button>
-        </div>
+        )}
       </div>
-      <p>
-        Configura los datos que verá el comprador. Las constancias se revisan
-        desde Pedidos.
-      </p>
-      {methods.map((m) => (
-        <fieldset key={m.id}>
-          <legend>{m.name || "Nuevo medio"}</legend>
+      <AdminNotice>{message}</AdminNotice>
+      {draft && (
+        <form
+          ref={editor}
+          className="admin-section form-grid payment-method-editor"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const method = {
+              ...draft,
+              name: String(draft.name || " ").trim(),
+              owner: String(draft.owner || "").trim(),
+              account: String(draft.account || "").trim(),
+            };
+            if (
+              !method.name ||
+              (method.active && (!method.owner || !method.account))
+            ) {
+              setMessage(
+                "Completa la plataforma, el titular y el número de cuenta.",
+              );
+              return;
+            }
+            setSettings((s) => {
+              const list = paymentMethods(s);
+              return {
+                ...s,
+                paymentMethods: list.some((m) => m.id === method.id)
+                  ? list.map((m) => (m.id === method.id ? method : m))
+                  : [...list, method],
+              };
+            });
+            log("Medios de pago", method.name + " guardado");
+            setDraft(null);
+            setMessage("Medio de pago guardado.");
+          }}
+        >
+          <div className="section-title">
+            <h3>
+              <PencilSimple size={21} />
+              {methods.some((m) => m.id === draft.id)
+                ? "Editar medio de pago"
+                : "Nuevo medio de pago"}
+            </h3>
+            <div className="admin-heading-actions">
+              <button
+                type="button"
+                className="button button-outline"
+                onClick={() => setDraft(null)}
+              >
+                <X size={18} />
+                Cancelar
+              </button>
+              <button className="button button-dark">
+                <Check size={18} />
+                Guardar cambios
+              </button>
+            </div>
+          </div>
           <div className="form-grid two">
             {[
               ["name", "Plataforma / banco", "Yape, Plin, BCP…"],
@@ -349,38 +397,107 @@ export function PaymentMethodsAdmin({ settings, setSettings, log }) {
               <label className="field" key={key}>
                 {label}
                 <input
-                  value={m[key] || ""}
-                  required={m.active || key === "name"}
+                  value={draft[key] || ""}
+                  maxLength={key === "account" ? 60 : 100}
+                  required={draft.active || key === "name"}
                   placeholder={placeholder}
-                  onChange={(e) => change(m.id, key, e.target.value)}
+                  onChange={(e) => change(key, e.target.value)}
                 />
               </label>
             ))}
           </div>
           <OptionalImage
-            label={"QR de " + (m.name || "pago")}
-            value={m.qr || ""}
-            onChange={(value) => change(m.id, "qr", value)}
+            label={"QR de " + (draft.name || "pago")}
+            value={draft.qr || ""}
+            onChange={(value) => change("qr", value)}
           />
           <label className="checkbox">
             <input
               type="checkbox"
-              checked={!!m.active}
-              onChange={(e) => change(m.id, "active", e.target.checked)}
+              checked={!!draft.active}
+              onChange={(e) => change("active", e.target.checked)}
             />
             Mostrar al comprador
           </label>
-          <button
-            type="button"
-            className="button button-danger"
-            onClick={() => setMethods((ms) => ms.filter((x) => x.id !== m.id))}
-          >
-            <Trash size={18} />
-            Eliminar medio
-          </button>
-        </fieldset>
-      ))}
-      <AdminNotice>{message}</AdminNotice>
-    </form>
+        </form>
+      )}
+      <div className="payment-method-list">
+        {methods.length ? (
+          methods.map((m) => (
+            <article className="payment-method-card" key={m.id}>
+              <div className="payment-method-summary">
+                {m.qr ? (
+                  <AssetImage src={m.qr} alt={"QR de " + m.name} />
+                ) : (
+                  <span className="payment-method-symbol">
+                    <CreditCard size={26} />
+                  </span>
+                )}
+                <div>
+                  <h3>{m.name}</h3>
+                  <AdminBadge>{m.active ? "Activa" : "Pausada"}</AdminBadge>
+                </div>
+              </div>
+              <dl>
+                <div>
+                  <dt>
+                    <UserCircle size={17} />
+                    Titular
+                  </dt>
+                  <dd>{m.owner || "Sin registrar"}</dd>
+                </div>
+                <div>
+                  <dt>
+                    <Bank size={17} />
+                    Número / cuenta
+                  </dt>
+                  <dd>{m.account || "Sin registrar"}</dd>
+                </div>
+                <div>
+                  <dt>
+                    <QrCode size={17} />
+                    QR
+                  </dt>
+                  <dd>{m.qr ? "Configurado" : "Sin imagen"}</dd>
+                </div>
+              </dl>
+              <div className="payment-method-actions">
+                <button
+                  className="button button-outline"
+                  onClick={() => {
+                    setMessage("");
+                    setDraft({ ...m });
+                  }}
+                >
+                  <PencilSimple size={18} />
+                  Editar
+                </button>
+                <button
+                  className="button button-danger"
+                  onClick={() => {
+                    setSettings((s) => ({
+                      ...s,
+                      paymentMethods: paymentMethods(s).filter(
+                        (x) => x.id !== m.id,
+                      ),
+                    }));
+                    if (draft?.id === m.id) setDraft(null);
+                    log("Medios de pago", m.name + " eliminado");
+                    setMessage("Medio de pago eliminado.");
+                  }}
+                >
+                  <Trash size={18} />
+                  Eliminar
+                </button>
+              </div>
+            </article>
+          ))
+        ) : (
+          <AdminEmpty icon={CreditCard} title="Sin medios de pago">
+            Añade una plataforma o banco para mostrar sus datos en la compra.
+          </AdminEmpty>
+        )}
+      </div>
+    </div>
   );
 }

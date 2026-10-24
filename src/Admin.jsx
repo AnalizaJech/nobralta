@@ -58,7 +58,6 @@ const modules = [
   ["Clientes", Users],
   ["Afiliados", Users],
   ["Agencias Shalom", Truck],
-  ["Logística", Truck],
   ["Medios de pago", CreditCard],
   ["Personal", Clock],
   ["Trabajos", Users],
@@ -67,13 +66,7 @@ const modules = [
 const navGroups = [
   {
     title: "Operación diaria",
-    items: [
-      "Resumen",
-      "Pedidos",
-      "Logística",
-      "Agencias Shalom",
-      "Medios de pago",
-    ],
+    items: ["Resumen", "Pedidos", "Agencias Shalom", "Medios de pago"],
   },
   { title: "Tienda", items: ["Catálogo", "Promociones"] },
   {
@@ -86,8 +79,7 @@ const descriptions = {
   Resumen:
     "Pagos pendientes, próximos despachos y existencias que requieren atención.",
   Pedidos:
-    "Consulta pedidos, revisa vouchers y actualiza cada etapa de la entrega.",
-  Logística: "Coordina el destino y confirma el costo de envío de cada pedido.",
+    "Revisa pagos, coordina el envío y actualiza cada etapa del pedido.",
   "Agencias Shalom":
     "Busca ubicaciones de Shalom y administra las agencias disponibles para recojo.",
   "Medios de pago":
@@ -573,7 +565,10 @@ export function Admin({
               </div>
               <div className="admin-columns admin-order-workspace">
                 <section className="admin-section">
-                  <h2>Compra y destinatario</h2>
+                  <h2>
+                    <UserCircle size={22} />
+                    Compra y destinatario
+                  </h2>
                   <OrderRecipient order={order} />
                   <div className="order-lines">
                     {order.lines.map((l) => (
@@ -600,15 +595,26 @@ export function Admin({
                   <OrderHistory history={order.history} />
                 </section>
                 <section className="admin-section">
-                  <h2>Pago y despacho</h2>
-                  <button
-                    className="button button-outline"
-                    onClick={() => choose("Logística")}
-                  >
-                    <Truck size={18} />
-                    Gestionar envío en Logística
-                  </button>
+                  <h2>
+                    <CreditCard size={22} />
+                    Pago y despacho
+                  </h2>
                   <OrderPayment order={order} />
+                  <OrderLogistics
+                    order={order}
+                    onQuote={(id, shipping) => {
+                      if (!Number.isFinite(shipping) || shipping < 0) return;
+                      updateOrder(
+                        id,
+                        { shipping, shippingQuotedAt: now() },
+                        "Costo de envío confirmado: " + currency(shipping),
+                      );
+                      setMessage(
+                        "Costo de envío actualizado para este pedido.",
+                      );
+                    }}
+                  />
+
                   <AdminVoucher file={order.report?.file} />
                   {order.status === "En revisión" && !observing && (
                     <form
@@ -620,7 +626,7 @@ export function Admin({
                         );
                         if (order.shipping == null) {
                           setNotice(
-                            "Confirma el costo del envío en Logística antes de verificar el total.",
+                            "Confirma el costo en Logística del pedido antes de verificar el total.",
                           );
                           return;
                         }
@@ -647,7 +653,10 @@ export function Admin({
                       }}
                     >
                       <div className="section-title">
-                        <h3>Verificación del pago</h3>
+                        <h3>
+                          <CreditCard size={20} />
+                          Verificación del pago
+                        </h3>
                         <button className="button button-dark">
                           Confirmar abono
                           <Check size={18} />
@@ -697,7 +706,10 @@ export function Admin({
                       }}
                     >
                       <div className="section-title">
-                        <h3>Observación del pago</h3>
+                        <h3>
+                          <Receipt size={20} />
+                          Observación del pago
+                        </h3>
                         <button className="button button-dark">
                           Enviar observación
                           <ArrowRight size={18} />
@@ -767,7 +779,10 @@ export function Admin({
                       }}
                     >
                       <div className="section-title">
-                        <h3>Datos de despacho</h3>
+                        <h3>
+                          <Truck size={20} />
+                          Datos de despacho
+                        </h3>
                         <button className="button button-dark">
                           Confirmar despacho
                           <Truck size={18} />
@@ -845,7 +860,10 @@ export function Admin({
           {tab === "Catálogo" && (
             <>
               <div className="section-title">
-                <h2>Prendas y variantes</h2>
+                <h2>
+                  <Package size={22} />
+                  Prendas y variantes
+                </h2>
                 <div className="admin-heading-actions">
                   <button
                     className="button button-outline"
@@ -966,7 +984,10 @@ export function Admin({
                     }}
                   >
                     <div className="section-title">
-                      <h2>{editing.name}</h2>
+                      <h2>
+                        <Package size={22} />
+                        {editing.name}
+                      </h2>
                       <button className="button button-dark">
                         Guardar producto
                         <Check size={18} />
@@ -1059,7 +1080,10 @@ export function Admin({
               >
                 <section className="admin-section">
                   <div className="section-title">
-                    <h2>Campañas de la tienda</h2>
+                    <h2>
+                      <Tag size={22} />
+                      Campañas de la tienda
+                    </h2>
                     <button
                       className="button button-dark"
                       onClick={() => {
@@ -1129,7 +1153,10 @@ export function Admin({
                     onSubmit={savePromo}
                   >
                     <div className="section-title">
-                      <h2>{editing ? "Editar campaña" : "Nueva campaña"}</h2>
+                      <h2>
+                        <Tag size={22} />
+                        {editing ? "Editar campaña" : "Nueva campaña"}
+                      </h2>
                       <button className="button button-dark">
                         Guardar campaña
                         <Check size={18} />
@@ -1298,7 +1325,10 @@ export function Admin({
           {tab === "Afiliados" && (
             <div className="admin-columns">
               <section className="admin-section">
-                <h2>Vendedores y códigos</h2>
+                <h2>
+                  <Users size={22} />
+                  Vendedores y códigos
+                </h2>
                 {affiliates.map((a) => {
                   const related = paid.filter((o) => o.affiliateId === a.id);
                   return (
@@ -1455,7 +1485,10 @@ export function Admin({
                 }}
               >
                 <div className="section-title">
-                  <h2>Nuevo vendedor</h2>
+                  <h2>
+                    <UserPlus size={22} />
+                    Nuevo vendedor
+                  </h2>
                   <button className="button button-dark">
                     Crear vendedor
                     <Plus size={18} />
@@ -1487,26 +1520,6 @@ export function Admin({
               </form>
             </div>
           )}
-          {tab === "Logística" && (
-            <OrderLogistics
-              orders={orders}
-              onQuote={(id, shipping) => {
-                if (!Number.isFinite(shipping) || shipping < 0) return;
-                updateOrder(
-                  id,
-                  { shipping, shippingQuotedAt: now() },
-                  "Costo de envío confirmado: " + currency(shipping),
-                );
-                setMessage(
-                  "Envío actualizado. El cliente verá el importe y el total de su pedido.",
-                );
-              }}
-              onOrder={(id) => {
-                choose("Pedidos");
-                setSelected(id);
-              }}
-            />
-          )}
           {tab === "Agencias Shalom" && (
             <AgencyManager
               agencies={agencies}
@@ -1524,7 +1537,10 @@ export function Admin({
           {tab === "Personal" && (
             <div className="admin-columns">
               <section className="admin-section">
-                <h2>Equipo y asistencia</h2>
+                <h2>
+                  <Clock size={22} />
+                  Equipo y asistencia
+                </h2>
                 {staff.map((p) => (
                   <div className="management-row" key={p.id}>
                     <div>
@@ -1603,7 +1619,10 @@ export function Admin({
                 }}
               >
                 <div className="section-title">
-                  <h2>Agregar al equipo</h2>
+                  <h2>
+                    <UserPlus size={22} />
+                    Agregar al equipo
+                  </h2>
                   <button className="button button-dark">
                     Registrar persona
                     <Plus size={18} />

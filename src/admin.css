@@ -2088,12 +2088,6 @@
 @media(max-width:700px) { .admin-app .admin-header { padding:0 12px; grid-template-columns:1fr auto 1fr; gap:6px; } .admin-app .admin-header > a, .admin-app .admin-header > a img { width:140px; } .admin-app .admin-header-actions { gap:0; } .admin-app .admin-header-actions .icon-button { width:36px; height:36px; min-height:36px; } }
 @media(max-width:380px) { .admin-app .admin-header > a, .admin-app .admin-header > a img { width:120px; } }
 .admin-app .admin-header-actions .bag-count { position:absolute; right:0; top:0; min-width:17px; height:17px; padding:0 4px; border-radius:50%; display:grid; place-items:center; background:#622938; color:#fff; font-size:9px; line-height:1; }
-.logistics-order-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin:24px 0; }
-.admin-app .logistics-order-grid h3 { display:flex; gap:10px; align-items:center; font-size:15px; margin:0 0 18px; }
-.logistics-order-grid p { font-size:13px; line-height:1.8; color:#52525b; }
-.logistics-order-grid form { padding:22px; border-radius:14px; background:#f8f8fa; }
-.logistics-order-grid .button { justify-self:start; }
-@media(max-width:700px){ .logistics-order-grid { grid-template-columns:1fr; gap:20px; } }
 
 /* Administrative actions stay with their section, before long content. */
 .admin-heading-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
@@ -2113,3 +2107,22 @@
 .admin-app .payment-admin-actions { display:flex; gap:12px; flex-wrap:wrap; margin:0; }
 .admin-app #job-editor { scroll-margin-top:130px; }
 @media(max-width:700px) { .admin-app .admin-heading-actions { flex-direction:column; align-items:stretch; } .admin-app .admin-heading-actions .button { flex:initial; width:100%; } }
+
+.admin-app .admin-section > h2, .admin-app .section-title > h2, .admin-app .section-title > h3, .admin-app .order-logistics > h3 { display:flex; align-items:center; gap:10px; }
+.admin-app .admin-section > h2 > svg, .admin-app .section-title > h2 > svg, .admin-app .section-title > h3 > svg, .admin-app .order-logistics > h3 > svg { color:#622938; flex-shrink:0; }
+.admin-app .order-logistics { margin:28px 0; padding:24px 0; border-block:1px solid #dedee2; }
+.admin-app .order-logistics > h3 { margin:0 0 20px; }
+.admin-app .order-logistics .section-title p { max-width:42ch; margin:0; }
+.admin-app .payment-method-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:20px; }
+.admin-app .payment-method-card { border:1px solid #dedee2; border-radius:16px; padding:24px; min-width:0; background:#fff; }
+.payment-method-summary { display:flex; align-items:center; gap:16px; }
+.payment-method-summary h3 { margin:0 0 8px; font-size:17px; }
+.payment-method-summary > img, .payment-method-symbol { width:56px; height:56px; object-fit:contain; background:#f6edf1; color:#622938; border-radius:12px; flex-shrink:0; display:grid; place-items:center; }
+.payment-method-card dl { margin:22px 0; }
+.payment-method-card dl > div { margin:14px 0; }
+.payment-method-card dt { display:flex; align-items:center; gap:8px; color:#52525b; font-size:12px; }
+.payment-method-card dt svg { color:#622938; }
+.payment-method-card dd { margin:6px 0 0 25px; font-size:13px; overflow-wrap:anywhere; }
+.payment-method-actions { display:flex; gap:12px; flex-wrap:wrap; padding-top:8px; }
+.admin-app .payment-method-editor { scroll-margin-top:130px; margin-bottom:24px; }
+.admin-app .payment-admin-workspace > .section-title { margin-bottom:24px; }

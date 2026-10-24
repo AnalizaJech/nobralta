@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, X } from "@phosphor-icons/react";
-export function AvatarCrop({ image, onApply, onCancel }) {
+export function AvatarCrop({ image, onApply, onCancel, qr = false }) {
   const modal = useRef(null),
     canvas = useRef(null),
     drag = useRef(null);
@@ -12,32 +12,37 @@ export function AvatarCrop({ image, onApply, onCancel }) {
   }, []);
   useEffect(() => {
     const side = Math.min(image.naturalWidth, image.naturalHeight) / zoom;
-    canvas.current
-      .getContext("2d")
-      .drawImage(
-        image,
-        ((image.naturalWidth - side) * x) / 100,
-        ((image.naturalHeight - side) * y) / 100,
-        side,
-        side,
-        0,
-        0,
-        400,
-        400,
-      );
-  }, [image, zoom, x, y]);
+    const ctx = canvas.current.getContext("2d");
+    ctx.clearRect(0, 0, 400, 400);
+    if (qr) {
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, 400, 400);
+      ctx.imageSmoothingEnabled = false;
+    }
+    ctx.drawImage(
+      image,
+      ((image.naturalWidth - side) * x) / 100,
+      ((image.naturalHeight - side) * y) / 100,
+      side,
+      side,
+      0,
+      0,
+      400,
+      400,
+    );
+  }, [image, zoom, x, y, qr]);
   return (
     <dialog
       ref={modal}
       className="avatar-crop"
-      aria-label="Recortar foto de perfil"
+      aria-label={qr ? "Recortar QR" : "Recortar foto de perfil"}
       onCancel={(e) => {
         e.preventDefault();
         onCancel();
       }}
     >
       <div className="avatar-crop-heading">
-        <h3>Recorta tu foto</h3>
+        <h3>{qr ? "Recorta tu QR" : "Recorta tu foto"}</h3>
         <button
           type="button"
           className="icon-button"
@@ -48,7 +53,9 @@ export function AvatarCrop({ image, onApply, onCancel }) {
         </button>
       </div>
       <p>
-        Ajusta el encuadre cuadrado. Arrastra la imagen o utiliza los controles.
+        {qr
+          ? "Mantén todo el código y su margen blanco dentro del cuadrado. Arrastra la imagen o utiliza los controles."
+          : "Ajusta el encuadre cuadrado. Arrastra la imagen o utiliza los controles."}
       </p>
       <canvas
         ref={canvas}
@@ -128,7 +135,13 @@ export function AvatarCrop({ image, onApply, onCancel }) {
         <button
           type="button"
           className="button button-dark"
-          onClick={() => onApply(canvas.current.toDataURL("image/jpeg", 0.88))}
+          onClick={() =>
+            onApply(
+              qr
+                ? canvas.current.toDataURL("image/png")
+                : canvas.current.toDataURL("image/jpeg", 0.88),
+            )
+          }
         >
           <Check size={18} />
           Usar recorte

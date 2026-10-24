@@ -2088,3 +2088,9 @@
 @media(max-width:700px) { .admin-app .admin-header { padding:0 12px; grid-template-columns:1fr auto 1fr; gap:6px; } .admin-app .admin-header > a, .admin-app .admin-header > a img { width:140px; } .admin-app .admin-header-actions { gap:0; } .admin-app .admin-header-actions .icon-button { width:36px; height:36px; min-height:36px; } }
 @media(max-width:380px) { .admin-app .admin-header > a, .admin-app .admin-header > a img { width:120px; } }
 .admin-app .admin-header-actions .bag-count { position:absolute; right:0; top:0; min-width:17px; height:17px; padding:0 4px; border-radius:50%; display:grid; place-items:center; background:#622938; color:#fff; font-size:9px; line-height:1; }
+.logistics-order-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin:24px 0; }
+.admin-app .logistics-order-grid h3 { display:flex; gap:10px; align-items:center; font-size:15px; margin:0 0 18px; }
+.logistics-order-grid p { font-size:13px; line-height:1.8; color:#52525b; }
+.logistics-order-grid form { padding:22px; border-radius:14px; background:#f8f8fa; }
+.logistics-order-grid .button { justify-self:start; }
+@media(max-width:700px){ .logistics-order-grid { grid-template-columns:1fr; gap:20px; } }

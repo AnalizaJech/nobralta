@@ -242,26 +242,38 @@ export async function buildReceipt(order) {
     Number(order.total ?? subtotal - Number(order.discount || 0)) +
     Number(order.shipping || 0);
   const summaryY = y;
-  box(103, y, 89, 61);
+  const quoted = order.shipping != null;
+  box(103, y, 89, quoted ? 61 : 44);
   txt("RESUMEN DE IMPORTES", 109, y + 9, 8, true, muted);
-  const sums = [
-    ["Prendas", money(subtotal)],
-    ["Descuento", money(order.discount || 0)],
-    ["Envío", order.shipping != null ? money(order.shipping) : "Por cotizar"],
-  ];
-  for (const [i, [label, value]] of sums.entries()) {
-    txt(label, 109, y + 19 + i * 7, 9, false, muted);
-    txt(value, 186, y + 19 + i * 7, 9, false, ink, { align: "right" });
-  }
-  box(103, y + 43, 89, 18, wine);
-  txt("Precio total", 109, y + 54, 10, true, [255, 255, 255]);
-  txt(money(total), 186, y + 54, 15, true, [255, 255, 255], { align: "right" });
+  if (quoted) {
+    const sums = [
+      ["Subtotal productos", money(order.total)],
+      ["Envío", money(order.shipping)],
+    ];
+    for (const [i, [label, value]] of sums.entries()) {
+      txt(label, 109, y + 20 + i * 8, 9, false, muted);
+      txt(value, 186, y + 20 + i * 8, 9, false, ink, { align: "right" });
+    }
+  } else txt("Envío en coordinación", 109, y + 19, 8, false, muted);
+  const totalY = y + (quoted ? 43 : 26);
+  box(103, totalY, 89, 18, wine);
+  txt(
+    quoted ? "Total a pagar" : "Importe productos",
+    109,
+    totalY + 11,
+    9,
+    true,
+    [255, 255, 255],
+  );
+  txt(money(total), 186, totalY + 11, 15, true, [255, 255, 255], {
+    align: "right",
+  });
   txt("INFORMACIÓN DE ENTREGA", 18, y + 5, 8, true, wine);
   let ny = y + 13;
   const notes = [
     "Entrega estimada: 2-10 días desde confirmar el pago y el destino.",
     order.shipping == null
-      ? "El envío se cotiza por separado antes de pagar."
+      ? "El costo del envío se confirma según la agencia seleccionada."
       : "El costo de envío figura en el resumen.",
     ...(order.report?.method
       ? [`Medio registrado: ${order.report.method}.`]

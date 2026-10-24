@@ -1,3 +1,4 @@
+import { OrderLogistics } from "./OrderLogistics";
 import {
   OrderRecipient,
   OrderTotals,
@@ -56,6 +57,7 @@ const modules = [
   ["Clientes", Users],
   ["Afiliados", Users],
   ["Envíos", Truck],
+  ["Logística", Truck],
   ["Medios de pago", CreditCard],
   ["Personal", Clock],
   ["Trabajos", Users],
@@ -64,7 +66,7 @@ const modules = [
 const navGroups = [
   {
     title: "Operación diaria",
-    items: ["Resumen", "Pedidos", "Envíos", "Medios de pago"],
+    items: ["Resumen", "Pedidos", "Logística", "Envíos", "Medios de pago"],
   },
   { title: "Tienda", items: ["Catálogo", "Promociones"] },
   {
@@ -78,6 +80,7 @@ const descriptions = {
     "Pagos pendientes, próximos despachos y existencias que requieren atención.",
   Pedidos:
     "Consulta pedidos, revisa vouchers y actualiza cada etapa de la entrega.",
+  Logística: "Coordina el destino y confirma el costo de envío de cada pedido.",
   Envíos:
     "Busca ubicaciones de Shalom y administra las agencias disponibles para recojo.",
   "Medios de pago":
@@ -588,39 +591,13 @@ export function Admin({
                 </section>
                 <section className="admin-section">
                   <h2>Pago y despacho</h2>
-                  {["Por pagar", "Pago observado"].includes(order.status) && (
-                    <form
-                      className="form-grid shipping-quote"
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        const f = Object.fromEntries(
-                          new FormData(e.currentTarget),
-                        );
-                        updateOrder(
-                          order.id,
-                          { shipping: Number(f.shipping) },
-                          "Envío cotizado: " + currency(Number(f.shipping)),
-                        );
-                        setMessage(
-                          "Cotización de envío actualizada en el pedido del cliente.",
-                        );
-                      }}
-                    >
-                      <Field
-                        label="Cotización de envío (S/)"
-                        name="shipping"
-                        type="number"
-                        min="0"
-                        step="0.01"
-                        defaultValue={order.shipping ?? ""}
-                        required
-                      />
-                      <button className="button button-dark">
-                        Confirmar cotización
-                        <Check size={18} />
-                      </button>
-                    </form>
-                  )}
+                  <button
+                    className="button button-outline"
+                    onClick={() => choose("Logística")}
+                  >
+                    <Truck size={18} />
+                    Gestionar envío en Logística
+                  </button>
                   <OrderPayment order={order} />
                   <AdminVoucher file={order.report?.file} />
                   {order.status === "En revisión" && !observing && (
@@ -631,6 +608,12 @@ export function Admin({
                         const f = Object.fromEntries(
                           new FormData(e.currentTarget),
                         );
+                        if (order.shipping == null) {
+                          setNotice(
+                            "Confirma el costo del envío en Logística antes de verificar el total.",
+                          );
+                          return;
+                        }
                         if (
                           Math.abs(
                             Number(f.verifiedAmount) -
@@ -1422,6 +1405,26 @@ export function Admin({
                 </button>
               </form>
             </div>
+          )}
+          {tab === "Logística" && (
+            <OrderLogistics
+              orders={orders}
+              onQuote={(id, shipping) => {
+                if (!Number.isFinite(shipping) || shipping < 0) return;
+                updateOrder(
+                  id,
+                  { shipping, shippingQuotedAt: now() },
+                  "Costo de envío confirmado: " + currency(shipping),
+                );
+                setMessage(
+                  "Envío actualizado. El cliente verá el importe y el total de su pedido.",
+                );
+              }}
+              onOrder={(id) => {
+                choose("Pedidos");
+                setSelected(id);
+              }}
+            />
           )}
           {tab === "Envíos" && (
             <AgencyManager

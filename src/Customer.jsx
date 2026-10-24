@@ -653,24 +653,34 @@ export function OrderDetail({ order, onReport, settings }) {
               <Receipt size={21} />
               Resumen de pago
             </h3>
-            <dl>
-              <div>
-                <dt>Prendas</dt>
-                <dd>{currency(order.total)}</dd>
-              </div>
-              <div>
-                <dt>Envío</dt>
-                <dd>
-                  {order.shipping != null
-                    ? currency(order.shipping)
-                    : "Por cotizar"}
-                </dd>
-              </div>
-              <div className="customer-order-total">
-                <dt>Precio total</dt>
-                <dd>{currency(order.total + (order.shipping || 0))}</dd>
-              </div>
-            </dl>
+            {order.shipping == null ? (
+              <>
+                <dl>
+                  <div className="customer-order-total">
+                    <dt>Importe de productos</dt>
+                    <dd>{currency(order.total)}</dd>
+                  </div>
+                </dl>
+                <p>
+                  Estamos coordinando el envío. Su costo aparecerá aquí cuando se confirme.
+                </p>
+              </>
+            ) : (
+              <dl>
+                <div>
+                  <dt>Subtotal de productos</dt>
+                  <dd>{currency(order.total)}</dd>
+                </div>
+                <div>
+                  <dt>Envío</dt>
+                  <dd>{currency(order.shipping)}</dd>
+                </div>
+                <div className="customer-order-total">
+                  <dt>Total a pagar</dt>
+                  <dd>{currency(order.total + order.shipping)}</dd>
+                </div>
+              </dl>
+            )}
           </section>
         </div>
         <div className="customer-order-download">

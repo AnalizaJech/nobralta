@@ -105,17 +105,26 @@ export function OrderPayment({ order }) {
   return (
     <div className="admin-payment-info">
       <dl className="order-totals">
-        <div>
-          <dt>Envío</dt>
-          <dd>
-            {order.shipping != null ? currency(order.shipping) : "Por cotizar"}
-          </dd>
-        </div>
+        {order.shipping != null && (
+          <div>
+            <dt>Envío confirmado</dt>
+            <dd>{currency(order.shipping)}</dd>
+          </div>
+        )}
         <div className="order-total">
-          <dt>Total a verificar</dt>
+          <dt>
+            {order.shipping == null
+              ? "Importe de productos"
+              : "Total a verificar"}
+          </dt>
           <dd>{currency(order.total + (order.shipping || 0))}</dd>
         </div>
       </dl>
+      {order.shipping == null && (
+        <p className="form-hint">
+          Confirma el costo del envío desde Logística para completar el total.
+        </p>
+      )}
       {order.report && (
         <dl className="order-info-grid">
           <div>

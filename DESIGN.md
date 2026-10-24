@@ -58,3 +58,8 @@ A4 blanco, márgenes18mm, marca original, negro/grises neutros y borgoña. Bloqu
 
 ## Tipografía PDF r35 — prioridad sobre r33
 Sustituir Helvetica por Manrope incrustada (regular400 y semibold600); Instrument Serif en el título Pedido y cierre. Logo centrado como la cabecera del sitio, metadatos discretos, tarjetas blancas con bordes neutros y total borgoña. Recursos estáticos locales, sin dependencia de fuentes instaladas en el equipo receptor.
+
+## Resumen de pago y Logística r36
+- Un único importe de productos mientras se coordina el envío; desglose y total solo tras confirmar costo.
+- Nuevo módulo Logística con destino, cliente e importe editable por pedido en etapa de pago/revisión; acceso al detalle.
+- Misma lógica en seguimiento, administración y PDF, con registro de fecha e historial.

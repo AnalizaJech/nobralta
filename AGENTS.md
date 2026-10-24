@@ -131,3 +131,6 @@ Quitar Volver a mi cuenta del seguimiento y la frase Confirma que esta agencia c
 
 ## Tipografía PDF r35
 El PDF debe usar las mismas fuentes del sitio incrustadas: Manrope400/600 para datos e Instrument Serif para título y cierre. No Helvetica genérica. Cabecera con marca centrada, bordes neutros y paleta blanca/negra/borgoña. Fuentes estáticas subconjuntadas en public/fonts; generación reproducible scripts/build-pdf-fonts.py desde fuentes OFL existentes.
+
+## Resumen y logística r36
+El resumen pendiente muestra una sola cifra como Importe de productos, sin repetir un total ni tratar envío sin cotizar como cero confirmado. Al registrar envío en Logística se muestran subtotal de productos, envío y total a pagar en cliente/PDF. Logística permite confirmar costo por pedido antes de verificar el pago; registra fecha e historial. Costo 0 significa envío sin costo confirmado. Mantener la verificación del importe completo y no aprobar pedidos con envío pendiente.

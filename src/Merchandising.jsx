@@ -5,6 +5,12 @@ import {
   WhatsappLogo,
   YoutubeLogo,
   LinkedinLogo,
+  XLogo,
+  TelegramLogo,
+  PinterestLogo,
+  DiscordLogo,
+  TwitchLogo,
+  Globe,
 } from "@phosphor-icons/react";
 import { AssetImage } from "./AssetImage";
 export const socialChannels = [
@@ -25,21 +31,41 @@ export const socialChannels = [
     "https://www.linkedin.com/company/nobralta/",
   ],
 ];
+export const socialIcons = Object.fromEntries([
+  ...socialChannels.map(([id, name, Icon]) => [id, { name, Icon }]),
+  ["x", { name: "X / Twitter", Icon: XLogo }],
+  ["telegram", { name: "Telegram", Icon: TelegramLogo }],
+  ["pinterest", { name: "Pinterest", Icon: PinterestLogo }],
+  ["discord", { name: "Discord", Icon: DiscordLogo }],
+  ["twitch", { name: "Twitch", Icon: TwitchLogo }],
+  ["web", { name: "Sitio web / otra red", Icon: Globe }],
+]);
+export const getSocialLinks = (settings) =>
+  settings.socialLinks ??
+  socialChannels.map(([id, name, , fallback]) => ({
+    id,
+    name,
+    icon: id,
+    url: settings["social_" + id] || fallback,
+  }));
 export function SocialLinks({ settings }) {
   return (
     <div className="social-links" aria-label="Redes sociales">
-      {socialChannels.map(([id, name, Icon, fallback]) => (
-        <a
-          key={id}
-          href={settings["social_" + id] || fallback}
-          aria-label={name}
-          title={name}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon size={21} />
-        </a>
-      ))}
+      {getSocialLinks(settings).map((m) => {
+        const Icon = (socialIcons[m.icon] || socialIcons.web).Icon;
+        return (
+          <a
+            key={m.id}
+            href={m.url}
+            aria-label={m.name}
+            title={m.name}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon size={21} />
+          </a>
+        );
+      })}
     </div>
   );
 }

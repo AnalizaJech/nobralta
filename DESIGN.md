@@ -72,3 +72,6 @@ Historial cliente con timeline y badges con icono como gestión de pedidos. Cont
 
 ## Administración compacta r40
 Logística es sección contextual dentro del detalle del pedido junto a pago/despacho; sin navegación independiente. Medios de pago: grid compacto de tarjetas blancas16px, plataforma/estado, titular, cuenta y estado QR con iconos; Editar secundario y Eliminar peligro. Editor único encima de la lista, acciones al inicio y scroll al abrir, cancelación sin persistencia. Guardar visible únicamente en editor. QR cuadrado con crop compartido, preview, arrastre/zoom/posición y salida PNG400px; recorte posterior disponible. Encabezados de módulos y formularios con icono semántico borgoña.
+
+## Gestión r41
+Redes configurables con lista de perfiles e iconos, alta/edición contextual y búsqueda visual de iconos sin servicios externos. Footer consume lista guardada y conserva compatibilidad con configuración previa. Contacto en resumen antes de editar. Clientes con iconos por dato. Afiliados/Personal muestran acciones de creación al principio y un editor bajo demanda antes del listado; móvil sin comprimir información frente a acciones laterales. Campañas mantiene editor por encima de la lista, desplazamiento contextual y publicación dentro del formulario; sin Pausar repetido en listado.

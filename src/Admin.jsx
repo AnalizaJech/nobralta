@@ -78,8 +78,7 @@ const navGroups = [
 const descriptions = {
   Resumen:
     "Pagos pendientes, próximos despachos y existencias que requieren atención.",
-  Pedidos:
-    "Revisa pagos, coordina el envío y actualiza cada etapa del pedido.",
+  Pedidos: "Revisa pagos, coordina el envío y actualiza cada etapa del pedido.",
   "Agencias Shalom":
     "Busca ubicaciones de Shalom y administra las agencias disponibles para recojo.",
   "Medios de pago":
@@ -143,6 +142,8 @@ export function Admin({
     [period, setPeriod] = useState("all");
   const [packLength, setPackLength] = useState(2);
   const [newMerchandise, setNewMerchandise] = useState(false);
+  const [affiliateComposer, setAffiliateComposer] = useState(false),
+    [staffComposer, setStaffComposer] = useState(false);
   const [catalogExporting, setCatalogExporting] = useState(false);
   const [catalogQuery, setCatalogQuery] = useState(""),
     [catalogCategory, setCatalogCategory] = useState("Todas"),
@@ -159,6 +160,24 @@ export function Admin({
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [tab, selected, editing?.id]);
+  useEffect(() => {
+    if (promoComposer)
+      document
+        .getElementById("campaign-editor")
+        ?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [promoComposer, editing?.id]);
+  useEffect(() => {
+    if (affiliateComposer)
+      document
+        .getElementById("affiliate-editor")
+        ?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [affiliateComposer]);
+  useEffect(() => {
+    if (staffComposer)
+      document
+        .getElementById("staff-editor")
+        ?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [staffComposer]);
   const menuTrigger = useRef(null);
   const adminRoot = useRef(null);
   useEffect(() => {
@@ -1124,30 +1143,13 @@ export function Admin({
                           <PencilSimple size={17} />
                           Editar
                         </button>
-                        <button
-                          className={
-                            p.active
-                              ? "button button-warning"
-                              : "button button-dark"
-                          }
-                          onClick={() => {
-                            setPromos((a) =>
-                              a.map((v) =>
-                                v.id === p.id ? { ...v, active: !v.active } : v,
-                              ),
-                            );
-                            log("Promoción", p.active ? "Pausada" : "Activada");
-                          }}
-                        >
-                          {p.active ? <Pause size={17} /> : <Play size={17} />}
-                          {p.active ? "Pausar" : "Activar"}
-                        </button>
                       </div>
                     </div>
                   ))}
                 </section>
                 {(editing || promoComposer) && (
                   <form
+                    id="campaign-editor"
                     className="admin-section form-grid"
                     key={editing?.id || "new"}
                     onSubmit={savePromo}
@@ -1157,10 +1159,25 @@ export function Admin({
                         <Tag size={22} />
                         {editing ? "Editar campaña" : "Nueva campaña"}
                       </h2>
-                      <button className="button button-dark">
-                        Guardar campaña
-                        <Check size={18} />
-                      </button>
+                      <div className="admin-heading-actions">
+                        {(editing || promoComposer) && (
+                          <button
+                            type="button"
+                            className="button button-outline"
+                            onClick={() => {
+                              setEditing(null);
+                              setPromoComposer(false);
+                            }}
+                          >
+                            <X size={18} />
+                            Cancelar edición
+                          </button>
+                        )}
+                        <button className="button button-dark">
+                          Guardar campaña
+                          <Check size={18} />
+                        </button>
+                      </div>
                     </div>
                     <Field
                       label="Título de la promoción"
@@ -1293,20 +1310,6 @@ export function Admin({
                       Los códigos no se acumulan con packs. Revisa la vigencia
                       antes de publicar.
                     </p>
-
-                    {(editing || promoComposer) && (
-                      <button
-                        type="button"
-                        className="text-action"
-                        onClick={() => {
-                          setEditing(null);
-                          setPromoComposer(false);
-                        }}
-                      >
-                        <X size={18} />
-                        Cancelar edición
-                      </button>
-                    )}
                   </form>
                 )}
               </div>
@@ -1323,22 +1326,135 @@ export function Admin({
             />
           )}
           {tab === "Afiliados" && (
-            <div className="admin-columns">
+            <div className="admin-columns management-workspace">
+              {affiliateComposer && (
+                <form
+                  id="affiliate-editor"
+                  className="admin-section form-grid"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const f = Object.fromEntries(new FormData(e.currentTarget));
+                    if (
+                      affiliates.some(
+                        (a) => a.code.toUpperCase() === f.code.toUpperCase(),
+                      )
+                    ) {
+                      setMessage("Ese código ya está registrado.");
+                      return;
+                    }
+                    setAffiliates((a) => [
+                      ...a,
+                      {
+                        ...f,
+                        id: crypto.randomUUID(),
+                        code: f.code.toUpperCase(),
+                        discount: Number(f.discount),
+                        commission: Number(f.commission),
+                        active: true,
+                      },
+                    ]);
+                    log("Afiliado", f.name + " creado");
+                    e.currentTarget.reset();
+                    setAffiliateComposer(false);
+                    setMessage(
+                      "Afiliado creado. Su código ya puede usarse en la bolsa.",
+                    );
+                  }}
+                >
+                  <div className="section-title">
+                    <h2>
+                      <UserPlus size={22} />
+                      Nuevo afiliado
+                    </h2>
+                    <div className="admin-heading-actions">
+                      <button
+                        type="button"
+                        className="button button-outline"
+                        onClick={() => setAffiliateComposer(false)}
+                      >
+                        <X size={18} />
+                        Cancelar
+                      </button>
+
+                      <button className="button button-dark">
+                        Crear afiliado
+                        <Plus size={18} />
+                      </button>
+                    </div>
+                  </div>
+                  <Field label="Nombre completo" name="name" required />
+                  <Field
+                    label="Código único"
+                    name="code"
+                    pattern="[A-Za-z0-9_\-]{3,24}"
+                    required
+                  />
+                  <Field
+                    label="Descuento al comprador (%)"
+                    name="discount"
+                    type="number"
+                    min="0"
+                    max="50"
+                    required
+                  />
+                  <Field
+                    label="Comisión (%)"
+                    name="commission"
+                    type="number"
+                    min="0"
+                    max="50"
+                    required
+                  />
+                </form>
+              )}
               <section className="admin-section">
-                <h2>
-                  <Users size={22} />
-                  Vendedores y códigos
-                </h2>
+                <div className="section-title">
+                  <h2>
+                    <Users size={22} />
+                    Vendedores afiliados
+                  </h2>
+                  {!affiliateComposer && (
+                    <button
+                      className="button button-dark"
+                      onClick={() => setAffiliateComposer(true)}
+                    >
+                      <Plus size={18} />
+                      Nuevo afiliado
+                    </button>
+                  )}
+                </div>
                 {affiliates.map((a) => {
                   const related = paid.filter((o) => o.affiliateId === a.id);
                   return (
                     <div className="management-row" key={a.id}>
                       <div>
                         <h3>{a.name}</h3>
-                        <p>
-                          {a.code} · Descuento {a.discount}% · Comisión{" "}
-                          {a.commission}%
-                        </p>
+                        <AdminBadge>
+                          {a.active ? "Activa" : "Pausada"}
+                        </AdminBadge>
+                        <dl className="affiliate-facts">
+                          <div>
+                            <dt>
+                              <Tag size={17} />
+                              Código
+                            </dt>
+                            <dd>{a.code}</dd>
+                          </div>
+                          <div>
+                            <dt>
+                              <Handbag size={17} />
+                              Descuento
+                            </dt>
+                            <dd>{a.discount}%</dd>
+                          </div>
+                          <div>
+                            <dt>
+                              <Receipt size={17} />
+                              Comisión
+                            </dt>
+                            <dd>{a.commission}%</dd>
+                          </div>
+                        </dl>
                         <small>
                           {related.length} pedidos verificados ·{" "}
                           {currency(
@@ -1447,77 +1563,12 @@ export function Admin({
                         ) : (
                           <UserPlus size={18} />
                         )}
-                        {a.active ? "Pausar" : "Activar"}
+                        {a.active ? "Desactivar código" : "Activar código"}
                       </button>
                     </div>
                   );
                 })}
               </section>
-              <form
-                className="admin-section form-grid"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const f = Object.fromEntries(new FormData(e.currentTarget));
-                  if (
-                    affiliates.some(
-                      (a) => a.code.toUpperCase() === f.code.toUpperCase(),
-                    )
-                  ) {
-                    setMessage("Ese código ya está registrado.");
-                    return;
-                  }
-                  setAffiliates((a) => [
-                    ...a,
-                    {
-                      ...f,
-                      id: crypto.randomUUID(),
-                      code: f.code.toUpperCase(),
-                      discount: Number(f.discount),
-                      commission: Number(f.commission),
-                      active: true,
-                    },
-                  ]);
-                  log("Afiliado", f.name + " creado");
-                  e.currentTarget.reset();
-                  setMessage(
-                    "Afiliado creado. Su código ya puede usarse en la bolsa.",
-                  );
-                }}
-              >
-                <div className="section-title">
-                  <h2>
-                    <UserPlus size={22} />
-                    Nuevo vendedor
-                  </h2>
-                  <button className="button button-dark">
-                    Crear vendedor
-                    <Plus size={18} />
-                  </button>
-                </div>
-                <Field label="Nombre completo" name="name" required />
-                <Field
-                  label="Código único"
-                  name="code"
-                  pattern="[A-Za-z0-9_\-]{3,24}"
-                  required
-                />
-                <Field
-                  label="Descuento al comprador (%)"
-                  name="discount"
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                />
-                <Field
-                  label="Comisión del vendedor (%)"
-                  name="commission"
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                />
-              </form>
             </div>
           )}
           {tab === "Agencias Shalom" && (
@@ -1535,12 +1586,69 @@ export function Admin({
             />
           )}
           {tab === "Personal" && (
-            <div className="admin-columns">
+            <div className="admin-columns management-workspace">
+              {staffComposer && (
+                <form
+                  id="staff-editor"
+                  className="admin-section form-grid"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const f = Object.fromEntries(new FormData(e.currentTarget));
+                    setStaff((a) => [
+                      ...a,
+                      {
+                        ...f,
+                        id: crypto.randomUUID(),
+                        active: false,
+                        records: [],
+                      },
+                    ]);
+                    e.currentTarget.reset();
+                    setStaffComposer(false);
+                    log("Personal", f.name + " agregado");
+                  }}
+                >
+                  <div className="section-title">
+                    <h2>
+                      <UserPlus size={22} />
+                      Agregar al equipo
+                    </h2>
+                    <div className="admin-heading-actions">
+                      <button
+                        type="button"
+                        className="button button-outline"
+                        onClick={() => setStaffComposer(false)}
+                      >
+                        <X size={18} />
+                        Cancelar
+                      </button>
+
+                      <button className="button button-dark">
+                        Registrar persona
+                        <Plus size={18} />
+                      </button>
+                    </div>
+                  </div>
+                  <Field label="Nombre completo" name="name" required />
+                  <Field label="Función" name="job" required />
+                </form>
+              )}
               <section className="admin-section">
-                <h2>
-                  <Clock size={22} />
-                  Equipo y asistencia
-                </h2>
+                <div className="section-title">
+                  <h2>
+                    <Clock size={22} />
+                    Equipo y asistencia
+                  </h2>
+                  {!staffComposer && (
+                    <button
+                      className="button button-dark"
+                      onClick={() => setStaffComposer(true)}
+                    >
+                      <Plus size={18} />
+                      Agregar persona
+                    </button>
+                  )}
+                </div>
                 {staff.map((p) => (
                   <div className="management-row" key={p.id}>
                     <div>
@@ -1600,37 +1708,6 @@ export function Admin({
                   aprobadas.
                 </p>
               </section>
-              <form
-                className="admin-section form-grid"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const f = Object.fromEntries(new FormData(e.currentTarget));
-                  setStaff((a) => [
-                    ...a,
-                    {
-                      ...f,
-                      id: crypto.randomUUID(),
-                      active: false,
-                      records: [],
-                    },
-                  ]);
-                  e.currentTarget.reset();
-                  log("Personal", f.name + " agregado");
-                }}
-              >
-                <div className="section-title">
-                  <h2>
-                    <UserPlus size={22} />
-                    Agregar al equipo
-                  </h2>
-                  <button className="button button-dark">
-                    Registrar persona
-                    <Plus size={18} />
-                  </button>
-                </div>
-                <Field label="Nombre completo" name="name" required />
-                <Field label="Función" name="job" required />
-              </form>
             </div>
           )}
           {tab === "Trabajos" && (

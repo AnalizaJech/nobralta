@@ -2126,3 +2126,31 @@
 .payment-method-actions { display:flex; gap:12px; flex-wrap:wrap; padding-top:8px; }
 .admin-app .payment-method-editor { scroll-margin-top:130px; margin-bottom:24px; }
 .admin-app .payment-admin-workspace > .section-title { margin-bottom:24px; }
+.admin-app .management-workspace { grid-template-columns:1fr; }
+.admin-app .promo-workspace.is-editing { grid-template-columns:1fr; }
+.admin-app .promo-workspace.is-editing > form { order:-1; }
+#campaign-editor, #affiliate-editor, #staff-editor, .social-editor { scroll-margin-top:130px; }
+.field-with-icon { display:inline-flex; align-items:center; gap:8px; }
+.field-with-icon svg { flex-shrink:0; color:#622938; }
+.admin-app .social-admin-list { display:grid; gap:16px; }
+.social-admin-row { border:1px solid #dedee2; border-radius:14px; padding:20px; display:flex; gap:16px; align-items:center; min-width:0; }
+.social-admin-row h3 { margin:0 0 6px; font-size:16px; }
+.social-admin-row a { font-size:12px; color:#52525b; overflow-wrap:anywhere; }
+.social-admin-row > div { min-width:0; }
+.social-admin-symbol { width:48px; height:48px; flex-shrink:0; display:grid; place-items:center; border-radius:12px; background:#f6edf1; color:#622938; }
+.social-admin-actions { margin-left:auto; display:flex; gap:12px; flex-shrink:0; }
+.social-icon-picker { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; }
+.social-icon-picker button { display:flex; align-items:center; gap:10px; padding:14px; border:1px solid #dedee2; border-radius:12px; background:white; font:inherit; font-size:12px; cursor:pointer; }
+.social-icon-picker button:hover { background:#f6edf1; }
+.social-icon-picker button[aria-pressed=true] { background:#622938; color:white; border-color:#622938; }
+.social-editor { margin-bottom:24px; }
+.contact-summary { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.contact-summary dt { display:flex; align-items:center; gap:9px; color:#622938; font-size:12px; }
+.contact-summary dd { margin:8px 0 0 27px; font-size:14px; }
+@media(max-width:700px) { .social-admin-row { flex-wrap:wrap; } .social-admin-actions { margin:0; width:100%; } .contact-summary { grid-template-columns:1fr; } }
+.affiliate-facts { display:flex; gap:24px; flex-wrap:wrap; margin:18px 0; }
+.affiliate-facts dt { display:flex; align-items:center; gap:8px; font-size:12px; color:#622938; }
+.affiliate-facts dd { margin:6px 0 0 25px; font-size:14px; font-weight:600; }
+.social-icon-picker { grid-template-columns:repeat(auto-fill,minmax(130px,160px)); }
+.admin-app .management-workspace .management-row > div:first-child { min-width:0; flex:1; }
+@media(max-width:700px) { .admin-app .management-workspace .management-row { flex-direction:column; align-items:flex-start; gap:20px; } .admin-app .management-workspace .management-row > div:first-child { width:100%; } .affiliate-facts { gap:18px; } }

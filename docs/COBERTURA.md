@@ -32,3 +32,6 @@ Alta y fotos se guardan en localStorage del navegador actual, sujetas a su capac
 
 ## Organización administrativa r40
 Logística se gestiona dentro de cada pedido, no como módulo independiente. Medios de pago ofrece lista compacta y editor por medio; alta/edición persisten solo al guardar, cancelar descarta borrador, eliminar actualiza configuración local. QR admite recorte cuadrado400px PNG y recorte de imagen existente; no valida que un QR corresponda al titular ni concilia transferencias. Almacén sigue siendo localStorage del navegador.
+
+## Redes y gestión r41
+Redes sociales configurables en localStorage, catálogo local de12 iconos y fallback web; URL restringida a HTTP/HTTPS. Crear/editar/eliminar actualiza enlaces del footer. No se verificó propiedad de perfiles ni se enviaron mensajes. Campañas/altas de afiliados y personal comprobadas en navegador; flujo sigue siendo local, sin permisos ni concurrencia de servidor.

@@ -59,3 +59,6 @@ Se verificó visualmente DNI/teléfono/correo con iconos propios a390px y en PDF
 
 ## r40 — Pedido y medios compactos
 Playwright1440/390: menú sin Logística independiente, costo15 guardado desde pedido; medios con0 formularios y0 botones Guardar en reposo. Editar/cancelar conserva original; alta guarda QR400x400 PNG, recorte posterior/cancelar conserva imagen, edición actualiza cuenta y eliminación retira tarjeta. Guardar desaparece tras persistir. Sin overflow móvil; capturas desktop/móvil/crop/pedido inspeccionadas. Navegación por8 módulos sin errores de consola; fixtures locales restaurados. Build Pages y tests de empaquetado completados.
+
+## r41 — Redes y gestión contextual
+Playwright1440/390: alta de Telegram con búsqueda/selección del icono y reflejo del enlace en footer; resumen de contacto sin guardar permanente. Campaña existente editada y nueva campaña de código creada, editor visible a230px, sin Pausar en listado. Rueda sobre descuento enfocado mantiene12. Alta de afiliado y personal desde botón inicial, formularios cerrados en reposo; persistencia comprobada. Clientes con4 iconos por registro y sin overflow global a390px. Capturas de redes y afiliados inspeccionadas, fixtures restaurados. Error de tupla de iconos detectado y corregido durante QA antes del cierre.

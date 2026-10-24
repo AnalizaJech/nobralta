@@ -1,3 +1,4 @@
+import { SocialMediaManager } from "./SocialMediaManager";
 import { AdminEmpty, AdminNotice, AdminBadge } from "./AdminFeedback";
 import { useState, useEffect } from "react";
 import {
@@ -11,6 +12,9 @@ import {
   Gear,
   ChartBar,
   MapPin,
+  X,
+  Phone,
+  Envelope,
   Receipt,
   Truck,
   WarningCircle,
@@ -28,7 +32,6 @@ import {
 import { Select } from "./Select";
 import { Field } from "./Customer";
 import { AssetImage } from "./AssetImage";
-import { socialChannels } from "./Merchandising";
 import { currency, date, phases } from "./store";
 const phaseIcons = {
   "Por pagar": CreditCard,
@@ -627,15 +630,27 @@ export function CustomerDirectory({ users, orders, onOrders }) {
             {rows.slice((page - 1) * 15, page * 15).map((u) => (
               <tr key={u.id}>
                 <td>
-                  <strong>
+                  <strong className="field-with-icon">
+                    <UserCircle size={19} />
                     {u.name} {u.lastName}
                   </strong>
                 </td>
                 <td>
-                  {u.email}
-                  <small>{u.phone || "Sin teléfono"}</small>
+                  <span className="field-with-icon">
+                    <Envelope size={17} />
+                    {u.email}
+                  </span>
+                  <small className="field-with-icon">
+                    <Phone size={17} />
+                    {u.phone || "Sin teléfono"}
+                  </small>
                 </td>
-                <td>{orders.filter((o) => o.userId === u.id).length}</td>
+                <td>
+                  <span className="field-with-icon">
+                    <Receipt size={17} />
+                    {orders.filter((o) => o.userId === u.id).length}
+                  </span>
+                </td>
                 <td>
                   <button
                     className="button button-outline"
@@ -668,7 +683,8 @@ export function CustomerDirectory({ users, orders, onOrders }) {
 }
 export function StoreSettings({ settings, setSettings, log }) {
   const [section, setSection] = useState("Atención"),
-    [message, setMessage] = useState("");
+    [message, setMessage] = useState(""),
+    [contactEditing, setContactEditing] = useState(false);
   return (
     <div className="store-settings">
       <div className="admin-subnav" aria-label="Secciones de configuración">
@@ -693,7 +709,45 @@ export function StoreSettings({ settings, setSettings, log }) {
           </button>
         ))}
       </div>
-      {
+      {section === "Redes sociales" ? (
+        <SocialMediaManager
+          settings={settings}
+          setSettings={setSettings}
+          log={log}
+        />
+      ) : !contactEditing ? (
+        <section className="admin-section">
+          <div className="section-title">
+            <h2>
+              <Headset size={22} />
+              Contacto y entrega
+            </h2>
+            <button
+              className="button button-dark"
+              onClick={() => setContactEditing(true)}
+            >
+              <PencilSimple size={18} />
+              Editar información
+            </button>
+          </div>
+          <dl className="contact-summary">
+            {[
+              ["Correo", settings.email, Envelope],
+              ["Teléfono", settings.phone, Phone],
+              ["Horario", settings.review, Clock],
+              ["Entrega", settings.delivery, Truck],
+            ].map(([label, value, Icon]) => (
+              <div key={label}>
+                <dt>
+                  <Icon size={18} />
+                  {label}
+                </dt>
+                <dd>{value || "Sin registrar"}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ) : (
         <form
           key={section}
           className="admin-section form-grid settings-panel"
@@ -702,7 +756,8 @@ export function StoreSettings({ settings, setSettings, log }) {
             const data = Object.fromEntries(new FormData(e.currentTarget));
             setSettings((s) => ({ ...s, ...data }));
             log("Configuración", section + " actualizada");
-            setMessage("Cambios guardados.");
+            setMessage("Información de atención actualizada.");
+            setContactEditing(false);
           }}
         >
           <div className="section-title">
@@ -712,55 +767,47 @@ export function StoreSettings({ settings, setSettings, log }) {
                 ? "Contacto y entrega"
                 : "Perfiles de la tienda"}
             </h2>
-            <button className="button button-dark">
-              <Check size={18} />
-              Guardar cambios
-            </button>
+            <div className="admin-heading-actions">
+              <button
+                type="button"
+                className="button button-outline"
+                onClick={() => setContactEditing(false)}
+              >
+                <X size={18} />
+                Cancelar
+              </button>{" "}
+              <button className="button button-dark">
+                <Check size={18} />
+                Actualizar información
+              </button>
+            </div>
           </div>
-          {section === "Atención" ? (
-            <>
-              <Field
-                label="Correo de atención"
-                name="email"
-                type="email"
-                defaultValue={settings.email}
-              />
-              <Field
-                label="Teléfono de atención"
-                name="phone"
-                type="tel"
-                defaultValue={settings.phone}
-              />
-              <Field
-                label="Horario de revisión"
-                name="review"
-                defaultValue={settings.review}
-              />
-              <Field
-                label="Plazo de entrega"
-                name="delivery"
-                defaultValue={settings.delivery}
-                required
-              />
-            </>
-          ) : (
-            <>
-              <p className="form-hint">
-                Los enlaces guardados se muestran en el footer de la tienda.
-              </p>
-              {socialChannels.map(([id, label, Icon, fallback]) => (
-                <Field
-                  key={id}
-                  label={label}
-                  name={"social_" + id}
-                  type="url"
-                  defaultValue={settings["social_" + id] || fallback}
-                />
-              ))}
-            </>
-          )}
+
+          <Field
+            label="Correo de atención"
+            name="email"
+            type="email"
+            defaultValue={settings.email}
+          />
+          <Field
+            label="Teléfono de atención"
+            name="phone"
+            type="tel"
+            defaultValue={settings.phone}
+          />
+          <Field
+            label="Horario de revisión"
+            name="review"
+            defaultValue={settings.review}
+          />
+          <Field
+            label="Plazo de entrega"
+            name="delivery"
+            defaultValue={settings.delivery}
+            required
+          />
         </form>
-      }
+      )}
       <AdminNotice>{message}</AdminNotice>
     </div>
   );

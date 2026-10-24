@@ -50,3 +50,6 @@ Se generaron PDF de1 y6páginas con las fuentes de la tienda. Inspección de rec
 
 ## r37 — Gestión y catálogo
 Playwright1440/390: alta con foto, dos tallas y existencias3/5; segunda alta de dos colores, validación por imagen faltante, categoría Camisas, persistencia al recargar y compra desde card (Blanco/M/S159). Editor de producto conserva guardado previo a campos. Trabajos: formulario0 antes de Nueva,1 al editar y0 tras guardar; confirmación visible. Módulos Medios de pago/Configuración/Trabajos/Agencias Shalom/Promociones/Personal/Afiliados sin overflow a390px. PDF filtrado1p y completo4p descargados desde navegador, primera/última páginas renderizadas e inspeccionadas. Assets QA solo en output ignorado; fixtures restaurados.
+
+## r38 — Iconos en seguimiento y PDF
+Playwright1440/390:2 movimientos con estado/nota, control desplegable y descarga con1 icono cada uno; cierre con Enter correcto; sin desbordamiento móvil. PDF descargado desde seguimiento; render de1p y final del documento extenso6p revisados con iconos locales y texto sin solapamiento. Fixtures restaurados. Build Pages y4 tests de empaquetado correctos.

@@ -137,3 +137,6 @@ El resumen pendiente muestra una sola cifra como Importe de productos, sin repet
 
 ## Gestión y catálogo r37 — 23/10/2026
 Evitar repetir la misma gestión en varios módulos. El costo de envío se modifica solo desde Logística, no al despachar; Agencias Shalom identifica el directorio. Cuenta se administra desde el icono de cabecera, sin duplicarla en Configuración. Acciones importantes al comienzo de la sección/formulario, junto a su título, nunca únicamente al final de listas extensas. Trabajos muestra formulario solo al crear/editar. Catálogo permite nueva mercancía con categoría existente, descripción, precio, tallas, fotos por color y unidades por variante. PDF de catálogo comercial filtrado, con imágenes, precios y tallas; tipografías Manrope/Instrument incrustadas, sin datos internos ni envío automático de WhatsApp.
+
+## Seguimiento e iconos r38
+Seguimiento cliente debe compartir el lenguaje visual de Pedidos admin: movimientos con badges semánticos e iconos, fecha/nota en línea de tiempo. Desplegable con superficie rosada, un icono y texto contextual Ver/Ocultar. PDF en bloque documental con FilePdf y descarga borgoña de un solo icono. PDF real incorpora los mismos iconos Phosphor en cabecera/destinatario/agencia/entrega/resumen, conservando fuentes y distribución. SVG locales reproducibles con scripts/build-pdf-icons.mjs, licencia incluida.

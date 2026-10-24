@@ -1,3 +1,4 @@
+import { AdminBadge } from "./AdminFeedback";
 import { Select } from "./Select";
 import { sku } from "./store";
 import { useState } from "react";
@@ -555,16 +556,23 @@ export function TrackingJourney({ order }) {
         </p>
       </div>
       <details className="tracking-events">
-        <summary>
-          Ver todos los movimientos
-          <ArrowRight size={18} />
+        <summary className="button tracking-events-toggle">
+          <ClockCounterClockwise size={19} aria-hidden="true" />
+          <span className="events-closed-label">Ver todos los movimientos</span>
+          <span className="events-open-label">Ocultar movimientos</span>
         </summary>
-        <ol>
+        {!order.history?.length && (
+          <p className="tracking-events-empty">
+            <Clock size={20} aria-hidden="true" />
+            Aún no hay movimientos registrados para este pedido.
+          </p>
+        )}
+        <ol aria-label="Movimientos del pedido">
           {[...(order.history || [])].reverse().map((h, n) => (
             <li key={n}>
-              <time>{date(h.at)}</time>
               <div>
-                <strong>{h.status}</strong>
+                <AdminBadge>{h.status}</AdminBadge>
+                <time dateTime={h.at}>{date(h.at)}</time>
                 {h.note && <p>{h.note}</p>}
               </div>
             </li>

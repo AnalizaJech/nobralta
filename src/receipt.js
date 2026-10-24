@@ -113,6 +113,19 @@ export async function buildReceipt(order) {
     pdf.setTextColor(...color);
     pdf.text(clean(s), x, y, opts);
   };
+  const icons = Object.fromEntries(
+    await Promise.all(
+      ["UserCircle", "MapPin", "Receipt", "Truck", "FilePdf"].map(
+        async (name) => [
+          name,
+          await raster("/icons/pdf-" + name + ".svg", true),
+        ],
+      ),
+    ),
+  );
+  const icon = (name, x, y) => {
+    if (icons[name]) pdf.addImage(icons[name].data, "PNG", x, y, 5, 5);
+  };
   const wrap = (s, w, size = 10, bold = false) => {
     pdf.setFont("Manrope", bold ? "bold" : "normal");
     pdf.setFontSize(size);
@@ -135,7 +148,8 @@ export async function buildReceipt(order) {
         { align: "center" },
         "Instrument",
       );
-    txt("DETALLE DE COMPRA", 18, 33, 8, false, muted);
+    icon("FilePdf", 18, 29);
+    txt("DETALLE DE COMPRA", 26, 33, 8, false, muted);
     txt(stamp(order.created), 192, 33, 8, false, muted, { align: "right" });
     pdf.setDrawColor(...line);
     pdf.setLineWidth(0.25);
@@ -158,8 +172,8 @@ export async function buildReceipt(order) {
     ...(order.guide ? [`Guía / OS: ${order.guide}`] : []),
   ].filter(Boolean);
   const blocks = [
-    { title: "DESTINATARIO", rows: recipient, x: 18 },
-    { title: "RECOJO EN SHALOM", rows: destination, x: 108 },
+    { title: "DESTINATARIO", rows: recipient, x: 18, icon: "UserCircle" },
+    { title: "RECOJO EN SHALOM", rows: destination, x: 108, icon: "MapPin" },
   ];
   const blockHeight = Math.max(
     43,
@@ -177,7 +191,8 @@ export async function buildReceipt(order) {
     pdf.setDrawColor(...line);
     pdf.setLineWidth(0.25);
     pdf.roundedRect(b.x, y, 84, blockHeight, 3, 3, "S");
-    txt(b.title, b.x + 6, y + 9, 8, true, wine);
+    icon(b.icon, b.x + 6, y + 5);
+    txt(b.title, b.x + 14, y + 9, 8, true, wine);
     let py = y + 17;
     for (const [i, r] of b.rows.entries()) {
       const rows = wrap(r, 72, 9, i === 0);
@@ -244,7 +259,8 @@ export async function buildReceipt(order) {
   const summaryY = y;
   const quoted = order.shipping != null;
   box(103, y, 89, quoted ? 61 : 44);
-  txt("RESUMEN DE IMPORTES", 109, y + 9, 8, true, muted);
+  icon("Receipt", 109, y + 5);
+  txt("RESUMEN DE IMPORTES", 117, y + 9, 8, true, muted);
   if (quoted) {
     const sums = [
       ["Subtotal productos", money(order.total)],
@@ -268,7 +284,8 @@ export async function buildReceipt(order) {
   txt(money(total), 186, totalY + 11, 15, true, [255, 255, 255], {
     align: "right",
   });
-  txt("INFORMACIÓN DE ENTREGA", 18, y + 5, 8, true, wine);
+  icon("Truck", 18, y + 1);
+  txt("INFORMACIÓN DE ENTREGA", 26, y + 5, 8, true, wine);
   let ny = y + 13;
   const notes = [
     "Entrega estimada: 2-10 días desde confirmar el pago y el destino.",

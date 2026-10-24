@@ -1,3 +1,4 @@
+import { AdminBadge } from "./AdminFeedback";
 import { OptionalImage } from "./OptionalImage";
 import { CheckoutPayment, paymentMethods, VoucherUpload } from "./Payments";
 import { DateField } from "./DateField";
@@ -8,6 +9,7 @@ import { useState } from "react";
 import {
   ArrowRight,
   DownloadSimple,
+  FilePdf,
   Check,
   Eye,
   EyeSlash,
@@ -602,7 +604,7 @@ export function OrderDetail({ order, onReport, settings }) {
           <p>{date(order.created)}</p>
           <h2>Pedido {order.id}</h2>
         </div>
-        <span className="status">{order.status}</span>
+        <AdminBadge>{order.status}</AdminBadge>
       </div>
       <TrackingJourney order={order} />
       <section className="customer-order-card">
@@ -662,7 +664,8 @@ export function OrderDetail({ order, onReport, settings }) {
                   </div>
                 </dl>
                 <p>
-                  Estamos coordinando el envío. Su costo aparecerá aquí cuando se confirme.
+                  Estamos coordinando el envío. Su costo aparecerá aquí cuando
+                  se confirme.
                 </p>
               </>
             ) : (
@@ -684,17 +687,19 @@ export function OrderDetail({ order, onReport, settings }) {
           </section>
         </div>
         <div className="customer-order-download">
-          <div>
-            <h3>Detalle de tu compra</h3>
-            <p>
-              El detalle del pedido no sustituye una boleta o factura
-              electrónica.
-            </p>
+          <div className="customer-document-intro">
+            <span className="customer-document-icon">
+              <FilePdf size={28} aria-hidden="true" />
+            </span>
+            <div>
+              <h3>Detalle de tu compra</h3>
+              <p>
+                El detalle del pedido no sustituye una boleta o factura
+                electrónica.
+              </p>
+            </div>
           </div>
-          <button
-            className="button button-outline"
-            onClick={() => receipt(order)}
-          >
+          <button className="button button-wine" onClick={() => receipt(order)}>
             <DownloadSimple size={19} />
             Descargar detalle PDF
           </button>

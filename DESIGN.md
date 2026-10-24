@@ -66,3 +66,6 @@ Sustituir Helvetica por Manrope incrustada (regular400 y semibold600); Instrumen
 
 ## Gestión y catálogo r37
 Acciones de alta, guardado y descarga junto al encabezado de cada sección; móviles apilados con ancho completo y separación12px. Crear mercancía usa un único editor con fotos por color y stock por talla; validación antes de persistir. Catálogo PDF A4, cuatro productos por página, marca centrada, fondo blanco, imágenes neutras y precio borgoña, mismas fuentes incrustadas del recibo. Funciones separadas: directorio Agencias Shalom, cotización Logística, guía/constancia en Pedidos. Sin cuenta repetida en Configuración ni formulario de trabajo vacío permanente.
+
+## Seguimiento r38
+Historial cliente con timeline y badges con icono como gestión de pedidos. Control Ver/Ocultar movimientos rosado suave y hover más marcado, icono único sin rotación. Bloque de documento con icono PDF y descarga borgoña. Recibo A4 conserva Manrope/Instrument y agrega iconos Phosphor discretos de5mm en los títulos.

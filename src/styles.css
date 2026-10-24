@@ -8536,3 +8536,30 @@ input:not(:disabled):-webkit-autofill:focus {
 .customer-order-card .customer-order-download { border-top:1px solid #dedee2; padding-top:24px; margin-top:24px; }
 @media(max-width:640px){ .order-detail .customer-order-facts { grid-template-columns:1fr; gap:28px; } }
 .order-detail .customer-order-facts { border-top:0; padding-top:0; }
+
+/* Customer tracking shares the order review's icon and status language. */
+.order-detail .admin-badge { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; font-size:11px; font-weight:600; line-height:1.5; border:1px solid #dedee2; background:#f4f4f6; color:#52525b; }
+.order-detail .admin-badge[data-tone="success"] { color:#155e52; background:#eaf5f1; border-color:#bad9cf; }
+.order-detail .admin-badge[data-tone="warning"] { color:#785014; background:#fff5e4; border-color:#e3c18f; }
+.order-detail .admin-badge[data-tone="info"] { color:#284e83; background:#edf3fc; border-color:#bdcee8; }
+.order-detail .admin-badge[data-tone="danger"] { color:#8c2e45; background:#fceef2; border-color:#e7bac5; }
+.order-detail .tracking-events > .tracking-events-toggle { display:inline-flex; justify-content:center; gap:10px; min-height:48px; padding:12px 22px; border:1px solid #dbb7c5; border-radius:999px; background:#f6edf1; color:#622938; font-weight:600; font-size:13px; max-width:100%; box-sizing:border-box; transition:background .18s,border-color .18s; }
+.order-detail .tracking-events > .tracking-events-toggle:hover { background:#eddae2; border-color:#bd8b9e; }
+.order-detail .tracking-events[open] summary svg { transform:none; }
+.tracking-events .events-open-label, .tracking-events[open] .events-closed-label { display:none; }
+.tracking-events[open] .events-open-label { display:inline; }
+.order-detail .tracking-events ol { margin:24px 0 0 6px; padding:0; }
+.order-detail .tracking-events ol > li { display:block; position:relative; padding:0 0 24px 22px; margin:0; background:transparent; border:0; border-left:1px solid #dedee2; border-radius:0; }
+.order-detail .tracking-events ol > li:last-child { padding-bottom:0; border-left-color:transparent; }
+.order-detail .tracking-events ol > li::before { content:""; position:absolute; left:-4px; top:13px; width:7px; height:7px; border-radius:50%; background:#622938; }
+.order-detail .tracking-events time { display:block; margin-top:8px; font-size:12px; }
+.order-detail .tracking-events li p { margin:8px 0 0; padding:0; line-height:1.8; }
+.tracking-events-empty { display:flex; align-items:center; gap:12px; padding:20px; margin:20px 0 0; background:#f6f6f8; border-radius:12px; font-size:13px; }
+.order-detail .customer-order-download { background:#faf8f9; border:1px solid #e6dce0; border-radius:14px; padding:22px; margin-top:24px; }
+.customer-document-intro { display:flex; gap:16px; align-items:flex-start; min-width:0; }
+.customer-document-icon { display:grid; place-items:center; width:52px; height:52px; flex-shrink:0; background:#f0e2e8; border-radius:12px; color:#622938; }
+.customer-document-intro h3 { margin:0 0 8px; }
+.customer-document-intro p { margin:0; font-size:12px; line-height:1.8; color:#52525b; max-width:50ch; }
+.customer-order-download .button-wine { background:#622938; color:#fff; border:1px solid #622938; }
+.customer-order-download .button-wine:hover { background:#451b28; border-color:#451b28; }
+@media(max-width:640px) { .order-detail .tracking-events-toggle, .order-detail .customer-order-download .button { width:100%; } .order-detail .customer-order-download { padding:18px; gap:20px; } .customer-document-icon { width:44px; height:44px; } }

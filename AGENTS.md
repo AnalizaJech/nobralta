@@ -119,3 +119,6 @@ Trabajos cliente coherente con tienda: titulares Instrument, tarjetas blancas co
 
 ## FAQ r31
 En Claro desde el principio los desplegables cerrados muestran Plus y abiertos Minus; no rotar Plus para formar una X.
+
+## Páginas informativas r32
+Las páginas del footer usan el mismo padding lateral de las secciones de tienda:5% escritorio/tablet y20px móvil. El título, introducción y grid de tarjetas comparten alineación; no permitir contenido pegado al borde.

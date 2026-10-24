@@ -8522,3 +8522,5 @@ input:not(:disabled):-webkit-autofill:focus {
 .care summary .care-collapse { display:none; }
 .care details[open] summary .care-expand { display:none; }
 .care details[open] summary .care-collapse { display:block; transform:none; }
+.page-surface--info .store-information { max-width:1440px; width:100%; box-sizing:border-box; padding:40px 5% 80px; }
+@media(max-width:640px) { .page-surface--info .store-information { padding:28px 20px 55px; } }

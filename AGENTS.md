@@ -113,3 +113,6 @@ El propietario pide quitar todos los rótulos de prueba/demostración en la UI d
 
 ## Retorno a administración y detalle cliente r29 — 23/10/2026
 Cuenta/búsqueda/bolsa abiertas desde admin deben cerrar con X de vuelta al módulo, estado de filtros/edición y scroll originales; mantener Admin montado y ocultarlo temporalmente, sin enviar al hero. Capturar scroll antes de foco de cabecera; búsqueda también debe restaurarlo. Logo sigue llevando expresamente a tienda. Cliente: título Pedido + código, prendas/recojo/destinatario/resumen/descarga en contenedores coherentes, movimientos con fondo y espaciado.
+
+## Trabajos y footer r30 — 23/10/2026
+Trabajos cliente coherente con tienda: titulares Instrument, tarjetas blancas con bordes/radios, CTA borgoña, información de oportunidad y proceso, formulario acotado y confirmación. Footer organizado con ayuda/cómo comprar, envíos/recojo, pagos, tallas, seguimiento, sobre tienda, trabajos, privacidad y condiciones. Páginas informativas con secciones útiles, sin botón Volver redundante (la X cierra). Usar solo datos confirmados: no inventar RUC/razón social/dirección física, certificaciones ni garantías. Contacto/horario de configuración y centro de ayuda.

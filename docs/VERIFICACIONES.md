@@ -35,3 +35,6 @@ Anchos input/resultados iguales:555.33px en1440,453.83 en1024,686 en768 y308 en3
 
 ## Retorno y detalle r29
 En Catálogo admin a600px de scroll, abrir/cerrar cuenta, búsqueda y bolsa mediante clic de puntero devuelve exactamente a600px y conserva Catálogo. Se utilizó clic por coordenadas visibles para evitar que el auto-scroll de locator.click alterase la posición antes del evento. Cliente con pedido En revisión: título Pedido NB-UX-29, cinco contenedores y movimientos desplegables;1440/1024/768/390 sin overflow. Fixtures restaurados, sin errores de ejecución.
+
+## Trabajos/footer r30
+Siete páginas informativas abiertas/cerradas desde footer a1440/1024/768/390px: sin botón Volver dentro del contenido ni desbordamiento. Trabajos listado/detalle revisados; formulario público guarda postulación y presenta confirmación; fixture restaurado. Todos los enlaces internos de información cierran con X. Sin errores de ejecución. Capturas r30 finales con animaciones terminadas. No se verificó cumplimiento legal productivo; datos comerciales oficiales continúan pendientes, sin inventarlos en la UI.

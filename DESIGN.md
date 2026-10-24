@@ -49,3 +49,6 @@ QR configurable por administrador, sin rótulos de demostración en UI. Avatar a
 
 ## Retorno y detalle cliente r29
 La navegación auxiliar preserva el contexto del área administrativa montada. El cierre restaura scroll y foco. Detalle cliente titula Pedido más código; tarjetas blancas con borde neutro, radio18px, padding26px, iconos borgoña y campos etiquetados. Secciones en tres columnas o apiladas; historial desplegado con filas contenidas y descarga con acción independiente.
+
+## Trabajos/footer r30
+Footer con base negra, marca blanca, enlaces agrupados y banda superior neutra que explica recojo, revisión del pago y seguimiento. Información por páginas con titular editorial y secciones blancas contenidas; sin CTA Volver. Trabajos comparte tipografía, espacios, bordes y CTA de tienda; detalle y postulación en dos columnas o apiladas. La navegación interna Ver oportunidades permite cambiar de convocatoria.

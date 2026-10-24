@@ -43,13 +43,12 @@ export function JobsPage({ jobs, onApply }) {
   return (
     <div className="jobs-page">
       <div className="jobs-intro">
-        <p>NOBRALTA / Trabajos</p>
-        <h1>
-          El carácter de una marca
-          <br />
-          también está en su gente.
-        </h1>
-        <p>Encuentra tu lugar en ventas, estilo y operación.</p>
+        <h1>El carácter de una marca también está en su gente.</h1>
+        <p>
+          Encuentra tu lugar en ventas, estilo y operación. Revisa las
+          oportunidades disponibles y cuéntanos qué te gustaría aportar a
+          NOBRALTA.
+        </p>
       </div>
       {job ? (
         <div className="job-detail">
@@ -76,12 +75,27 @@ export function JobsPage({ jobs, onApply }) {
                 {job.type}
               </p>
               <div className="job-description">{job.description}</div>
+              <div className="job-expectations">
+                <h3>Antes de postular</h3>
+                <p>
+                  Revisa el área, la ubicación y el tipo de vínculo de esta
+                  oportunidad. Cuéntanos tu experiencia y disponibilidad para
+                  conocer mejor tu perfil.
+                </p>
+                <p>
+                  Las funciones, la modalidad y las condiciones se conversarán
+                  durante el proceso.
+                </p>
+              </div>
             </section>
             {done ? (
               <div className="application-success" role="status">
                 <Check size={28} />
                 <h3>Tu interés quedó registrado.</h3>
-                <p>Gracias por querer formar parte de NOBRALTA.</p>
+                <p>
+                  Gracias por querer formar parte de NOBRALTA. Conservaremos los
+                  datos que enviaste para revisar tu perfil en esta oportunidad.
+                </p>
               </div>
             ) : (
               <form
@@ -121,7 +135,13 @@ export function JobsPage({ jobs, onApply }) {
                 />
                 <label className="field">
                   ¿Qué te gustaría aportar?
-                  <textarea name="message" maxLength={2000} rows={4} required />
+                  <textarea
+                    name="message"
+                    placeholder="Cuéntanos tu experiencia, disponibilidad y lo que te interesa de esta oportunidad."
+                    maxLength={2000}
+                    rows={4}
+                    required
+                  />
                 </label>
                 <label className="checkbox">
                   <input type="checkbox" required />
@@ -165,6 +185,35 @@ export function JobsPage({ jobs, onApply }) {
           )}
         </div>
       )}
+      <section className="jobs-process">
+        <h2>Así puedes formar parte.</h2>
+        <div>
+          <article>
+            <Briefcase size={26} />
+            <h3>Conoce la oportunidad</h3>
+            <p>
+              Lee las funciones, el área y la modalidad antes de elegir dónde
+              aportar.
+            </p>
+          </article>
+          <article>
+            <Users size={26} />
+            <h3>Comparte tu perfil</h3>
+            <p>
+              Completa tus datos y cuéntanos tu experiencia e interés. Revisa tu
+              correo y teléfono antes de enviar.
+            </p>
+          </article>
+          <article>
+            <Check size={26} />
+            <h3>Conversemos</h3>
+            <p>
+              Tu postulación quedará registrada para su revisión. Si tu perfil
+              encaja, podremos contactarte para conocer más de ti.
+            </p>
+          </article>
+        </div>
+      </section>
     </div>
   );
 }

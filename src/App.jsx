@@ -1,3 +1,4 @@
+import { StoreFooter, StoreInformation } from "./StoreInformation";
 import { DiscountNotice } from "./Payments";
 import { nameProduct } from "./catalog-names";
 import { ProductCard } from "./ProductCard";
@@ -1612,32 +1613,14 @@ export function App() {
             </div>
           </section>
         </main>
-        <footer
-          className="footer section-pad"
-          hidden={!!screen || menu || search}
-        >
-          <AssetImage
-            className="footer-wordmark"
-            src="/assets/brand-wordmark.svg"
-            alt="NOBRALTA"
+        <div hidden={!!screen || menu || search}>
+          <StoreFooter
+            settings={settings}
+            onInfo={information}
+            onAccount={() => setScreen("account")}
+            onJobs={() => setScreen("jobs")}
           />
-          <SocialLinks settings={settings} />
-          <div>
-            <button onClick={() => information("Mi pedido")}>Mi pedido</button>
-            <button onClick={() => information("Ayuda")}>Ayuda</button>
-            <button onClick={() => information("Privacidad")}>
-              Privacidad
-            </button>
-            <button onClick={() => information("Condiciones")}>
-              Condiciones
-            </button>
-          </div>
-          <p>
-            PERÚ · PRECIOS EN PEN
-            <br />
-            ENTREGA 2–10 DÍAS
-          </p>
-        </footer>
+        </div>
         {screen && (
           <section
             className={"page-surface page-surface--" + screen}
@@ -2229,52 +2212,7 @@ export function App() {
                 />
               )}
               {screen === "info" && (
-                <div className="info-content">
-                  <h2>{info}</h2>
-                  {info === "Condiciones" ? (
-                    <p>{policy}</p>
-                  ) : info === "Mi pedido" ? (
-                    <>
-                      <p>
-                        El seguimiento privado mostrará la revisión del pago, la
-                        preparación y el despacho por separado. Una constancia
-                        no confirma el abono.
-                      </p>
-                      <p>
-                        Consulta el historial y los detalles de tu compra desde
-                        Mi cuenta.
-                      </p>
-                    </>
-                  ) : info === "Privacidad" ? (
-                    <p>
-                      Tus datos se usan para gestionar tu cuenta, atender
-                      pedidos, coordinar el recojo y comunicar detalles de
-                      compra. No se publican constancias ni datos de
-                      destinatarios en el catálogo.
-                    </p>
-                  ) : (
-                    <>
-                      <p>
-                        Compra online para Perú. Recoge en tu agencia Shalom.
-                        Entrega estimada de 2–10 días tras confirmar el pago y
-                        el destino. El costo de envío se informa antes de
-                        transferir.
-                      </p>
-                      <p>
-                        Atención online. Consulta el estado de tu compra desde
-                        Mi cuenta. No contamos con tienda física para atención
-                        pública.
-                      </p>
-                    </>
-                  )}
-                  <button
-                    className="button button-dark"
-                    onClick={() => setScreen(null)}
-                  >
-                    Volver
-                    <ArrowRight size={19} />
-                  </button>
-                </div>
+                <StoreInformation page={info} settings={settings} />
               )}
             </div>
           </section>

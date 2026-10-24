@@ -50,9 +50,42 @@ async function raster(src, logo = false) {
     return null;
   }
 }
+let fontData;
+async function loadFonts(pdf) {
+  const fonts = [
+    ["pdf-Manrope-Regular.ttf", "Manrope", "normal"],
+    ["pdf-Manrope-Semibold.ttf", "Manrope", "bold"],
+    ["pdf-InstrumentSerif.ttf", "Instrument", "normal"],
+  ];
+  fontData ||= Promise.all(
+    fonts.map(async ([file]) => {
+      const response = await fetch(assetUrl("/fonts/" + file));
+      if (!response.ok) throw Error("No pudimos cargar la tipografía del PDF.");
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      let binary = "";
+      for (let i = 0; i < bytes.length; i += 16384)
+        binary += String.fromCharCode(...bytes.subarray(i, i + 16384));
+      return btoa(binary);
+    }),
+  ).catch((error) => {
+    fontData = null;
+    throw error;
+  });
+  const data = await fontData;
+  fonts.forEach(([file, family, style], i) => {
+    pdf.addFileToVFS(file, data[i]);
+    pdf.addFont(file, family, style);
+  });
+}
 export async function buildReceipt(order) {
   const { jsPDF } = await import("jspdf");
-  const pdf = new jsPDF({ unit: "mm", format: "a4", compress: true });
+  const pdf = new jsPDF({
+    unit: "mm",
+    format: "a4",
+    compress: true,
+    putOnlyUsedFonts: true,
+  });
+  await loadFonts(pdf);
   pdf.setProperties({
     title: `Detalle de compra ${order.id}`,
     subject: "Resumen de pedido NOBRALTA",
@@ -65,14 +98,23 @@ export async function buildReceipt(order) {
       async (src) => thumbnails.set(src, await raster(src)),
     ),
   );
-  const txt = (s, x, y, size = 10, bold = false, color = ink, opts = {}) => {
-    pdf.setFont("helvetica", bold ? "bold" : "normal");
+  const txt = (
+    s,
+    x,
+    y,
+    size = 10,
+    bold = false,
+    color = ink,
+    opts = {},
+    family = "Manrope",
+  ) => {
+    pdf.setFont(family, bold ? "bold" : "normal");
     pdf.setFontSize(size);
     pdf.setTextColor(...color);
     pdf.text(clean(s), x, y, opts);
   };
-  const wrap = (s, w, size = 10) => {
-    pdf.setFont("helvetica", "normal");
+  const wrap = (s, w, size = 10, bold = false) => {
+    pdf.setFont("Manrope", bold ? "bold" : "normal");
     pdf.setFontSize(size);
     return pdf.splitTextToSize(clean(s), w);
   };
@@ -80,21 +122,29 @@ export async function buildReceipt(order) {
     pdf.setFillColor(...color);
     pdf.roundedRect(x, y, w, h, 3, 3, "F");
   };
-  const header = (first = false) => {
-    if (logo) pdf.addImage(logo.data, "PNG", 18, 17, 58, 58 * logo.ratio);
-    else txt("NOBRALTA", 18, 26, 23, true);
-    txt("DETALLE DE COMPRA", 192, 19, 8, true, muted, { align: "right" });
-    txt(`Pedido ${order.id}`, 192, 27, 13, true, ink, { align: "right" });
-    txt(stamp(order.created), 192, 34, 8, false, muted, { align: "right" });
-    pdf.setDrawColor(...wine);
-    pdf.setLineWidth(0.65);
-    pdf.line(18, 43, 192, 43);
+  const header = () => {
+    if (logo) pdf.addImage(logo.data, "PNG", 76, 14, 58, 58 * logo.ratio);
+    else
+      txt(
+        "NOBRALTA",
+        105,
+        23,
+        26,
+        false,
+        ink,
+        { align: "center" },
+        "Instrument",
+      );
+    txt("DETALLE DE COMPRA", 18, 33, 8, false, muted);
+    txt(stamp(order.created), 192, 33, 8, false, muted, { align: "right" });
+    pdf.setDrawColor(...line);
+    pdf.setLineWidth(0.25);
+    pdf.line(18, 39, 192, 39);
+    txt(`Pedido ${order.id}`, 18, 53, 25, false, ink, {}, "Instrument");
+    txt(order.status, 192, 52, 9, true, wine, { align: "right" });
   };
-  header(true);
-  let y = 54;
-  txt("Resumen del pedido", 18, y, 17, true);
-  txt(order.status, 192, y, 10, true, wine, { align: "right" });
-  y += 9;
+  header();
+  let y = 64;
   const recipient = [
     `${order.customer.name} ${order.customer.lastName}`,
     `DNI: ${order.customer.dni}`,
@@ -115,15 +165,22 @@ export async function buildReceipt(order) {
     43,
     ...blocks.map(
       (b) =>
-        18 + b.rows.reduce((n, r) => n + wrap(r, 72, 9).length * 4.4 + 2, 0),
+        18 +
+        b.rows.reduce(
+          (n, r, i) => n + wrap(r, 72, 9, i === 0).length * 4.4 + 2,
+          0,
+        ),
     ),
   );
   for (const b of blocks) {
-    box(b.x, y, 84, blockHeight);
+    box(b.x, y, 84, blockHeight, [255, 255, 255]);
+    pdf.setDrawColor(...line);
+    pdf.setLineWidth(0.25);
+    pdf.roundedRect(b.x, y, 84, blockHeight, 3, 3, "S");
     txt(b.title, b.x + 6, y + 9, 8, true, wine);
     let py = y + 17;
     for (const [i, r] of b.rows.entries()) {
-      const rows = wrap(r, 72, 9);
+      const rows = wrap(r, 72, 9, i === 0);
       for (const row of rows) {
         txt(row, b.x + 6, py, 9, i === 0);
         py += 4.4;
@@ -143,12 +200,12 @@ export async function buildReceipt(order) {
   const next = () => {
     pdf.addPage();
     header();
-    y = 53;
+    y = 64;
   };
   if (y > 230) next();
   tableHead();
   for (const [i, p] of order.lines.entries()) {
-    const names = wrap(p.name, 84, 10),
+    const names = wrap(p.name, 84, 10, true),
       variants = wrap(
         `${p.color} / Talla ${p.size}${p.packId ? " / Pack" : ""}`,
         84,
@@ -220,7 +277,7 @@ export async function buildReceipt(order) {
   }
   y = Math.max(summaryY + 70, ny + 6);
   if (y + 15 > 270) next();
-  txt("Gracias por elegir NOBRALTA.", 18, y, 11, true);
+  txt("Gracias por elegir NOBRALTA.", 18, y, 18, false, ink, {}, "Instrument");
   txt(
     "Conserva el código de tu pedido para consultar su seguimiento.",
     18,

@@ -44,3 +44,6 @@ PDF generado en navegador con jsPDF: pedido corto1página y28prendas de nombres 
 
 ## Seguimiento compacto r34
 Pedido cliente: botón Volver a mi cuenta0, bloque de recojo de seguimiento1, tarjeta de recojo duplicada0; datos de compra agrupados en1panel.1440/1024/768/390 sin desbordamiento. Frase de confirmación retirada del checkout. Fixture restaurado.
+
+## Tipografía PDF r35
+Se generaron PDF de1 y6páginas con las fuentes de la tienda. Inspección de recursos PDF:3archivos FontFile2 incrustados, únicamente Manrope e Instrument en BaseFont; sin Helvetica. Páginas renderizadas con Poppler e inspeccionadas sin cortes/solapamientos. Nombres largos, acentos, precios y paginación conservados. Fuentes derivadas de TTF locales OFL mediante fontTools; sin dependencias nuevas de runtime.

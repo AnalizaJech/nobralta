@@ -55,3 +55,6 @@ Footer con base negra, marca blanca, enlaces agrupados y banda superior neutra q
 
 ## PDF de compra r33
 A4 blanco, márgenes18mm, marca original, negro/grises neutros y borgoña. Bloques claros para destinatario y agencia; tabla con miniaturas, cantidad, precio unitario e importe. Total en bloque borgoña. Tipografía Helvetica legible y logo rasterizado desde SVG maestro. Cabecera y pie comunes en pedidos multipágina. Trabajos sin líneas estructurales duplicadas sobre las tarjetas.
+
+## Tipografía PDF r35 — prioridad sobre r33
+Sustituir Helvetica por Manrope incrustada (regular400 y semibold600); Instrument Serif en el título Pedido y cierre. Logo centrado como la cabecera del sitio, metadatos discretos, tarjetas blancas con bordes neutros y total borgoña. Recursos estáticos locales, sin dependencia de fuentes instaladas en el equipo receptor.

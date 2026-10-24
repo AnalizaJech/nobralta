@@ -128,3 +128,6 @@ Evitar separadores redundantes en intro/listado/proceso de Trabajos; conservar s
 
 ## Seguimiento compacto r34
 Quitar Volver a mi cuenta del seguimiento y la frase Confirma que esta agencia corresponde a tu ubicación del checkout. Recojo se muestra solo en TrackingJourney, no repetir otra tarjeta con la misma agencia. Agrupar prendas/destinatario/pago/descarga en un panel, con columnas cuando haya espacio, evitando contenedores anchos apilados sin necesidad.
+
+## Tipografía PDF r35
+El PDF debe usar las mismas fuentes del sitio incrustadas: Manrope400/600 para datos e Instrument Serif para título y cierre. No Helvetica genérica. Cabecera con marca centrada, bordes neutros y paleta blanca/negra/borgoña. Fuentes estáticas subconjuntadas en public/fonts; generación reproducible scripts/build-pdf-fonts.py desde fuentes OFL existentes.

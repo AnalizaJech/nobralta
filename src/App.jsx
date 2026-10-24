@@ -1585,7 +1585,7 @@ export function App() {
               <details>
                 <summary>
                   ¿Cómo elegir mi talla?
-                  <Plus size={19} />
+                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
                 </summary>
                 <p>
                   Consulta las medidas de cada pieza antes de comprar. Compara
@@ -1595,7 +1595,7 @@ export function App() {
               <details>
                 <summary>
                   Envíos y revisión del pago
-                  <Plus size={19} />
+                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
                 </summary>
                 <p>
                   Recoge en la agencia Shalom que elijas. Entrega estimada de
@@ -1606,7 +1606,7 @@ export function App() {
               <details>
                 <summary>
                   Condiciones de compra
-                  <Plus size={19} />
+                  <Plus className="care-expand" size={19} aria-hidden="true" /><Minus className="care-collapse" size={19} aria-hidden="true" />
                 </summary>
                 <p>{policy}</p>
               </details>

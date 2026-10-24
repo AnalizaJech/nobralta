@@ -8519,3 +8519,6 @@ input:not(:disabled):-webkit-autofill:focus {
 .store-footer .social-links { display:flex; }
 .store-footer-contact .footer-help { display:inline-flex; align-items:center; gap:10px; padding:10px 16px; color:#fff; border:1px solid #777780; border-radius:999px; font-size:12px; }
 .store-footer-contact .footer-help:hover { background:#622938; border-color:#9e6a7b; }
+.care summary .care-collapse { display:none; }
+.care details[open] summary .care-expand { display:none; }
+.care details[open] summary .care-collapse { display:block; transform:none; }

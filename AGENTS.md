@@ -116,3 +116,6 @@ Cuenta/búsqueda/bolsa abiertas desde admin deben cerrar con X de vuelta al mód
 
 ## Trabajos y footer r30 — 23/10/2026
 Trabajos cliente coherente con tienda: titulares Instrument, tarjetas blancas con bordes/radios, CTA borgoña, información de oportunidad y proceso, formulario acotado y confirmación. Footer organizado con ayuda/cómo comprar, envíos/recojo, pagos, tallas, seguimiento, sobre tienda, trabajos, privacidad y condiciones. Páginas informativas con secciones útiles, sin botón Volver redundante (la X cierra). Usar solo datos confirmados: no inventar RUC/razón social/dirección física, certificaciones ni garantías. Contacto/horario de configuración y centro de ayuda.
+
+## FAQ r31
+En Claro desde el principio los desplegables cerrados muestran Plus y abiertos Minus; no rotar Plus para formar una X.

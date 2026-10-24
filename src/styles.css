@@ -8524,3 +8524,7 @@ input:not(:disabled):-webkit-autofill:focus {
 .care details[open] summary .care-collapse { display:block; transform:none; }
 .page-surface--info .store-information { max-width:1440px; width:100%; box-sizing:border-box; padding:40px 5% 80px; }
 @media(max-width:640px) { .page-surface--info .store-information { padding:28px 20px 55px; } }
+
+.jobs-page .jobs-intro, .jobs-page .job-list, .jobs-page .jobs-process { border:0; }
+.jobs-page .jobs-intro { padding-bottom:0; }
+.jobs-page .jobs-process { padding-top:0; }

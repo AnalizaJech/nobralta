@@ -122,3 +122,6 @@ En Claro desde el principio los desplegables cerrados muestran Plus y abiertos M
 
 ## Páginas informativas r32
 Las páginas del footer usan el mismo padding lateral de las secciones de tienda:5% escritorio/tablet y20px móvil. El título, introducción y grid de tarjetas comparten alineación; no permitir contenido pegado al borde.
+
+## Trabajos y PDF r33 — 23/10/2026
+Evitar separadores redundantes en intro/listado/proceso de Trabajos; conservar solo el borde de las tarjetas. PDF de compra profesional: logo real, datos de pedido, destinatario y agencia en bloques, tabla negra con imágenes y precios, total borgoña, encabezados/pies repetidos y paginación. Usar assetUrl para assets en GitHub Pages. No cortar nombres largos ni filas entre páginas; mantener nota de que no sustituye comprobante tributario.

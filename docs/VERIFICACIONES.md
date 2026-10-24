@@ -38,3 +38,6 @@ En Catálogo admin a600px de scroll, abrir/cerrar cuenta, búsqueda y bolsa medi
 
 ## Trabajos/footer r30
 Siete páginas informativas abiertas/cerradas desde footer a1440/1024/768/390px: sin botón Volver dentro del contenido ni desbordamiento. Trabajos listado/detalle revisados; formulario público guarda postulación y presenta confirmación; fixture restaurado. Todos los enlaces internos de información cierran con X. Sin errores de ejecución. Capturas r30 finales con animaciones terminadas. No se verificó cumplimiento legal productivo; datos comerciales oficiales continúan pendientes, sin inventarlos en la UI.
+
+## PDF/Trabajos r33
+PDF generado en navegador con jsPDF: pedido corto1página y28prendas de nombres largos6páginas. Todas las páginas renderizadas con Poppler e inspeccionadas: sin corte/solapamiento, logo/imágenes, repetición de cabeceras, numeración y total correctos. Render de1página con envío por cotizar y6páginas con descuento/envío. Artefactos locales output/pdf/detalle-compra.pdf y detalle-extenso.pdf; ignorados por Git. Borders superior/inferior de intro/listado/proceso Trabajos comprobados0px.

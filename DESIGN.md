@@ -52,3 +52,6 @@ La navegación auxiliar preserva el contexto del área administrativa montada. E
 
 ## Trabajos/footer r30
 Footer con base negra, marca blanca, enlaces agrupados y banda superior neutra que explica recojo, revisión del pago y seguimiento. Información por páginas con titular editorial y secciones blancas contenidas; sin CTA Volver. Trabajos comparte tipografía, espacios, bordes y CTA de tienda; detalle y postulación en dos columnas o apiladas. La navegación interna Ver oportunidades permite cambiar de convocatoria.
+
+## PDF de compra r33
+A4 blanco, márgenes18mm, marca original, negro/grises neutros y borgoña. Bloques claros para destinatario y agencia; tabla con miniaturas, cantidad, precio unitario e importe. Total en bloque borgoña. Tipografía Helvetica legible y logo rasterizado desde SVG maestro. Cabecera y pie comunes en pedidos multipágina. Trabajos sin líneas estructurales duplicadas sobre las tarjetas.
